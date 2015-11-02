@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.order.bo;
+package com.jingyunbank.etrade.api.user.bo;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 收货地址 业务类
  *
  */
-public class DeliveryAddress implements Serializable{
+public class Address implements Serializable{
 
 	private static final long serialVersionUID = -3775543595566670218L;
 	

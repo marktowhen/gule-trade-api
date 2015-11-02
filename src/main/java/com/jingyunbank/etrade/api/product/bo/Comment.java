@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Comment {
 
-	private String id;
-	private String pid;//production id
+	private String ID;
+	private String GID;//
 	private String orderno;//order NO
-	private String product;
+	private String goods;
 	private String service;
 	private String delivery;
 	private int productScore;
@@ -17,29 +17,29 @@ public class Comment {
 	private int score;
 	private List<String> imgs = new ArrayList<String>();
 	
-	public String getId() {
-		return id;
+	public String getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(String iD) {
+		ID = iD;
 	}
-	public String getPid() {
-		return pid;
+	public String getGID() {
+		return GID;
 	}
-	public void setPid(String pid) {
-		this.pid = pid;
+	public void setGID(String gID) {
+		GID = gID;
+	}
+	public String getGoods() {
+		return goods;
+	}
+	public void setGoods(String goods) {
+		this.goods = goods;
 	}
 	public String getOrderno() {
 		return orderno;
 	}
 	public void setOrderno(String orderno) {
 		this.orderno = orderno;
-	}
-	public String getProduct() {
-		return product;
-	}
-	public void setProduct(String product) {
-		this.product = product;
 	}
 	public String getService() {
 		return service;

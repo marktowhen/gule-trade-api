@@ -3,19 +3,19 @@ package com.jingyunbank.etrade.api.user.bo;
 import java.io.Serializable;
 
 /**
- * 用户领域对象（业务对象），其中username，phone， email必须是相互<br>
+ * 用户领域对象（业务对象），其中username，mobile， email必须是相互<br>
  * 独立，全局唯一的。<br><br>
  * usernmae 只能包含数字跟英文字母，不能包含点号等特殊字符，并且必须英文字母开头<br>
- * phone 11位数字的有效手机号<br>
+ * mobile 11位数字的有效手机号<br>
  * email 有效的邮箱地址，必须包含点好点号跟有效域名<br>
  *
  */
-public class User implements Serializable {
+public class Users implements Serializable {
 
 	private static final long serialVersionUID = 4649028411420209157L;
-	private String id;
+	private String ID;
 	private String username;//global unique, ([a-zA-Z]+[a-zA-Z0-9]){4, 20}必须英文字母开头
-	private String phone;//11位数字的有效手机号
+	private String mobile;//11位数字的有效手机号
 	private String email;//有效的邮箱
 	private String password;
 	private String tradepwd;
@@ -23,11 +23,11 @@ public class User implements Serializable {
 	private UserInfo uinfo;
 	private boolean locked;
 	
-	public String getId() {
-		return id;
+	public String getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(String iD) {
+		ID = iD;
 	}
 	public String getUsername() {
 		return username;
@@ -35,11 +35,11 @@ public class User implements Serializable {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getPhone() {
-		return phone;
+	public String getMobile() {
+		return mobile;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 	public String getEmail() {
 		return email;

@@ -6,26 +6,26 @@ import com.jingyunbank.etrade.api.exception.OrderPaidException;
 import com.jingyunbank.etrade.api.exception.OrderPayException;
 import com.jingyunbank.etrade.api.exception.OrderPayFailException;
 import com.jingyunbank.etrade.api.exception.OrderUpdateException;
-import com.jingyunbank.etrade.api.order.bo.Order;
-import com.jingyunbank.etrade.api.order.bo.OrderRefund;
+import com.jingyunbank.etrade.api.order.bo.Orders;
+import com.jingyunbank.etrade.api.order.bo.Refund;
 
 public interface IOrderContextService {
 	
-	public void generate(Order order) throws OrderGenerateException;
+	public void generate(Orders order) throws OrderGenerateException;
 	/**
 	 * 更新订单的信息<br>
 	 * 用户支付前，可以修改自己的订单信息，如支付方式，收货地址，商品数量，移除商品等
 	 * @param order
 	 * @throws OrderUpdateException
 	 */
-	public void update(Order order) throws OrderUpdateException;
+	public void update(Orders order) throws OrderUpdateException;
 	/**
 	 * 调用支付接口对该订单进行支付<br>
 	 * 该方法更新订单状态为PAYING，并生成相应log信息，然后调用相应支付接口
 	 * @param order 订单信息
 	 * @throws OrderPayException 抛出该异常如果在调用支付接口，或者更改订单状态时
 	 */
-	public void pay(Order order) throws OrderPayException;
+	public void pay(Orders order) throws OrderPayException;
 	/**
 	 * 完成支付操作<br>
 	 * 当接收到相应支付接口的支付结果反馈后，执行相应的动作<br>
@@ -85,9 +85,11 @@ public interface IOrderContextService {
 	 * 对为过退换货期的商品或订单申请退款，将订单状态修改为退款中，等待卖家同意
 	 * @param refund
 	 */
-	public void refund(OrderRefund refund);
+	public void refund(Refund refund);
 	
-	public void denyRefund(OrderRefund refund);
+	public void denyRefund(Refund refund);
 	
-	public void approveRefund(OrderRefund refund);
+	public void approveRefund(Refund refund);
+	
+	public boolean canRefund(String oid);
 }

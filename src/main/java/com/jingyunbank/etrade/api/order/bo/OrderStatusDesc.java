@@ -20,23 +20,40 @@ package com.jingyunbank.etrade.api.order.bo;
  * <tr><td>订单取消</td><td>CANCELED</td><td>订单被取消</td></tr>
  * <tr><td>订单移除</td><td>REMOVED</td><td>已取消的订单被用户删除</td></tr>
  * <tr><td>退款中</td><td>REFUNDING</td><td>买家申请退款中</td></tr>
- * <tr><td>退款失败</td><td>REFUNDDENIED</td><td>卖家驳回退款申请</td></tr>
+ * <tr><td>退款驳回</td><td>RFDDENIED</td><td>卖家驳回退款申请</td></tr>
+ * <tr><td>退款失败</td><td>RFDFAIL</td><td>卖家退款同意，但是退款失败</td></tr>
  * <tr><td>退款完成</td><td>REFUNDED</td><td>退款完成</td></tr>
  * 	</table>
  */
 public class OrderStatusDesc {
 
-	private String id;
+	public final static String NEW 				= "NEW";
+	public final static String PAYING 			= "PAYING";
+	public final static String PAID 			= "PAID";
+	public final static String PAYFAIL 			= "PAYFAIL";
+	public final static String DELIVERING 		= "DELIVERING";
+	public final static String DELIVERED 		= "DELIVERED";
+	public final static String RECEIVED 		= "RECEIVED";
+	public final static String COMMENTED 		= "COMMENTED";
+	public final static String CANCELED 		= "CANCELED";
+	public final static String REMOVED 			= "REMOVED";
+	public final static String REFUNDING 		= "REFUNDING";
+	public final static String RFDDENIED 		= "REFUNDDENIED";
+	public final static String RFDFAIL 			= "REFUNDFAIL";
+	public final static String REFUNDED 		= "REFUNDED";
+	
+	private String ID;
 	private String name;
 	private String code;
 	private String order;
 	private String desc;
+	private boolean visible;//该状态下的订单买家是否可见
 	
-	public String getId() {
-		return id;
+	public String getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(String iD) {
+		ID = iD;
 	}
 	public String getName() {
 		return name;
@@ -61,5 +78,11 @@ public class OrderStatusDesc {
 	}
 	public void setOrder(String order) {
 		this.order = order;
+	}
+	public boolean isVisible() {
+		return visible;
+	}
+	public void setVisible(boolean visible) {
+		this.visible = visible;
 	}
 }

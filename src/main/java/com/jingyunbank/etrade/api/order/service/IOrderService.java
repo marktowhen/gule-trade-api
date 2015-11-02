@@ -6,18 +6,18 @@ import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.DataUpdatingException;
-import com.jingyunbank.etrade.api.order.bo.Order;
+import com.jingyunbank.etrade.api.order.bo.Orders;
 
 public interface IOrderService {
 
-	public boolean save(Order order) throws DataSavingException;
+	public boolean save(Orders order) throws DataSavingException;
 	
-	public boolean update(Order order) throws DataUpdatingException;
+	public boolean update(Orders order) throws DataUpdatingException;
 	
-	public Optional<Order> getByOrderNo(String orderno) ;
+	public Optional<Orders> getByOrderNo(String orderno) ;
 	
-	public List<Order> list(String uid);
+	public List<Orders> list(String uid);
 	
-	public List<Order> list(Date start, Date end);
+	public List<Orders> list(Date start, Date end);
 	
 }

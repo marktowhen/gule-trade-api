@@ -1,23 +1,23 @@
-package com.jingyunbank.etrade.api.pay.bo;
+package com.jingyunbank.etrade.api.order.bo;
 
 import java.io.Serializable;
 
 /**
- * 
- * 支付方式领域类
+ * 配送方式 业务类
+ * 如申通快递，韵达，顺丰等
  *
  */
-public class PayType implements Serializable{
-
-	private static final long serialVersionUID = -5467713442211706253L;
+public class DeliveryType implements Serializable{
+	
+	private static final long serialVersionUID = 3644175367717895095L;
 	
 	private String id;
+	private String type;
 	private String code;
 	private String name;
 	private String description;
 	private boolean disable;
-	private boolean online;
-	private String url;
+	
 	public String getId() {
 		return id;
 	}
@@ -26,6 +26,12 @@ public class PayType implements Serializable{
 	}
 	public String getCode() {
 		return code;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	public void setCode(String code) {
 		this.code = code;
@@ -47,18 +53,6 @@ public class PayType implements Serializable{
 	}
 	public void setDisable(boolean disable) {
 		this.disable = disable;
-	}
-	public boolean isOnline() {
-		return online;
-	}
-	public void setOnline(boolean online) {
-		this.online = online;
-	}
-	public String getUrl() {
-		return url;
-	}
-	public void setUrl(String url) {
-		this.url = url;
 	}
 	
 }
