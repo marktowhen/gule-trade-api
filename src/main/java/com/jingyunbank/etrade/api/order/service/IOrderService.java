@@ -12,9 +12,9 @@ public interface IOrderService {
 
 	public boolean save(Orders order) throws DataSavingException;
 	
-	public boolean update(Orders order) throws DataUpdatingException;
+	public boolean refresh(Orders order) throws DataUpdatingException;
 	
-	public Optional<Orders> getByOrderNo(String orderno) ;
+	public Optional<Orders> singleByOrderNo(String orderno) ;
 	
 	public List<Orders> list(String uid);
 	
