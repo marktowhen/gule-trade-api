@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.order.bo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,9 +19,10 @@ public class Orders  implements Serializable{
 	private Date addtime;//下单时间
 	private String paytypeID;//支付方式 id
 	private String paytypeName;
-	private double price;//订单总价
+	private BigDecimal price;//订单总价
 	private String statusID;//订单状态id
 	private String statusName;
+	private BigDecimal postage;
 	
 	private List<Goods> goods = new LinkedList<Goods>();
 
@@ -88,14 +90,6 @@ public class Orders  implements Serializable{
 		this.paytypeName = paytypeName;
 	}
 
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
 	public String getStatusID() {
 		return statusID;
 	}
@@ -118,6 +112,22 @@ public class Orders  implements Serializable{
 
 	public void setGoods(List<Goods> goods) {
 		this.goods = goods;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public BigDecimal getPostage() {
+		return postage;
+	}
+
+	public void setPostage(BigDecimal postage) {
+		this.postage = postage;
 	}
 	
 }
