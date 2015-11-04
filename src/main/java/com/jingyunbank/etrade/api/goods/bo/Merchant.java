@@ -132,5 +132,7 @@ public class Merchant {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+	public static Merchant getInstance(){
+		return new Merchant();
+	}
 }

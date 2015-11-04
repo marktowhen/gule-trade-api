@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.goods.service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
@@ -16,5 +17,5 @@ public interface IMerchantService {
 	 * @param range
 	 * @return
 	 */
-	public List<Merchant> listMerchants();
+	public List<Merchant> listMerchants() throws IllegalAccessException, InvocationTargetException;
 }
