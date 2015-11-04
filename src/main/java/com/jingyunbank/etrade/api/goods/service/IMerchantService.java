@@ -3,7 +3,7 @@ package com.jingyunbank.etrade.api.goods.service;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
-import com.jingyunbank.etrade.api.good.bo.Merchant;
+import com.jingyunbank.etrade.api.goods.bo.Merchant;
 
 /**
  * 提供商家服务
