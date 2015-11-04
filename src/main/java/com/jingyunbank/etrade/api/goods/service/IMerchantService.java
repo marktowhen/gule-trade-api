@@ -11,5 +11,10 @@ import com.jingyunbank.etrade.api.goods.bo.Merchant;
  *
  */
 public interface IMerchantService {
-	public List<Merchant> list(Range range);
+	/**
+	 * 查找推荐商家
+	 * @param range
+	 * @return
+	 */
+	public List<Merchant> listMerchants();
 }
