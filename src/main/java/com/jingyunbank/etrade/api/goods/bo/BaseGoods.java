@@ -24,9 +24,12 @@ public class BaseGoods implements Serializable{
 	private String brandname;   //所属品牌
 	private String brand_desc;   //所属品牌描述
 	
+	private String type_id; //所属属性id
+	private String good_type_name; //所属类型
+	
 	private String goodname;  //商品名
 	private String goodcode;  //商品编码
-	private String goodtype; //所属类型
+	
 	private String price; //原价
 	private String discount; //折扣
 	private String discount_price; //折扣价
@@ -127,11 +130,18 @@ public class BaseGoods implements Serializable{
 	public void setGoodcode(String goodcode) {
 		this.goodcode = goodcode;
 	}
-	public String getGoodtype() {
-		return goodtype;
+
+	public String getType_id() {
+		return type_id;
 	}
-	public void setGoodtype(String goodtype) {
-		this.goodtype = goodtype;
+	public void setType_id(String type_id) {
+		this.type_id = type_id;
+	}
+	public String getGood_type_name() {
+		return good_type_name;
+	}
+	public void setGood_type_name(String good_type_name) {
+		this.good_type_name = good_type_name;
 	}
 	public String getPrice() {
 		return price;
