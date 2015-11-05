@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.goods.bo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 
@@ -30,13 +31,16 @@ public class BaseGoods implements Serializable{
 	private String goodname;  //商品名
 	private String goodcode;  //商品编码
 	
-	private String price; //原价
+	private BigDecimal price; //原价
+	private BigDecimal special_price; //特价
+	private BigDecimal now_price; //现价
 	private String discount; //折扣
-	private String discount_price; //折扣价
+	private BigDecimal discount_price; //折扣价
 	private String show_path;  //展示图片
 	private String thumb_path; //缩略图
 	private String count; //库存
 	private String volume; //销量
+	private String goodaddtime;//商品添加时间
 	
 	/** 产品标准号*/
 	private String standardNo;
@@ -118,19 +122,6 @@ public class BaseGoods implements Serializable{
 	public void setBrand_desc(String brand_desc) {
 		this.brand_desc = brand_desc;
 	}
-	public String getGoodname() {
-		return goodname;
-	}
-	public void setGoodname(String goodname) {
-		this.goodname = goodname;
-	}
-	public String getGoodcode() {
-		return goodcode;
-	}
-	public void setGoodcode(String goodcode) {
-		this.goodcode = goodcode;
-	}
-
 	public String getType_id() {
 		return type_id;
 	}
@@ -143,11 +134,35 @@ public class BaseGoods implements Serializable{
 	public void setGood_type_name(String good_type_name) {
 		this.good_type_name = good_type_name;
 	}
-	public String getPrice() {
+	public String getGoodname() {
+		return goodname;
+	}
+	public void setGoodname(String goodname) {
+		this.goodname = goodname;
+	}
+	public String getGoodcode() {
+		return goodcode;
+	}
+	public void setGoodcode(String goodcode) {
+		this.goodcode = goodcode;
+	}
+	public BigDecimal getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
+	}
+	public BigDecimal getSpecial_price() {
+		return special_price;
+	}
+	public void setSpecial_price(BigDecimal special_price) {
+		this.special_price = special_price;
+	}
+	public BigDecimal getNow_price() {
+		return now_price;
+	}
+	public void setNow_price(BigDecimal now_price) {
+		this.now_price = now_price;
 	}
 	public String getDiscount() {
 		return discount;
@@ -155,10 +170,10 @@ public class BaseGoods implements Serializable{
 	public void setDiscount(String discount) {
 		this.discount = discount;
 	}
-	public String getDiscount_price() {
+	public BigDecimal getDiscount_price() {
 		return discount_price;
 	}
-	public void setDiscount_price(String discount_price) {
+	public void setDiscount_price(BigDecimal discount_price) {
 		this.discount_price = discount_price;
 	}
 	public String getShow_path() {
@@ -281,6 +296,13 @@ public class BaseGoods implements Serializable{
 	public void setUnit(String unit) {
 		this.unit = unit;
 	}
+	public String getGoodaddtime() {
+		return goodaddtime;
+	}
+	public void setGoodaddtime(String goodaddtime) {
+		this.goodaddtime = goodaddtime;
+	}
+	
 	
 	
 	

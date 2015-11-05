@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.goods.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.jingyunbank.etrade.api.goods.bo.Goods;
 
@@ -31,4 +32,11 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<Goods> listTypes() throws Exception;
+	/**
+	 * 根据多条件查询商品
+	 * @param map 参数封装为map对象
+	 * @return
+	 * @throws Exception 
+	 */
+	public List<Goods> listGoodsByWhere(Map<String,Object> map) throws Exception;
 }
