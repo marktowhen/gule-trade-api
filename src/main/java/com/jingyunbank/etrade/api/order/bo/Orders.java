@@ -16,6 +16,7 @@ public class Orders  implements Serializable{
 	private String receiver;//收货人
 	private String addressID;//收货地址->address id
 	private String UID;//下单人
+	private String MID;
 	private Date addtime;//下单时间
 	private String paytypeID;//支付方式 id
 	private String paytypeName;
@@ -128,6 +129,14 @@ public class Orders  implements Serializable{
 
 	public void setPostage(BigDecimal postage) {
 		this.postage = postage;
+	}
+
+	public String getMID() {
+		return MID;
+	}
+
+	public void setMID(String mID) {
+		MID = mID;
 	}
 	
 }

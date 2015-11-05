@@ -11,6 +11,13 @@ import com.jingyunbank.etrade.api.order.bo.Refund;
 
 public interface IOrderContextService {
 	
+	/**
+	 * 生成订单信息<br>
+	 * 用户填写完订单详情后点击确定按钮，完成订单提交
+	 * <br>
+	 * @param order
+	 * @throws OrderGenerateException
+	 */
 	public void generate(Orders order) throws OrderGenerateException;
 	/**
 	 * 更新订单的信息<br>

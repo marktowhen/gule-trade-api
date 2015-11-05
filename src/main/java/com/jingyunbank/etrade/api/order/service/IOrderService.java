@@ -10,13 +10,15 @@ import com.jingyunbank.etrade.api.order.bo.Orders;
 
 public interface IOrderService {
 
-	public boolean save(Orders order) throws DataSavingException;
+	public void save(Orders order) throws DataSavingException;
 	
-	public boolean refresh(Orders order) throws DataUpdatingException;
+	public void refresh(Orders order) throws DataUpdatingException;
 	
 	public Optional<Orders> singleByOrderNo(String orderno) ;
 	
 	public List<Orders> list(String uid);
+	
+	public List<Orders> list();
 	
 	public List<Orders> list(Date start, Date end);
 	
