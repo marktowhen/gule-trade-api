@@ -10,29 +10,37 @@ public class Address implements Serializable{
 
 	private static final long serialVersionUID = -3775543595566670218L;
 	
-	private String id;
-	private String uid;
-	private String name;
-	private int country;
-	private int province;
-	private int city;
-	private String address;
-	private String zipcode;
-	private String receiver;
-	private String mobile;
-	private String telephone;
-	private boolean defaulted;
-	public String getId() {
-		return id;
+	private String ID;
+	private String UID;//用户id
+	private String name;//标题
+	private int country;//国家
+	private int province;//省
+	private int city;//市
+	private String address;//详细地址
+	private String zipcode;//邮编
+	private String receiver;//接收人
+	private String mobile;//手机
+	private String telephone;//座机
+	private boolean defaulted;//是否默认
+	private boolean valid;//是否有效
+	
+	public boolean isValid() {
+		return valid;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setValid(boolean valid) {
+		this.valid = valid;
 	}
-	public String getUid() {
-		return uid;
+	public String getID() {
+		return ID;
 	}
-	public void setUid(String uid) {
-		this.uid = uid;
+	public void setID(String iD) {
+		ID = iD;
+	}
+	public String getUID() {
+		return UID;
+	}
+	public void setUID(String uID) {
+		UID = uID;
 	}
 	public String getName() {
 		return name;
