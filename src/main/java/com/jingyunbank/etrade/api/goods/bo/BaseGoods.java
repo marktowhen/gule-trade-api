@@ -30,14 +30,19 @@ public class BaseGoods implements Serializable{
 	
 	private String goodname;  //商品名
 	private String goodcode;  //商品编码
-	
 	private BigDecimal price; //原价
 	private BigDecimal special_price; //特价
 	private BigDecimal now_price; //现价
 	private String discount; //折扣
 	private BigDecimal discount_price; //折扣价
-	private String show_path;  //展示图片
-	private String thumb_path; //缩略图
+	private String show_path_1;  //展示图片
+	private String show_path_2;  //展示图片
+	private String show_path_3;  //展示图片
+	private String show_path_4;  //展示图片
+	private String thumb_path_1; //缩略图
+	private String thumb_path_2; //缩略图
+	private String thumb_path_3; //缩略图
+	private String thumb_path_4; //缩略图
 	private String count; //库存
 	private String volume; //销量
 	private String goodaddtime;//商品添加时间
@@ -74,6 +79,56 @@ public class BaseGoods implements Serializable{
 	private String weight;
 	/** 单位*/
 	private String unit;
+	
+	
+	public String getShow_path_1() {
+		return show_path_1;
+	}
+	public void setShow_path_1(String show_path_1) {
+		this.show_path_1 = show_path_1;
+	}
+	public String getShow_path_2() {
+		return show_path_2;
+	}
+	public void setShow_path_2(String show_path_2) {
+		this.show_path_2 = show_path_2;
+	}
+	public String getShow_path_3() {
+		return show_path_3;
+	}
+	public void setShow_path_3(String show_path_3) {
+		this.show_path_3 = show_path_3;
+	}
+	public String getShow_path_4() {
+		return show_path_4;
+	}
+	public void setShow_path_4(String show_path_4) {
+		this.show_path_4 = show_path_4;
+	}
+	public String getThumb_path_1() {
+		return thumb_path_1;
+	}
+	public void setThumb_path_1(String thumb_path_1) {
+		this.thumb_path_1 = thumb_path_1;
+	}
+	public String getThumb_path_2() {
+		return thumb_path_2;
+	}
+	public void setThumb_path_2(String thumb_path_2) {
+		this.thumb_path_2 = thumb_path_2;
+	}
+	public String getThumb_path_3() {
+		return thumb_path_3;
+	}
+	public void setThumb_path_3(String thumb_path_3) {
+		this.thumb_path_3 = thumb_path_3;
+	}
+	public String getThumb_path_4() {
+		return thumb_path_4;
+	}
+	public void setThumb_path_4(String thumb_path_4) {
+		this.thumb_path_4 = thumb_path_4;
+	}
 	public String getId() {
 		return id;
 	}
@@ -176,18 +231,7 @@ public class BaseGoods implements Serializable{
 	public void setDiscount_price(BigDecimal discount_price) {
 		this.discount_price = discount_price;
 	}
-	public String getShow_path() {
-		return show_path;
-	}
-	public void setShow_path(String show_path) {
-		this.show_path = show_path;
-	}
-	public String getThumb_path() {
-		return thumb_path;
-	}
-	public void setThumb_path(String thumb_path) {
-		this.thumb_path = thumb_path;
-	}
+	
 	public String getCount() {
 		return count;
 	}
