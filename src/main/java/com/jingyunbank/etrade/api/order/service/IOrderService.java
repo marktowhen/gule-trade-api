@@ -5,14 +5,14 @@ import java.util.List;
 import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.exception.DataUpdatingException;
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 
 public interface IOrderService {
 
 	public void save(Orders order) throws DataSavingException;
 	
-	public void refresh(Orders order) throws DataUpdatingException;
+	public void refresh(Orders order) throws DataRefreshingException;
 	
 	public Optional<Orders> singleByOrderNo(String orderno) ;
 	

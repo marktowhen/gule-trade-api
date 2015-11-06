@@ -203,3 +203,15 @@ CREATE TABLE `jingyun_etrade`.`refund_image` (
   `rid` CHAR(22) NULL,
   `path` VARCHAR(255) NULL,
   PRIMARY KEY (`id`));
+
+------------------------------------购物车------------------------------------- 
+CREATE TABLE `jingyun_etrade`.`cart` (
+  `id` CHAR(22) NOT NULL,
+  `uid` CHAR(22) NULL,
+  `gid` CHAR(22) NULL,
+  `price` DECIMAL(8,2) NULL,
+  `count` INT NULL,
+  `addtime` DATETIME NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+COMMENT = '购物车表';
