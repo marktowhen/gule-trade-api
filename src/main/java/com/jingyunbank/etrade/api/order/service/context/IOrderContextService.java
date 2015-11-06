@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.order.service.context;
 
+import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.OrderDeliveringException;
 import com.jingyunbank.etrade.api.exception.OrderGenerateException;
 import com.jingyunbank.etrade.api.exception.OrderPaidException;
@@ -86,7 +87,7 @@ public interface IOrderContextService {
 	 * 将已经取消的订单更新为删除状态，不在显示在用户的订单列表中
 	 * @param orderno
 	 */
-	public void remove(String orderno);
+	public void remove(String id) throws DataRemovingException;
 	/**
 	 * 申请退款<br>
 	 * 对为过退换货期的商品或订单申请退款，将订单状态修改为退款中，等待卖家同意

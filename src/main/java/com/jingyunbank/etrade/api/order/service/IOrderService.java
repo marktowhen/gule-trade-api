@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.order.bo.Orders;
@@ -21,5 +22,7 @@ public interface IOrderService {
 	public List<Orders> list();
 	
 	public List<Orders> list(Date start, Date end);
+
+	public void remove(String id) throws DataRemovingException;
 	
 }
