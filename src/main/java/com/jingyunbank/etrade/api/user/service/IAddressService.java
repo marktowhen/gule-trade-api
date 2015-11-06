@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.user.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.user.bo.Address;
@@ -43,6 +44,14 @@ public interface IAddressService {
 	 * 2015年11月5日 qxs
 	 */
 	public List<Address> list(String uid);
+	
+	/**
+	 * 分页查询有效地址
+	 * @param uid
+	 * @return
+	 * 2015年11月5日 qxs
+	 */
+	public List<Address> listPage(Address address, Range range);
 	
 	
 	
