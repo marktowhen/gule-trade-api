@@ -15,7 +15,7 @@ public interface ICartService {
 	
 	public void refresh(Cart cart) throws DataRefreshingException;
 	
-	public void remove(Cart cart) throws DataRemovingException;
+	public void remove(String id) throws DataRemovingException;
 	
 	public List<Cart> list(String uid);
 	
