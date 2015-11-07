@@ -7,6 +7,7 @@ import java.util.Optional;
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.user.bo.UserInfo;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
 public interface IUserService {
@@ -28,7 +29,7 @@ public interface IUserService {
 	 */
 	public Optional<Users> getByKey(String key);
 	
-	public boolean save(Users user) throws DataSavingException;
+	public boolean save(Users user, UserInfo info) throws DataSavingException;
 	
 	public boolean update(Users user) throws DataRefreshingException;
 	
