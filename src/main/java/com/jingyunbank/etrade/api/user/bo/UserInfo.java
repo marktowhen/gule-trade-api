@@ -13,7 +13,7 @@ public class UserInfo  implements Serializable{
 	private int country;//国家
 	private int province;//省份
 	private int city;//城市
-	private String addres;//街道
+	private String address;//街道
 	private int education;//教育程度
 	private int job;//职业
 	private int income;//收入
@@ -64,11 +64,13 @@ public class UserInfo  implements Serializable{
 	public void setCity(int city) {
 		this.city = city;
 	}
-	public String getAddres() {
-		return addres;
+
+	public String getAddress() {
+		return address;
 	}
-	public void setAddres(String addres) {
-		this.addres = addres;
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public int getEducation() {
 		return education;
