@@ -27,7 +27,7 @@ public interface IAddressService {
 	 * @throws DataRefreshingException
 	 * 2015年11月5日 qxs
 	 */
-	public boolean delete(Address address) throws DataRefreshingException ;
+	public boolean remove(Address address) throws DataRefreshingException ;
 	
 	/**
 	 * 查找单条地址详情
@@ -52,6 +52,17 @@ public interface IAddressService {
 	 * 2015年11月5日 qxs
 	 */
 	public List<Address> listPage(Address address, Range range);
+
+	
+	
+	/**
+	 * 设置默认收货地址
+	 * @param id
+	 * @param uid
+	 * 2015年11月9日 qxs
+	 * @throws DataRefreshingException 
+	 */
+	public void refreshDefualt(String id, String uid) throws DataRefreshingException;
 	
 	
 	

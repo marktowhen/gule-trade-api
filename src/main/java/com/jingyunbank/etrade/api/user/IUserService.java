@@ -31,7 +31,7 @@ public interface IUserService {
 	
 	public boolean save(Users user, UserInfo info) throws DataSavingException;
 	
-	public boolean update(Users user) throws DataRefreshingException;
+	public boolean refresh(Users user) throws DataRefreshingException;
 	
 	public List<Users> list(Range range);
 	

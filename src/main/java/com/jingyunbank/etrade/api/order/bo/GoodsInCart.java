@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.jingyunbank.etrade.api.goods.bo.Goods;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class GoodsInCart implements Serializable{
@@ -12,7 +11,6 @@ public class GoodsInCart implements Serializable{
 	private static final long serialVersionUID = -5109034256152795171L;
 	private String ID;
 	private Cart cart;
-	private Goods goods;
 	private Users user;
 	private String cartID;
 	private String GID;
@@ -35,12 +33,6 @@ public class GoodsInCart implements Serializable{
 	}
 	public void setCart(Cart cart) {
 		this.cart = cart;
-	}
-	public Goods getGoods() {
-		return goods;
-	}
-	public void setGoods(Goods goods) {
-		this.goods = goods;
 	}
 	public String getCartID() {
 		return cartID;
