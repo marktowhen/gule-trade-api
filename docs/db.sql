@@ -215,3 +215,52 @@ CREATE TABLE `jingyun_etrade`.`cart` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
 COMMENT = '购物车表';
+
+-----------------------------------收货地址-------------------------------------
+
+CREATE TABLE `address` (
+  `id` char(22) NOT NULL,
+  `uid` char(22) NOT NULL COMMENT 'user id',
+  `name` varchar(20) DEFAULT NULL COMMENT '收货地址标题',
+  `country` int(3) NOT NULL COMMENT '国家',
+  `province` int(5) NOT NULL,
+  `city` int(10) NOT NULL,
+  `address` varchar(80) NOT NULL COMMENT '详细地址',
+  `zipcode` varchar(10) DEFAULT NULL COMMENT '邮政编码',
+  `receiver` varchar(30) NOT NULL COMMENT '收货人',
+  `mobile` varchar(11) NOT NULL COMMENT '收件人手机',
+  `telephone` varchar(15) DEFAULT NULL COMMENT '座机',
+  `defaulted` tinyint(1) DEFAULT NULL COMMENT '是否默认',
+  `valid` tinyint(1) DEFAULT NULL COMMENT '是否有效',
+  PRIMARY KEY (`id`),
+  KEY `INDEX_ADDRESS_UID` (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-----------------------------------国家-------------------------------------
+CREATE TABLE `country` (
+  `country_id` int(3) NOT NULL,
+  `country_name` varchar(20) NOT NULL COMMENT '名字',
+  PRIMARY KEY (`country_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-----------------------------------省份-------------------------------------
+CREATE TABLE `province` (
+  `province_id` bigint(20) NOT NULL,
+  `province_name` varchar(50) NOT NULL,
+  `country_id` int(3) DEFAULT NULL,
+  PRIMARY KEY (`province_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-----------------------------------城市-------------------------------------
+
+CREATE TABLE `city` (
+  `city_id` bigint(20) NOT NULL,
+  `city_name` varchar(50) DEFAULT NULL,
+  `zip_code` varchar(50) DEFAULT NULL,
+  `province_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`city_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
