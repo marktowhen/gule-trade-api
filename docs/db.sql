@@ -205,13 +205,23 @@ CREATE TABLE `jingyun_etrade`.`refund_image` (
   PRIMARY KEY (`id`));
 
 ------------------------------------购物车------------------------------------- 
-CREATE TABLE `jingyun_etrade`.`cart` (
+CREATE TABLE `cart` (
+  `id` char(22) NOT NULL,
+  `uid` char(22) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `uid_UNIQUE` (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='购物车表，每个用户只有一个购物车记录，通常在用户注册时生成';
+
+
+CREATE TABLE `jingyun_etrade`.`goods_in_cart` (
   `id` CHAR(22) NOT NULL,
-  `uid` CHAR(22) NULL,
-  `gid` CHAR(22) NULL,
+  `cart_id` CHAR(22) NULL COMMENT '所属购物车',
+  `uid` CHAR(22) NULL COMMENT '所属用户（冗余字段，与购物车表中重复，用于避免连表查询）',
+  `gid` CHAR(22) NULL COMMENT '商品id',
   `price` DECIMAL(8,2) NULL,
   `count` INT NULL,
   `addtime` DATETIME NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
-COMMENT = '购物车表';
+COMMENT = '购物车中的商品';
