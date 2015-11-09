@@ -39,4 +39,11 @@ public interface IGoodsService {
 	 * @throws Exception 
 	 */
 	public List<Goods> listGoodsByWhere(Map<String,Object> map) throws Exception;
+	/**
+	 * 首页查询热门推荐商品
+	 * @return
+	 * @throws Exception
+	 */
+	public List<Goods> listHotGoods() throws Exception;
+	
 }

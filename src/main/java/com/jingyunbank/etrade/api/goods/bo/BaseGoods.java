@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 /**
  * 
 * Title: 商品的包装类[包含商品 商户 品牌属性] 
+* 实体类 业务类可以继承该类
 * @author    duanxf
 * @date      2015年11月4日
  */
