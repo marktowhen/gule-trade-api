@@ -9,7 +9,7 @@ import com.jingyunbank.etrade.api.user.bo.UserInfo;
 public interface IUserInfoService {
 public boolean save(UserInfo uinfo) throws DataSavingException;
 	
-	public boolean update(UserInfo uinfo) throws DataRefreshingException;
+	public boolean refresh(UserInfo uinfo) throws DataRefreshingException;
 	
 	public Optional<UserInfo> getByUid(String id);
 	
@@ -18,4 +18,6 @@ public boolean save(UserInfo uinfo) throws DataSavingException;
 	public Optional<UserInfo> getByUname(String username);
 	
 	public Optional<UserInfo> getByEmail(String email);
+	
+	public int UidExists(String uid);
 }
