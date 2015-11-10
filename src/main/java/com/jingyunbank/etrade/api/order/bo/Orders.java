@@ -2,7 +2,9 @@ package com.jingyunbank.etrade.api.order.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Orders  implements Serializable{
 
@@ -13,13 +15,20 @@ public class Orders  implements Serializable{
 	private String addressID;//收货地址->address id
 	private String UID;//下单人
 	private String MID;
+	private String mname;
 	private Date addtime;//下单时间
 	private String paytypeID;//支付方式 id
 	private String paytypeName;
+	private String deliveryTypeID;
+	private String deliveryTypeName;
 	private BigDecimal price;//订单总价
-	private String statusID;//订单状态id
+	private String statusCode;//订单状态code
 	private String statusName;
 	private BigDecimal postage;
+	private String note;
+	
+	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
+	private List<OrderTrace> traces = new ArrayList<OrderTrace>();
 	
 	public String getID() {
 		return ID;
@@ -51,6 +60,14 @@ public class Orders  implements Serializable{
 
 	public void setReceiver(String receiver) {
 		this.receiver = receiver;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
 	}
 
 	public String getAddressID() {
@@ -85,12 +102,12 @@ public class Orders  implements Serializable{
 		this.paytypeName = paytypeName;
 	}
 
-	public String getStatusID() {
-		return statusID;
+	public String getStatusCode() {
+		return statusCode;
 	}
 
-	public void setStatusID(String statusID) {
-		this.statusID = statusID;
+	public void setStatusCode(String code) {
+		this.statusCode = code;
 	}
 
 	public String getStatusName() {
@@ -123,6 +140,46 @@ public class Orders  implements Serializable{
 
 	public void setMID(String mID) {
 		MID = mID;
+	}
+
+	public String getDeliveryTypeID() {
+		return deliveryTypeID;
+	}
+
+	public void setDeliveryTypeID(String deliveryTypeID) {
+		this.deliveryTypeID = deliveryTypeID;
+	}
+
+	public String getDeliveryTypeName() {
+		return deliveryTypeName;
+	}
+
+	public void setDeliveryTypeName(String deliveryTypeName) {
+		this.deliveryTypeName = deliveryTypeName;
+	}
+
+	public List<OrderGoods> getGoods() {
+		return goods;
+	}
+
+	public void setGoods(List<OrderGoods> goods) {
+		this.goods = goods;
+	}
+
+	public List<OrderTrace> getTraces() {
+		return traces;
+	}
+
+	public void setTraces(List<OrderTrace> traces) {
+		this.traces = traces;
+	}
+
+	public String getMname() {
+		return mname;
+	}
+
+	public void setMname(String mname) {
+		this.mname = mname;
 	}
 	
 }

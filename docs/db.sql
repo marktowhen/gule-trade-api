@@ -38,20 +38,26 @@ CREATE TABLE `jingyun_etrade`.`users_info` (
 
   
 ------------------------------------订单表-------------------------------------
-CREATE TABLE `jingyun_etrade`.`orders` (
-  `id` CHAR(22) NOT NULL,
-  `orderno` BIGINT NOT NULL,
-  `uid` CHAR(22) NOT NULL,
-  `addtime` DATETIME NOT NULL,
-  `paytype_id` CHAR(22) NULL COMMENT '支付方式id，用来索引支付方式表paytype',
-  `paytype_name` VARCHAR(20) NULL COMMENT '支付方式名称，冗余字段，用来订单查询时的显示',
-  `receiver` VARCHAR(20) NULL COMMENT '收货人，来自收货地址，冗余字段，用户订单显示',
-  `address_id` CHAR(22) NULL,
-  `price` DECIMAL(8,2) NULL,
-  `status_id` CHAR(22) NULL COMMENT '订单状态id，索引order_status_desc表',
-  `status_name` VARCHAR(20) NULL COMMENT '状态名称，冗余字段，用来订单查询时的显示',
-  UNIQUE INDEX `orderno_UNIQUE` (`orderno` ASC),
-  PRIMARY KEY (`id`));
+CREATE TABLE `orders` (
+  `id` char(22) NOT NULL,
+  `orderno` bigint(20) NOT NULL,
+  `uid` char(22) NOT NULL,
+  `mid` char(22) NOT NULL COMMENT '商家',
+  `mname` varchar(50) DEFAULT NULL,
+  `addtime` datetime NOT NULL,
+  `paytype_id` char(22) DEFAULT NULL COMMENT '支付方式id，用来索引支付方式表paytype',
+  `paytype_name` varchar(20) DEFAULT NULL COMMENT '支付方式名称，冗余字段，用来订单查询时的显示',
+  `receiver` varchar(20) DEFAULT NULL COMMENT '收货人，来自收货地址，冗余字段，用户订单显示',
+  `address_id` char(22) DEFAULT NULL,
+  `price` decimal(8,2) NOT NULL,
+  `status_code` varchar(12) NOT NULL COMMENT '订单状态code，索引order_status_desc表',
+  `status_name` varchar(20) DEFAULT NULL COMMENT '状态名称，冗余字段，用来订单查询时的显示',
+  `postage` decimal(8,2) DEFAULT NULL COMMENT '订单邮费',
+  `note` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `orderno_UNIQUE` (`orderno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 ------------------------------------支付方式表-------------------------------------
 CREATE TABLE `jingyun_etrade`.`pay_type` (
@@ -76,7 +82,7 @@ CREATE TABLE `jingyun_etrade`.`delivery_type` (
 
 
 ------------------------------------订单详情表-------------------------------------
-CREATE TABLE `order_detail` (
+CREATE TABLE `order_goods` (
   `id` char(22) NOT NULL,
   `oid` char(22) NOT NULL,
   `gid` char(22) NOT NULL,
@@ -90,7 +96,7 @@ CREATE TABLE `order_detail` (
   `reduce` decimal(8,2) DEFAULT NULL COMMENT '下单时的优惠价格，优惠快照',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='订单详情表，描述该订单中包含哪些商品，以及商品价格，邮费，优惠价格等订单快照';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单详情表，描述该订单中包含哪些商品，以及商品价格，邮费，优惠价格等订单快照';
 
 
 ------------------------------------订单追踪表-------------------------------------
@@ -135,16 +141,15 @@ CREATE TABLE `jingyun_etrade`.`order_delivery` (
 COMMENT = '订单物流信息，卖家将发送的快递单号填入该' ;
 
 ------------------------------------订单状态定义表-------------------------------------
-CREATE TABLE `jingyun_etrade`.`order_status_desc` (
-  `id` CHAR(22) NOT NULL,
-  `name` VARCHAR(20) NULL,
-  `code` VARCHAR(12) NULL,
-  `description` VARCHAR(255) NULL,
-  `order` INT NULL,
-  `visible` TINYINT NULL COMMENT '该状态订单是否对用户可见',
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `code_UNIQUE` (`code` ASC))
-COMMENT = '该类定义了整个订单的生命周期中各个节点的状态' ;
+CREATE TABLE `order_status_desc` (
+  `code` varchar(12) NOT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `order` int(11) DEFAULT NULL,
+  `visible` tinyint(4) DEFAULT NULL COMMENT '该状态订单是否对用户可见',
+  PRIMARY KEY (`code`),
+  UNIQUE KEY `code_UNIQUE` (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='该类定义了整个订单的生命周期中各个节点的状态';
 
 ------------------------------------退款原因定义表-------------------------------------
 CREATE TABLE `jingyun_etrade`.`refund_reason_desc` (
@@ -154,7 +159,7 @@ CREATE TABLE `jingyun_etrade`.`refund_reason_desc` (
   `description` varchar(255) DEFAULT NULL,
   `visible` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 ------------------------------------退单表-------------------------------------

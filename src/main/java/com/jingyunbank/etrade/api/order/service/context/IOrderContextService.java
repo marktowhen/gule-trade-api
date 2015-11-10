@@ -1,6 +1,9 @@
 package com.jingyunbank.etrade.api.order.service.context;
 
+import java.util.List;
+
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
+import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.OrderDeliveringException;
 import com.jingyunbank.etrade.api.exception.OrderGenerateException;
 import com.jingyunbank.etrade.api.exception.OrderPaidException;
@@ -13,13 +16,19 @@ import com.jingyunbank.etrade.api.order.bo.Refund;
 public interface IOrderContextService {
 	
 	/**
-	 * 生成订单信息<br>
+	 * 保存订单信息<br>
 	 * 用户填写完订单详情后点击确定按钮，完成订单提交
 	 * <br>
 	 * @param order
 	 * @throws OrderGenerateException
 	 */
-	public void generate(Orders order) throws OrderGenerateException;
+	public void save(Orders order) throws DataSavingException;
+	/**
+	 * 保存多个订单信息
+	 * @param orders
+	 * @throws DataSavingException
+	 */
+	public void save(List<Orders> orders) throws DataSavingException;
 	/**
 	 * 更新订单的信息<br>
 	 * 用户支付前，可以修改自己的订单信息，如支付方式，收货地址，商品数量，移除商品等

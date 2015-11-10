@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 改对象定义订单中包含的商品以及下单时的商品价格等信息
  *
  */
-public class OrderDetail implements Serializable{
+public class OrderGoods implements Serializable{
 
 	private static final long serialVersionUID = -3377063429817839243L;
 	
