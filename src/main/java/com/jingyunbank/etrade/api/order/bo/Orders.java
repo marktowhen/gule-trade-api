@@ -3,10 +3,6 @@ package com.jingyunbank.etrade.api.order.bo;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-
-import com.jingyunbank.etrade.api.product.bo.Goods;
 
 public class Orders  implements Serializable{
 
@@ -25,8 +21,6 @@ public class Orders  implements Serializable{
 	private String statusName;
 	private BigDecimal postage;
 	
-	private List<Goods> goods = new LinkedList<Goods>();
-
 	public String getID() {
 		return ID;
 	}
@@ -105,14 +99,6 @@ public class Orders  implements Serializable{
 
 	public void setStatusName(String statusName) {
 		this.statusName = statusName;
-	}
-
-	public List<Goods> getGoods() {
-		return goods;
-	}
-
-	public void setGoods(List<Goods> goods) {
-		this.goods = goods;
 	}
 
 	public BigDecimal getPrice() {
