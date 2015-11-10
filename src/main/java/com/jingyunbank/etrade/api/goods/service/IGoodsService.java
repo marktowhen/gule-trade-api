@@ -1,13 +1,13 @@
 package com.jingyunbank.etrade.api.goods.service;
 
 import java.util.List;
-import java.util.Map;
 
 import com.jingyunbank.core.Range;
-import com.jingyunbank.etrade.api.goods.bo.HotGoods;
-import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
+import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
+import com.jingyunbank.etrade.api.goods.bo.HotGoods;
+import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 
 /**
  * 
@@ -82,4 +82,11 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listMerchantByWhereGoods(GoodsShow show) throws Exception;
+	/**
+	 * 阿胶后台查询24小时热门推荐商品
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<Hot24Goods> listHot24Goods() throws Exception;
 }
