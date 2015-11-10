@@ -22,8 +22,9 @@ public class GoodsShow implements Serializable {
 	private BigDecimal beginPrice;
 	private BigDecimal endPrice;
 	private int order;
-
 	
+	private String goodsName; //结果查询使用
+	private String MID; //  相关产品 -->店铺ID
 
 	public BigDecimal getBeginPrice() {
 		return beginPrice;
@@ -73,4 +74,21 @@ public class GoodsShow implements Serializable {
 		this.order = order;
 	}
 
+	public String getGoodsName() {
+		return goodsName;
+	}
+
+	public void setGoodsName(String goodsName) {
+		this.goodsName = goodsName;
+	}
+
+	public String getMID() {
+		return MID;
+	}
+
+	public void setMID(String mID) {
+		MID = mID;
+	}
+
+	
 }
