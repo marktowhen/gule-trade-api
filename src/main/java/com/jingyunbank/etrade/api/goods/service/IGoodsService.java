@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
+import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
 
 /**
@@ -22,7 +23,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<HotGoods> listGoodsByLikeName(String goodsname,Range range) throws Exception;
+	public List<ShowGoods> listGoodsByLikeName(String goodsname,Range range) throws Exception;
 
 	/**
 	 * 查询所有的品牌
@@ -30,7 +31,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<HotGoods> listBrands() throws Exception;
+	public List<ShowGoods> listBrands() throws Exception;
 
 	/**
 	 * 查询所有的类别
@@ -38,7 +39,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<HotGoods> listTypes() throws Exception;
+	public List<ShowGoods> listTypes() throws Exception;
 
 	/**
 	 * 根据多条件查询商品
@@ -46,7 +47,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<HotGoods> listGoodsByWhere(GoodsShow goodsshow,Range range) throws Exception;
+	public List<ShowGoods> listGoodsByWhere(GoodsShow goodsshow,Range range) throws Exception;
 
 	/**
 	 * 首页查询热门推荐商品
@@ -55,5 +56,13 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<HotGoods> listHotGoods() throws Exception;
-
+	
+	
+	/**
+	 * 查询宝贝推荐
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listRecommend()throws Exception;
 }
