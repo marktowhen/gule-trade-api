@@ -10,6 +10,7 @@ import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.user.bo.UserInfo;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
+
 public interface IUserService {
 
 	public Optional<Users> getByUid(String id);
@@ -50,4 +51,5 @@ public interface IUserService {
 	 */
 	public boolean exists(String key);
 	
+	/*public boolean updatePhone(Users user) throws DataRefreshingException;*/
 }
