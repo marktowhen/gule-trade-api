@@ -72,7 +72,7 @@ public class BaseGoods implements Serializable {
 	private String isGiftBox;// 是否礼盒装
 	private String weight;// 重量
 	private String unit;// 单位
-
+ 
 	public String getMID() {
 		return MID;
 	}
