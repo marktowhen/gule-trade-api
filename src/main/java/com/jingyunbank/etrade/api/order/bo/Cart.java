@@ -1,12 +1,16 @@
 package com.jingyunbank.etrade.api.order.bo;
 
+import java.io.Serializable;
+
 
 
 /**
  * 购物车 领域对象类
  */
-public class Cart {
+public class Cart implements Serializable{
 
+	private static final long serialVersionUID = 1628693720175112831L;
+	
 	private String ID;
 	private String UID;
 

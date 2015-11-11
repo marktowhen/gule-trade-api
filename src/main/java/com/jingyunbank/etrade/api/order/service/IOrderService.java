@@ -13,6 +13,8 @@ public interface IOrderService {
 
 	public void save(Orders order) throws DataSavingException;
 	
+	public void save(List<Orders> order) throws DataSavingException;
+	
 	public void refresh(Orders order) throws DataRefreshingException;
 	
 	public Optional<Orders> singleByOrderNo(String orderno) ;

@@ -1,6 +1,8 @@
 package com.jingyunbank.etrade.api.order.bo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * 订单详情业务对象<br>
@@ -10,18 +12,18 @@ import java.io.Serializable;
 public class OrderGoods implements Serializable{
 
 	private static final long serialVersionUID = -3377063429817839243L;
-	
 	private String ID;
 	private String OID;//订单id
+	private long orderno;
 	private String GID;//商品id
-	private double price;//订单生成时的商品价格
+	private String gname;
+	private BigDecimal price;//订单生成时的商品价格
 	private int count;
 	private int points;//赠送积分
-	private double postage;//邮费
-	private String note;
-	private String statusID;//状态id，用户支持订单中某个商品的退款
-	private double payout;//实际付款
-	private double reduce;//优惠减免价格
+	private String statusCode;//状态id，用户支持订单中某个商品的退款
+	private BigDecimal payout;//实际付款
+	private BigDecimal reduce;//优惠减免价格
+	private Date addtime;
 	
 	public String getID() {
 		return ID;
@@ -41,12 +43,6 @@ public class OrderGoods implements Serializable{
 	public void setGID(String gID) {
 		GID = gID;
 	}
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
 	public int getCount() {
 		return count;
 	}
@@ -59,35 +55,47 @@ public class OrderGoods implements Serializable{
 	public void setPoints(int points) {
 		this.points = points;
 	}
-	public double getPostage() {
-		return postage;
+	public String getStatusCode() {
+		return statusCode;
 	}
-	public void setPostage(double postage) {
-		this.postage = postage;
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
 	}
-	public String getNote() {
-		return note;
+	public long getOrderno() {
+		return orderno;
 	}
-	public void setNote(String note) {
-		this.note = note;
+	public void setOrderno(long orderno) {
+		this.orderno = orderno;
 	}
-	public String getStatusID() {
-		return statusID;
+	public BigDecimal getPrice() {
+		return price;
 	}
-	public void setStatusID(String statusID) {
-		this.statusID = statusID;
+	public void setPrice(BigDecimal price) {
+		this.price = price;
 	}
-	public double getPayout() {
+	public BigDecimal getPayout() {
 		return payout;
 	}
-	public void setPayout(double payout) {
+	public void setPayout(BigDecimal payout) {
 		this.payout = payout;
 	}
-	public double getReduce() {
+	public BigDecimal getReduce() {
 		return reduce;
 	}
-	public void setReduce(double reduce) {
+	public void setReduce(BigDecimal reduce) {
 		this.reduce = reduce;
+	}
+	public String getGname() {
+		return gname;
+	}
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+	public Date getAddtime() {
+		return addtime;
+	}
+	public void setAddtime(Date addtime) {
+		this.addtime = addtime;
 	}
 	
 }

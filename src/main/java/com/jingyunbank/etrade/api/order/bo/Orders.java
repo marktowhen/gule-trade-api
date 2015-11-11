@@ -10,7 +10,7 @@ public class Orders  implements Serializable{
 
 	private static final long serialVersionUID = 2563253149671693408L;
 	private String ID;
-	private String orderno;
+	private long orderno;
 	private String receiver;//收货人
 	private String addressID;//收货地址->address id
 	private String UID;//下单人
@@ -46,11 +46,11 @@ public class Orders  implements Serializable{
 		UID = uID;
 	}
 
-	public String getOrderno() {
+	public long getOrderno() {
 		return orderno;
 	}
 
-	public void setOrderno(String orderno) {
+	public void setOrderno(long orderno) {
 		this.orderno = orderno;
 	}
 
