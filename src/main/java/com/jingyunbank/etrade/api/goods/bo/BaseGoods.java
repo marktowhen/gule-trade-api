@@ -35,7 +35,7 @@ public class BaseGoods implements Serializable {
 	private String goodsName; // 商品名
 	private String goodsCode; // 商品编码
 	private BigDecimal price; // 原价
-	private BigDecimal promotion_price; // 特价
+	private BigDecimal promotionPrice; // 促销价格
 	private BigDecimal nowPrice; // 现价
 	private String disCount; // 折扣
 	private BigDecimal discountPrice; // 折扣价
@@ -178,12 +178,12 @@ public class BaseGoods implements Serializable {
 	}
 
 
-	public BigDecimal getPromotion_price() {
-		return promotion_price;
+	public BigDecimal getPromotionPrice() {
+		return promotionPrice;
 	}
 
-	public void setPromotion_price(BigDecimal promotion_price) {
-		this.promotion_price = promotion_price;
+	public void setPromotionPrice(BigDecimal promotionPrice) {
+		this.promotionPrice = promotionPrice;
 	}
 
 	public BigDecimal getNowPrice() {
