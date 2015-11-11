@@ -75,13 +75,16 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<GoodsMerchant> listMerchantByWhere(GoodsShow show, Range range) throws Exception;
+
 	/**
 	 * 店铺相关产品
+	 * 
 	 * @param show
 	 * @return
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listMerchantByWhereGoods(GoodsShow show) throws Exception;
+
 	/**
 	 * 阿胶后台查询24小时热门推荐商品
 	 * 
@@ -89,4 +92,10 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<Hot24Goods> listHot24Goods() throws Exception;
+	/**
+	 * 根据推广排序查询推广商品
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listGoodsExpand() throws Exception;
 }
