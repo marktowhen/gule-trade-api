@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.user;
+package com.jingyunbank.etrade.api.user.service;
 
 import java.util.Optional;
 
@@ -13,11 +13,13 @@ public boolean save(UserInfo uinfo) throws DataSavingException;
 	
 	public Optional<UserInfo> getByUid(String id);
 	
-	public Optional<UserInfo> getByPhone(String phone);
-	
-	public Optional<UserInfo> getByUname(String username);
-	
-	public Optional<UserInfo> getByEmail(String email);
-	
 	public int UidExists(String uid);
+	/**
+	 * 更新头像
+	 * @param uinfo
+	 * @return
+	 * @throws DataRefreshingException
+	 * 2015年11月11日 qxs
+	 */
+	public boolean refreshPicture(UserInfo uinfo) throws DataRefreshingException;
 }
