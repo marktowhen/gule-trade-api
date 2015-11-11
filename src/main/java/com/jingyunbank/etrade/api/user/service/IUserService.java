@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.user;
+package com.jingyunbank.etrade.api.user.service;
 
 import java.util.Date;
 import java.util.List;
