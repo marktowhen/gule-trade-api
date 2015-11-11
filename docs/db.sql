@@ -278,3 +278,16 @@ CREATE TABLE `city` (
   PRIMARY KEY (`city_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--------------------------系统参数------------------------------
+
+CREATE TABLE `system_param` (
+  `id` varchar(22) NOT NULL,
+  `type` varchar(15) NOT NULL COMMENT '类别',
+  `name` varchar(15) NOT NULL COMMENT '参数名',
+  `value` varchar(30) NOT NULL COMMENT '参数值',
+  `description` varchar(40) DEFAULT NULL COMMENT '描述',
+  `add_time` datetime DEFAULT NULL COMMENT '添加时间',
+  `author` varchar(10) DEFAULT NULL COMMENT '添加人',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统参数';
+
