@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.goods.service;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.goods.bo.FootprintGoods;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
@@ -98,4 +99,11 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listGoodsExpand() throws Exception;
+	/**
+	 * 阿胶后台查询我的足迹
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<FootprintGoods> listFootprintGoods() throws Exception;
 }
