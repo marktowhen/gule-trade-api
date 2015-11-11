@@ -35,13 +35,16 @@ public class BaseGoods implements Serializable {
 	private String goodsName; // 商品名
 	private String goodsCode; // 商品编码
 	private BigDecimal price; // 原价
-	private BigDecimal specialPrice; // 特价
+	private BigDecimal promotion_price; // 特价
 	private BigDecimal nowPrice; // 现价
 	private String disCount; // 折扣
 	private BigDecimal discountPrice; // 折扣价
 	private String count; // 库存
 	private String volume; // 销量
 	private Date addTime;// 商品添加时间
+	private Date pro_start;  //促销开始时间
+	private Date pro_end;	//促销结束时间
+	private String pro_flag; //是否促销标志
 	
 	//----------------商品图片属性-----------------//
 	private String show_path_1; // 展示图片
@@ -174,12 +177,13 @@ public class BaseGoods implements Serializable {
 		this.price = price;
 	}
 
-	public BigDecimal getSpecialPrice() {
-		return specialPrice;
+
+	public BigDecimal getPromotion_price() {
+		return promotion_price;
 	}
 
-	public void setSpecialPrice(BigDecimal specialPrice) {
-		this.specialPrice = specialPrice;
+	public void setPromotion_price(BigDecimal promotion_price) {
+		this.promotion_price = promotion_price;
 	}
 
 	public BigDecimal getNowPrice() {
@@ -420,6 +424,30 @@ public class BaseGoods implements Serializable {
 
 	public void setUnit(String unit) {
 		this.unit = unit;
+	}
+
+	public Date getPro_start() {
+		return pro_start;
+	}
+
+	public void setPro_start(Date pro_start) {
+		this.pro_start = pro_start;
+	}
+
+	public Date getPro_end() {
+		return pro_end;
+	}
+
+	public void setPro_end(Date pro_end) {
+		this.pro_end = pro_end;
+	}
+
+	public String getPro_flag() {
+		return pro_flag;
+	}
+
+	public void setPro_flag(String pro_flag) {
+		this.pro_flag = pro_flag;
 	}
 
 }
