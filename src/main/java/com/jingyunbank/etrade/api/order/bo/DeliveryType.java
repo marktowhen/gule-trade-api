@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 配送方式 业务类
- * 如申通快递，韵达，顺丰等
+ * 包括，CMS，普通快递，邮政
  *
  */
 public class DeliveryType implements Serializable{

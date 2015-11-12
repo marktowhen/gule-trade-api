@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 
  * 支付方式领域类
- *
+ *	包括在线支付，线下支付，货到付款
  */
 public class PayType implements Serializable{
 
