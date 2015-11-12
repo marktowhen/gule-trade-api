@@ -118,6 +118,12 @@ public interface IGoodsService {
 	 * @throws DataSavingException
 	 */
 	public boolean saveFootprint(String uid,String gid) throws DataSavingException;
-
+	/**
+	 * 在结果中查询商品
+	 * @param bo
+	 * @param range
+	 * @return
+	 * @throws Exception
+	 */
 	public List<ShowGoods> listGoodsByGoodsResult(GoodsShow bo, Range range) throws Exception;
 }
