@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.goods.service;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.goods.bo.FootprintGoods;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
@@ -109,6 +110,14 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<FootprintGoods> listFootprintGoods() throws Exception;
+	/**
+	 * 保存我的足迹
+	 * @param uid
+	 * @param gid
+	 * @return
+	 * @throws DataSavingException
+	 */
+	public boolean saveFootprint(String uid,String gid) throws DataSavingException;
 
 	public List<ShowGoods> listGoodsByGoodsResult(GoodsShow bo, Range range) throws Exception;
 }
