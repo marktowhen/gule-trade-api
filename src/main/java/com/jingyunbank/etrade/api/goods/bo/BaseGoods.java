@@ -44,7 +44,10 @@ public class BaseGoods implements Serializable {
 	private Date addTime;// 商品添加时间
 	private Date pro_start;  //促销开始时间
 	private Date pro_end;	//促销结束时间
-	private String pro_flag; //是否促销标志
+	private int pro_flag; //是否促销标志
+	private Date upTime; //上架时间
+	private Date downTime;//下架时间
+	
 	
 	//----------------商品图片属性-----------------//
 	private String show_path_1; // 展示图片
@@ -70,6 +73,7 @@ public class BaseGoods implements Serializable {
 	private String note;// 注意事项
 	private String storageMethods;// 储藏方法
 	private String isGiftBox;// 是否礼盒装
+	private Date ProductionDate;//生产日期
 	private String weight;// 重量
 	private String unit;// 单位
  
@@ -442,12 +446,36 @@ public class BaseGoods implements Serializable {
 		this.pro_end = pro_end;
 	}
 
-	public String getPro_flag() {
+	public int getPro_flag() {
 		return pro_flag;
 	}
 
-	public void setPro_flag(String pro_flag) {
+	public void setPro_flag(int pro_flag) {
 		this.pro_flag = pro_flag;
+	}
+
+	public Date getProductionDate() {
+		return ProductionDate;
+	}
+
+	public void setProductionDate(Date productionDate) {
+		ProductionDate = productionDate;
+	}
+
+	public Date getUpTime() {
+		return upTime;
+	}
+
+	public void setUpTime(Date upTime) {
+		this.upTime = upTime;
+	}
+
+	public Date getDownTime() {
+		return downTime;
+	}
+
+	public void setDownTime(Date downTime) {
+		this.downTime = downTime;
 	}
 
 }

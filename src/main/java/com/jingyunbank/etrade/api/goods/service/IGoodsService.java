@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.goods.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
@@ -10,6 +11,7 @@ import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
+import com.jingyunbank.etrade.api.user.bo.Address;
 
 /**
  * 
@@ -126,4 +128,12 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listGoodsByGoodsResult(GoodsShow bo, Range range) throws Exception;
+	
+	/**
+	 * 根据id 查询 商品属性
+	 * @param gid
+	 * @return
+	 * @throws Exception
+	 */
+	public Optional<ShowGoods> singleById(String gid) throws Exception;
 }
