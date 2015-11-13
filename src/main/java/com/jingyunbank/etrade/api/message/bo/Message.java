@@ -3,6 +3,8 @@ package com.jingyunbank.etrade.api.message.bo;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.jingyunbank.etrade.api.user.bo.Users;
+
 public class Message implements Serializable{
 
 	private static final long serialVersionUID = -4803430571542836689L;
@@ -16,6 +18,29 @@ public class Message implements Serializable{
 	private Date addtime;//添加时间
 	private String addip;//添加人的ip
 	private boolean hasRead;//是否已读
+	
+	private Users sendUser = new Users();//发送者
+	private Users receiveUser = new Users();//接收者
+	private boolean needReadStatus = false;//查询时是否需要加上读取状态
+	
+	public boolean isNeedReadStatus() {
+		return needReadStatus;
+	}
+	public void setNeedReadStatus(boolean needReadStatus) {
+		this.needReadStatus = needReadStatus;
+	}
+	public Users getSendUser() {
+		return sendUser;
+	}
+	public void setSendUser(Users sendUser) {
+		this.sendUser = sendUser;
+	}
+	public Users getReceiveUser() {
+		return receiveUser;
+	}
+	public void setReceiveUser(Users receiveUser) {
+		this.receiveUser = receiveUser;
+	}
 	public String getID() {
 		return ID;
 	}

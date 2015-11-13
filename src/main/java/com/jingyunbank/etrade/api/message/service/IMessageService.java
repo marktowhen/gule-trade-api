@@ -21,6 +21,10 @@ public interface IMessageService {
 	 * 删除状态
 	 */
 	int STATUS_DEL = 3;
+	/**
+	 * 站内信
+	 */
+	String TYPE_LETTER = "letter";
 
 	public boolean save(Message message) throws DataSavingException;
 	
@@ -48,7 +52,7 @@ public interface IMessageService {
 	 * @throws DataRefreshingException
 	 * 2015年11月12日 qxs
 	 */
-	boolean remove(String id) throws DataRefreshingException;
+	boolean remove(String id, String receiveUID) throws DataRefreshingException;
 	/**
 	 * 批量删除
 	 * @param ids
@@ -56,15 +60,17 @@ public interface IMessageService {
 	 * @throws DataRefreshingException
 	 * 2015年11月12日 qxs
 	 */
-	public boolean remove(String [] ids) throws DataRefreshingException;
+	public boolean remove(String [] ids, String receiveUID) throws DataRefreshingException;
 	
 	/**
 	 * 获取单条信息详情
 	 * @param ID
+	 * @param receiveUID 
 	 * @return
 	 * 2015年11月12日 qxs
+	 * @throws DataRefreshingException 
 	 */
-	public Optional<Message> getSingle(String ID);
+	public Optional<Message> getSingle(String ID, String receiveUID) ;
 	
 	/**
 	 * 分页查询
@@ -82,6 +88,31 @@ public interface IMessageService {
 	 * 2015年11月12日 qxs
 	 */
 	public List<Message> list(Message message);
+
+	/**
+	 * 修改消息的读取状态
+	 * @param id
+	 * @param receiveUID
+	 * 2015年11月13日 qxs
+	 * @throws Exception 
+	 */
+	public void refreshReadStatus(Message message) throws DataRefreshingException  ;
+	
+	/**
+	 * 修改消息的读取状态
+	 * @param ids
+	 * @param receiveUID
+	 * 2015年11月13日 qxs
+	 */
+	public void refreshReadStatus(String [] ids, Message message) throws DataRefreshingException  ;
+
+	/**
+	 * 查询数量
+	 * @param message
+	 * @return
+	 * 2015年11月13日 qxs
+	 */
+	public int getAmount(Message message);
 
 	
 	
