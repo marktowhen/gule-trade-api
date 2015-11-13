@@ -5,13 +5,13 @@ import java.util.Optional;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.goods.bo.CollectGoods;
 import com.jingyunbank.etrade.api.goods.bo.FootprintGoods;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
-import com.jingyunbank.etrade.api.user.bo.Address;
 
 /**
  * 
@@ -136,4 +136,18 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public Optional<ShowGoods> singleById(String gid) throws Exception;
+	/**
+	 * 保存我的收藏
+	 * @param uid
+	 * @param gid
+	 * @return
+	 * @throws DataSavingException
+	 */
+	public boolean saveCollect(String uid,String fid,String type) throws DataSavingException;
+	/**
+	 * 查询我的收藏店铺商品信息
+	 * @return
+	 * @throws Exception
+	 */
+	public List<CollectGoods> listMerchantCollect(String uid,String type) throws Exception;
 }
