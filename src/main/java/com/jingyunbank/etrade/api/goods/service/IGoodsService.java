@@ -150,4 +150,12 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<CollectGoods> listMerchantCollect(String uid,String type) throws Exception;
+	/**
+	 * 查询我的收藏是否已经存在
+	 * @param uid
+	 * @param gid
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean isCollectExists(String uid,String fid,String type)throws Exception;
 }
