@@ -4,12 +4,6 @@ import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.exception.OrderDeliveringException;
-import com.jingyunbank.etrade.api.exception.OrderGenerateException;
-import com.jingyunbank.etrade.api.exception.OrderPaidException;
-import com.jingyunbank.etrade.api.exception.OrderPayException;
-import com.jingyunbank.etrade.api.exception.OrderPayFailException;
-import com.jingyunbank.etrade.api.exception.OrderUpdateException;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 import com.jingyunbank.etrade.api.order.bo.Refund;
 
@@ -43,14 +37,14 @@ public interface IOrderContextService {
 	 * @param order
 	 * @throws OrderUpdateException
 	 */
-	public void update(Orders order) throws OrderUpdateException;
+	public void update(Orders order) throws DataSavingException;
 	/**
 	 * 调用支付接口对该订单进行支付<br>
 	 * 该方法更新订单状态为PAYING，并生成相应log信息，然后调用相应支付接口
 	 * @param order 订单信息
 	 * @throws OrderPayException 抛出该异常如果在调用支付接口，或者更改订单状态时
 	 */
-	public void pay(Orders order) throws OrderPayException;
+	public void pay(Orders order) throws DataSavingException;
 	/**
 	 * 完成支付操作<br>
 	 * 当接收到相应支付接口的支付结果反馈后，执行相应的动作<br>
@@ -58,14 +52,14 @@ public interface IOrderContextService {
 	 * @param orderno 订单号
 	 * @throws OrderPaidException 
 	 */
-	public void paid(String orderno) throws OrderPaidException;
+	public void paid(String orderno) throws DataSavingException;
 	/**
 	 * 完成支付失败的相应操作<br>
 	 * 包括：更新订单状态为PAYFAIL，并生成相应log信息，然后通知买家支付失败
 	 * @param orderno
 	 * @throws OrderPayFailException
 	 */
-	public void payfail(String orderno) throws OrderPayFailException;
+	public void payfail(String orderno) throws DataSavingException;
 	/**
 	 * 支付成功确认<br>
 	 * 用户支付成功后，卖家需要将订单状态更新为delivering， <br>
@@ -73,7 +67,7 @@ public interface IOrderContextService {
 	 * 一旦卖家将订单状态更新至此，买家申请退款就必须得到买家的同意
 	 * @param orderno
 	 */
-	public void delivering(String orderno) throws OrderDeliveringException;
+	public void delivering(String orderno) throws DataSavingException;
 	/**
 	 * 卖家订单发货<br>
 	 * 更新订单状态为已发货，然后通知买家注意收货，并生成相应log信息等

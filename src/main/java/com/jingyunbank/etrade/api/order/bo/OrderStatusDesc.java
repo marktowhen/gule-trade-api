@@ -1,5 +1,7 @@
 package com.jingyunbank.etrade.api.order.bo;
 
+import java.io.Serializable;
+
 /**
  * 订单状态描述定义业务类。<br><br>
  * 该类定义了整个订单的生命周期中各个节点的状态<br><br>
@@ -25,8 +27,9 @@ package com.jingyunbank.etrade.api.order.bo;
  * <tr><td>退款完成</td><td>REFUNDED</td><td>退款完成</td></tr>
  * 	</table>
  */
-public final class OrderStatusDesc {
+public final class OrderStatusDesc implements Serializable{
 
+	private static final long serialVersionUID = 7805539891696735065L;
 	public final static String NEW_CODE 				= "NEW";
 	public final static String PAYING_CODE 				= "PAYING";
 	public final static String PAID_CODE 				= "PAID";

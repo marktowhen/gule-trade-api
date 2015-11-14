@@ -2,12 +2,17 @@ package com.jingyunbank.etrade.api.order.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Orders  implements Serializable{
 
+	//订单有效期
+	public static final long VALID_TIME_IN_SECOND = 30/**分*/ * 60 /**秒*/ ;
+	
 	private static final long serialVersionUID = 2563253149671693408L;
 	private String ID;
 	private long orderno;
@@ -181,5 +186,12 @@ public class Orders  implements Serializable{
 	public void setMname(String mname) {
 		this.mname = mname;
 	}
-	
+	public Date getExpireTime(){
+		if(Objects.nonNull(this.addtime)){
+			Instant i = this.addtime.toInstant();
+			Instant e = i.plusSeconds(VALID_TIME_IN_SECOND);
+			return Date.from(e);
+		}
+		return new Date();
+	}
 }
