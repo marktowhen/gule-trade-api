@@ -1,9 +1,11 @@
 package com.jingyunbank.etrade.api.goods.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.goods.bo.CollectGoods;
 import com.jingyunbank.etrade.api.goods.bo.FootprintGoods;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
@@ -118,6 +120,42 @@ public interface IGoodsService {
 	 * @throws DataSavingException
 	 */
 	public boolean saveFootprint(String uid,String gid) throws DataSavingException;
-
+	/**
+	 * 在结果中查询商品
+	 * @param bo
+	 * @param range
+	 * @return
+	 * @throws Exception
+	 */
 	public List<ShowGoods> listGoodsByGoodsResult(GoodsShow bo, Range range) throws Exception;
+	
+	/**
+	 * 根据id 查询 商品属性
+	 * @param gid
+	 * @return
+	 * @throws Exception
+	 */
+	public Optional<ShowGoods> singleById(String gid) throws Exception;
+	/**
+	 * 保存我的收藏
+	 * @param uid
+	 * @param gid
+	 * @return
+	 * @throws DataSavingException
+	 */
+	public boolean saveCollect(String uid,String fid,String type) throws DataSavingException;
+	/**
+	 * 查询我的收藏店铺商品信息
+	 * @return
+	 * @throws Exception
+	 */
+	public List<CollectGoods> listMerchantCollect(String uid,String type) throws Exception;
+	/**
+	 * 查询我的收藏是否已经存在
+	 * @param uid
+	 * @param gid
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean isCollectExists(String uid,String fid,String type)throws Exception;
 }

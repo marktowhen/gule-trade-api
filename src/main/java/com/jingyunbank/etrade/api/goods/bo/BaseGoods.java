@@ -44,17 +44,25 @@ public class BaseGoods implements Serializable {
 	private Date addTime;// 商品添加时间
 	private Date pro_start;  //促销开始时间
 	private Date pro_end;	//促销结束时间
-	private String pro_flag; //是否促销标志
+	private int pro_flag; //是否促销标志
+	private Date upTime; //上架时间
+	private Date downTime;//下架时间
+	private BigDecimal postage; //邮费
+	private int subVolumeType; //减库存方式 (拍下减库存 0 付款减库存1)
+	private String barCode; //条形码
+	private String goodsDesc; //宝贝描述
+	private String goodsTitle; //宝贝标题
+
 	
 	//----------------商品图片属性-----------------//
 	private String show_path_1; // 展示图片
 	private String show_path_2; // 展示图片
 	private String show_path_3; // 展示图片
 	private String show_path_4; // 展示图片
-	private String thumb_path_1; // 缩略图
-	private String thumb_path_2; // 缩略图
-	private String thumb_path_3; // 缩略图
-	private String thumb_path_4; // 缩略图
+	private String show_path_5; // 展示图片
+	private String content;  //图片展示html代码
+	
+
 	// --------------商品详细属性----------------//
 	private String standardNo;// 产品标准号
 	private String shelfLife; // 保质期
@@ -70,9 +78,79 @@ public class BaseGoods implements Serializable {
 	private String note;// 注意事项
 	private String storageMethods;// 储藏方法
 	private String isGiftBox;// 是否礼盒装
+	private Date ProductionDate;//生产日期
 	private String weight;// 重量
 	private String unit;// 单位
+	private String factoryName; //厂名
+	private String factoryAddr; //厂址
+	private String factoryTel;  //联系方式
+	
+	
  
+	public BigDecimal getPostage() {
+		return postage;
+	}
+
+	public void setPostage(BigDecimal postage) {
+		this.postage = postage;
+	}
+
+	public int getSubVolumeType() {
+		return subVolumeType;
+	}
+
+	public void setSubVolumeType(int subVolumeType) {
+		this.subVolumeType = subVolumeType;
+	}
+
+	public String getBarCode() {
+		return barCode;
+	}
+
+	public void setBarCode(String barCode) {
+		this.barCode = barCode;
+	}
+
+	public String getGoodsDesc() {
+		return goodsDesc;
+	}
+
+	public void setGoodsDesc(String goodsDesc) {
+		this.goodsDesc = goodsDesc;
+	}
+
+	public String getGoodsTitle() {
+		return goodsTitle;
+	}
+
+	public void setGoodsTitle(String goodsTitle) {
+		this.goodsTitle = goodsTitle;
+	}
+
+	public String getFactoryName() {
+		return factoryName;
+	}
+
+	public void setFactoryName(String factoryName) {
+		this.factoryName = factoryName;
+	}
+
+	public String getFactoryAddr() {
+		return factoryAddr;
+	}
+
+	public void setFactoryAddr(String factoryAddr) {
+		this.factoryAddr = factoryAddr;
+	}
+
+	public String getFactoryTel() {
+		return factoryTel;
+	}
+
+	public void setFactoryTel(String factoryTel) {
+		this.factoryTel = factoryTel;
+	}
+
 	public String getMID() {
 		return MID;
 	}
@@ -242,36 +320,22 @@ public class BaseGoods implements Serializable {
 		this.show_path_4 = show_path_4;
 	}
 
-	public String getThumb_path_1() {
-		return thumb_path_1;
+	
+
+	public String getShow_path_5() {
+		return show_path_5;
 	}
 
-	public void setThumb_path_1(String thumb_path_1) {
-		this.thumb_path_1 = thumb_path_1;
+	public void setShow_path_5(String show_path_5) {
+		this.show_path_5 = show_path_5;
 	}
 
-	public String getThumb_path_2() {
-		return thumb_path_2;
+	public String getContent() {
+		return content;
 	}
 
-	public void setThumb_path_2(String thumb_path_2) {
-		this.thumb_path_2 = thumb_path_2;
-	}
-
-	public String getThumb_path_3() {
-		return thumb_path_3;
-	}
-
-	public void setThumb_path_3(String thumb_path_3) {
-		this.thumb_path_3 = thumb_path_3;
-	}
-
-	public String getThumb_path_4() {
-		return thumb_path_4;
-	}
-
-	public void setThumb_path_4(String thumb_path_4) {
-		this.thumb_path_4 = thumb_path_4;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public String getCount() {
@@ -442,12 +506,36 @@ public class BaseGoods implements Serializable {
 		this.pro_end = pro_end;
 	}
 
-	public String getPro_flag() {
+	public int getPro_flag() {
 		return pro_flag;
 	}
 
-	public void setPro_flag(String pro_flag) {
+	public void setPro_flag(int pro_flag) {
 		this.pro_flag = pro_flag;
+	}
+
+	public Date getProductionDate() {
+		return ProductionDate;
+	}
+
+	public void setProductionDate(Date productionDate) {
+		ProductionDate = productionDate;
+	}
+
+	public Date getUpTime() {
+		return upTime;
+	}
+
+	public void setUpTime(Date upTime) {
+		this.upTime = upTime;
+	}
+
+	public Date getDownTime() {
+		return downTime;
+	}
+
+	public void setDownTime(Date downTime) {
+		this.downTime = downTime;
 	}
 
 }
