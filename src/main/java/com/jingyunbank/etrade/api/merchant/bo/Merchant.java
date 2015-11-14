@@ -41,6 +41,8 @@ public class Merchant {
 	private String imgPath ;
 	/** 是否开具发票 0否1是  */
 	private String invoiceFlag;
+	/**发票的类型*/
+	private String codes;
 	public String getID() {
 		return ID;
 	}
@@ -142,6 +144,12 @@ public class Merchant {
 	}
 	public void setInvoiceFlag(String invoiceFlag) {
 		this.invoiceFlag = invoiceFlag;
+	}
+	public String getCodes() {
+		return codes;
+	}
+	public void setCodes(String codes) {
+		this.codes = codes;
 	}
 	
 }
