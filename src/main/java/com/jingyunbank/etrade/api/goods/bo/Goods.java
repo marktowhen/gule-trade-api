@@ -42,7 +42,7 @@ public class Goods implements Serializable {
 	/** 销量 */
 	private int volume;
 	/** add时间 */
-	private Date addtime;
+	private Date addTime;
 	/** 管理员排序 */
 	private int adminSort;
 	/** 商家排序 */
@@ -217,12 +217,14 @@ public class Goods implements Serializable {
 		this.volume = volume;
 	}
 
-	public Date getAddtime() {
-		return addtime;
+	
+
+	public Date getAddTime() {
+		return addTime;
 	}
 
-	public void setAddtime(Date addtime) {
-		this.addtime = addtime;
+	public void setAddTime(Date addTime) {
+		this.addTime = addTime;
 	}
 
 	public int getAdminSort() {
