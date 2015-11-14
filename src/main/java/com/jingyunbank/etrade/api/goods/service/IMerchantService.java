@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.goods.bo.Merchant;
 
 /**
@@ -18,4 +19,11 @@ public interface IMerchantService {
 	 * @return
 	 */
 	public List<Merchant> listMerchants() throws IllegalAccessException, InvocationTargetException;
+	/**
+	 * 商家保存
+	 * @param merchant
+	 * @return
+	 * @throws DataSavingException
+	 */
+	public boolean saveMerchant(Merchant merchant) throws DataSavingException;
 }
