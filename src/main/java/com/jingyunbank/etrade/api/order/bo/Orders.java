@@ -22,7 +22,7 @@ public class Orders  implements Serializable{
 	private String MID;
 	private String mname;
 	private Date addtime;//下单时间
-	private String paytypeID;//支付方式 id
+	private String paytypeCode;//支付方式code
 	private String paytypeName;
 	private String deliveryTypeID;
 	private String deliveryTypeName;
@@ -91,12 +91,12 @@ public class Orders  implements Serializable{
 		this.addtime = addtime;
 	}
 
-	public String getPaytypeID() {
-		return paytypeID;
+	public String getPaytypeCode() {
+		return paytypeCode;
 	}
 
-	public void setPaytypeID(String paytypeID) {
-		this.paytypeID = paytypeID;
+	public void setPaytypeCode(String paytypeCode) {
+		this.paytypeCode = paytypeCode;
 	}
 
 	public String getPaytypeName() {

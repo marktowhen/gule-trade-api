@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.goods.bo;
+package com.jingyunbank.etrade.api.merchant.bo;
 
 import java.util.Date;
 
