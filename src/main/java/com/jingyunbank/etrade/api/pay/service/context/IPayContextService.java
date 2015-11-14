@@ -8,7 +8,13 @@ import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
 
 public interface IPayContextService {
 
-	public void save(List<OrderPayment> payments) throws DataSavingException;
+	/**
+	 * 保存多个订单的支付状态。<p>
+	 * <b>注：只保存线上支付的订单状态.</b>
+	 * @param orders
+	 * @throws DataSavingException
+	 */
+	public void save(List<Orders> orders) throws DataSavingException;
 
 	/**
 	 * 检查指定的订单是否是可以支付的。<p>

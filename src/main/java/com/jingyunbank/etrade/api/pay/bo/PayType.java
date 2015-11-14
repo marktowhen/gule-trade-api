@@ -11,6 +11,10 @@ public class PayType implements Serializable{
 
 	private static final long serialVersionUID = -5467713442211706253L;
 	
+	public final static String ONLINE_CODE 					= "ONLINE";//线上支付
+	public final static String OFFLINE_CODE 				= "OFFLINE";//线下支付
+	public final static String COD_CODE 					= "COD";//货到付款
+	
 	private String id;
 	private String code;
 	private String name;
