@@ -1,11 +1,11 @@
-package com.jingyunbank.etrade.api.goods.service;
+package com.jingyunbank.etrade.api.merchant.service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.goods.bo.Merchant;
+import com.jingyunbank.etrade.api.merchant.bo.Merchant;
 
 /**
  * 提供商家服务
