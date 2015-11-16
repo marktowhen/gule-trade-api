@@ -4,6 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.merchant.bo.InvoiceType;
 import com.jingyunbank.etrade.api.merchant.bo.Merchant;
@@ -41,4 +43,17 @@ public interface IMerchantService {
 	 * @throws DataSavingException
 	 */
 	public boolean saveMerchantInvoiceType(Merchant merchant) throws Exception;
+	/**
+	 * 商家修改
+	 * @param merchant
+	 * @return
+	 * @throws DataRefreshingException
+	 */
+	public boolean updateMerchant(Merchant merchant) throws DataRefreshingException ;
+	/**
+	 * 删除商家和类型关联记录
+	 * @param merchant
+	 * @throws DataRemovingException
+	 */
+	public boolean removeMerchantInvoiceType(Merchant merchant) throws DataRemovingException;
 }
