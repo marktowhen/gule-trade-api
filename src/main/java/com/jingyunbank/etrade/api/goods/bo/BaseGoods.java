@@ -52,14 +52,14 @@ public class BaseGoods implements Serializable {
 	private String barCode; //条形码
 	private String goodsDesc; //宝贝描述
 	private String goodsTitle; //宝贝标题
-
+	private int state;
 	
 	//----------------商品图片属性-----------------//
-	private String show_path_1; // 展示图片
-	private String show_path_2; // 展示图片
-	private String show_path_3; // 展示图片
-	private String show_path_4; // 展示图片
-	private String show_path_5; // 展示图片
+	private String thumb_path_1; // 展示图片
+	private String thumb_path_2; // 展示图片
+	private String thumb_path_3; // 展示图片
+	private String thumb_path_4; // 展示图片
+	private String thumb_path_5; // 展示图片
 	private String content;  //图片展示html代码
 	
 
@@ -288,46 +288,46 @@ public class BaseGoods implements Serializable {
 		this.discountPrice = discountPrice;
 	}
 
-	public String getShow_path_1() {
-		return show_path_1;
-	}
-
-	public void setShow_path_1(String show_path_1) {
-		this.show_path_1 = show_path_1;
-	}
-
-	public String getShow_path_2() {
-		return show_path_2;
-	}
-
-	public void setShow_path_2(String show_path_2) {
-		this.show_path_2 = show_path_2;
-	}
-
-	public String getShow_path_3() {
-		return show_path_3;
-	}
-
-	public void setShow_path_3(String show_path_3) {
-		this.show_path_3 = show_path_3;
-	}
-
-	public String getShow_path_4() {
-		return show_path_4;
-	}
-
-	public void setShow_path_4(String show_path_4) {
-		this.show_path_4 = show_path_4;
-	}
-
 	
 
-	public String getShow_path_5() {
-		return show_path_5;
+	public String getThumb_path_1() {
+		return thumb_path_1;
 	}
 
-	public void setShow_path_5(String show_path_5) {
-		this.show_path_5 = show_path_5;
+	public void setThumb_path_1(String thumb_path_1) {
+		this.thumb_path_1 = thumb_path_1;
+	}
+
+	public String getThumb_path_2() {
+		return thumb_path_2;
+	}
+
+	public void setThumb_path_2(String thumb_path_2) {
+		this.thumb_path_2 = thumb_path_2;
+	}
+
+	public String getThumb_path_3() {
+		return thumb_path_3;
+	}
+
+	public void setThumb_path_3(String thumb_path_3) {
+		this.thumb_path_3 = thumb_path_3;
+	}
+
+	public String getThumb_path_4() {
+		return thumb_path_4;
+	}
+
+	public void setThumb_path_4(String thumb_path_4) {
+		this.thumb_path_4 = thumb_path_4;
+	}
+
+	public String getThumb_path_5() {
+		return thumb_path_5;
+	}
+
+	public void setThumb_path_5(String thumb_path_5) {
+		this.thumb_path_5 = thumb_path_5;
 	}
 
 	public String getContent() {
@@ -536,6 +536,14 @@ public class BaseGoods implements Serializable {
 
 	public void setDownTime(Date downTime) {
 		this.downTime = downTime;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
 	}
 
 }

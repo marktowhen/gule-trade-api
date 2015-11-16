@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.merchant.service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Optional;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
@@ -78,4 +79,24 @@ public interface IMerchantService {
 	 * @throws DataRemovingException
 	 */
 	public boolean removeMerchantDeliveryType(Merchant merchant) throws DataRemovingException ;
+	/**
+	 * 根据商家ID查询商家信息
+	 * @param mid
+	 * @return
+	 */
+	public Optional<Merchant> getMerchant(String mid);
+	/**
+	 * 根据MID查询商家的发票类型
+	 * @return
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 */
+	public List<InvoiceType> listInvoiceType(String mid) throws IllegalAccessException, InvocationTargetException;
+	/**
+	 * 根据MID查询商家的快递类型
+	 * @return
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 */
+	public List<DeliveryType> listDeliveryType(String mid) throws IllegalAccessException, InvocationTargetException ;
 }
