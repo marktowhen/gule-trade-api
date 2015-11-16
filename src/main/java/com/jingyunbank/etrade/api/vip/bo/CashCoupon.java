@@ -27,6 +27,7 @@ public class CashCoupon extends BaseCoupon implements Serializable {
 	private Date usedtime;
 	private BigDecimal threshhold;//使用门槛
 	
+	
 	public String getID() {
 		return ID;
 	}
