@@ -20,6 +20,7 @@ public class OrderPayment implements Serializable{
 	private String MID;
 	private String mname;
 	private long transno;
+	private long extransno;//外部真是交易号，用户订单合并支付的情况。（提交给支付平台的交易号）
 	private BigDecimal money;
 	private String note;
 	private boolean done;
@@ -105,5 +106,11 @@ public class OrderPayment implements Serializable{
 	}
 	public void setAddtime(Date addtime) {
 		this.addtime = addtime;
+	}
+	public long getExtransno() {
+		return extransno;
+	}
+	public void setExtransno(long extransno) {
+		this.extransno = extransno;
 	}
 }

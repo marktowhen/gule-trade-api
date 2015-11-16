@@ -1,4 +1,5 @@
-package com.jingyunbank.etrade.api.pay.service;
+package com.jingyunbank.etrade.api.pay.handler;
+
 
 public interface PayHandlerResolver {
 
