@@ -7,6 +7,7 @@ import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.merchant.bo.DeliveryType;
 import com.jingyunbank.etrade.api.merchant.bo.InvoiceType;
 import com.jingyunbank.etrade.api.merchant.bo.Merchant;
 
@@ -56,4 +57,25 @@ public interface IMerchantService {
 	 * @throws DataRemovingException
 	 */
 	public boolean removeMerchantInvoiceType(Merchant merchant) throws DataRemovingException;
+	/**
+	 * 查询所有快递类型
+	 * @return
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 */
+	public List<DeliveryType> listDeliveryType() throws IllegalAccessException, InvocationTargetException ;
+	/**
+	 * 保存商家快递类型
+	 * @param merchant
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean saveMerchantDeliveryType(Merchant merchant) throws Exception;
+	/**
+	 * 删除商家和快递类型关联记录
+	 * @param merchant
+	 * @return
+	 * @throws DataRemovingException
+	 */
+	public boolean removeMerchantDeliveryType(Merchant merchant) throws DataRemovingException ;
 }
