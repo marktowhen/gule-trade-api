@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.merchant.bo;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 商家业务BEAN
@@ -45,6 +46,10 @@ public class Merchant {
 	private String invoiceCodes;
 	/**快递的类型*/
 	private String deliveryCodes;
+	/**发票类型列表*/
+	private List<InvoiceType> invoiceList;
+	/**发票类型列表*/
+	private List<DeliveryType> deliverylist;
 	public String getID() {
 		return ID;
 	}
@@ -159,6 +164,18 @@ public class Merchant {
 	}
 	public void setDeliveryCodes(String deliveryCodes) {
 		this.deliveryCodes = deliveryCodes;
+	}
+	public List<InvoiceType> getInvoiceList() {
+		return invoiceList;
+	}
+	public void setInvoiceList(List<InvoiceType> invoiceList) {
+		this.invoiceList = invoiceList;
+	}
+	public List<DeliveryType> getDeliverylist() {
+		return deliverylist;
+	}
+	public void setDeliverylist(List<DeliveryType> deliverylist) {
+		this.deliverylist = deliverylist;
 	}
 	
 	

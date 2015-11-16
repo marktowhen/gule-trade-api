@@ -1,5 +1,8 @@
 package com.jingyunbank.etrade.api.merchant.service.context;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.Optional;
+
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.merchant.bo.Merchant;
@@ -24,4 +27,10 @@ public interface IMerchantContextService {
 	 * @throws DataSavingException
 	 */
 	public boolean updateMerchant(Merchant merchant) throws DataRefreshingException;
+	/**
+	 * 根据商家ID 查询商家信息
+	 * @param mid
+	 * @return
+	 */
+	public Optional<Merchant> getMerchantInfoByMid(String mid) throws IllegalAccessException, InvocationTargetException;
 }
