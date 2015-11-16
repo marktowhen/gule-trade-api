@@ -21,4 +21,5 @@ public interface ICouponStrategyService {
 	 * @return
 	 */
 	public BigDecimal calculate(BigDecimal originCost, BaseCoupon coupon) throws UnsupportedOperationException;
+	
 }

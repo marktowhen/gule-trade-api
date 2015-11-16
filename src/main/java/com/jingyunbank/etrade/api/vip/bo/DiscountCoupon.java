@@ -18,14 +18,22 @@ public class DiscountCoupon extends BaseCoupon implements Serializable{
 	
 	private String ID;
 	private String code;//充值码
-	private BigDecimal discount;
+	private BigDecimal discount;//折扣
 	private Date addtime;
 	private Date start;
 	private Date end;
 	private boolean used;//是否充值到某用户账户中
 	private Date usedtime;//充值时间
-	private BigDecimal threshhold;
+	private BigDecimal threshhold;//使用门槛
 	
+	private BigDecimal value;//面值 抵用的最高值
+	
+	public BigDecimal getValue() {
+		return value;
+	}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
 	public String getID() {
 		return ID;
 	}

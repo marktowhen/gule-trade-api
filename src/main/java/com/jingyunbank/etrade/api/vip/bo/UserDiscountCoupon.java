@@ -9,7 +9,7 @@ public class UserDiscountCoupon implements Serializable{
 	private String ID;
 	private String UID;
 	private String couponID;
-	private String OID;
+	private String OID;//订单号
 	private Date rechargeTime;//充值时间
 	private Date consumeTime;//消费使用时间
 	private boolean recharged;
