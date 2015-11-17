@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.goods.bo;
+package com.jingyunbank.etrade.api.track.bo;
 
 import java.io.Serializable;
 import java.util.Date;
