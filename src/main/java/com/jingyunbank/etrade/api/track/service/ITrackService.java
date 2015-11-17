@@ -3,7 +3,7 @@ package com.jingyunbank.etrade.api.track.service;
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.track.bo.CollectGoods;
+import com.jingyunbank.etrade.api.track.bo.FavoritesGoods;
 import com.jingyunbank.etrade.api.track.bo.FootprintGoods;
 
 /**
@@ -34,13 +34,13 @@ public interface ITrackService {
 	 * @return
 	 * @throws DataSavingException
 	 */
-	public boolean saveCollect(String uid,String fid,String type) throws DataSavingException;
+	public boolean saveFavorites(String uid,String fid,String type) throws DataSavingException;
 	/**
 	 * 查询我的收藏店铺商品信息
 	 * @return
 	 * @throws Exception
 	 */
-	public List<CollectGoods> listMerchantCollect(String uid,String type) throws Exception;
+	public List<FavoritesGoods> listMerchantFavorites(String uid,String type) throws Exception;
 	/**
 	 * 查询我的收藏是否已经存在
 	 * @param uid
@@ -48,5 +48,5 @@ public interface ITrackService {
 	 * @return
 	 * @throws Exception
 	 */
-	public boolean isCollectExists(String uid,String fid,String type)throws Exception;
+	public boolean isFavoritesExists(String uid,String fid,String type)throws Exception;
 }

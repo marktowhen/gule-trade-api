@@ -10,7 +10,7 @@ import com.jingyunbank.etrade.api.goods.bo.BaseGoods;
  * @author liug
  *
  */
-public class CollectGoods extends BaseGoods implements Serializable {
+public class FavoritesGoods extends BaseGoods implements Serializable {
 
 	private static final long serialVersionUID = 2563253149671693408L;
 	private Date collectTime;
