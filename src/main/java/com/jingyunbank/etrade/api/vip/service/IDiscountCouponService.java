@@ -3,6 +3,10 @@ package com.jingyunbank.etrade.api.vip.service;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.core.Result;
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.exception.DataRemovingException;
+import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.user.bo.Users;
 import com.jingyunbank.etrade.api.vip.bo.DiscountCoupon;
 
@@ -12,8 +16,9 @@ public interface IDiscountCouponService {
 	 * @param DiscountCoupon
 	 * @return
 	 * 2015年11月14日 qxs
+	 * @throws DataSavingException 
 	 */
-	public boolean save(DiscountCoupon discountCoupon, Users manager);
+	public boolean save(DiscountCoupon discountCoupon, Users manager) throws DataSavingException;
 	
 	/**
 	 * 逻辑删除
@@ -21,8 +26,9 @@ public interface IDiscountCouponService {
 	 * @param manager
 	 * @return
 	 * 2015年11月14日 qxs
+	 * @throws DataRemovingException 
 	 */
-	public boolean remove(DiscountCoupon discountCoupon, Users manager);
+	public boolean remove(String code, Users manager) throws DataRemovingException;
 	
 	/**
 	 * 判断是否有效 包括时间和状态
@@ -30,7 +36,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public boolean isValid(String code);
+	public Result isValid(String code);
 	
 	/**
 	 * 查看详情
@@ -54,19 +60,15 @@ public interface IDiscountCouponService {
 	 * 2015年11月14日 qxs
 	 */
 	public List<DiscountCoupon> listAll(DiscountCoupon discountCoupon, Range range);
+	
+	
 	/**
-	 * 查询 有效期内未删除的
-	 * @param DiscountCoupon
+	 * 激活
+	 * @param code
 	 * @return
-	 * 2015年11月14日 qxs
+	 * @throws DataRefreshingException
+	 * 2015年11月17日 qxs
 	 */
-	public List<DiscountCoupon> listValid(DiscountCoupon discountCoupon);
-	/**
-	 * 查询 有效期内未删除的
-	 * @param DiscountCoupon
-	 * @param range
-	 * @return
-	 * 2015年11月14日 qxs
-	 */
-	public List<DiscountCoupon> listValid(DiscountCoupon discountCoupon, Range range);
+	public boolean active(String code) throws DataRefreshingException ;
+
 }
