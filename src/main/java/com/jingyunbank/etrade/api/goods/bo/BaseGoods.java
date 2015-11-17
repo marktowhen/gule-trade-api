@@ -54,6 +54,7 @@ public class BaseGoods implements Serializable {
 	private String goodsTitle; //宝贝标题
 	private int state;
 	
+	private int comment; //商品评论数
 	//----------------商品图片属性-----------------//
 	private String thumb_path_1; // 展示图片
 	private String thumb_path_2; // 展示图片
@@ -544,6 +545,14 @@ public class BaseGoods implements Serializable {
 
 	public void setState(int state) {
 		this.state = state;
+	}
+
+	public int getComment() {
+		return comment;
+	}
+
+	public void setComment(int comment) {
+		this.comment = comment;
 	}
 
 }

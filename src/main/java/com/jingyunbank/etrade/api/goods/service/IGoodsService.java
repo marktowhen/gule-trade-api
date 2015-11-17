@@ -81,13 +81,21 @@ public interface IGoodsService {
 	public List<GoodsMerchant> listMerchantByWhere(GoodsShow show, Range range) throws Exception;
 
 	/**
-	 * 店铺相关产品
+	 * 店铺相关产品 显示4条
 	 * 
 	 * @param show
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listMerchantByWhereGoods(GoodsShow show) throws Exception;
+	public List<ShowGoods> listMerchantByWhereGoods4(GoodsShow show) throws Exception;
+	/**
+	 * 店铺相关产品 全部显示
+	 * 
+	 * @param show
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listMerchantByWhereGoodsMax(GoodsShow show,Range range) throws Exception;
 
 	/**
 	 * 阿胶后台查询24小时热门推荐商品

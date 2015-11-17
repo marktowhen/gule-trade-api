@@ -90,5 +90,6 @@ public class GoodsShow implements Serializable {
 		MID = mID;
 	}
 
+
 	
 }
