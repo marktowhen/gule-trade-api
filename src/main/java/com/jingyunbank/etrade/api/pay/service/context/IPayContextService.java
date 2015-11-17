@@ -1,9 +1,11 @@
 package com.jingyunbank.etrade.api.pay.service.context;
 
 import java.util.List;
+import java.util.Map;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.bo.Orders;
+import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
 
 public interface IPayContextService {
 
@@ -27,5 +29,12 @@ public interface IPayContextService {
 	 * @return
 	 */
 	public boolean ifpayable(List<Orders> orders);
-	
+	/**
+	 * 构建支付信息，该信息用于提交给支付平台的支付信息数据.
+	 * <p>
+	 * 包括，交易号（extransno，多订单共享），交易总额等
+	 * @param payments
+	 * @throws DataSavingException
+	 */
+	public Map<String, String> buildPayInfo(List<OrderPayment> payments, String platformCode) throws Exception;
 }

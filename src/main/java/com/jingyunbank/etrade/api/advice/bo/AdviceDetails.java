@@ -6,8 +6,8 @@ import java.util.Date;
 public class AdviceDetails implements Serializable{
 	//动态的行内咨询
 	private static final long serialVersionUID = 6898615572819261062L;
-	private String id;
-	private String sid;
+	private String ID;
+	private String SID;
 	private String name;//主要的信息
 	private String title;//标题
 	private String content;//内容
@@ -21,23 +21,23 @@ public class AdviceDetails implements Serializable{
 	public void setOrders(int orders) {
 		this.orders = orders;
 	}
-	public String getSid() {
-		return sid;
+	public String getID() {
+		return ID;
 	}
-	public void setSid(String sid) {
-		this.sid = sid;
+	public void setID(String iD) {
+		ID = iD;
+	}
+	public String getSID() {
+		return SID;
+	}
+	public void setSID(String sID) {
+		SID = sID;
 	}
 	public String getStatus() {
 		return status;
 	}
 	public void setStatus(String status) {
 		this.status = status;
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
 	}
 	public String getName() {
 		return name;

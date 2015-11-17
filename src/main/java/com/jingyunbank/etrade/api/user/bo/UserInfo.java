@@ -6,7 +6,7 @@ import java.util.Date;
 public class UserInfo  implements Serializable{
 
 	private static final long serialVersionUID = 2020236521202437237L;
-	private String uid;
+	private String 	UID;
 	private Date birthday;//生日
 	private boolean marriage;//婚否
 	private Gender gender;//性别
@@ -30,11 +30,11 @@ public class UserInfo  implements Serializable{
 		this.picture = picture;
 	}
 	
-	public String getUid() {
-		return uid;
+	public String getUID() {
+		return UID;
 	}
-	public void setUid(String uid) {
-		this.uid = uid;
+	public void setUID(String uID) {
+		UID = uID;
 	}
 	public Date getBirthday() {
 		return birthday;

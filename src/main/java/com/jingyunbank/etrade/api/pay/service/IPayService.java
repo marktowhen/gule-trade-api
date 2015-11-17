@@ -20,4 +20,6 @@ public interface IPayService {
 	
 	public List<OrderPayment> listPayments(List<String> oids);
 
+	public void refreshExtransno(List<OrderPayment> payments) throws DataSavingException;
+
 }
