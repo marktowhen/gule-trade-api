@@ -10,10 +10,23 @@ public class UserDiscountCoupon implements Serializable{
 	private String UID;
 	private String couponID;
 	private String OID;//订单号
-	private Date rechargeTime;//充值时间
 	private Date consumeTime;//消费使用时间
-	private boolean recharged;
 	private boolean consumed;
+	private Date addTime;//激活时间
+	private DiscountCoupon discountCoupon;
+	
+	public DiscountCoupon getDiscountCoupon() {
+		return discountCoupon;
+	}
+	public void setDiscountCoupon(DiscountCoupon discountCoupon) {
+		this.discountCoupon = discountCoupon;
+	}
+	public Date getAddTime() {
+		return addTime;
+	}
+	public void setAddTime(Date addTime) {
+		this.addTime = addTime;
+	}
 	public String getID() {
 		return ID;
 	}
@@ -38,23 +51,11 @@ public class UserDiscountCoupon implements Serializable{
 	public void setOID(String oID) {
 		OID = oID;
 	}
-	public Date getRechargeTime() {
-		return rechargeTime;
-	}
-	public void setRechargeTime(Date rechargeTime) {
-		this.rechargeTime = rechargeTime;
-	}
 	public Date getConsumeTime() {
 		return consumeTime;
 	}
 	public void setConsumeTime(Date consumeTime) {
 		this.consumeTime = consumeTime;
-	}
-	public boolean isRecharged() {
-		return recharged;
-	}
-	public void setRecharged(boolean recharged) {
-		this.recharged = recharged;
 	}
 	public boolean isConsumed() {
 		return consumed;

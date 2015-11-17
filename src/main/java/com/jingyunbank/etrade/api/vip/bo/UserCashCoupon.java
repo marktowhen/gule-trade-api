@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.vip.bo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class UserCashCoupon implements Serializable{
 
@@ -10,10 +11,22 @@ public class UserCashCoupon implements Serializable{
 	private String UID;
 	private String couponID;
 	private String OID;//订单号
-	private Date rechargeTime;//充值时间
 	private Date consumeTime;//消费使用时间
-	private boolean recharged;
 	private boolean consumed;
+	private CashCoupon cashCoupon;
+	private Date addTime;//激活时间
+	public Date getAddTime() {
+		return addTime;
+	}
+	public void setAddTime(Date addTime) {
+		this.addTime = addTime;
+	}
+	public CashCoupon getCashCoupon() {
+		return cashCoupon;
+	}
+	public void setCashCoupon(CashCoupon cashCoupon) {
+		this.cashCoupon = cashCoupon;
+	}
 	public String getID() {
 		return ID;
 	}
@@ -38,23 +51,11 @@ public class UserCashCoupon implements Serializable{
 	public void setOID(String oID) {
 		OID = oID;
 	}
-	public Date getRechargeTime() {
-		return rechargeTime;
-	}
-	public void setRechargeTime(Date rechargeTime) {
-		this.rechargeTime = rechargeTime;
-	}
 	public Date getConsumeTime() {
 		return consumeTime;
 	}
 	public void setConsumeTime(Date consumeTime) {
 		this.consumeTime = consumeTime;
-	}
-	public boolean isRecharged() {
-		return recharged;
-	}
-	public void setRecharged(boolean recharged) {
-		this.recharged = recharged;
 	}
 	public boolean isConsumed() {
 		return consumed;
