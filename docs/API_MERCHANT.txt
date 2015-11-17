@@ -44,7 +44,6 @@
 			qq:"qq",
 			twoDimensionCode:"二维码路径",
 			registerDate:"注册时间",
-			adminSortNum:"管理员排序",
 			merchantDesc:"商家描述",
 			invoiceFlag:"是否开具发票 0否1是 ",
 			invoiceCodes:"发票的类型",//发票类型的字符串如：T001,T002
@@ -100,7 +99,6 @@
 			qq:"qq",
 			twoDimensionCode:"二维码路径",
 			registerDate:"注册时间",
-			adminSortNum:"管理员排序",
 			merchantDesc:"商家描述",
 			invoiceFlag:"是否开具发票 0否1是 ",
 			invoiceCodes:"发票的类型",//发票类型的字符串如：T001,T002
