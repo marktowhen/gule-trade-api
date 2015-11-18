@@ -53,4 +53,42 @@
 			}
 		},{...},{...},{...}
 	}
-	
+
+2)24小时热卖推荐查询:
+	方法： GET
+	资源路径: /api/goods/hot24goods/list
+	请求参数类型：json
+	请求参数：{
+		无
+	}
+	响应结果类型：json
+	响应结果:{
+		code:"",
+		message:"",
+		bad:"",
+		body:{
+			mid:"商家主键",
+			goodsList:[{
+			collectTime: "我的收藏收藏时间",
+			comment: "商品评论数",
+			gid: "GID",
+			goodsName: "商品名",
+			goodsTitle: "宝贝标题",
+			nowPrice: "现价",
+			price: "原价",
+			pro_end: "促销结束时间",
+			pro_flag: "是否促销标志",
+			pro_start: "促销开始时间",
+			promotionPrice: "促销价格",
+			thumb_path_1: "缩略图",
+			unit: "单位",
+			visitTime: "我的足迹浏览时间",
+			weight: "重量",
+			},{……},{……}]
+		},{...},{...},{...}
+	}
+
+ 
+
+
+
