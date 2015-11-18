@@ -10,8 +10,10 @@ public class Comments implements Serializable{
 	private static final long serialVersionUID = 5781821369962254868L;
 	private String ID;
 	private String UID;
+	private String replyUID;//对评论进行回复的人
 	private String GID;
 	private String ImgID;
+	private String replyComment;//回复人回复的内容
 	private String goodsComment;
 	private int commentGrade;
 	private String goodsService;
@@ -36,6 +38,14 @@ public class Comments implements Serializable{
 	public void setUID(String uID) {
 		UID = uID;
 	}
+	
+
+	public String getReplyUID() {
+		return replyUID;
+	}
+	public void setReplyUID(String replyUID) {
+		this.replyUID = replyUID;
+	}
 	public String getGID() {
 		return GID;
 	}
@@ -59,7 +69,13 @@ public class Comments implements Serializable{
 	public void setImgs(List<CommentsImg> imgs) {
 		this.imgs = imgs;
 	}
-
+	
+	public String getReplyComment() {
+		return replyComment;
+	}
+	public void setReplyComment(String replyComment) {
+		this.replyComment = replyComment;
+	}
 	public String getGoodsComment() {
 		return goodsComment;
 	}
