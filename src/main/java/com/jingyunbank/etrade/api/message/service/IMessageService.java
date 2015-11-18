@@ -7,8 +7,9 @@ import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.message.bo.Message;
+import com.jingyunbank.etrade.api.message.service.context.ISyncNotifyService;
 
-public interface IMessageService {
+public interface IMessageService extends ISyncNotifyService{
 	/**
 	 * 成功状态
 	 */

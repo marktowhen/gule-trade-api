@@ -101,5 +101,14 @@ public class Message implements Serializable{
 	public void setHasRead(boolean hasRead) {
 		this.hasRead = hasRead;
 	}
+	@Override
+	public String toString() {
+		return "Message [ID=" + ID + ", sentUID=" + sentUID + ", receiveUID="
+				+ receiveUID + ", title=" + title + ", content=" + content
+				+ ", type=" + type + ", status=" + status + ", addtime="
+				+ addtime + ", addip=" + addip + ", hasRead=" + hasRead
+				+ ", sendUser=" + sendUser + ", receiveUser=" + receiveUser
+				+ ", needReadStatus=" + needReadStatus + "]";
+	}
 	
 }
