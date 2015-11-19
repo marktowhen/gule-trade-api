@@ -1,0 +1,240 @@
+	登录
+		方法：POST
+		资源路径: /api/user/login 
+		请求参数：{
+			"key" : "用户名/手机/邮箱",   //必填
+			"password":"密码" ,  //必填
+			"captcha" : "验证码" //选填
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200/500,
+			"message":"成功/错误原因",
+			body: ""   //
+		}
+	
+	登出
+		方法：GET
+		资源路径: /api/user/logout
+		请求参数：{
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"成功",
+			body: ""   //
+		}
+		
+	根据用户名/手机/邮箱查询用户信息
+		方法：GET
+		资源路径: /api/user/query
+		请求参数：{
+			"key" : "用户名/手机/邮箱"   //必填
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				"username":"qxstest",  //用户名
+				"mobile":"15853161111", //手机
+				"email":"627956245@qq.com", //邮箱
+				"password":"16F16BB4490A1E00DC110E5699F05B0C", //登录密码
+				"tradepwd":"DFDBFB735BD8FDB2B3B387E5494CC0F4", //交易密码
+				"nickname":"呵呵",//昵称
+				"locked":false, //是否被锁
+				"id":"1"  //id
+			}   //
+		}
+			
+		
+	获取已登录用户的信息
+		方法：GET
+		资源路径: /api/user/loginuser
+		请求参数：{
+			
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				"username":"qxstest",  //用户名
+				"mobile":"15853161111", //手机
+				"email":"627956245@qq.com", //邮箱
+				"password":"16F16BB4490A1E00DC110E5699F05B0C", //登录密码
+				"tradepwd":"DFDBFB735BD8FDB2B3B387E5494CC0F4", //交易密码
+				"nickname":"呵呵",//昵称
+				"locked":false, //是否被锁
+				"id":"1"  //id
+			}   //
+		}
+		
+	//------------------------------qxs 验证/修改邮箱  start-----------------------------------------------	
+	
+	发送验证码到注册手机 
+		方法：GET
+		资源路径: /api/user/smsMessage
+		请求参数：{
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	
+	校验短信验证码
+		方法：GET
+		资源路径: /api/user/cksmsMessage
+		请求参数：{
+			"code" : "短信验证码" //必填
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+		
+	发送验证链接到用户输入的邮箱
+		
+		方法：GET
+		资源路径: /api/user/email-link
+		请求参数：{
+			"code" : "图形验证码", //必填
+			"email" : "邮箱" //必填
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	
+	验证邮箱链接(用户点击链接时验证)
+		方法：GET
+		资源路径: /api/user/ckemail-link
+		请求参数：{
+		
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	//------------------------------验证邮箱end-----------------------------------------------
+	
+	
+	//------------------------------ 验证手机  start---------------------------------------
+
+	发送验证码到注册邮箱 
+		方法：GET
+		资源路径: /api/user/email-message
+		请求参数：{
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	
+	校验邮箱验证码
+		方法：POST
+		资源路径: /api/user/email-message
+		请求参数：{
+			"code" : "短信验证码" //必填
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+		
+	发送手机验证码
+		
+		方法：GET
+		资源路径: /api/user/message
+		请求参数：{
+			"mobile" : "手机号" //必填
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	
+	验证手机验证码
+		方法：POST
+		资源路径: /api/user/message
+		请求参数：{
+			"mobile" : "手机号",
+			"code" :"手机验证码"
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	//------------------------------ 验证手机  end-----------------------------------------------
+  
+	//-------------------------------头像上传 start-----------------------------------
+	
+	上传头像
+		方法：fileUpload
+		资源路径: /api/user/picture
+		请求参数：{
+			"name":"file", //这三个都必传 但是怎么传暂时还不清楚
+			"originalFilename" :"原文件名",
+			"contentType" : "扩展名"
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body: {
+				
+			}   //
+		}
+	
+	
+	
+	
+	
+	
+	
+	
