@@ -26,9 +26,10 @@ public class CrossFilter implements Filter{
 			FilterChain chain) throws IOException, ServletException {
 		System.out.println("filtered ........................");
 		HttpServletResponse hsresponse = (HttpServletResponse) response;
-		hsresponse.setHeader("Access-Control-Allow-Origin", "*");
+		hsresponse.setHeader("Access-Control-Allow-Origin", "http://localhost:9000");
 		hsresponse.setHeader("Access-Control-Allow-Headers", "Content-Type");
 		hsresponse.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");
+		hsresponse.setHeader("Access-Control-Allow-Credentials", "true");
 		chain.doFilter(request, hsresponse);
 	}
 
