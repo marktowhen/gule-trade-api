@@ -10,7 +10,9 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletResponse;
-
+/**
+ * <b>该过滤器只应用于开发测试环境，线上环境应当去掉该过滤器！</b>
+ */
 @WebFilter("/*")
 public class CrossFilter implements Filter{
 
