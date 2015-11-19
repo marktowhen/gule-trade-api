@@ -9,7 +9,10 @@ import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.message.bo.Message;
 import com.jingyunbank.etrade.api.message.service.context.ISyncNotifyService;
 
-public interface IMessageService extends ISyncNotifyService{
+/**
+ * 站内信服务
+ */
+public interface IInboxService extends ISyncNotifyService{
 	/**
 	 * 成功状态
 	 */
