@@ -1,16 +1,16 @@
-¶¯Ì¬µÄ×ÊÑ¶
-1.1)±£´æÒ»¼¶²Ëµ¥ÖÐµÄÄÚÈÝ£º
+åŠ¨æ€çš„èµ„è®¯
+1.1)ä¿å­˜ä¸€çº§èœå•ä¸­çš„å†…å®¹ï¼š
 
 	
-	·½·¨£ºPUT
-	×ÊÔ´Â·¾¶£º/api/information/save
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£º{
-		SiteID:"Óë¶þ¼¶²Ëµ¥¹ØÁªµÄÁÐ"
-		name:"¶ÔÓ¦¶þ¼¶²Ëµ¥µÄ±êÌâ"
+	æ–¹æ³•ï¼šPUT
+	èµ„æºè·¯å¾„ï¼š/api/information/save
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼š{
+		SiteID:"ä¸ŽäºŒçº§èœå•å…³è”çš„åˆ—"
+		name:"å¯¹åº”äºŒçº§èœå•çš„æ ‡é¢˜"
 	}
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š
 	{
 
 
@@ -19,16 +19,17 @@
 		body:
 			{
 				ID:"",
-				SiteID:"Óë¶þ¼¶²Ëµ¥¹ØÁªµÄ",
-				name:"¶ÔÓ¦¶þ¼¶²Ëµ¥µÄ±êÌâ"     	
+				SiteID:"ä¸ŽäºŒçº§èœå•å…³è”çš„",
+				name:"å¯¹åº”äºŒçº§èœå•çš„æ ‡é¢˜"     	
 		}
-1.2£©²éÑ¯Ò»¼¶²Ëµ¥ÖÐµÄËùÓÐÄÚÈÝ
+
+1.2ï¼‰æŸ¥è¯¢ä¸€çº§èœå•ä¸­çš„æ‰€æœ‰å†…å®¹
 	
-	·½·¨£ºGET
-	×ÊÔ´Â·¾¶£º/api/information/gets£¨ÎÞÌõ¼þÈ«²¿²éÑ¯£©
-	ÇëÇó²ÎÊý£ºÎÞ
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º
+	æ–¹æ³•ï¼šGET
+	èµ„æºè·¯å¾„ï¼š/api/information/getsï¼ˆæ— æ¡ä»¶å…¨éƒ¨æŸ¥è¯¢ï¼‰
+	è¯·æ±‚å‚æ•°ï¼šæ— 
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š
 	{
 
 
@@ -37,8 +38,8 @@
 		body:[
 			{
 				ID:"",
-				SiteID:"ÓëÒ»¼¶²Ëµ¥¹ØÁªµÄ",
-				name:"¶ÔÓ¦¶þ¼¶²Ëµ¥µÄ±êÌâ"
+				SiteID:"ä¸Žä¸€çº§èœå•å…³è”çš„",
+				name:"å¯¹åº”äºŒçº§èœå•çš„æ ‡é¢˜"
 			},
 			{...},
 			{...}
@@ -46,14 +47,14 @@
 		     ]	
 		}
 
+//---------------------------------------------------------------------------------------------
+2.1ï¼‰ç‚¹å‡»æ—¶æ˜¾ç¤ºäºŒçº§èœå•ï¼š
 
-2.1£©µã»÷Ê±ÏÔÊ¾¶þ¼¶²Ëµ¥£º
-
-	·½·¨£ºGET
-	×ÊÔ´Â·¾¶£º/api/information/sites/{siteid}(ÓëÒ»¼¶²Ëµ¥¹ØÁªµÄsiteid)
-	ÇëÇó²ÎÊý£ºÎÞ
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º
+	æ–¹æ³•ï¼šGET
+	èµ„æºè·¯å¾„ï¼š/api/information/sites/{siteid}(ä¸Žä¸€çº§èœå•å…³è”çš„siteid)
+	è¯·æ±‚å‚æ•°ï¼šæ— 
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š
 	{
 
 
@@ -62,8 +63,8 @@
 		body:[
 			{
 				ID:"",
-				SiteID:"ÓëÒ»¼¶²Ëµ¥¹ØÁªµÄ",
-				name:"¶ÔÓ¦¶þ¼¶²Ëµ¥µÄ±êÌâ"
+				SiteID:"ä¸Žä¸€çº§èœå•å…³è”çš„",
+				name:"å¯¹åº”äºŒçº§èœå•çš„æ ‡é¢˜"
 			},
 			{...},
 			{...}
@@ -71,18 +72,18 @@
 		     ]	
 		}
 
-2.2)±£´æ¶þ¼¶²Ëµ¥£º
+2.2)ä¿å­˜äºŒçº§èœå•ï¼š
 	  
 
-	·½·¨£ºPUT
-	×ÊÔ´Â·¾¶£º/api/information/site	
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£º{
-		SiteID:"ÓëÒ»¼¶²Ëµ¥¹ØÁªµÄÁÐ"
-		name:"¶ÔÓ¦¶þ¼¶²Ëµ¥µÄ±êÌâ"
+	æ–¹æ³•ï¼šPUT
+	èµ„æºè·¯å¾„ï¼š/api/information/site	
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼š{
+		SiteID:"ä¸Žä¸€çº§èœå•å…³è”çš„åˆ—"
+		name:"å¯¹åº”äºŒçº§èœå•çš„æ ‡é¢˜"
 	}
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š
 	{
 
 
@@ -91,137 +92,137 @@
 		body:
 			{
 				ID:"",
-				SiteID:"ÓëÒ»¼¶²Ëµ¥¹ØÁªµÄ",
-				name:"¶ÔÓ¦¶þ¼¶²Ëµ¥µÄ±êÌâ"
+				SiteID:"ä¸Žä¸€çº§èœå•å…³è”çš„",
+				name:"å¯¹åº”äºŒçº§èœå•çš„æ ‡é¢˜"
 			
 		     	
 		}
-
-3.2£©±£´æÏàÓ¦µÄ¶à¸öÄÚÈÝµÄÐÅÏ¢£º
+//---------------------------------------------------------------------------------------------
+3.2ï¼‰ä¿å­˜ç›¸åº”çš„å¤šä¸ªå†…å®¹çš„ä¿¡æ¯ï¼š
 		
-	·½·¨£ºPUT
-	×ÊÔ´Â·¾¶£º/api/information/savedetails
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£º{
-		SID£º"Óë¶þ¼¶²Ëµ¥(id)¹ØÁªµÄ;"//±ØÌî
-		name:"Ö÷ÒªµÄÄÚÈÝ¼ò½é"
-		title:"±êÌâÐÅÏ¢"
-		content:"ÏàÓ¦µÄÄÚÈÝÐÅÏ¢"
-		publish:"³ö°æÊ±¼ä"
-		addtime:"Ìí¼ÓµÄÊ±¼ä"
+	æ–¹æ³•ï¼šPUT
+	èµ„æºè·¯å¾„ï¼š/api/information/savedetails
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼š{
+		SIDï¼š"ä¸ŽäºŒçº§èœå•(id)å…³è”çš„;"//å¿…å¡«
+		name:"ä¸»è¦çš„å†…å®¹ç®€ä»‹"
+		title:"æ ‡é¢˜ä¿¡æ¯"
+		content:"ç›¸åº”çš„å†…å®¹ä¿¡æ¯"
+		publish:"å‡ºç‰ˆæ—¶é—´"
+		addtime:"æ·»åŠ çš„æ—¶é—´"
 		
 		}
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏàÓ¦½á¹û£º
+	å“åº”ç±»åž‹ï¼šjson
+	ç›¸åº”ç»“æžœï¼š
 	{
 		
 		"code":200,
 		"message":"",
 		body:[
 
-		SID£º"Óë¶þ¼¶²Ëµ¥(id)¹ØÁªµÄ;"//±ØÌî
-		name:"Ö÷ÒªµÄÄÚÈÝ¼ò½é"
-		title:"±êÌâÐÅÏ¢"
-		content:"ÏàÓ¦µÄÄÚÈÝÐÅÏ¢"
-		publish:"³ö°æÊ±¼ä"
-		addtime:"Ìí¼ÓµÄÊ±¼ä"
+		SIDï¼š"ä¸ŽäºŒçº§èœå•(id)å…³è”çš„;"//å¿…å¡«
+		name:"ä¸»è¦çš„å†…å®¹ç®€ä»‹"
+		title:"æ ‡é¢˜ä¿¡æ¯"
+		content:"ç›¸åº”çš„å†…å®¹ä¿¡æ¯"
+		publish:"å‡ºç‰ˆæ—¶é—´"
+		addtime:"æ·»åŠ çš„æ—¶é—´"
 
 		     ]	
 	}
 
-3.3) ÐÞ¸Ä¶ÔÓ¦ÄÚÈÝÐÅÏ¢
+3.3) ä¿®æ”¹å¯¹åº”å†…å®¹ä¿¡æ¯
 
-	·½·¨£ºPOST
-	×ÊÔ´Â·¾¶£º/api/information/update
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£º{
-		ID:(Í¨¹ýid½øÐÐÐÞ¸Ä)
-		SID£º"Óë¶þ¼¶²Ëµ¥(id)¹ØÁªµÄ;"//±ØÌî
-		name:"Ö÷ÒªµÄÄÚÈÝ¼ò½é"
-		title:"±êÌâÐÅÏ¢"
-		content:"ÏàÓ¦µÄÄÚÈÝÐÅÏ¢"
-		publish:"³ö°æÊ±¼ä"
-		addtime:"Ìí¼ÓµÄÊ±¼ä"
+	æ–¹æ³•ï¼šPOST
+	èµ„æºè·¯å¾„ï¼š/api/information/update
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼š{
+		ID:(é€šè¿‡idè¿›è¡Œä¿®æ”¹)
+		SIDï¼š"ä¸ŽäºŒçº§èœå•(id)å…³è”çš„;"//å¿…å¡«
+		name:"ä¸»è¦çš„å†…å®¹ç®€ä»‹"
+		title:"æ ‡é¢˜ä¿¡æ¯"
+		content:"ç›¸åº”çš„å†…å®¹ä¿¡æ¯"
+		publish:"å‡ºç‰ˆæ—¶é—´"
+		addtime:"æ·»åŠ çš„æ—¶é—´"
 	}
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š
 	{
 		"code":200,
 		"message":"",
-		body:[(ÐÞ¸ÄÖ®ºóµÄÑù×Ó)
+		body:[(ä¿®æ”¹ä¹‹åŽçš„æ ·å­)
 		ID:
-		SID£º"Óë¶þ¼¶²Ëµ¥(id)¹ØÁªµÄ;"//±ØÌî
-		name:"Ö÷ÒªµÄÄÚÈÝ¼ò½é"
-		title:"±êÌâÐÅÏ¢"
-		content:"ÏàÓ¦µÄÄÚÈÝÐÅÏ¢"
-		publish:"³ö°æÊ±¼ä"
-		addtime:"Ìí¼ÓµÄÊ±¼ä"
+		SIDï¼š"ä¸ŽäºŒçº§èœå•(id)å…³è”çš„;"//å¿…å¡«
+		name:"ä¸»è¦çš„å†…å®¹ç®€ä»‹"
+		title:"æ ‡é¢˜ä¿¡æ¯"
+		content:"ç›¸åº”çš„å†…å®¹ä¿¡æ¯"
+		publish:"å‡ºç‰ˆæ—¶é—´"
+		addtime:"æ·»åŠ çš„æ—¶é—´"
 		]
 
 	}
-3.4£©ÔÚÊ×Ò³ÏÔÊ¾µÄÄÚÈÝ
+3.4ï¼‰åœ¨é¦–é¡µæ˜¾ç¤ºçš„å†…å®¹
 
-	·½·¨£ºGET
-	×ÊÔ´Â·¾¶£º/api/information/details/{sid}(Óë¶þ¼¶²Ëµ¥Ëù¹ØÁªµÄ)
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£ºÎÞ
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º{
+	æ–¹æ³•ï¼šGET
+	èµ„æºè·¯å¾„ï¼š/api/information/details/{sid}(ä¸ŽäºŒçº§èœå•æ‰€å…³è”çš„)
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼šæ— 
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š{
 
 		"code":200,
 		"message":"",
-		body:[£¨²éÑ¯³ö¶ÔÓ¦µÄ¶à¸öÄÚÈÝ£©
+		body:[ï¼ˆæŸ¥è¯¢å‡ºå¯¹åº”çš„å¤šä¸ªå†…å®¹ï¼‰
 		{
 		ID:
-		SID£º"Óë¶þ¼¶²Ëµ¥(id)¹ØÁªµÄ;"//±ØÌî
-		name:"Ö÷ÒªµÄÄÚÈÝ¼ò½é"//±ØÌî
-		title:"±êÌâÐÅÏ¢"//±ØÌî
-		content:"ÏàÓ¦µÄÄÚÈÝÐÅÏ¢"//±ØÌî
-		publish:"³ö°æÊ±¼ä"
-		addtime:"Ìí¼ÓµÄÊ±¼ä"
-		status:"×´Ì¬"
-		orders:"ÅÅÐò"
-		}£¬
+		SIDï¼š"ä¸ŽäºŒçº§èœå•(id)å…³è”çš„;"//å¿…å¡«
+		name:"ä¸»è¦çš„å†…å®¹ç®€ä»‹"//å¿…å¡«
+		title:"æ ‡é¢˜ä¿¡æ¯"//å¿…å¡«
+		content:"ç›¸åº”çš„å†…å®¹ä¿¡æ¯"//å¿…å¡«
+		publish:"å‡ºç‰ˆæ—¶é—´"
+		addtime:"æ·»åŠ çš„æ—¶é—´"
+		status:"çŠ¶æ€"
+		orders:"æŽ’åº"
+		}ï¼Œ
 		{...},
 		{...}
 		]
 	}
 	
-3.5£©µã»÷ÄÚÈÝ
+3.5ï¼‰ç‚¹å‡»å†…å®¹
 
-	·½·¨£º	GET
-	×ÊÔ´Â·¾¶£º/api/information/detail/{id}
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£ºÎÞ
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º{
+	æ–¹æ³•ï¼š	GET
+	èµ„æºè·¯å¾„ï¼š/api/information/detail/{id}
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼šæ— 
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š{
 
 		"code":200,
 		"message":"",
-		body:[£¨²éÑ¯³ö¶ÔÓ¦µÄ¶à¸öÄÚÈÝ£©
+		body:[ï¼ˆæŸ¥è¯¢å‡ºå¯¹åº”çš„å¤šä¸ªå†…å®¹ï¼‰
 		{
 		ID:
-		SID£º"Óë¶þ¼¶²Ëµ¥(id)¹ØÁªµÄ;"//±ØÌî
-		name:"Ö÷ÒªµÄÄÚÈÝ¼ò½é"//±ØÌî
-		title:"±êÌâÐÅÏ¢"//±ØÌî
-		content:"ÏàÓ¦µÄÄÚÈÝÐÅÏ¢"//±ØÌî
-		publish:"³ö°æÊ±¼ä"
-		addtime:"Ìí¼ÓµÄÊ±¼ä"
-		status:"×´Ì¬"
-		orders:"ÅÅÐò"
+		SIDï¼š"ä¸ŽäºŒçº§èœå•(id)å…³è”çš„;"//å¿…å¡«
+		name:"ä¸»è¦çš„å†…å®¹ç®€ä»‹"//å¿…å¡«
+		title:"æ ‡é¢˜ä¿¡æ¯"//å¿…å¡«
+		content:"ç›¸åº”çš„å†…å®¹ä¿¡æ¯"//å¿…å¡«
+		publish:"å‡ºç‰ˆæ—¶é—´"
+		addtime:"æ·»åŠ çš„æ—¶é—´"
+		status:"çŠ¶æ€"
+		orders:"æŽ’åº"
 		}
 
 		]
 
 	}
-3.6£©É¾³ý¹ýÆÚµÄÏêÏ¸ÄÚÈÝ
+3.6ï¼‰åˆ é™¤è¿‡æœŸçš„è¯¦ç»†å†…å®¹
 
-	·½·¨£ºDELETE
-	×ÊÔ´Â·¾¶£º/api/information/delete/{id}
-	ÇëÇó²ÎÊýÀàÐÍ£ºjson
-	ÇëÇó²ÎÊý£ºÎÞ
-	ÏìÓ¦ÀàÐÍ£ºjson
-	ÏìÓ¦½á¹û£º{
+	æ–¹æ³•ï¼šDELETE
+	èµ„æºè·¯å¾„ï¼š/api/information/delete/{id}
+	è¯·æ±‚å‚æ•°ç±»åž‹ï¼šjson
+	è¯·æ±‚å‚æ•°ï¼šæ— 
+	å“åº”ç±»åž‹ï¼šjson
+	å“åº”ç»“æžœï¼š{
 
 
 
