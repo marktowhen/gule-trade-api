@@ -1,9 +1,9 @@
-package com.jingyunbank.etrade.api.advice.bo;
+package com.jingyunbank.etrade.api.information.bo;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class AdviceDetails implements Serializable{
+public class InformationDetails implements Serializable{
 	//动态的行内咨询
 	private static final long serialVersionUID = 6898615572819261062L;
 	private String ID;

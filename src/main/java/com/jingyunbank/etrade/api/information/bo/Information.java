@@ -1,6 +1,7 @@
-package com.jingyunbank.etrade.api.advice.bo;
+package com.jingyunbank.etrade.api.information.bo;
 
-public class AdviceSite {
+public class Information {
+
 	private String ID;
 	private String SiteID;
 	private String name;
@@ -22,5 +23,5 @@ public class AdviceSite {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
+	} 
 }
