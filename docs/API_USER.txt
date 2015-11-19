@@ -93,7 +93,7 @@
 			body: {
 				"username":"qxstest",  //用户名
 				"mobile":"15853161111", //手机
-				"email":"627956245@qq.com", //邮箱
+				"email":"6@qq.com", //邮箱
 				"password":"16F16BB4490A1E00DC110E5699F05B0C", //登录密码
 				"tradepwd":"DFDBFB735BD8FDB2B3B387E5494CC0F4", //交易密码
 				"nickname":"呵呵",//昵称
@@ -117,7 +117,7 @@
 			body: {
 				"username":"qxstest",  //用户名
 				"mobile":"15853161111", //手机
-				"email":"627956245@qq.com", //邮箱
+				"email":"6279@qq.com", //邮箱
 				"password":"16F16BB4490A1E00DC110E5699F05B0C", //登录密码
 				"tradepwd":"DFDBFB735BD8FDB2B3B387E5494CC0F4", //交易密码
 				"nickname":"呵呵",//昵称
