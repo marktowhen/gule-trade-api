@@ -61,7 +61,13 @@ public interface IDiscountCouponService {
 	 */
 	public List<DiscountCoupon> listAll(DiscountCoupon discountCoupon, Range range);
 	
-	
+	/**
+	 * 查询数量
+	 * @param cashCoupon
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	public int getAmount(DiscountCoupon cashCoupon);
 	/**
 	 * 激活
 	 * @param code

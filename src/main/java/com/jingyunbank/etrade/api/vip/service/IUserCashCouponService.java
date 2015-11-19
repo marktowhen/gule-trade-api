@@ -48,6 +48,14 @@ public interface IUserCashCouponService {
 	 * @throws DataRefreshingException 
 	 */
 	public boolean consume(String couponId, String oid) throws DataRefreshingException;
+
+	/**
+	 * 查询未使用的有效抵用券数量
+	 * @param boFromVo
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	public int getUnusedCouponAmount(UserCashCoupon bo);
 	
 	
 }

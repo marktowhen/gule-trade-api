@@ -23,6 +23,13 @@ public interface IUserDiscountCouponService {
 	List<UserDiscountCoupon> getUnusedCoupon(UserDiscountCoupon bo, Range range);
 
 	/**
+	 * 获取用户可用的券数量
+	 * @param bo
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	int getUnusedCouponAmount(UserDiscountCoupon bo);
+	/**
 	 * 激活
 	 * @param code
 	 * @param uid
@@ -43,5 +50,7 @@ public interface IUserDiscountCouponService {
 	 * @throws DataRefreshingException 
 	 */
 	boolean consume(String couponId, String oid) throws DataRefreshingException;
+
+	
 
 }

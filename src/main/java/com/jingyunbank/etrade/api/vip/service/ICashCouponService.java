@@ -65,6 +65,13 @@ public interface ICashCouponService {
 	 * 2015年11月14日 qxs
 	 */
 	public List<CashCoupon> listAll(CashCoupon cashCoupon, Range range);
+	/**
+	 * 查询数量
+	 * @param cashCoupon
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	public int getAmount(CashCoupon cashCoupon);
 	
 	/**
 	 * 激活一张卡 将其改为已使用状态
