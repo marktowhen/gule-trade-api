@@ -78,7 +78,7 @@ public interface IAddressService {
 	 * @return
 	 * 2015年11月20日 qxs
 	 */
-	public List<Address> listUserAdd(String uid, Range range);
+	public List<Address> list(String uid, Range range);
 	
 	/**
 	 * 查询数量
