@@ -20,6 +20,7 @@ public interface ICashCouponService {
 	/**
 	 * 管理员新增一张代金券
 	 * @param cashCoupon
+	 * @param manager 记录日志做准备
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
@@ -27,8 +28,8 @@ public interface ICashCouponService {
 	
 	/**
 	 * 逻辑删除
-	 * @param cashCoupon
-	 * @param manager
+	 * @param code 编码
+	 * @param manager 记录日志做准备
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
@@ -36,29 +37,36 @@ public interface ICashCouponService {
 	
 	/**
 	 * 判断是否可被激活 
-	 * 未删除、未使用、在有效期内
+	 * 未删除、未使用、未过期
 	 * @param code
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public Result isValid(String code);
+	public Result canActive(String code);
 	
 	/**
 	 * 查看详情
-	 * @param cashCoupon
+	 * @param code
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public CashCoupon getSingle(CashCoupon cashCoupon);
+	public CashCoupon getSingleByCode(String cashCoupon);
 	/**
-	 * 查询 不关注是否有效
+	 * 查看详情
+	 * @param code
+	 * @return
+	 * 2015年11月14日 qxs
+	 */
+	public CashCoupon getSingleByID(String id);
+	/**
+	 * 查询 
 	 * @param cashCoupon
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
 	public List<CashCoupon> listAll(CashCoupon cashCoupon);
 	/**
-	 * 列表查询 不关注是否有效
+	 * 列表查询 
 	 * @param cashCoupon
 	 * @param range
 	 * @return

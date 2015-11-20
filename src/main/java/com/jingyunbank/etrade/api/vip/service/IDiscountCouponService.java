@@ -31,20 +31,28 @@ public interface IDiscountCouponService {
 	public boolean remove(String code, Users manager) throws DataRemovingException;
 	
 	/**
-	 * 判断是否有效 包括时间和状态
+	 * 是否可被激活
 	 * @param code
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public Result isValid(String code);
+	public Result canActive(String code);
 	
 	/**
 	 * 查看详情
-	 * @param DiscountCoupon
+	 * @param code
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public DiscountCoupon getSingle(DiscountCoupon discountCoupon);
+	public DiscountCoupon getSingleByCode(String code);
+	
+	/**
+	 * 查看详情
+	 * @param id
+	 * @return
+	 * 2015年11月14日 qxs
+	 */
+	public DiscountCoupon getSingleByID(String id);
 	/**
 	 * 查询 不关注是否有效
 	 * @param DiscountCoupon
