@@ -35,7 +35,7 @@ public interface IInboxService extends ISyncNotifyService{
 	/**
 	 * 多个新增
 	 * @param message
-	 * @param receiveUids
+	 * @param receiveUids 接收人id
 	 * 2015年11月12日 qxs
 	 * @throws DataSavingException 
 	 */
@@ -44,7 +44,7 @@ public interface IInboxService extends ISyncNotifyService{
 	/**
 	 * 多个新增
 	 * @param message
-	 * @param receiveUids
+	 * @param receiveUids 接收人id
 	 * 2015年11月12日 qxs
 	 * @throws DataSavingException 
 	 */
@@ -52,6 +52,7 @@ public interface IInboxService extends ISyncNotifyService{
 	/**
 	 * 逻辑删除消息
 	 * @param id
+	 * @param receiveUID
 	 * @return
 	 * @throws DataRefreshingException
 	 * 2015年11月12日 qxs
@@ -60,6 +61,7 @@ public interface IInboxService extends ISyncNotifyService{
 	/**
 	 * 批量删除
 	 * @param ids
+	 * @param receiveUID
 	 * @return
 	 * @throws DataRefreshingException
 	 * 2015年11月12日 qxs
@@ -74,49 +76,59 @@ public interface IInboxService extends ISyncNotifyService{
 	 * 2015年11月12日 qxs
 	 * @throws DataRefreshingException 
 	 */
-	public Optional<Message> getSingle(String ID, String receiveUID) ;
+	public Optional<Message> getSingle(String ID) ;
 	
 	/**
-	 * 分页查询
-	 * @param message
+	 * 列表查询
+	 * @param uid
 	 * @param range
 	 * @return
 	 * 2015年11月12日 qxs
 	 */
-	public List<Message> list(Message message, Range range);
-
-	/**
-	 * 按条件查询所有，不分页
-	 * @param message
-	 * @return
-	 * 2015年11月12日 qxs
-	 */
-	public List<Message> list(Message message);
-
-	/**
-	 * 修改消息的读取状态
-	 * @param id
-	 * @param receiveUID
-	 * 2015年11月13日 qxs
-	 * @throws Exception 
-	 */
-	public void refreshReadStatus(Message message) throws DataRefreshingException  ;
+	public List<Message> list(String uid, Range range);
 	
-	/**
-	 * 修改消息的读取状态
-	 * @param ids
-	 * @param receiveUID
-	 * 2015年11月13日 qxs
-	 */
-	public void refreshReadStatus(String [] ids, Message message) throws DataRefreshingException  ;
-
 	/**
 	 * 查询数量
 	 * @param message
 	 * @return
 	 * 2015年11月13日 qxs
 	 */
-	public int getAmount(Message message);
+	public int getAmount(String receiveUID);
+	/**
+	 * 未读消息
+	 * @param uid
+	 * @param range
+	 * @return
+	 * 2015年11月12日 qxs
+	 */
+	public List<Message> listUnread(String uid, Range range);
+	/**
+	 * 未读消息数量
+	 * @param message
+	 * @return
+	 * 2015年11月13日 qxs
+	 */
+	public int getAmountUnread(String receiveUID);
+
+	/**
+	 * 修改消息的读取状态
+	 * @param id
+	 * @param hasRead
+	 * @throws DataRefreshingException
+	 * 2015年11月20日 qxs
+	 */
+	public void refreshReadStatus(String  id , boolean hasRead) throws DataRefreshingException  ;
+	
+	/**
+	 * 修改消息的读取状态
+	 * @param ids
+	 * @param hasRead
+	 * @throws DataRefreshingException
+	 * 2015年11月20日 qxs
+	 */
+	public void refreshReadStatus(String [] ids , boolean hasRead) throws DataRefreshingException  ;
+
+	
 
 	
 	
