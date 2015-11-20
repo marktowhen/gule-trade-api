@@ -26,16 +26,34 @@ public interface IAddressService {
 	 */
 	public boolean save(Address address) throws DataSavingException, DataRefreshingException;
 	
+	/**
+	 * 修改收货地址
+	 * @param address 部分修改 id,uid 必传, 将其他传入的字段进行修改
+	 * @return
+	 * @throws DataRefreshingException
+	 * 2015年11月20日 qxs
+	 */
 	public boolean refresh(Address address) throws DataRefreshingException;
 	
 	/**
 	 * 删除某条地址，状态置为无效
-	 * @param address
+	 * @param id
+	 * @param uid
 	 * @return
 	 * @throws DataRefreshingException
-	 * 2015年11月5日 qxs
+	 * 2015年11月20日 qxs
 	 */
-	public boolean remove(Address address) throws DataRefreshingException ;
+	public boolean remove(String id, String uid) throws DataRefreshingException ;
+	
+	/**
+	 * 删除某条地址，状态置为无效
+	 * @param ids
+	 * @param uid
+	 * @return
+	 * @throws DataRefreshingException
+	 * 2015年11月20日 qxs
+	 */
+	public boolean remove(String [] ids, String uid) throws DataRefreshingException ;
 	
 	/**
 	 * 查找单条地址详情
@@ -54,14 +72,21 @@ public interface IAddressService {
 	public List<Address> list(String uid);
 	
 	/**
-	 * 分页查询有效地址
+	 * 查询某个用户地址
 	 * @param uid
+	 * @param range
 	 * @return
-	 * 2015年11月5日 qxs
+	 * 2015年11月20日 qxs
 	 */
-	public List<Address> listPage(Address address, Range range);
-
+	public List<Address> listUserAdd(String uid, Range range);
 	
+	/**
+	 * 查询数量
+	 * @param boFromVo
+	 * @return
+	 * 2015年11月13日 qxs
+	 */
+	public int getAmount(String uid);
 	
 	/**
 	 * 设置默认收货地址
@@ -72,13 +97,7 @@ public interface IAddressService {
 	 */
 	public void refreshDefualt(String id, String uid) throws DataRefreshingException;
 
-	/**
-	 * 查询数量
-	 * @param boFromVo
-	 * @return
-	 * 2015年11月13日 qxs
-	 */
-	public int getAmount(Address boFromVo);
+	
 	
 	/**
 	 * 查询默认收货地址
@@ -87,6 +106,9 @@ public interface IAddressService {
 	 * 2015年11月13日 qxs
 	 */
 	public Optional<Address> getDefaultAddress(String uid);
+
+	
+	
 	
 	
 	
