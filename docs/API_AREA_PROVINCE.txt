@@ -83,3 +83,25 @@
 				{……}
 			]	
 		}
+		
+		
+	6)根据国家查询
+		方法： GET
+		资源路径: /api/province/list/{countryID}
+		请求参数类型：json
+		请求参数：{	
+			
+		}
+		响应类型：json
+		响应结果:{
+			code:"",
+			message:"",
+			body:[
+				{
+					"provinceID":1
+					,"provinceName":"名称"
+					,"countryID":国家id
+				},
+				{……}
+			]	
+		}	
