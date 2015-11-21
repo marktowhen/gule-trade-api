@@ -129,6 +129,20 @@
 				"message":"",
 				body: 
 			}
+		是否可以消费
+			方法：GET
+			资源路径: /api/user-discountcoupon/can-consume
+			请求参数：{
+				"couponId": "券ID" ,//必填
+				"orderPrice":订单价值
+			}
+			相应类型：json
+			相应结果：
+			{
+				"code":200,//200成功 500失败
+				"message":"",//失败原因
+				body: 
+			}
 	
 		用户未使用的有效券
 			方法：GET

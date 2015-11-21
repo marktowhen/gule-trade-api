@@ -83,3 +83,24 @@
 				{……}
 			]	
 		}
+		
+	6)根据省查city
+		方法： GET
+		资源路径: /api/city/list/{provinceID}
+		请求参数类型：json
+		请求参数：{	
+			
+		}
+		响应类型：json
+		响应结果:{
+			code:"",
+			message:"",
+			body:[
+				{
+					"cityID":城市id
+					,"cityName":"名称"
+					,"provinceID":省id
+				},
+				{……}
+			]	
+		}	

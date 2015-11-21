@@ -1,8 +1,10 @@
 package com.jingyunbank.etrade.api.vip.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.user.bo.Users;
@@ -32,13 +34,38 @@ public interface IUserCashCouponService {
 	public boolean active(CashCoupon cashCoupon, Users user) throws DataRefreshingException, DataSavingException;
 	
 	/**
-	 * 查询未使用的有效抵用券
+	 * 用户未使用的未过期抵用券
+	 * @param uid
+	 * @param range
+	 * @return
+	 * 2015年11月20日 qxs
+	 */
+	public List<UserCashCoupon> getUnusedCoupon(String uid, Range range);
+	
+	/**
+	 * 查询未使用的未过期抵用券
 	 * @param cashCoupon
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
 	public List<UserCashCoupon> getUnusedCoupon(UserCashCoupon userCoupon, Range range);
 
+	/**
+	 * 查询未使用的未过期抵用券
+	 * @param boFromVo
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	public int getUnusedCouponAmount(UserCashCoupon bo);
+	/**
+	 * 是否可以消费
+	 * @param couponId
+	 * @param uid
+	 * @param orderPrice
+	 * @return
+	 * 2015年11月20日 qxs
+	 */
+	public Result canConsume(String couponId, String uid, BigDecimal orderPrice);
 	/**
 	 * 消费
 	 * @param couponId
@@ -49,13 +76,7 @@ public interface IUserCashCouponService {
 	 */
 	public boolean consume(String couponId, String oid) throws DataRefreshingException;
 
-	/**
-	 * 查询未使用的有效抵用券数量
-	 * @param boFromVo
-	 * @return
-	 * 2015年11月19日 qxs
-	 */
-	public int getUnusedCouponAmount(UserCashCoupon bo);
+	
 	
 	
 }

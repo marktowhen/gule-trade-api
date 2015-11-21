@@ -41,20 +41,10 @@
 				"id":"Xo8oTaXUQi-u81JKpoIndA"  //消息的id
 			}
 		}
-		
-	3)列表查询
+	3)未读列表查询
 		方法：GET
-		资源路径: /api/message/list/{uid} -->用户id
+		资源路径: /api/message/list/unread/{uid} -->用户id
 		请求参数：{
-			"ID" : "消息id", //选填
-			"sentUID" : "发送人ID" ,  //选填
-			"title" : "标题" ,   //选填 模糊查询
-			"content" :"内容",		//选填 模糊查询
-			"type" : "类型" ,	//选填 letter代表站内信
-			"status" : "状态", //选填 默认为1 1成功 2失败 3删除
-			"hasRead":true,          //选填 是否已读(需要needReadStatus) 默认为false->查询未读消息  true->已读消息
-			"needReadStatus":true    //选填 是否关注 hasRead的状态 默认false->查询不关注是否已读 true->关注hasRead的状态
-			
 		}
 		相应类型：json
 		相应结果：
@@ -80,19 +70,51 @@
 			]	
 		}
 		
-	4)数量查询
+	4)未读数量查询
+		方法：GET
+		资源路径: /api/message/amount/unread/{uid} -->用户id
+		请求参数：{
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body:数值   //
+		}	
+	5)列表查询
+		方法：GET
+		资源路径: /api/message/list/{uid} -->用户id
+		请求参数：{
+		}
+		相应类型：json
+		相应结果：
+		{
+			"code":200,
+			"message":"",
+			body:[
+				{
+					"sentUID":"2", 	  //发送者id
+					"receiveUID":"1", //接收者id
+					"title":"测试",   //标题
+					"content":"真",   //内容
+					"type":"letter",  //类型 letter代表站内信
+					"status":1,       //状态 1成功 2失败 3删除
+					"addtime":1447381675000, //发送时间
+					"addip":"127.0.0.1",     //发送人的ip
+					"hasRead":true,          //是否已读
+					"sendUser":{"username":""},//发送人
+					"receiveUser":{"username":"qxstest"}, //接受人
+					"id":"Xo8oTaXUQi-u81JKpoIndA"  //消息的id
+				},
+				{……}
+			]	
+		}
+		
+	6)数量查询
 		方法：GET
 		资源路径: /api/message/amount/{uid} -->用户id
 		请求参数：{
-			"ID" : "消息id", //选填
-			"sentUID" : "发送人ID" ,  //选填
-			"title" : "标题" ,   //选填 模糊查询
-			"content" :"内容",		//选填 模糊查询
-			"type" : "类型" ,	//选填 letter代表站内信
-			"status" : "状态", //选填 默认为1 1成功 2失败 3删除
-			"hasRead":true,          //选填 是否已读(需要needReadStatus) 默认为false->查询未读消息  true->已读消息
-			"needReadStatus":true    //选填 是否关注 hasRead的状态 默认false->查询不关注是否已读 true->关注hasRead的状态
-		
 		}
 		相应类型：json
 		相应结果：
@@ -102,7 +124,7 @@
 			body:数值   //
 		}
 		
-	5)删除
+	7)删除
 		方法：DELETE
 		资源路径: /api/message/{id} ->消息id  多个id以英文逗号隔开
 		请求参数：{
@@ -115,7 +137,7 @@
 			body: 空   //
 		}
 		
-	6)将消息置为已读或未读
+	8)将消息置为已读或未读
 		方法：POST
 		资源路径: /api/message/{id} ->消息id  多个id以英文逗号隔开
 		请求参数：{

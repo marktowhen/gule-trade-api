@@ -40,19 +40,19 @@ public interface ICountryService {
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public List<Country> selectList(Country bo, Range range);
+	public List<Country> list(Country bo, Range range);
 	/**
 	 * 不分页查询
 	 * @param bo
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public List<Country> selectList(Country bo);
+	public List<Country> list(Country bo);
 	/**
 	 * 单个详情
 	 * @param id
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public Country selectSingle(int id);
+	public Country single(int id);
 }
