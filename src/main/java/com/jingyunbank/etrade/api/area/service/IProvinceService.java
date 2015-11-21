@@ -1,6 +1,9 @@
 package com.jingyunbank.etrade.api.area.service;
 
+import java.util.Collection;
 import java.util.List;
+
+import org.springframework.validation.ObjectError;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.area.bo.Province;
@@ -41,19 +44,27 @@ public interface IProvinceService {
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public List<Province> selectList(Province bo, Range range);
+	public List<Province> list(Province bo, Range range);
 	/**
 	 * 不分页查询
 	 * @param bo
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public List<Province> selectList(Province bo);
+	public List<Province> list(Province bo);
 	/**
 	 * 单个详情
 	 * @param id
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public Province selectSingle(int id);
+	public Province single(int id);
+	
+	/**
+	 * 根据国家查询
+	 * @param countryID
+	 * @return
+	 * 2015年11月21日 qxs
+	 */
+	public List<Province> listByCountry(int countryID);
 }
