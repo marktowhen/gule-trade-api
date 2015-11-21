@@ -15,18 +15,20 @@ public class PayType implements Serializable{
 	public final static String OFFLINE_CODE 				= "OFFLINE";//线下支付
 	public final static String COD_CODE 					= "COD";//货到付款
 	
-	private String id;
+	private String ID;
 	private String code;
 	private String name;
 	private String description;
 	private boolean disable;
 	private boolean online;
 	private String url;
-	public String getId() {
-		return id;
+	
+	
+	public String getID() {
+		return ID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setID(String iD) {
+		ID = iD;
 	}
 	public String getCode() {
 		return code;
