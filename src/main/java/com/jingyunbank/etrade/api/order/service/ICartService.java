@@ -66,5 +66,11 @@ public interface ICartService {
 	 * @return
 	 */
 	public Optional<Cart> singleCart(String uid);
+	/**
+	 * 删除用户购物车中的所有商品
+	 * @param loginUID
+	 * @throws DataRemovingException
+	 */
+	public void clear(String uid) throws DataRemovingException;
 	
 }
