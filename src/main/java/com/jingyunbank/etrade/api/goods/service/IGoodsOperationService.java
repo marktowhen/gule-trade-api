@@ -1,11 +1,6 @@
 package com.jingyunbank.etrade.api.goods.service;
 
-import java.util.Map;
 import java.util.Optional;
-
-import com.jingyunbank.etrade.api.goods.bo.Goods;
-import com.jingyunbank.etrade.api.goods.bo.GoodsDetail;
-import com.jingyunbank.etrade.api.goods.bo.GoodsImg;
 import com.jingyunbank.etrade.api.goods.bo.GoodsOperation;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 

@@ -1,7 +1,6 @@
 package com.jingyunbank.etrade.api.goods.bo;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 
