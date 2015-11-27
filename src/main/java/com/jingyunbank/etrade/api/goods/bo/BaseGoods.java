@@ -44,7 +44,7 @@ public class BaseGoods implements Serializable {
 	private Date addTime;// 商品添加时间
 	private Date pro_start;  //促销开始时间
 	private Date pro_end;	//促销结束时间
-	private int pro_flag; //是否促销标志
+	private String pro_flag; //是否促销标志
 	private Date upTime; //上架时间
 	private Date downTime;//下架时间
 	private BigDecimal postage; //邮费
@@ -507,14 +507,15 @@ public class BaseGoods implements Serializable {
 		this.pro_end = pro_end;
 	}
 
-	public int getPro_flag() {
+	 
+
+	public String getPro_flag() {
 		return pro_flag;
 	}
 
-	public void setPro_flag(int pro_flag) {
+	public void setPro_flag(String pro_flag) {
 		this.pro_flag = pro_flag;
 	}
-
 
 	public Date getProductionDate() {
 		return productionDate;
