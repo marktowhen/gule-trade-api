@@ -1,6 +1,8 @@
 package com.jingyunbank.etrade.api.goods.service;
 
+import java.util.List;
 import java.util.Optional;
+
 import com.jingyunbank.etrade.api.goods.bo.GoodsOperation;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 
@@ -58,4 +60,18 @@ public interface IGoodsOperationService {
 	 * @throws Exception
 	 */
 	public boolean refreshGoodsDown(String gid)throws Exception;
+	
+	/**
+	 * 获取所有店铺
+	 * @return
+	 * @throws Exception
+	 */
+	public  List<ShowGoods> listMerchant()throws Exception;
+	/**
+	 * 根据商家MID 查询当前上架所属的品牌
+	 * @param mid
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listBrandsByMid(String mid)throws Exception;
 }
