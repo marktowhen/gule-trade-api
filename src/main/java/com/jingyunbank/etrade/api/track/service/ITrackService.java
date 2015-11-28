@@ -18,7 +18,7 @@ public interface ITrackService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<FootprintGoods> listFootprintGoods(int to) throws Exception;
+	public List<FootprintGoods> listFootprintGoods(int from,int to) throws Exception;
 	/**
 	 * 保存我的足迹
 	 * @param uid
@@ -40,7 +40,7 @@ public interface ITrackService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<FavoritesGoods> listMerchantFavorites(String uid,String type,int to) throws Exception;
+	public List<FavoritesGoods> listMerchantFavorites(String uid,String type,int from,int to) throws Exception;
 	/**
 	 * 查询我的收藏是否已经存在
 	 * @param uid
