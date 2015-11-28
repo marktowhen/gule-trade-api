@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.pay.service.context;
 import java.util.List;
 import java.util.Map;
 
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
@@ -38,4 +39,16 @@ public interface IPayContextService {
 	 */
 	public Map<String, String> refreshAndComposite(List<OrderPayment> payments, 
 					String platformCode, String platformName) throws Exception;
+	/**
+	 * 处理支付平台相应的支付成功的结果
+	 * @param extransno
+	 * @throws DataRefreshingException
+	 */
+	public void paydone(String extransno) throws DataRefreshingException;
+	/**
+	 * 处理支付平台相应的支付失败的结果
+	 * @param extransno
+	 * @throws DataRefreshingException
+	 */
+	public void payfail(String extransno) throws DataRefreshingException;
 }

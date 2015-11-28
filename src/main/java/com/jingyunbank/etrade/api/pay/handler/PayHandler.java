@@ -7,6 +7,6 @@ import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
 
 public interface PayHandler {
 
-	public Map<String, String> handle(List<OrderPayment> payments) throws Exception;
+	public Map<String, String> prepare(List<OrderPayment> payments) throws Exception;
 	
 }

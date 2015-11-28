@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.pay.service;
 
 import java.util.List;
 
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
@@ -34,4 +35,16 @@ public interface IPayService {
 	 */
 	public boolean allDone(List<String> orderpaymentids) ;
 
+	/**
+	 * 完成支付
+	 * @param extransno
+	 * @throws DataRefreshingException
+	 */
+	public void finish(String extransno) throws DataRefreshingException;
+	/**
+	 * 支付失败
+	 * @param extransno
+	 * @throws DataRefreshingException
+	 */
+	public void fail(String extransno) throws DataRefreshingException;
 }
