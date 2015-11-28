@@ -13,7 +13,7 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 
 public interface IUserService {
 
-	public Optional<Users> getByUid(String id);
+	public Optional<Users> getByUID(String id);
 	
 	public Optional<Users> getByPhone(String phone);
 	

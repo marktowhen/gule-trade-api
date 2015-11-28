@@ -24,7 +24,7 @@ public class OrderPayment implements Serializable{
 	private BigDecimal money;
 	private String note;
 	private boolean done;
-	private int platformCode;
+	private String platformCode;
 	private String platformName;
 	private Date addtime;
 	private Date paidtime;
@@ -83,10 +83,10 @@ public class OrderPayment implements Serializable{
 	public void setDone(boolean done) {
 		this.done = done;
 	}
-	public int getPlatformCode() {
+	public String getPlatformCode() {
 		return platformCode;
 	}
-	public void setPlatformCode(int platformCode) {
+	public void setPlatformCode(String platformCode) {
 		this.platformCode = platformCode;
 	}
 	public String getPlatformName() {
