@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.track.service;
 
 import java.util.List;
 
+import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.track.bo.FavoritesGoods;
 import com.jingyunbank.etrade.api.track.bo.FootprintGoods;
@@ -49,4 +50,11 @@ public interface ITrackService {
 	 * @throws Exception
 	 */
 	public boolean isFavoritesExists(String uid,String fid,String type)throws Exception;
+	/**
+	 * 根据ID 删除我的收藏
+	 * @param id
+	 * @return
+	 * @throws DataRemovingException
+	 */
+	public boolean removeFavoritesById(String id) throws DataRemovingException;
 }
