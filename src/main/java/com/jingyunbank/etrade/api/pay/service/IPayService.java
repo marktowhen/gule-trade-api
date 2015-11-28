@@ -20,6 +20,18 @@ public interface IPayService {
 	
 	public List<OrderPayment> listPayments(List<String> oids);
 
-	public void refreshExtransno(List<OrderPayment> payments) throws DataSavingException;
+	public void refresh(List<OrderPayment> payments) throws DataSavingException;
+	/**
+	 * 检查是否有订单已经支付完成。
+	 * @param payments
+	 * @return
+	 */
+	public boolean anyDone(List<String> orderpaymentids) ; 
+	/**
+	 * 检查是否所有指定的订单都已经支付完成。
+	 * @param payments
+	 * @return
+	 */
+	public boolean allDone(List<String> orderpaymentids) ;
 
 }

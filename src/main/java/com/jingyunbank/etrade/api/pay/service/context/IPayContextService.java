@@ -30,11 +30,12 @@ public interface IPayContextService {
 	 */
 	public boolean ifpayable(List<Orders> orders);
 	/**
-	 * 构建支付信息，该信息用于提交给支付平台的支付信息数据.
+	 * 更新支付信息的 对外交易号(extransno)，支付平台等信息，并且合成用于提交给支付平台的支付信息。
 	 * <p>
-	 * 包括，交易号（extransno，多订单共享），交易总额等
+	 * 如果其中某支付信息已经过时或者已完成支付，则不会更新任一支付信息，并且返回{"error":"支付信息有误！"}
 	 * @param payments
 	 * @throws DataSavingException
 	 */
-	public Map<String, String> buildPayInfo(List<OrderPayment> payments, String platformCode) throws Exception;
+	public Map<String, String> refreshAndComposite(List<OrderPayment> payments, 
+					String platformCode, String platformName) throws Exception;
 }
