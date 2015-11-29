@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
@@ -18,8 +19,19 @@ public interface IOrderService {
 	public void refresh(Orders order) throws DataRefreshingException;
 	
 	public Optional<Orders> singleByOrderNo(String orderno) ;
-	
+	/**
+	 * 查询某用户的所有订单信息，默认是按照下单时间的降序排列
+	 * @param uid
+	 * @return
+	 */
 	public List<Orders> list(String uid);
+	/**
+	 * 查询某用户的按时间降序排列的订单中的 某几条数据。
+	 * @param uid
+	 * @param range from->to
+	 * @return
+	 */
+	public List<Orders> list(String uid, Range range);
 	
 	public List<Orders> list();
 	
