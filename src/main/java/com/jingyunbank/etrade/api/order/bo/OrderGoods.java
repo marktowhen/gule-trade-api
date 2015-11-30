@@ -24,6 +24,7 @@ public class OrderGoods implements Serializable{
 	private BigDecimal payout;//实际付款
 	private BigDecimal reduce;//优惠减免价格
 	private Date addtime;
+	private String imgpath;
 	
 	public String getID() {
 		return ID;
@@ -97,5 +98,10 @@ public class OrderGoods implements Serializable{
 	public void setAddtime(Date addtime) {
 		this.addtime = addtime;
 	}
-	
+	public String getImgpath() {
+		return imgpath;
+	}
+	public void setImgpath(String imgpath) {
+		this.imgpath = imgpath;
+	}
 }
