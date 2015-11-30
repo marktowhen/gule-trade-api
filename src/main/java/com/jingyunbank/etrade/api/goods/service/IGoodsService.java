@@ -42,7 +42,15 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listTypes() throws Exception;
-
+	
+	/**
+	 * 查询所有商品
+	 * @param range
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listAll(Range range)throws Exception;
+	
 	/**
 	 * 根据多条件查询商品
 	 * 
