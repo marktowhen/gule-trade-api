@@ -95,7 +95,7 @@ public interface IAddressService {
 	 * 2015年11月9日 qxs
 	 * @throws DataRefreshingException 
 	 */
-	public void refreshDefualt(String id, String uid) throws DataRefreshingException;
+	public void refreshDefault(String id, String uid, boolean defaulted) throws DataRefreshingException;
 
 	
 	
