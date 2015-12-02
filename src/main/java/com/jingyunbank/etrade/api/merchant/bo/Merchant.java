@@ -42,6 +42,8 @@ public class Merchant {
 	private String imgPath ;
 	/** 是否开具发票 0否1是  */
 	private String invoiceFlag;
+	/** 商家的等级1-5  */
+	private String level;
 	/**发票的类型*/
 	private String invoiceCodes;
 	/**快递的类型*/
@@ -177,6 +179,10 @@ public class Merchant {
 	public void setDeliverylist(List<DeliveryType> deliverylist) {
 		this.deliverylist = deliverylist;
 	}
-	
-	
+	public String getLevel() {
+		return level;
+	}
+	public void setLevel(String level) {
+		this.level = level;
+	}
 }

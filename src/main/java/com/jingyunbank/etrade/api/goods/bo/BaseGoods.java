@@ -19,6 +19,7 @@ public class BaseGoods implements Serializable {
 	private String MID;
 	private String merchantName; // 商家
 	private String merchantDesc; // 商家简介
+	private String level; // 商家等级
 	private String merchantImg; // 商家图片
 
 	// --------------品牌属性----------------//
