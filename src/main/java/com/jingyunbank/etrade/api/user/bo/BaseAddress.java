@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class BaseAddress implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8638143560261167710L;
 	private String ID;
 	private String UID;//用户id
 	private String name;//标题

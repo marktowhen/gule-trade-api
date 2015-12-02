@@ -1,9 +1,6 @@
 package com.jingyunbank.etrade.api.area.service;
 
-import java.util.Collection;
 import java.util.List;
-
-import org.springframework.validation.ObjectError;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.area.bo.Province;
