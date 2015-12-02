@@ -32,5 +32,5 @@ public interface IPointLogService {
 	 * @throws DataSavingException
 	 * 2015年12月1日 qxs
 	 */
-	public boolean add(PointLog pointLog) throws DataSavingException;
+	public boolean save(PointLog pointLog) throws DataSavingException;
 }

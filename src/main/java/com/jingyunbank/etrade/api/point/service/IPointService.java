@@ -43,12 +43,20 @@ public interface IPointService {
 	public boolean minusPoint(String uid, int point) throws DataRefreshingException;
 	
 	/**
+	 * 获取用户积分
+	 * @param uid
+	 * @return
+	 * 2015年12月2日 qxs
+	 */
+	public Point get(String uid);
+	
+	/**
 	 * 获得用户当前积分
 	 * @param uid
 	 * @return
 	 * 2015年12月1日 qxs
 	 */
-	public int get(String uid);
+	public int getPoint(String uid);
 	
 
 }
