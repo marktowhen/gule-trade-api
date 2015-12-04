@@ -89,22 +89,38 @@ public interface IInboxService extends ISyncNotifyService{
 	
 	/**
 	 * 查询数量
-	 * @param message
+	 * @param receiveUID
 	 * @return
 	 * 2015年11月13日 qxs
 	 */
 	public int getAmount(String receiveUID);
 	/**
 	 * 未读消息
-	 * @param uid
+	 * @param receiveUID
 	 * @param range
 	 * @return
 	 * 2015年11月12日 qxs
 	 */
-	public List<Message> listUnread(String uid, Range range);
+	public List<Message> listUnread(String receiveUID, Range range);
+	/**
+	 * 已读消息数量
+	 * @param receiveUID
+	 * @return
+	 * 2015年11月13日 qxs
+	 */
+	public int getAmountRead(String receiveUID);
+	
+	/**
+	 * 已读消息
+	 * @param receiveUID
+	 * @param range
+	 * @return
+	 * 2015年11月12日 qxs
+	 */
+	public List<Message> listRead(String receiveUID, Range range);
 	/**
 	 * 未读消息数量
-	 * @param message
+	 * @param receiveUID
 	 * @return
 	 * 2015年11月13日 qxs
 	 */
