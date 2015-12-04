@@ -8,4 +8,6 @@ public interface IPayPipelineService {
 
 	public List<PayPipeline> list();
 	
+	public PayPipeline single(String pipecode);
+	
 }
