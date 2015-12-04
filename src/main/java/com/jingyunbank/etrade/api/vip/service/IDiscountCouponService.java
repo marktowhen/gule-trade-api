@@ -36,7 +36,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public Result canActive(String code);
+	public Result<String> canActive(String code);
 	
 	/**
 	 * 查看详情

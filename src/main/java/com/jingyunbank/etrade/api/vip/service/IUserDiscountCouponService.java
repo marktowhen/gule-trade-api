@@ -24,14 +24,6 @@ public interface IUserDiscountCouponService {
 	 */
 	public List<UserDiscountCoupon> getUnusedCoupon(String uid, Range range);
 
-	/**
-	 * 用户未使用的未过期抵用券
-	 * @param bo
-	 * @param range
-	 * @return
-	 * 2015年11月17日 qxs
-	 */
-	List<UserDiscountCoupon> getUnusedCoupon(UserDiscountCoupon bo, Range range);
 
 	/**
 	 * 用户未使用的未过期抵用券数量
@@ -39,7 +31,7 @@ public interface IUserDiscountCouponService {
 	 * @return
 	 * 2015年11月19日 qxs
 	 */
-	int getUnusedCouponAmount(UserDiscountCoupon bo);
+	int getUnusedCouponAmount(String uid);
 	/**
 	 * 激活
 	 * @param code
@@ -59,7 +51,7 @@ public interface IUserDiscountCouponService {
 	 * @return
 	 * 2015年11月20日 qxs
 	 */
-	public Result canConsume(String couponId, String uid, BigDecimal orderPrice);
+	public Result<String> canConsume(String couponId, String uid, BigDecimal orderPrice);
 	
 	/**
 	 * 消费
@@ -71,6 +63,55 @@ public interface IUserDiscountCouponService {
 	 */
 	boolean consume(String couponId, String oid) throws DataRefreshingException;
 
+	
+	/**
+	 * 已消费的数量
+	 * @param uid
+	 * @return
+	 * 2015年12月3日 qxs
+	 */
+	int getConsumedCouponAmount(String uid);
+	/**
+	 * 已消费的列表
+	 * @param uid
+	 * @param range
+	 * @return
+	 * 2015年12月3日 qxs
+	 */
+	List<UserDiscountCoupon> getConsumedCoupon(String uid, Range range);
+	
+	/**
+	 * 已过期的数量
+	 * @param uid
+	 * @return
+	 * 2015年12月3日 qxs
+	 */
+	int getOverdueCouponAmount(String uid);
+	/**
+	 * 已过期的列表
+	 * @param uid
+	 * @param range
+	 * @return
+	 * 2015年12月4日 qxs
+	 */
+	List<UserDiscountCoupon> getOverdueCoupon(String uid, Range range);
+	
+	/**
+	 * 当前可用数量
+	 * @param uid
+	 * @return
+	 * 2015年12月3日 qxs
+	 */
+	int getUseableCouponAmount(String uid);
+	
+	/**
+	 * 当前可用的列表
+	 * @param uid
+	 * @param range
+	 * @return
+	 * 2015年12月4日 qxs
+	 */
+	List<UserDiscountCoupon> getUseableCoupon(String uid, Range range);
 	
 
 }
