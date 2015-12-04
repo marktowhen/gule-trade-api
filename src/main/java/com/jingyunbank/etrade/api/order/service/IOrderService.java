@@ -8,6 +8,8 @@ import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.order.bo.OrderGoods;
+import com.jingyunbank.etrade.api.order.bo.OrderStatusDesc;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 
 public interface IOrderService {
@@ -25,6 +27,20 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<Orders> list(String uid);
+	/**
+	 * 查询某用户的某订单状态下的所有订单
+	 * @param uid
+	 * @param status
+	 * @return
+	 */
+	public List<Orders> listOrder(String uid, OrderStatusDesc status);
+	/**
+	 * 查询某用户的某订单状态下的所有订单商品
+	 * @param uid
+	 * @param status
+	 * @return
+	 */
+	public List<OrderGoods> listOrderGoods(String uid, OrderStatusDesc status);
 	/**
 	 * 查询某用户的按时间降序排列的订单中的 某几条数据。
 	 * @param uid

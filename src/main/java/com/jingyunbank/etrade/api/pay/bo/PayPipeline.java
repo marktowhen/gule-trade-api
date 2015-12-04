@@ -3,11 +3,11 @@ package com.jingyunbank.etrade.api.pay.bo;
 import java.io.Serializable;
 
 /**
- * 支付平台领域对象<br>
+ * 支付渠道领域对象<br>
  * 该类实例描述可能的支付平台信息，如各家银行网关支付，支付宝，京东支付等等。<br>
  * 其中应当包括支付平台名称，平台代码，是否是第三方支付
  */
-public class PayPlatform implements Serializable{
+public class PayPipeline implements Serializable{
 
 	private static final long serialVersionUID = 205285626202979394L;
 	
