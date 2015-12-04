@@ -37,8 +37,10 @@ public interface IPayContextService {
 	 * @param payments
 	 * @throws DataSavingException
 	 */
-	public Map<String, String> refreshAndComposite(List<OrderPayment> payments, 
-					String pipelineCode, String pipelineName) throws Exception;
+	public Map<String, String> refreshAndComposite(
+					List<OrderPayment> payments, 
+					String pipelineCode, String pipelineName,
+					String bankCode) throws Exception;
 	/**
 	 * 处理支付平台相应的支付成功的结果
 	 * @param extransno
