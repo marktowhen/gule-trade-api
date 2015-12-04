@@ -13,6 +13,7 @@ public class OrderGoods implements Serializable{
 
 	private static final long serialVersionUID = -3377063429817839243L;
 	private String ID;
+	private String UID;
 	private String OID;//订单id
 	private long orderno;
 	private String GID;//商品id
@@ -103,5 +104,11 @@ public class OrderGoods implements Serializable{
 	}
 	public void setImgpath(String imgpath) {
 		this.imgpath = imgpath;
+	}
+	public String getUID() {
+		return UID;
+	}
+	public void setUID(String uID) {
+		UID = uID;
 	}
 }
