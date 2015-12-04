@@ -10,6 +10,7 @@ import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 
 
+
 public interface ICommentService {
 	
 	public boolean save(Comments comments) throws DataSavingException;
@@ -23,4 +24,6 @@ public interface ICommentService {
 	public void refreshStatus(Comments comments) throws DataRefreshingException;
 	
 	public void refreshStatus(String[] ids,Comments comments) throws DataRefreshingException;
+	
+	public Optional<Comments> selectCommentByOid(String oid);
 }

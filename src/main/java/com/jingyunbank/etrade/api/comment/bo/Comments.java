@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.jingyunbank.etrade.api.user.bo.Users;
+
+
 public class Comments implements Serializable{
 
 	private static final long serialVersionUID = 5781821369962254868L;
 	private String ID;
 	private String UID;
+	private String OID;
 	private String replyUID;//对评论进行回复的人
 	private String GID;
 	private String ImgID;
@@ -21,11 +25,20 @@ public class Comments implements Serializable{
 	private Date addtime;//添加评价的时间
 	private int commentStatus;
 	private int orders;
+	/*private Users users; */
 	private List<CommentsImg> imgs=new ArrayList<CommentsImg>();
+	
 	
 	public List<CommentsImg> getImgs() {
 		return imgs;
 	}
+	public String getOID() {
+		return OID;
+	}
+	public void setOID(String oID) {
+		OID = oID;
+	}
+
 	public String getID() {
 		return ID;
 	}
