@@ -34,13 +34,7 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<Orders> listOrder(String uid, OrderStatusDesc status);
-	/**
-	 * 查询某用户的某订单状态下的所有订单商品
-	 * @param uid
-	 * @param status
-	 * @return
-	 */
-	public List<OrderGoods> listOrderGoods(String uid, OrderStatusDesc status);
+	
 	/**
 	 * 查询某用户的按时间降序排列的订单中的 某几条数据。
 	 * @param uid

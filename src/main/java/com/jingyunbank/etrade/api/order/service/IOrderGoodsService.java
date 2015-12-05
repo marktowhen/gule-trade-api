@@ -1,10 +1,12 @@
 package com.jingyunbank.etrade.api.order.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 
 import com.jingyunbank.etrade.api.order.bo.OrderGoods;
+import com.jingyunbank.etrade.api.order.bo.OrderStatusDesc;
 
 /**
  * 用来管理操作订单中每件商品的服务接口
@@ -13,4 +15,13 @@ public interface IOrderGoodsService {
 
 	public void save(List<OrderGoods> goods) throws DataSavingException;
 	
+	/**
+	 * 查询某用户的某订单状态下的所有订单商品
+	 * @param uid
+	 * @param status
+	 * @return
+	 */
+	public List<OrderGoods> listOrderGoods(String uid,OrderStatusDesc status);/*OrderStatusDesc status*/
+	
+	public Optional<OrderGoods> getOrderGoods(String gid);
 }
