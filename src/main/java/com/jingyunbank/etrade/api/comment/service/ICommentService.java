@@ -26,4 +26,6 @@ public interface ICommentService {
 	public void refreshStatus(String[] ids,Comments comments) throws DataRefreshingException;
 	
 	public Optional<Comments> selectCommentByOid(String oid);
+	
+	public int commentCount(String gid);
 }

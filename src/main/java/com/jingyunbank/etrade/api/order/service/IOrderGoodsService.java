@@ -23,5 +23,5 @@ public interface IOrderGoodsService {
 	 */
 	public List<OrderGoods> listOrderGoods(String uid,OrderStatusDesc status);/*OrderStatusDesc status*/
 	
-	public Optional<OrderGoods> getOrderGoods(String gid);
+	public Optional<OrderGoods> getOrderGoods(String oid);
 }
