@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
 import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
+import com.jingyunbank.etrade.api.goods.bo.HoneyGoods;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
@@ -134,5 +135,12 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public Optional<ShowGoods> singleById(String gid) throws Exception;
+	/**
+	 * 查询阿胶详情页  宝贝排行列表
+	 * @return
+	 * @throws Exception
+	 */
+	public List<HoneyGoods> listHoneyGoods() throws Exception;
+	
 	 
 }
