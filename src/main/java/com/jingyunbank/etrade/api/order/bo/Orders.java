@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
+
 public class Orders  implements Serializable{
 
 	//订单有效期
@@ -34,6 +36,7 @@ public class Orders  implements Serializable{
 	
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
 	private List<OrderTrace> traces = new ArrayList<OrderTrace>();
+	private OrderPayment payment = new OrderPayment();
 	
 	public String getID() {
 		return ID;
@@ -177,6 +180,14 @@ public class Orders  implements Serializable{
 
 	public void setTraces(List<OrderTrace> traces) {
 		this.traces = traces;
+	}
+
+	public OrderPayment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(OrderPayment payment) {
+		this.payment = payment;
 	}
 
 	public String getMname() {

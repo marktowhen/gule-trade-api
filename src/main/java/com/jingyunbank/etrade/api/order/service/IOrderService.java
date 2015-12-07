@@ -5,10 +5,9 @@ import java.util.List;
 import java.util.Optional;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.exception.DataRefreshingException;
-import com.jingyunbank.etrade.api.order.bo.OrderGoods;
 import com.jingyunbank.etrade.api.order.bo.OrderStatusDesc;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 
@@ -18,7 +17,7 @@ public interface IOrderService {
 	
 	public void save(List<Orders> order) throws DataSavingException;
 	
-	public void refresh(Orders order) throws DataRefreshingException;
+	public void refreshStatus(List<String> oids, OrderStatusDesc status) throws DataRefreshingException;
 	
 	public Optional<Orders> singleByOrderNo(String orderno) ;
 	/**
@@ -48,5 +47,12 @@ public interface IOrderService {
 	public List<Orders> list(Date start, Date end);
 
 	public void remove(String id) throws DataRemovingException;
+
+	/**
+	 * 根据对外订单号获取公用该订单号的订单信息
+	 * @param extransno
+	 * @return
+	 */
+	public List<Orders> listByExtransno(String extransno);
 	
 }
