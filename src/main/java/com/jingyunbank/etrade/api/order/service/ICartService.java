@@ -17,13 +17,7 @@ public interface ICartService {
 	 * @param goods
 	 * @throws DataSavingException
 	 */
-	public void save(GoodsInCart goods) throws DataSavingException;
-	/**
-	 * 保存多件商品到购物车
-	 * @param goods
-	 * @throws DataSavingException
-	 */
-	public void save(List<GoodsInCart> goods) throws DataSavingException;
+	public boolean save(GoodsInCart goods) throws DataSavingException;
 	/**
 	 * 更新购物车中商品的数量，价格等信息
 	 * @param goods
