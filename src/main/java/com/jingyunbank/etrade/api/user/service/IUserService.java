@@ -30,9 +30,9 @@ public interface IUserService {
 	 */
 	public Optional<Users> getByKey(String key);
 	
-	public boolean save(Users user, UserInfo info) throws DataSavingException;
+	public void save(Users user, UserInfo info) throws DataSavingException;
 	
-	public boolean refresh(Users user) throws DataRefreshingException;
+	public void refresh(Users user) throws DataRefreshingException;
 	
 	public List<Users> list(Range range);
 	

@@ -14,6 +14,14 @@ public class Cart implements Serializable{
 	private String ID;
 	private String UID;
 
+	public Cart() {
+		super();
+	}
+	public Cart(String iD, String uID) {
+		super();
+		ID = iD;
+		UID = uID;
+	}
 	public String getID() {
 		return ID;
 	}
