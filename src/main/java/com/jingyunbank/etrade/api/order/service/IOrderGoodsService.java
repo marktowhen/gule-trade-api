@@ -23,7 +23,7 @@ public interface IOrderGoodsService {
 	 */
 	public List<OrderGoods> listOrderGoods(String uid,OrderStatusDesc status);/*OrderStatusDesc status*/
 	
-	public Optional<OrderGoods> getOrderGoods(String gid);
+	public Optional<OrderGoods> singleOrderGoods(String oid);
 
 	/**
 	 * 更新指定订单的商品信息的状态
