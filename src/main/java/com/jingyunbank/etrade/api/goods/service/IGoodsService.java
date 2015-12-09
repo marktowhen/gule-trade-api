@@ -75,8 +75,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listRecommend() throws Exception;
-
+	public List<ShowGoods> listRecommend(String from, String to) throws Exception;
 	/**
 	 * 根据商品条件查询关联店铺
 	 * 
