@@ -12,13 +12,24 @@ import com.jingyunbank.etrade.api.vip.bo.DiscountCoupon;
 
 public interface IDiscountCouponService {
 	/**
-	 * 管理员新增一张代金券
+	 * 管理员新增一张抵用券
 	 * @param DiscountCoupon
 	 * @return
 	 * 2015年11月14日 qxs
 	 * @throws DataSavingException 
 	 */
 	public boolean save(DiscountCoupon discountCoupon, Users manager) throws DataSavingException;
+	
+	/**
+	 * 新增多张券
+	 * @param discountCoupon
+	 * @param manager
+	 * @param amount
+	 * @return
+	 * @throws DataSavingException
+	 * 2015年12月9日 qxs
+	 */
+	public boolean saveMuti(DiscountCoupon discountCoupon, Users manager, int amount) throws DataSavingException;
 	
 	/**
 	 * 逻辑删除
@@ -84,5 +95,7 @@ public interface IDiscountCouponService {
 	 * 2015年11月17日 qxs
 	 */
 	public boolean active(String code) throws DataRefreshingException ;
+
+	
 
 }

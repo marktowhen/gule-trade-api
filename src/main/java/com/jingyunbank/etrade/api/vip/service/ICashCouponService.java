@@ -27,6 +27,16 @@ public interface ICashCouponService {
 	public boolean save(CashCoupon cashCoupon, Users manager) throws DataSavingException;
 	
 	/**
+	 * 新增多张券
+	 * @param cashCoupon
+	 * @param manager
+	 * @param amount
+	 * 2015年12月9日 qxs
+	 * @throws DataSavingException 
+	 */
+	public boolean saveMuti(CashCoupon cashCoupon, Users manager, int amount) throws DataSavingException;
+	
+	/**
 	 * 逻辑删除
 	 * @param code 编码
 	 * @param manager 记录日志做准备
@@ -89,5 +99,6 @@ public interface ICashCouponService {
 	 * @throws DataRefreshingException 
 	 */
 	public boolean activeCoupon(String code) throws DataRefreshingException;
+
 }
 
