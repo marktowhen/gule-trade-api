@@ -56,5 +56,5 @@ public interface ITrackService {
 	 * @return
 	 * @throws DataRemovingException
 	 */
-	public boolean removeFavoritesById(String id) throws DataRemovingException;
+	public boolean removeFavoritesById(List<String> id) throws DataRemovingException;
 }
