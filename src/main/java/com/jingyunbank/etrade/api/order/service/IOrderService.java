@@ -6,7 +6,6 @@ import java.util.Optional;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
-import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.bo.OrderStatusDesc;
 import com.jingyunbank.etrade.api.order.bo.Orders;
@@ -59,8 +58,6 @@ public interface IOrderService {
 	public List<Orders> list();
 	
 	public List<Orders> list(Date start, Date end);
-
-	public void remove(String id) throws DataRemovingException;
 
 	/**
 	 * 根据对外订单号获取公用该订单号的订单信息
