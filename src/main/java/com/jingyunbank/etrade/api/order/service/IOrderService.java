@@ -27,6 +27,8 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<Orders> list(String uid);
+	
+	public List<Orders> list(List<String> oids);
 	/**
 	 * 查询某用户的某订单状态下的所有订单
 	 * @param uid

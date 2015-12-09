@@ -5,6 +5,7 @@ import java.util.List;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.order.bo.OrderLogistic;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 import com.jingyunbank.etrade.api.order.bo.Refund;
 
@@ -56,18 +57,20 @@ public interface IOrderContextService {
 	public void payfail(String extorderno) throws DataRefreshingException, DataSavingException ;
 	/**
 	 * 支付成功确认<br>
-	 * 用户支付成功后，卖家需要将订单状态更新为delivering， <br>
+	 * 用户支付成功后，卖家需要将订单状态更新为accept， <br>
 	 * 以表示该订单中的商品正在出库即将配送或已经配送但还没有更新为已配送状态，<br>
-	 * 一旦卖家将订单状态更新至此，买家申请退款就必须得到买家的同意
+	 * 一旦卖家将订单状态更新至此，买家申请退款就必须得到买家的同意.
+	 * <p>NOTE:所有待处理订单必须处于 PAID 状态
 	 * @param orderno
+	 * @return 如果有订单状态不正确，则返回false
 	 */
-	public void delivering(String orderno) throws DataSavingException;
+	public boolean accept(List<String> oids) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 卖家订单发货<br>
 	 * 更新订单状态为已发货，然后通知买家注意收货，并生成相应log信息等
 	 * @param orderno
 	 */
-	public void delivered(String orderno);
+	public boolean dispatch(OrderLogistic logistic) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 买家订单收货<br>
 	 * 更新订单状态为已收货(RECEIVED)，并生成相应log信息等。<br>
@@ -105,4 +108,5 @@ public interface IOrderContextService {
 	public void approveRefund(Refund refund);
 	
 	public boolean canRefund(String oid);
+	
 }
