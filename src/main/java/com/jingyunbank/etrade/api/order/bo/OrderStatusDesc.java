@@ -62,17 +62,21 @@ public final class OrderStatusDesc implements Serializable{
 	
 	private String name;
 	private String code;
-	private int order;
-	private String desc;
+	private int orders;
+	private String description;
 	private boolean visible;//该状态下的订单买家是否可见
 	
-	public OrderStatusDesc(String code, String name, int order,
+	public OrderStatusDesc() {
+		super();
+	}
+
+	public OrderStatusDesc(String code, String name, int orders,
 			String desc, boolean visible) {
 		super();
 		this.name = name;
 		this.code = code;
-		this.order = order;
-		this.desc = desc;
+		this.orders = orders;
+		this.description = desc;
 		this.visible = visible;
 	}
 	
@@ -87,19 +91,23 @@ public final class OrderStatusDesc implements Serializable{
 	}
 	public void setCode(String code) {
 		this.code = code;
+	}	
+	public String getDescription() {
+		return description;
 	}
-	public String getDesc() {
-		return desc;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+
+	public int getOrders() {
+		return orders;
 	}
-	public int getOrder() {
-		return order;
+
+	public void setOrders(int orders) {
+		this.orders = orders;
 	}
-	public void setOrder(int order) {
-		this.order = order;
-	}
+
 	public boolean isVisible() {
 		return visible;
 	}
