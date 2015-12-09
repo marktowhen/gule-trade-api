@@ -18,8 +18,9 @@ public interface IOrderService {
 	public void save(List<Orders> order) throws DataSavingException;
 	
 	public void refreshStatus(List<String> oids, OrderStatusDesc status) throws DataRefreshingException;
+
+	public Optional<Orders> single(String oid);
 	
-	public Optional<Orders> singleByOrderNo(String orderno) ;
 	/**
 	 * 查询某用户的所有订单信息，默认是按照下单时间的降序排列
 	 * @param uid
