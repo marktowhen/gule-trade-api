@@ -65,5 +65,16 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<Orders> listByExtransno(String extransno);
+
+	/**
+	 * 查询用户的订单数量
+	 * @param uid
+	 * @param statuscode 订单状态码 （如果为空，则不过滤该条件，即查询全部）
+	 * @param fromdate 订单开始日期（格式良好的日期字符串，如‘2015-12-09’，如果为空，则默认‘1970-01-01’）
+	 * @param keywords 订单商品关键字（如果为空，则不过滤该条件，即查询全部）
+	 * @return
+	 * 2015年12月10日 qxs
+	 */
+	public Integer getAmount(String uid, String statuscode, String fromdate,String keywords);
 	
 }
