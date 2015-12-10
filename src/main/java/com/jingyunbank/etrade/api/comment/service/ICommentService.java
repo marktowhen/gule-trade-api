@@ -17,6 +17,8 @@ public interface ICommentService {
 	//通过gid得到产品的留言
 	public List<Comments> getCommentsByGid(String gid);
 	
+	public List<Comments> selectCommentGradeByGid(String gid,int commentGrade);
+	
 	public Optional<Comments> getById(String id);
 	
 	public void remove(String id) throws DataRemovingException;

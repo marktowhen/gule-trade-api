@@ -9,7 +9,7 @@ public class UserInfo  implements Serializable{
 	private String 	UID;
 	private Date birthday;//生日
 	private boolean marriage;//婚否
-	private Gender gender;//性别
+	private boolean gender;//性别
 	private int country;//国家
 	private int province;//省份
 	private int city;//城市
@@ -48,10 +48,10 @@ public class UserInfo  implements Serializable{
 	public void setMarriage(boolean marriage) {
 		this.marriage = marriage;
 	}
-	public Gender getGender() {
+	public boolean isGender() {
 		return gender;
 	}
-	public void setGender(Gender gender) {
+	public void setGender(boolean gender) {
 		this.gender = gender;
 	}
 	public int getCountry() {
@@ -122,9 +122,9 @@ public class UserInfo  implements Serializable{
 	public void setRegdevice(Device regdevice) {
 		this.regdevice = regdevice;
 	}
-	public enum Gender{
+	/*public enum Gender{
 		MAIL, FEMALE, NONE
-	}
+	}*/
 	public enum Device{
 		PC, WAP, ANDROID, IPHONE, WINPHONE
 	}

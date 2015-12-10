@@ -25,6 +25,7 @@ public class Comments implements Serializable{
 	private Date addtime;//添加评价的时间
 	private int commentStatus;
 	private int orders;
+	
 	/*private Users users; */
 	private List<CommentsImg> imgs=new ArrayList<CommentsImg>();
 	
