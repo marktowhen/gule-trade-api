@@ -80,5 +80,11 @@ public interface ICartService {
 	 * @throws DataRemovingException
 	 */
 	public void clear(String uid) throws DataRemovingException;
+	/**
+	 * 指定用户的购物车中的商品数量
+	 * @param uid
+	 * @return
+	 */
+	public int count(String uid);
 	
 }

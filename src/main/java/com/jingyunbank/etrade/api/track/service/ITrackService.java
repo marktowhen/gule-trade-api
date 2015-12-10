@@ -57,4 +57,14 @@ public interface ITrackService {
 	 * @throws DataRemovingException
 	 */
 	public boolean removeFavoritesById(List<String> id) throws DataRemovingException;
+	/**
+	 * 获取我的收藏大小
+	 * @param uid
+	 * @param type
+	 * @param from
+	 * @param to
+	 * @return
+	 * @throws Exception
+	 */
+	public int countMerchantFavorites(String uid,String type) throws Exception;
 }
