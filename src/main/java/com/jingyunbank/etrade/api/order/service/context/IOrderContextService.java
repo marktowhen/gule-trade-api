@@ -3,8 +3,8 @@ package com.jingyunbank.etrade.api.order.service.context;
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
-import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.order.bo.OrderLogistic;
 import com.jingyunbank.etrade.api.order.bo.Orders;
 import com.jingyunbank.etrade.api.order.bo.Refund;
 
@@ -56,29 +56,31 @@ public interface IOrderContextService {
 	public void payfail(String extorderno) throws DataRefreshingException, DataSavingException ;
 	/**
 	 * 支付成功确认<br>
-	 * 用户支付成功后，卖家需要将订单状态更新为delivering， <br>
+	 * 用户支付成功后，卖家需要将订单状态更新为accept， <br>
 	 * 以表示该订单中的商品正在出库即将配送或已经配送但还没有更新为已配送状态，<br>
-	 * 一旦卖家将订单状态更新至此，买家申请退款就必须得到买家的同意
+	 * 一旦卖家将订单状态更新至此，买家申请退款就必须得到买家的同意.
+	 * <p>NOTE:所有待处理订单必须处于 PAID 状态
 	 * @param orderno
+	 * @return 如果有订单状态不正确，则返回false
 	 */
-	public void delivering(String orderno) throws DataSavingException;
+	public boolean accept(List<String> oids) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 卖家订单发货<br>
 	 * 更新订单状态为已发货，然后通知买家注意收货，并生成相应log信息等
 	 * @param orderno
 	 */
-	public void delivered(String orderno);
+	public boolean dispatch(OrderLogistic logistic) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 买家订单收货<br>
 	 * 更新订单状态为已收货(RECEIVED)，并生成相应log信息等。<br>
 	 * <strong>该方法的执行表示整个订单完成</strong>
 	 * @param orderno
 	 */
-	public void received(String orderno);
+	public boolean received(List<String> oids) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 取消订单<br>
 	 * 将订单状态更新为已取消。<br>
-	 * 只有订单<strong>还没有支付</strong>或者<strong>支付但没有得到卖家确认</strong>的情况下才可以取消。
+	 * 只有订单<strong>还没有支付</strong>的情况下才可以取消。
 	 * <br>
 	 * 如果买家已付款，但是希望放弃购买，此时必须向卖家提出退款申请，得到卖家同意后，方可退款。<br>
 	 * 参考<code></code>
@@ -86,13 +88,13 @@ public interface IOrderContextService {
 	 * @param orderno 订单号
 	 * @param reason 取消原因
 	 */
-	public void cancel(String orderno, String reason);
+	public boolean cancel(String oid, String reason) throws DataRefreshingException, DataSavingException;
 	/**
-	 * 移除已取消的订单<br>
+	 * 移除已取消的订单(逻辑删除)<br>
 	 * 将已经取消的订单更新为删除状态，不在显示在用户的订单列表中
 	 * @param orderno
 	 */
-	public void remove(String id) throws DataRemovingException;
+	public boolean remove(String id) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 申请退款<br>
 	 * 对为过退换货期的商品或订单申请退款，将订单状态修改为退款中，等待卖家同意
@@ -105,4 +107,5 @@ public interface IOrderContextService {
 	public void approveRefund(Refund refund);
 	
 	public boolean canRefund(String oid);
+	
 }

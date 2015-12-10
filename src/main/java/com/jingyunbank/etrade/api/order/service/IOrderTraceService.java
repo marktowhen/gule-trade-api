@@ -15,4 +15,5 @@ public interface IOrderTraceService {
 	
 	public void save(List<OrderTrace> traces) throws DataSavingException;
 	
+	public List<OrderTrace> list(String oid) ;
 }

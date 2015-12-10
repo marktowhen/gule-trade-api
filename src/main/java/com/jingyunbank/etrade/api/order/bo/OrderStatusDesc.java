@@ -15,7 +15,7 @@ import java.io.Serializable;
  * <tr><td>支付结果确认</td><td>PAYING</td><td>支付结果确认中， 已调用第三方或者银行支付接口，等待对方确认支付结果</td></tr>
  * <tr><td>已付款</td><td>PAID</td><td>买家完成支付</td></tr>
  * <tr><td>支付失败</td><td>PAYFAIL</td><td>第三方或者银行告知支付失败</td></tr>
- * <tr><td>卖家发货中，商品出库中</td><td>DELIVERING</td><td>卖家确认用户已经付款,并准备发货,该状态中的，及状态后的产品不允许用户直接退款，必须发起退款申请，得到卖家同意方可退款</td></tr>
+ * <tr><td>卖家发货中，商品出库中</td><td>ACCEPT</td><td>卖家确认用户已经付款,并准备发货,该状态中的，及状态后的产品不允许用户直接退款，必须发起退款申请，得到卖家同意方可退款</td></tr>
  * <tr><td>卖家已发货</td><td>DELIVERED</td><td>卖家已发货</td></tr>
  * <tr><td>买家已收货</td><td>RECEIVED</td><td>买家确认收到货品，意味着交易成功</td></tr>
  * <tr><td>买家已评价</td><td>COMMENTED</td><td>买家已经评价了该商品</td></tr>
@@ -34,7 +34,7 @@ public final class OrderStatusDesc implements Serializable{
 	public final static String PAYING_CODE 				= "PAYING";
 	public final static String PAID_CODE 				= "PAID";
 	public final static String PAYFAIL_CODE 			= "PAYFAIL";
-	public final static String DELIVERING_CODE 			= "DELIVERING";
+	public final static String ACCEPT_CODE 				= "ACCEPT";
 	public final static String DELIVERED_CODE 			= "DELIVERED";
 	public final static String RECEIVED_CODE 			= "RECEIVED";
 	public final static String COMMENTED_CODE 			= "COMMENTED";
@@ -49,7 +49,7 @@ public final class OrderStatusDesc implements Serializable{
 	public final static OrderStatusDesc			PAYING			= new OrderStatusDesc(PAYING_CODE, "支付结果确认中", 1, "支付结果确认中， 已调用第三方或者银行支付接口，等待对方确认支付结果", false);
 	public final static OrderStatusDesc			PAID			= new OrderStatusDesc(PAID_CODE, "已付款", 2, "买家完成支付", true);
 	public final static OrderStatusDesc			PAYFAIL			= new OrderStatusDesc(PAYFAIL_CODE, "支付失败", 2, "第三方或者银行告知支付失败", true);
-	public final static OrderStatusDesc			DELIVERING		= new OrderStatusDesc(DELIVERING_CODE, "卖家发货中/商品出库中", 3, "卖家确认用户已经付款,并准备发货,该状态中的，及状态后的产品不允许用户直接退款，必须发起退款申请，得到卖家同意方可退款", true);
+	public final static OrderStatusDesc			ACCEPT			= new OrderStatusDesc(ACCEPT_CODE, "卖家接受订单/卖家发货中/商品出库中", 3, "卖家确认用户已经付款,并准备发货,该状态中的，及状态后的产品不允许用户直接退款，必须发起退款申请，得到卖家同意方可退款", true);
 	public final static OrderStatusDesc			DELIVERED		= new OrderStatusDesc(DELIVERED_CODE, "卖家已发货", 4, "卖家已发货", true);
 	public final static OrderStatusDesc			RECEIVED		= new OrderStatusDesc(RECEIVED_CODE, "买家已收货", 5, "买家确认收到货品，意味着交易成功", true);
 	public final static OrderStatusDesc			COMMENTED		= new OrderStatusDesc(COMMENTED_CODE, "买家已评价", 6, "买家已经评价了该商品", true);
@@ -62,17 +62,21 @@ public final class OrderStatusDesc implements Serializable{
 	
 	private String name;
 	private String code;
-	private int order;
-	private String desc;
+	private int orders;
+	private String description;
 	private boolean visible;//该状态下的订单买家是否可见
 	
-	public OrderStatusDesc(String code, String name, int order,
+	public OrderStatusDesc() {
+		super();
+	}
+
+	public OrderStatusDesc(String code, String name, int orders,
 			String desc, boolean visible) {
 		super();
 		this.name = name;
 		this.code = code;
-		this.order = order;
-		this.desc = desc;
+		this.orders = orders;
+		this.description = desc;
 		this.visible = visible;
 	}
 	
@@ -87,19 +91,23 @@ public final class OrderStatusDesc implements Serializable{
 	}
 	public void setCode(String code) {
 		this.code = code;
+	}	
+	public String getDescription() {
+		return description;
 	}
-	public String getDesc() {
-		return desc;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+
+	public int getOrders() {
+		return orders;
 	}
-	public int getOrder() {
-		return order;
+
+	public void setOrders(int orders) {
+		this.orders = orders;
 	}
-	public void setOrder(int order) {
-		this.order = order;
-	}
+
 	public boolean isVisible() {
 		return visible;
 	}

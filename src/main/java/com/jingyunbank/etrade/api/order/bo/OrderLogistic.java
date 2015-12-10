@@ -7,13 +7,14 @@ import java.util.Date;
  * 订单物流信息，卖家将发送的快递单号填入该
  *
  */
-public class OrderDelivery implements Serializable{
+public class OrderLogistic implements Serializable{
 	private static final long serialVersionUID = -1424634030820474079L;
 	private String ID;
 	private String OID;
 	private String expressno;
+	private String expressName;
 	private Date addtime;
-	private String typeID;
+	private String typeCode;
 	private String typeName;
 	public String getID() {
 		return ID;
@@ -39,11 +40,17 @@ public class OrderDelivery implements Serializable{
 	public void setAddtime(Date addtime) {
 		this.addtime = addtime;
 	}
-	public String getTypeID() {
-		return typeID;
+	public String getExpressName() {
+		return expressName;
 	}
-	public void setTypeID(String typeID) {
-		this.typeID = typeID;
+	public void setExpressName(String expressName) {
+		this.expressName = expressName;
+	}
+	public String getTypeCode() {
+		return typeCode;
+	}
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
 	}
 	public String getTypeName() {
 		return typeName;

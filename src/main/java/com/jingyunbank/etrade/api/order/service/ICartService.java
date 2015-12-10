@@ -26,16 +26,30 @@ public interface ICartService {
 	public void refresh(GoodsInCart goods) throws DataRefreshingException;
 	/**
 	 * 将商品从购物车中移除
-	 * @param goods
+	 * @param gidInCart 商品在购物车中的id
 	 * @throws DataRemovingException
 	 */
 	public void remove(String gidInCart) throws DataRemovingException;
 	/**
 	 * 将多件商品从购物车中移除
-	 * @param goods
+	 * @param gidInCart 商品在购物车中的id
 	 * @throws DataRemovingException
 	 */
 	public void remove(List<String> gidsInCart) throws DataRemovingException;
+	
+	/**
+	 * 将商品从用户的购物车中移除
+	 * @param gid 商品id
+	 * @throws DataRemovingException
+	 */
+	public void remove(String gid, String uid) throws DataRemovingException;
+	/**
+	 * 将多件商品从购物车中移除
+	 * @param gids 商品id
+	 * @throws DataRemovingException
+	 */
+	public void remove(List<String> gids, String uid) throws DataRemovingException;
+	
 	/**
 	 * 列出用户购物车中的所有商品
 	 * @param uid
@@ -66,5 +80,11 @@ public interface ICartService {
 	 * @throws DataRemovingException
 	 */
 	public void clear(String uid) throws DataRemovingException;
+	/**
+	 * 指定用户的购物车中的商品数量
+	 * @param uid
+	 * @return
+	 */
+	public int count(String uid);
 	
 }

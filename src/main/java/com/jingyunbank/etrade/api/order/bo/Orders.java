@@ -19,7 +19,9 @@ public class Orders  implements Serializable{
 	private String ID;
 	private long orderno;
 	private String receiver;//收货人
-	private String addressID;//收货地址->address id
+	private String address;//收货地址
+	private String mobile ;//收货人电话
+	private String zipcode;
 	private String UID;//下单人
 	private String MID;
 	private String mname;
@@ -77,13 +79,26 @@ public class Orders  implements Serializable{
 	public void setNote(String note) {
 		this.note = note;
 	}
-
-	public String getAddressID() {
-		return addressID;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAddressID(String addressID) {
-		this.addressID = addressID;
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
 	}
 
 	public Date getAddtime() {
