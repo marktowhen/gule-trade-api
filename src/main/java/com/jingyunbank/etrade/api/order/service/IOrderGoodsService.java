@@ -31,4 +31,5 @@ public interface IOrderGoodsService {
 	 * @param paid
 	 */
 	public void refreshStatus(List<String> oids, OrderStatusDesc paid) throws DataRefreshingException;
+	/*public void refreshGoodStatus(String oid, OrderStatusDesc paid) throws DataRefreshingException;*/
 }
