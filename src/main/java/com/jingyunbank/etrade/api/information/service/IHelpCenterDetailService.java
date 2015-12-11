@@ -19,11 +19,12 @@ public interface IHelpCenterDetailService {
 	public Optional<HelpCenterDetail> single(String id);
 	
 	/**
-	 * 查询所有有效的
+	 * 根据类别查找明细
+	 * @param categoryID
 	 * @return
-	 * 2015年12月10日 qxs
+	 * 2015年12月11日 qxs
 	 */
-	public List<HelpCenterDetail> listAllValid();
+	public List<HelpCenterDetail> listAllValid(String categoryID);
 	
 	/**
 	 * 新增
