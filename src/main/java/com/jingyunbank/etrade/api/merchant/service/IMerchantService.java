@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
@@ -98,4 +99,13 @@ public interface IMerchantService {
 	 * @throws InvocationTargetException
 	 */
 	public List<DeliveryType> listDeliveryType(String mid) throws IllegalAccessException, InvocationTargetException ;
+	/**
+	 * 根据查询条件查询所有商家列表
+	 * @param merchant
+	 * @param range
+	 * @return
+	 * @throws Exception
+	 */
+	public List<Merchant> listMerchantsByCondition(Merchant merchant, Range range) throws Exception;
+	
 }
