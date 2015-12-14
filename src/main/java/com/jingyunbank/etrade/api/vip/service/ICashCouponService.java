@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.vip.service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
@@ -52,7 +53,7 @@ public interface ICashCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public Result<String> canActive(String code);
+	public Result<CashCoupon> canActive(String code);
 	
 	/**
 	 * 查看详情
@@ -60,36 +61,30 @@ public interface ICashCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public CashCoupon getSingleByCode(String cashCoupon);
+	public CashCoupon singleByCode(String cashCoupon);
 	/**
 	 * 查看详情
 	 * @param code
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public CashCoupon getSingleByID(String id);
+	public CashCoupon singleByID(String id);
 	/**
-	 * 查询 
-	 * @param cashCoupon
-	 * @return
-	 * 2015年11月14日 qxs
-	 */
-	public List<CashCoupon> listAll(CashCoupon cashCoupon);
-	/**
-	 * 列表查询 
-	 * @param cashCoupon
+	 * 查询一段时间内新增的券
+	 * @param addTimeFrom
+	 * @param addTimeTo
 	 * @param range
 	 * @return
-	 * 2015年11月14日 qxs
+	 * 2015年12月14日 qxs
 	 */
-	public List<CashCoupon> listAll(CashCoupon cashCoupon, Range range);
+	public List<CashCoupon> list(Date addTimeFrom, Date addTimeTo, Range range);
 	/**
 	 * 查询数量
 	 * @param cashCoupon
 	 * @return
 	 * 2015年11月19日 qxs
 	 */
-	public int getAmount(CashCoupon cashCoupon);
+	public int count(Date addTimeFrom, Date addTimeTo);
 	
 	/**
 	 * 激活一张卡 将其改为已使用状态

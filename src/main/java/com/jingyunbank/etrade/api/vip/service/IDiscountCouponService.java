@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.vip.service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.jingyunbank.core.Range;
@@ -47,7 +48,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public Result<String> canActive(String code);
+	public Result<DiscountCoupon> canActive(String code);
 	
 	/**
 	 * 查看详情
@@ -55,7 +56,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public DiscountCoupon getSingleByCode(String code);
+	public DiscountCoupon singleByCode(String code);
 	
 	/**
 	 * 查看详情
@@ -63,14 +64,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public DiscountCoupon getSingleByID(String id);
-	/**
-	 * 查询 不关注是否有效
-	 * @param DiscountCoupon
-	 * @return
-	 * 2015年11月14日 qxs
-	 */
-	public List<DiscountCoupon> listAll(DiscountCoupon discountCoupon);
+	public DiscountCoupon singleByID(String id);
 	/**
 	 * 列表查询 不关注是否有效
 	 * @param DiscountCoupon
@@ -78,7 +72,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public List<DiscountCoupon> listAll(DiscountCoupon discountCoupon, Range range);
+	public List<DiscountCoupon> list(Date addTimeFrom, Date addTImeTo, Range range);
 	
 	/**
 	 * 查询数量
@@ -86,7 +80,7 @@ public interface IDiscountCouponService {
 	 * @return
 	 * 2015年11月19日 qxs
 	 */
-	public int getAmount(DiscountCoupon cashCoupon);
+	public int count(Date addTimeFrom, Date addTImeTo);
 	/**
 	 * 激活
 	 * @param code
