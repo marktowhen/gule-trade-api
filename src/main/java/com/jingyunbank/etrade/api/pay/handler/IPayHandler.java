@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
 
-public interface PayHandler {
+public interface IPayHandler {
 
 	public Map<String, String> prepare(List<OrderPayment> payments, String bankCode) throws Exception;
 	

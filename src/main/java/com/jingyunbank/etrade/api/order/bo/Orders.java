@@ -30,7 +30,10 @@ public class Orders  implements Serializable{
 	private String paytypeName;
 	private String deliveryTypeCode;
 	private String deliveryTypeName;
-	private BigDecimal price;//订单总价
+	private String couponID;
+	private String couponType;
+	private BigDecimal price;//订单初始总价
+	private BigDecimal payout;//优惠后的总价
 	private String statusCode;//订单状态code
 	private String statusName;
 	private BigDecimal postage;
@@ -141,14 +144,6 @@ public class Orders  implements Serializable{
 		this.statusName = statusName;
 	}
 
-	public BigDecimal getPrice() {
-		return price;
-	}
-
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
 	public BigDecimal getPostage() {
 		return postage;
 	}
@@ -212,6 +207,38 @@ public class Orders  implements Serializable{
 	public void setMname(String mname) {
 		this.mname = mname;
 	}
+	
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public BigDecimal getPayout() {
+		return payout;
+	}
+
+	public void setPayout(BigDecimal payout) {
+		this.payout = payout;
+	}
+	public String getCouponID() {
+		return couponID;
+	}
+
+	public void setCouponID(String couponID) {
+		this.couponID = couponID;
+	}
+
+	public String getCouponType() {
+		return couponType;
+	}
+
+	public void setCouponType(String couponType) {
+		this.couponType = couponType;
+	}
+
 	public Date getExpireTime(){
 		if(Objects.nonNull(this.addtime)){
 			Instant i = this.addtime.toInstant();
