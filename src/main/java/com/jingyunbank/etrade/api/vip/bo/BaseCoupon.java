@@ -11,6 +11,11 @@ public class BaseCoupon implements Serializable{
 
 	private static final long serialVersionUID = 305713281345643598L;
 
+	public final static String CASHCOUPON = "CASHCOUPON";
+	public final static String DISCOUNTCOUPON = "DISCOUNTCOUPON";
+	public final static String CASHCOUPONSTRATEGY = "CASHCOUPONSTRATEGY";
+	public final static String DISCOUNTCOUPONSTRATEGY = "DISCOUNTCOUPONSTRATEGY";
+	
 	private boolean del;//是否被删除
 	private String remark;//备注 
 	private Date addtimeStart;
