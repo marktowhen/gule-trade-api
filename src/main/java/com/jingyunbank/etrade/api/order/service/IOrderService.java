@@ -85,6 +85,6 @@ public interface IOrderService {
 	 * @return
 	 * 2015年12月10日 qxs
 	 */
-	public Integer getAmount(String uid, String statuscode, String fromdate,String keywords);
+	public Integer count(String uid, String statuscode, String fromdate,String keywords);
 	
 }
