@@ -10,6 +10,8 @@ import com.jingyunbank.etrade.api.goods.bo.HoneyGoods;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
+import com.jingyunbank.etrade.back.api.goods.bo.GoodsList;
+import com.jingyunbank.etrade.back.api.goods.bo.GoodsSearch;
 
 /**
  * 
@@ -140,6 +142,14 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<HoneyGoods> listHoneyGoods() throws Exception;
+	/**
+	 * 根据多条件查询商品
+	 * 
+	 * @param goodsshow
+	 * @return
+	 * @throws Exception
+	 */
+	public List<GoodsList> listGoodsByCondition(GoodsSearch goodsSearch, Range range) throws Exception;
 	
 	 
 }
