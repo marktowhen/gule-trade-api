@@ -1,8 +1,6 @@
-package com.jingyunbank.etrade.back.api.goods.bo;
+package com.jingyunbank.etrade.api.goods.bo;
 
 import java.io.Serializable;
-
-import com.jingyunbank.etrade.api.goods.bo.BaseGoods;
 
 /**
  * 商品后台查询业务
