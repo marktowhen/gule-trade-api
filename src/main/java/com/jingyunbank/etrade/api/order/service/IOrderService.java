@@ -36,12 +36,6 @@ public interface IOrderService {
 	 */
 	public List<Orders> listOrder(String uid, OrderStatusDesc status);
 	/**
-	 * 修改order的状态
-	 * @param id
-	 * @param status
-	 */
-	public void refreshOrderStatus(String id,OrderStatusDesc status) throws DataRefreshingException;;
-	/**
 	 * 查询某用户的按时间降序排列的订单中的 某几条数据。
 	 * @param uid
 	 * @param range from->to
