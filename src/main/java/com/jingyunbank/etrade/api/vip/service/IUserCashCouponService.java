@@ -40,7 +40,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年11月20日 qxs
 	 */
-	public List<UserCashCoupon> getUnusedCoupon(String uid, Range range);
+	public List<UserCashCoupon> listUnusedCoupon(String uid, Range range);
 	
 	
 	/**
@@ -49,26 +49,26 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年11月19日 qxs
 	 */
-	public int getUnusedCouponAmount(String uid);
+	public int countUnusedCoupon(String uid);
 
 	/**
 	 * 是否可以消费
 	 * @param couponId
 	 * @param uid
 	 * @param orderPrice
-	 * @return
+	 * @return UserCashCoupon 返回对象中的cashCoupon属性包含购物金信息
 	 * 2015年11月20日 qxs
 	 */
-	public Result<String> canConsume(String couponId, String uid, BigDecimal orderPrice);
+	public Result<UserCashCoupon> canConsume(String couponId, String uid, BigDecimal orderPrice);
 	/**
 	 * 消费
 	 * @param couponId
-	 * @param oid
+	 * @param uid
 	 * @return
 	 * 2015年11月17日 qxs
 	 * @throws DataRefreshingException 
 	 */
-	public boolean consume(String couponId, String oid) throws DataRefreshingException;
+	public boolean consume(String couponId, String uid) throws DataRefreshingException;
 	
 	/**
 	 * 已消费的数量
@@ -76,7 +76,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月3日 qxs
 	 */
-	int getConsumedCouponAmount(String uid);
+	int countConsumedCoupon(String uid);
 	/**
 	 * 已消费的列表
 	 * @param uid
@@ -84,7 +84,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月3日 qxs
 	 */
-	List<UserCashCoupon> getConsumedCoupon(String uid, Range range);
+	List<UserCashCoupon> listConsumedCoupon(String uid, Range range);
 	
 	/**
 	 * 已过期的数量
@@ -92,7 +92,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月3日 qxs
 	 */
-	int getOverdueCouponAmount(String uid);
+	int countOverdueCoupon(String uid);
 	/**
 	 * 已过期的列表
 	 * @param uid
@@ -100,7 +100,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月4日 qxs
 	 */
-	List<UserCashCoupon> getOverdueCoupon(String uid, Range range);
+	List<UserCashCoupon> listOverdueCoupon(String uid, Range range);
 	
 	/**
 	 * 当前可用数量
@@ -108,7 +108,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月3日 qxs
 	 */
-	int getUseableCouponAmount(String uid);
+	int countUseableCoupon(String uid);
 	
 	/**
 	 * 当前可用的列表
@@ -117,7 +117,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月4日 qxs
 	 */
-	List<UserCashCoupon> getUseableCoupon(String uid, Range range);
+	List<UserCashCoupon> listUseableCoupon(String uid, Range range);
 	
 
 

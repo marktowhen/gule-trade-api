@@ -9,7 +9,6 @@ public class UserDiscountCoupon implements Serializable{
 	private String ID;
 	private String UID;
 	private String couponID;
-	private String OID;//订单号
 	private Date consumeTime;//消费使用时间
 	private boolean consumed;
 	private Date addTime;//激活时间
@@ -44,12 +43,6 @@ public class UserDiscountCoupon implements Serializable{
 	}
 	public void setCouponID(String couponID) {
 		this.couponID = couponID;
-	}
-	public String getOID() {
-		return OID;
-	}
-	public void setOID(String oID) {
-		OID = oID;
 	}
 	public Date getConsumeTime() {
 		return consumeTime;

@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.goods.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.etrade.api.goods.bo.BaseGoodsOperation;
 import com.jingyunbank.etrade.api.goods.bo.GoodsOperation;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 
@@ -26,7 +27,7 @@ public interface IGoodsOperationService {
 	 * @return
 	 * @throws Exception
 	 */
-	public Optional<ShowGoods> singleById(String gid) throws Exception;
+	public Optional<BaseGoodsOperation> singleById(String gid) throws Exception;
 	
 	/**
 	 * 修改商品
@@ -66,12 +67,12 @@ public interface IGoodsOperationService {
 	 * @return
 	 * @throws Exception
 	 */
-	public  List<ShowGoods> listMerchant()throws Exception;
+	public  List<BaseGoodsOperation> listMerchant()throws Exception;
 	/**
 	 * 根据商家MID 查询当前上架所属的品牌
 	 * @param mid
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listBrandsByMid(String mid)throws Exception;
+	public List<BaseGoodsOperation> listBrandsByMid(String mid)throws Exception;
 }
