@@ -14,4 +14,6 @@ public interface IStoreService {
 	 */
 	public String store(String fname, byte[] content) throws FileStorageException;
 	
+	
+	
 }
