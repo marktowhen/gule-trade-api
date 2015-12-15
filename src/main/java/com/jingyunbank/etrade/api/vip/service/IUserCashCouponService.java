@@ -62,7 +62,7 @@ public interface IUserCashCouponService {
 	 */
 	public Result<UserCashCoupon> canConsume(String couponId, String uid, BigDecimal orderPrice);
 	/**
-	 * 消费
+	 * 消费 同时将冻结状态恢复
 	 * @param couponId
 	 * @param uid
 	 * @return
@@ -144,7 +144,7 @@ public interface IUserCashCouponService {
 	 * @return
 	 * 2015年12月15日 qxs
 	 */
-	boolean deblock(String couponID, String uid) throws DataRefreshingException;
+	boolean unlock(String couponID, String uid) throws DataRefreshingException;
 	
 	/**
 	 * 单个查看
