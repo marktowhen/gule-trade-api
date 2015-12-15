@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.vip.service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.core.Result;
@@ -54,7 +55,7 @@ public interface IUserDiscountCouponService {
 	public Result<UserDiscountCoupon> canConsume(String couponId, String uid, BigDecimal orderPrice);
 	
 	/**
-	 * 消费
+	 * 消费 同时将冻结状态恢复
 	 * @param couponId
 	 * @param uid
 	 * @return
@@ -112,6 +113,60 @@ public interface IUserDiscountCouponService {
 	 * 2015年12月4日 qxs
 	 */
 	List<UserDiscountCoupon> listUseableCoupon(String uid, Range range);
+	/**
+	 * 当前可用列表
+	 * @param uid
+	 * @param orderPrice
+	 * @param range
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	public List<UserDiscountCoupon> listUseableCoupon(String uid, BigDecimal orderPrice, Range range);
 	
 
+	/**
+	 * 是否锁定
+	 * @param couponID
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	boolean isLocked(String couponID);
+	
+	/**
+	 * 锁定
+	 * @param couponID
+	 * @param uid 券的所有者
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	boolean lock(String couponID, String uid) throws DataRefreshingException;
+	
+	/**
+	 * 解锁
+	 * @param couponID
+	 * @param uid 券的所有者
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	boolean unlock(String couponID, String uid) throws DataRefreshingException;
+	
+	/**
+	 * 单个查看
+	 * @param couponID
+	 * @param uid
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	Optional<UserDiscountCoupon> single(String couponID, String uid );
+	
+	/**
+	 * 单个查看
+	 * @param couponID
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	Optional<UserDiscountCoupon> single(String couponID);
+
+
+	
 }

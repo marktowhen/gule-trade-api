@@ -13,7 +13,14 @@ public class UserDiscountCoupon implements Serializable{
 	private boolean consumed;
 	private Date addTime;//激活时间
 	private DiscountCoupon discountCoupon;
+	private boolean locked;//是否被锁定
 	
+	public boolean isLocked() {
+		return locked;
+	}
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
 	public DiscountCoupon getDiscountCoupon() {
 		return discountCoupon;
 	}
