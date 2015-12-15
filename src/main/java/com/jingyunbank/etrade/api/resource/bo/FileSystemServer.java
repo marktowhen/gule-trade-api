@@ -10,6 +10,7 @@ public class FileSystemServer {
 	private String name;
 	private String host;
 	private String rootpath;
+	private String vpath;//虚拟路径
 	
 	public String getCode() {
 		return code;
@@ -34,5 +35,11 @@ public class FileSystemServer {
 	}
 	public void setRootpath(String rootpath) {
 		this.rootpath = rootpath;
+	}
+	public String getVpath() {
+		return vpath;
+	}
+	public void setVpath(String vpath) {
+		this.vpath = vpath;
 	}
 }
