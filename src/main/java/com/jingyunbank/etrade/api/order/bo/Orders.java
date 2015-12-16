@@ -30,8 +30,10 @@ public class Orders  implements Serializable{
 	private String paytypeName;
 	private String deliveryTypeCode;
 	private String deliveryTypeName;
-	private String couponID;
-	private String couponType;
+	private String invoiceType;//发票类型（个人，企业）
+	private String invoiceTitle;
+	private String couponID;//优惠卡券Id
+	private String couponType;//优惠卡券类型 （DISCOUNTCOUPON, CACHCOUPON）
 	private BigDecimal price;//订单初始总价
 	private BigDecimal payout;//优惠后的总价
 	private String statusCode;//订单状态code
@@ -237,6 +239,22 @@ public class Orders  implements Serializable{
 
 	public void setCouponType(String couponType) {
 		this.couponType = couponType;
+	}
+
+	public String getInvoiceType() {
+		return invoiceType;
+	}
+
+	public void setInvoiceType(String invoiceType) {
+		this.invoiceType = invoiceType;
+	}
+
+	public String getInvoiceTitle() {
+		return invoiceTitle;
+	}
+
+	public void setInvoiceTitle(String invoiceTitle) {
+		this.invoiceTitle = invoiceTitle;
 	}
 
 	public Date getExpireTime(){

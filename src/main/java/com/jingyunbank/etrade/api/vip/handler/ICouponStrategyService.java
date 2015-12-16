@@ -33,4 +33,18 @@ public interface ICouponStrategyService {
 	 * @throws DataRefreshingException
 	 */
 	public void consume(String UID, String couponID) throws DataRefreshingException;
+	/**
+	 * 冻结某用户得某优惠券，以防止统一优惠券多次使用
+	 * @param UID
+	 * @param couponID
+	 * @throws DataRefreshingException
+	 */
+	public void lock(String UID, String couponID) throws DataRefreshingException;
+	/**
+	 * 接触优惠券的冻结
+	 * @param UID
+	 * @param couponID
+	 * @throws DataRefreshingException
+	 */
+	public void unlock(String UID, String couponID) throws DataRefreshingException;
 }
