@@ -22,6 +22,10 @@ public class GoodsInCart implements Serializable{
 	private BigDecimal price;
 	private Date addtime;
 	
+	//attrs to show
+	private String imgpath;
+	private int stock;
+	
 	public String getID() {
 		return ID;
 	}
@@ -93,6 +97,18 @@ public class GoodsInCart implements Serializable{
 	}
 	public void setMname(String mname) {
 		this.mname = mname;
+	}
+	public String getImgpath() {
+		return imgpath;
+	}
+	public void setImgpath(String imgpath) {
+		this.imgpath = imgpath;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
 	
 }
