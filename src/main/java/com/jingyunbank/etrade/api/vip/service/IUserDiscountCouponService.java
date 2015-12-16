@@ -113,6 +113,15 @@ public interface IUserDiscountCouponService {
 	 * 2015年12月4日 qxs
 	 */
 	List<UserDiscountCoupon> listUseableCoupon(String uid, Range range);
+	/**
+	 * 当前可用列表
+	 * @param uid
+	 * @param orderPrice
+	 * @param range
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	public List<UserDiscountCoupon> listUseableCoupon(String uid, BigDecimal orderPrice, Range range);
 	
 
 	/**
@@ -157,4 +166,7 @@ public interface IUserDiscountCouponService {
 	 * 2015年12月15日 qxs
 	 */
 	Optional<UserDiscountCoupon> single(String couponID);
+
+
+	
 }

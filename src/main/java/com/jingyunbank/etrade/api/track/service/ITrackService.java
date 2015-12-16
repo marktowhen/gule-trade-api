@@ -1,9 +1,11 @@
 package com.jingyunbank.etrade.api.track.service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.track.bo.AdDetail;
 import com.jingyunbank.etrade.api.track.bo.FavoritesGoods;
 import com.jingyunbank.etrade.api.track.bo.FootprintGoods;
 
@@ -67,4 +69,12 @@ public interface ITrackService {
 	 * @throws Exception
 	 */
 	public int countMerchantFavorites(String uid,String type) throws Exception;
+	/**
+	 * 查询广告列表
+	 * @param code
+	 * @return
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 */
+	public List<AdDetail> listAdDetails(String code) throws IllegalAccessException, InvocationTargetException;
 }

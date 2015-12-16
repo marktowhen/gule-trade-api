@@ -121,6 +121,15 @@ public interface IUserCashCouponService {
 	List<UserCashCoupon> listUseableCoupon(String uid, Range range);
 	
 	/**
+	 * 当前可用优惠券
+	 * @param uid
+	 * @param orderPrice
+	 * @param range
+	 * @return
+	 * 2015年12月15日 qxs
+	 */
+	public List<UserCashCoupon> listUseableCoupon(String uid, BigDecimal orderPrice, Range range);
+	/**
 	 * 是否锁定
 	 * @param couponID
 	 * @return
@@ -162,6 +171,8 @@ public interface IUserCashCouponService {
 	 * 2015年12月15日 qxs
 	 */
 	Optional<UserCashCoupon> single(String couponID);
+
+	
 	
 	
 
