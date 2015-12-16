@@ -49,5 +49,12 @@ public interface IBrandService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<Brand> listBrandsByMid(String mid) throws Exception; 
+	public List<Brand> listBrandsByMid(String mid) throws Exception;
+	
+	/**
+	 * 查询所有品牌
+	 * @return
+	 * @throws Exception
+	 */
+	public List<Brand> listBrands() throws Exception;
 }
