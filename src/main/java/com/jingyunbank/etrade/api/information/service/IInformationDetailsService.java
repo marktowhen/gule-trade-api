@@ -3,7 +3,7 @@ package com.jingyunbank.etrade.api.information.service;
 import java.util.List;
 import java.util.Optional;
 
-
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
@@ -17,7 +17,9 @@ public interface IInformationDetailsService {
 	
 	public boolean refresh(InformationDetails infomationDetails) throws DataRefreshingException;
 	
-	public List<InformationDetails> getDeailsBySiteid(String sid);
+	public List<InformationDetails> getDeailsBySiteid(String sid,Range range);
+	
+	public List<InformationDetails> getDeailBySiteid(String sid);
 	
 	public Optional<InformationDetails> getDetailByid(String id);
 }
