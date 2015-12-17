@@ -21,6 +21,7 @@ public class GoodsInCart implements Serializable{
 	private int count;
 	private BigDecimal price;
 	private Date addtime;
+	private BigDecimal pprice;
 	
 	//attrs to show
 	private String imgpath;
@@ -109,6 +110,12 @@ public class GoodsInCart implements Serializable{
 	}
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+	public BigDecimal getPprice() {
+		return pprice;
+	}
+	public void setPprice(BigDecimal pprice) {
+		this.pprice = pprice;
 	}
 	
 }

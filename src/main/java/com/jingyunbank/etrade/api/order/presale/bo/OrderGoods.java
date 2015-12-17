@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 订单详情业务对象<br>
  * 改对象定义订单中包含的商品以及下单时的商品价格等信息
- *
+ *	价格计算公式：payout = (pprice? pprice:price) - couponReduce
  */
 public class OrderGoods implements Serializable{
 
@@ -18,12 +18,13 @@ public class OrderGoods implements Serializable{
 	private long orderno;
 	private String GID;//商品id
 	private String gname;
-	private BigDecimal price;//订单生成时的商品价格
+	private BigDecimal pprice;//promotion price//促销价格
+	private BigDecimal price;//订单生成时的商品原价格
 	private int count;
 	private int points;//赠送积分
 	private String statusCode;//状态id，用户支持订单中某个商品的退款
 	private BigDecimal payout;//实际付款
-	private BigDecimal reduce;//优惠减免价格
+	private BigDecimal couponReduce;//卡券优惠减免价格
 	private Date addtime;
 	private String imgpath;
 	
@@ -81,11 +82,11 @@ public class OrderGoods implements Serializable{
 	public void setPayout(BigDecimal payout) {
 		this.payout = payout;
 	}
-	public BigDecimal getReduce() {
-		return reduce;
+	public BigDecimal getCouponReduce() {
+		return couponReduce;
 	}
-	public void setReduce(BigDecimal reduce) {
-		this.reduce = reduce;
+	public void setCouponReduce(BigDecimal couponReduce) {
+		this.couponReduce = couponReduce;
 	}
 	public String getGname() {
 		return gname;
@@ -110,5 +111,11 @@ public class OrderGoods implements Serializable{
 	}
 	public void setUID(String uID) {
 		UID = uID;
+	}
+	public BigDecimal getPprice() {
+		return pprice;
+	}
+	public void setPprice(BigDecimal pprice) {
+		this.pprice = pprice;
 	}
 }

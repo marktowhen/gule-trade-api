@@ -2,7 +2,9 @@ package com.jingyunbank.etrade.api.order.postsale.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 退单领域对象<br>
@@ -18,8 +20,8 @@ public class Refund implements Serializable{
 	private String OID;//所退商品订单号
 	private String MID;//商家
 	private String UID;
-	private BigDecimal orderMoney;
-	private BigDecimal returnMoney;//退款金额申请
+	private BigDecimal omoney;//订单价格
+	private BigDecimal money;//退款金额申请
 	private String reason;//退款退货原因
 	private String description;//说明
 	private Date addtime;//申请时间
@@ -27,6 +29,7 @@ public class Refund implements Serializable{
 	private String statusName;//RefundStatusDesc
 	private boolean returnGoods;//是否退货
 	
+	private List<RefundCertificate> certificates = new ArrayList<RefundCertificate>();
 	
 	public String getID() {
 		return ID;
@@ -82,18 +85,6 @@ public class Refund implements Serializable{
 	public void setUID(String uID) {
 		UID = uID;
 	}
-	public BigDecimal getOrderMoney() {
-		return orderMoney;
-	}
-	public void setOrderMoney(BigDecimal orderMoney) {
-		this.orderMoney = orderMoney;
-	}
-	public BigDecimal getReturnMoney() {
-		return returnMoney;
-	}
-	public void setReturnMoney(BigDecimal returnMoney) {
-		this.returnMoney = returnMoney;
-	}
 	public String getReason() {
 		return reason;
 	}
@@ -106,5 +97,22 @@ public class Refund implements Serializable{
 	public void setStatusCode(String statusCode) {
 		this.statusCode = statusCode;
 	}
-	
+	public BigDecimal getOmoney() {
+		return omoney;
+	}
+	public void setOmoney(BigDecimal omoney) {
+		this.omoney = omoney;
+	}
+	public BigDecimal getMoney() {
+		return money;
+	}
+	public void setMoney(BigDecimal money) {
+		this.money = money;
+	}
+	public List<RefundCertificate> getCertificates() {
+		return certificates;
+	}
+	public void setCertificates(List<RefundCertificate> certificates) {
+		this.certificates = certificates;
+	}	
 }

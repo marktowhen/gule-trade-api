@@ -8,7 +8,7 @@ public interface IRefundContextService {
 	 * 对为过退换货期的商品或订单申请退款，将订单状态修改为退款中，等待卖家同意
 	 * @param refund
 	 */
-	public void refund(Refund refund);
+	public void request(Refund refund);
 	
 	public void denyRefund(Refund refund);
 	
