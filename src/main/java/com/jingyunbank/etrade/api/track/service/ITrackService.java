@@ -137,4 +137,26 @@ public interface ITrackService {
 	 * @throws Exception
 	 */
 	public List<AdDetail> listAddetailsByCondition(AdDetail adDetail, Range range) throws Exception;
+	/**
+	 * 删除广告
+	 * @param id
+	 * @return
+	 * @throws DataRemovingException
+	 */
+	public boolean removeAddetail(List<String> id) throws DataRemovingException;
+	/**
+	 * 删除广告模块
+	 * @param id
+	 * @return
+	 * @throws DataRemovingException
+	 */
+	public boolean removeAdmodule(List<String> id) throws DataRemovingException;
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 * @throws DataRemovingException
+	 */
+	public int queryAddetailsCount(List<String> id) throws Exception;
+	
 }
