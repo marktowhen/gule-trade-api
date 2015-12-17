@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.order.bo;
+package com.jingyunbank.etrade.api.order.postsale.bo;
 
 /**
  * 退款原因描述的领域对象<br>

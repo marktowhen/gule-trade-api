@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.order.bo;
+package com.jingyunbank.etrade.api.order.presale.bo;
 
 import java.io.Serializable;
 
@@ -21,6 +21,11 @@ import java.io.Serializable;
  * <tr><td>买家已评价</td><td>COMMENTED</td><td>买家已经评价了该商品</td></tr>
  * <tr><td>订单取消</td><td>CANCELED</td><td>订单被取消</td></tr>
  * <tr><td>订单移除</td><td>REMOVED</td><td>已取消的订单被用户删除</td></tr>
+ * <tr><td>退款中</td><td>REFUNDING</td><td>买家申请退款中</td></tr>
+ * <tr><td>退款驳回</td><td>RFDDENIED</td><td>卖家驳回退款申请</td></tr>
+ * <tr><td>退款失败</td><td>RFDFAIL</td><td>卖家退款同意，但是退款失败</td></tr>
+ * <tr><td>退款完成</td><td>REFUNDED</td><td>退款完成</td></tr>
+ 
  * <tr><td>退款中</td><td>REFUNDING</td><td>买家申请退款中</td></tr>
  * <tr><td>退款驳回</td><td>RFDDENIED</td><td>卖家驳回退款申请</td></tr>
  * <tr><td>退款失败</td><td>RFDFAIL</td><td>卖家退款同意，但是退款失败</td></tr>

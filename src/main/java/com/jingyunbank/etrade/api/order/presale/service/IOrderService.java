@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.order.service;
+package com.jingyunbank.etrade.api.order.presale.service;
 
 import java.util.Date;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.Optional;
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.order.bo.OrderStatusDesc;
-import com.jingyunbank.etrade.api.order.bo.Orders;
+import com.jingyunbank.etrade.api.order.presale.bo.OrderStatusDesc;
+import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 
 public interface IOrderService {
 

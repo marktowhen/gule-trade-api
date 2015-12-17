@@ -1,13 +1,14 @@
-package com.jingyunbank.etrade.api.order.service;
+package com.jingyunbank.etrade.api.order.presale.service;
 
 import java.util.List;
 import java.util.Optional;
 
 
+
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.order.bo.OrderGoods;
-import com.jingyunbank.etrade.api.order.bo.OrderStatusDesc;
+import com.jingyunbank.etrade.api.order.presale.bo.OrderGoods;
+import com.jingyunbank.etrade.api.order.presale.bo.OrderStatusDesc;
 
 /**
  * 用来管理操作订单中每件商品的服务接口

@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.order.bo;
+package com.jingyunbank.etrade.api.order.postsale.bo;
 
 /**
  * 退单的证明图片

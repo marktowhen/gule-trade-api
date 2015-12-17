@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.order.bo;
+package com.jingyunbank.etrade.api.cart.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

@@ -1,9 +1,9 @@
-package com.jingyunbank.etrade.api.order.service;
+package com.jingyunbank.etrade.api.order.presale.service;
 
 import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.order.bo.OrderLogistic;
+import com.jingyunbank.etrade.api.order.presale.bo.OrderLogistic;
 
 public interface IOrderLogisticService {
 

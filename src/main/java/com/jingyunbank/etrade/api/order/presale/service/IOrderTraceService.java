@@ -1,9 +1,9 @@
-package com.jingyunbank.etrade.api.order.service;
+package com.jingyunbank.etrade.api.order.presale.service;
 
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.order.bo.OrderTrace;
+import com.jingyunbank.etrade.api.order.presale.bo.OrderTrace;
 
 /**
  * 订单生命周期管理服务类。<br>

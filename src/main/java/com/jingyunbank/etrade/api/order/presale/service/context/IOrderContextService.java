@@ -1,12 +1,11 @@
-package com.jingyunbank.etrade.api.order.service.context;
+package com.jingyunbank.etrade.api.order.presale.service.context;
 
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.order.bo.OrderLogistic;
-import com.jingyunbank.etrade.api.order.bo.Orders;
-import com.jingyunbank.etrade.api.order.bo.Refund;
+import com.jingyunbank.etrade.api.order.presale.bo.OrderLogistic;
+import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 
 public interface IOrderContextService {
 	
@@ -95,17 +94,5 @@ public interface IOrderContextService {
 	 * @param orderno
 	 */
 	public boolean remove(String id) throws DataRefreshingException, DataSavingException;
-	/**
-	 * 申请退款<br>
-	 * 对为过退换货期的商品或订单申请退款，将订单状态修改为退款中，等待卖家同意
-	 * @param refund
-	 */
-	public void refund(Refund refund);
-	
-	public void denyRefund(Refund refund);
-	
-	public void approveRefund(Refund refund);
-	
-	public boolean canRefund(String oid);
 	
 }
