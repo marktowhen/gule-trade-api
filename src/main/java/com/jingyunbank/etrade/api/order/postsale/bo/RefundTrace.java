@@ -13,10 +13,12 @@ public class RefundTrace implements Serializable {
 	private String ID;
 	private String RID;//退单id
 	private String operator;//操作者（区分买家卖家）
-	private String statusID;//
+	private String statusCode;//
 	private String statusName;//
 	private Date addtime;//发生时间
 	private String note;//
+	
+	
 	public String getID() {
 		return ID;
 	}
@@ -34,12 +36,6 @@ public class RefundTrace implements Serializable {
 	}
 	public void setOperator(String operator) {
 		this.operator = operator;
-	}
-	public String getStatusID() {
-		return statusID;
-	}
-	public void setStatusID(String statusID) {
-		this.statusID = statusID;
 	}
 	public String getStatusName() {
 		return statusName;
@@ -59,6 +55,10 @@ public class RefundTrace implements Serializable {
 	public void setNote(String note) {
 		this.note = note;
 	}
-	
-	
+	public String getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
+	}
 }

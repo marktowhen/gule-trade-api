@@ -1,11 +1,12 @@
 package com.jingyunbank.etrade.api.order.postsale.bo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 订单退款领域对象<br>
- * 该类描述了，用户的订单退款请求信息
+ * 退单领域对象<br>
+ * 该类描述了，用户的退单请求信息
  *
  */
 public class Refund implements Serializable{
@@ -13,27 +14,25 @@ public class Refund implements Serializable{
 	private static final long serialVersionUID = 6270362729008555666L;
 	
 	private String ID;
-	private String GID;//商品id
+	private String OGID;//订单商品id
 	private String OID;//所退商品订单号
-	private double money;//退款金额申请
-	private String reasonID;
-	private String reasonName;
+	private String MID;//商家
+	private String UID;
+	private BigDecimal orderMoney;
+	private BigDecimal returnMoney;//退款金额申请
+	private String reason;//退款退货原因
+	private String description;//说明
 	private Date addtime;//申请时间
-	private String statusID;
-	private String statusName;//OrderStatusDesc
+	private String statusCode;
+	private String statusName;//RefundStatusDesc
 	private boolean returnGoods;//是否退货
-	private String description;
+	
+	
 	public String getID() {
 		return ID;
 	}
 	public void setID(String iD) {
 		ID = iD;
-	}
-	public String getGID() {
-		return GID;
-	}
-	public void setGID(String gID) {
-		GID = gID;
 	}
 	public String getOID() {
 		return OID;
@@ -41,35 +40,11 @@ public class Refund implements Serializable{
 	public void setOID(String oID) {
 		OID = oID;
 	}
-	public double getMoney() {
-		return money;
-	}
-	public void setMoney(double money) {
-		this.money = money;
-	}
-	public String getReasonID() {
-		return reasonID;
-	}
-	public void setReasonID(String reasonID) {
-		this.reasonID = reasonID;
-	}
-	public String getReasonName() {
-		return reasonName;
-	}
-	public void setReasonName(String reasonName) {
-		this.reasonName = reasonName;
-	}
 	public Date getAddtime() {
 		return addtime;
 	}
 	public void setAddtime(Date addtime) {
 		this.addtime = addtime;
-	}
-	public String getStatusID() {
-		return statusID;
-	}
-	public void setStatusID(String statusID) {
-		this.statusID = statusID;
 	}
 	public String getStatusName() {
 		return statusName;
@@ -88,6 +63,48 @@ public class Refund implements Serializable{
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getOGID() {
+		return OGID;
+	}
+	public void setOGID(String oGID) {
+		OGID = oGID;
+	}
+	public String getMID() {
+		return MID;
+	}
+	public void setMID(String mID) {
+		MID = mID;
+	}
+	public String getUID() {
+		return UID;
+	}
+	public void setUID(String uID) {
+		UID = uID;
+	}
+	public BigDecimal getOrderMoney() {
+		return orderMoney;
+	}
+	public void setOrderMoney(BigDecimal orderMoney) {
+		this.orderMoney = orderMoney;
+	}
+	public BigDecimal getReturnMoney() {
+		return returnMoney;
+	}
+	public void setReturnMoney(BigDecimal returnMoney) {
+		this.returnMoney = returnMoney;
+	}
+	public String getReason() {
+		return reason;
+	}
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+	public String getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
 	}
 	
 }

@@ -3,7 +3,7 @@ package com.jingyunbank.etrade.api.order.postsale.bo;
 /**
  * 退单的证明图片
  */
-public class RefundImage {
+public class RefundCertificate {
 
 	private String ID;
 	private String RID;
