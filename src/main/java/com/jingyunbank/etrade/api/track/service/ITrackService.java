@@ -2,10 +2,14 @@ package com.jingyunbank.etrade.api.track.service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Optional;
 
+import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.track.bo.AdDetail;
+import com.jingyunbank.etrade.api.track.bo.AdModule;
 import com.jingyunbank.etrade.api.track.bo.FavoritesGoods;
 import com.jingyunbank.etrade.api.track.bo.FootprintGoods;
 
@@ -77,4 +81,60 @@ public interface ITrackService {
 	 * @throws InvocationTargetException
 	 */
 	public List<AdDetail> listAdDetails(String code) throws IllegalAccessException, InvocationTargetException;
+	/**
+	 * 根据ID 查询广告模块
+	 * @param id
+	 * @return
+	 */
+	public Optional<AdModule> getAdmoduleInfo(String id);
+	/**
+	 * 根据ID 查询广告
+	 * @param id
+	 * @return
+	 */
+	public Optional<AdDetail> getAddetailInfo(String id);
+	/**
+	 * 保存广告模块
+	 * @param adModule
+	 * @return
+	 * @throws DataSavingException
+	 */
+	public boolean saveAdmodule(AdModule adModule) throws DataSavingException;
+	/**
+	 * 保存广告
+	 * @param adDetail
+	 * @return
+	 * @throws DataSavingException
+	 */
+	public boolean saveAddetail(AdDetail adDetail) throws DataSavingException;
+	/**
+	 * 更新广告模块
+	 * @param adModule
+	 * @return
+	 * @throws DataRefreshingException
+	 */
+	public boolean updateAdmodule(AdModule adModule) throws DataRefreshingException;
+	/**
+	 * 更新广告
+	 * @param adDetail
+	 * @return
+	 * @throws DataRefreshingException
+	 */
+	public boolean updateAddetail(AdDetail adDetail) throws DataRefreshingException;
+	/**
+	 * 查询广告模块列表
+	 * @param adModule
+	 * @param range
+	 * @return
+	 * @throws Exception
+	 */
+	public List<AdModule> listModulesByCondition(AdModule adModule, Range range) throws Exception;
+	/**
+	 * 查询广告列表
+	 * @param adDetail
+	 * @param range
+	 * @return
+	 * @throws Exception
+	 */
+	public List<AdDetail> listAddetailsByCondition(AdDetail adDetail, Range range) throws Exception;
 }
