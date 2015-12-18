@@ -22,4 +22,6 @@ public interface IInformationDetailsService {
 	public List<InformationDetails> getDeailBySiteid(String sid);
 	
 	public Optional<InformationDetails> getDetailByid(String id);
+	
+	public List<InformationDetails> selectDetail();
 }

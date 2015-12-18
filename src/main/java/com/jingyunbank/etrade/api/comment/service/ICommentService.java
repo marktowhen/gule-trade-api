@@ -31,4 +31,6 @@ public interface ICommentService {
 	public Optional<Comments> selectCommentByOid(String oid);
 	
 	public int commentCount(String gid);
+	
+	public List<Comments> selectComment();
 }
