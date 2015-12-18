@@ -19,7 +19,7 @@ public class RefundStatusDesc {
 	public final static String RETURN_CODE				= "RRETURN";
 	public final static String DONE_CODE 				= "RDONE";
 	
-	public final static RefundStatusDesc			REQUEST		= new RefundStatusDesc(REQUEST_CODE, "买家退款申请", 0, "买家申请退款", true);
+	public final static RefundStatusDesc			REQUEST		= new RefundStatusDesc(REQUEST_CODE, "买家申请退款", 0, "买家申请退款", true);
 	public final static RefundStatusDesc			CANCEL		= new RefundStatusDesc(CANCEL_CODE, "买家取消退款申请", 0, "买家取消退款申请", true);
 	public final static RefundStatusDesc			ACCEPT		= new RefundStatusDesc(ACCEPT_CODE, "卖家同意退款申请", 0, "卖家同意退款申请", true);
 	public final static RefundStatusDesc			DENIED		= new RefundStatusDesc(DENIED_CODE, "卖家驳回退款申请", 0, "卖家驳回退款申请", true);
