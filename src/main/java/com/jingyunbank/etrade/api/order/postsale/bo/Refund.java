@@ -17,6 +17,7 @@ public class Refund implements Serializable{
 	
 	private String ID;
 	private String OGID;//订单商品id
+	private long refundno;
 	private String OID;//所退商品订单号
 	private String MID;//商家
 	private String UID;
@@ -28,6 +29,11 @@ public class Refund implements Serializable{
 	private String statusCode;
 	private String statusName;//RefundStatusDesc
 	private boolean returnGoods;//是否退货
+	
+	private String GID;
+	private String gname;
+	private String gpath;
+	private long orderno;
 	
 	private List<RefundCertificate> certificates = new ArrayList<RefundCertificate>();
 	
@@ -114,5 +120,35 @@ public class Refund implements Serializable{
 	}
 	public void setCertificates(List<RefundCertificate> certificates) {
 		this.certificates = certificates;
-	}	
+	}
+	public long getRefundno() {
+		return refundno;
+	}
+	public void setRefundno(long refundno) {
+		this.refundno = refundno;
+	}
+	public String getGID() {
+		return GID;
+	}
+	public void setGID(String gID) {
+		GID = gID;
+	}
+	public String getGname() {
+		return gname;
+	}
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+	public long getOrderno() {
+		return orderno;
+	}
+	public void setOrderno(long orderno) {
+		this.orderno = orderno;
+	}
+	public String getGpath() {
+		return gpath;
+	}
+	public void setGpath(String gpath) {
+		this.gpath = gpath;
+	}
 }

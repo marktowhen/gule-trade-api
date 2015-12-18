@@ -11,7 +11,7 @@ public interface IRefundContextService {
 	 * 对为过退换货期的商品或订单申请退款，将订单状态修改为退款中，等待卖家同意
 	 * @param refund
 	 */
-	public void request(Refund refund) throws DataSavingException;
+	public void request(Refund refund) throws DataSavingException, DataRefreshingException;
 	/**
 	 * 撤销本次退款申请
 	 * @param RID

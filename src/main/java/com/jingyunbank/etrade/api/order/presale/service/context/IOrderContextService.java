@@ -32,13 +32,6 @@ public interface IOrderContextService {
 	 */
 	public void save(List<Orders> orders) throws DataSavingException;
 	/**
-	 * 更新订单的信息<br>
-	 * 用户支付前，可以修改自己的订单信息，如支付方式，收货地址，商品数量，移除商品等
-	 * @param order
-	 * @throws OrderUpdateException
-	 */
-	public void update(Orders order) throws DataSavingException;
-	/**
 	 * 完成支付操作<br>
 	 * 当接收到相应支付接口的支付结果反馈后，执行相应的动作<br>
 	 * 包括：更新订单状态为PAID，并生成相应的log信息，另外需要通知卖方用户支付成功
@@ -72,10 +65,14 @@ public interface IOrderContextService {
 	/**
 	 * 买家订单收货<br>
 	 * 更新订单状态为已收货(RECEIVED)，并生成相应log信息等。<br>
-	 * <strong>该方法的执行表示整个订单完成</strong>
+	 * <strong><i>该方法的执行表示交易成功，进入售后环节</i></strong>
+	 	<ul>
+	 		<li><strong>如果订单中有商品处于退款中的状态，则取消该商品的退款申请。</strong>
+	 	</ul>
+	 * 
 	 * @param orderno
 	 */
-	public boolean received(List<String> oids) throws DataRefreshingException, DataSavingException;
+	public boolean received(String oid) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 取消订单<br>
 	 * 将订单状态更新为已取消。<br>
@@ -94,5 +91,25 @@ public interface IOrderContextService {
 	 * @param orderno
 	 */
 	public boolean remove(String id) throws DataRefreshingException, DataSavingException;
-	
+	/**
+	 * 将某订单的某商品状态改为退款中。
+	 * <ul>
+		 * <li>如果订单中只有一件商品
+		 * 	<ul>
+		 * 	<li>用户还没有确认收货，则将商品状态置为退款中，同时保持订单状态不变
+		 * 	<li>用户已经确认收货（交易成功）则将商品状态置为退款中，同时保持订单状态不变
+		 * 	</ul>
+		 * <li>如果订单中有多件商品
+		 * 	<ul>
+		 * 	<li>用户还没有确认收货，则将该商品状态置为退款中，同时保持订单状态及其他商品状态不变
+		 * 	<li>用户已经确认收货（交易成功）则将该商品状态置为退款中，同时保持订单状态及其他商品状态不变
+		 * 	</ul>
+	 * </ul>
+	 * @param oid
+	 * @param ogid
+	 * @return
+	 * @throws DataRefreshingException
+	 * @throws DataSavingException
+	 */
+	public boolean refund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
 }
