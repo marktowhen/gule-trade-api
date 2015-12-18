@@ -15,7 +15,14 @@ public class InformationDetails implements Serializable{
 	private Date addtime;//添加时间
 	private String status;
 	private int orders;
+	private String abstracts;
 	
+	public String getAbstracts() {
+		return abstracts;
+	}
+	public void setAbstracts(String abstracts) {
+		this.abstracts = abstracts;
+	}
 	public String getPicture() {
 		return picture;
 	}
