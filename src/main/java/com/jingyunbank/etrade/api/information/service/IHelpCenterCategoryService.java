@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.information.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
@@ -17,6 +18,14 @@ public interface IHelpCenterCategoryService {
 	 * 2015年12月10日 qxs
 	 */
 	public Optional<HelpCenterCategory> single(String id); 
+	
+	/**
+	 * 查询所有有效类别
+	 * @param range 
+	 * @return
+	 * 2015年12月10日 qxs
+	 */
+	public List<HelpCenterCategory> listAllValid(Range range);
 	
 	/**
 	 * 查询所有有效类别
