@@ -35,7 +35,7 @@ public class RefundStatusDesc {
 	public RefundStatusDesc() {
 		super();
 	}
-	public RefundStatusDesc(String name, String code, int orders,
+	public RefundStatusDesc(String code, String name, int orders,
 			String description, boolean visible) {
 		super();
 		this.name = name;
