@@ -26,6 +26,9 @@ public class OrderGoods implements Serializable{
 	private BigDecimal payout;//实际付款
 	private BigDecimal couponReduce;//卡券优惠减免价格
 	private Date addtime;
+	
+	private String MID;
+	private String mname;
 	private String imgpath;
 	
 	public String getID() {
@@ -117,5 +120,17 @@ public class OrderGoods implements Serializable{
 	}
 	public void setPprice(BigDecimal pprice) {
 		this.pprice = pprice;
+	}
+	public String getMname() {
+		return mname;
+	}
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+	public String getMID() {
+		return MID;
+	}
+	public void setMID(String mID) {
+		MID = mID;
 	}
 }
