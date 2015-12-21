@@ -29,6 +29,7 @@ public class Refund implements Serializable{
 	private String statusCode;
 	private String statusName;//RefundStatusDesc
 	private boolean returnGoods;//是否退货
+	private boolean received;//是否已收到货物
 	
 	private String GID;
 	private String gname;
@@ -150,5 +151,11 @@ public class Refund implements Serializable{
 	}
 	public void setGpath(String gpath) {
 		this.gpath = gpath;
+	}
+	public boolean isReceived() {
+		return received;
+	}
+	public void setReceived(boolean received) {
+		this.received = received;
 	}
 }
