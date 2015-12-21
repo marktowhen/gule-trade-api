@@ -27,5 +27,8 @@ public interface IRefundService {
 	 */
 	public List<Refund> listm(String mid, String statuscode,
 			String fromdate, String keywords, Range range);
+
+	public List<Refund> list(String uid, String statuscode,
+			String fromdate, String keywords, Range range);
 	
 }
