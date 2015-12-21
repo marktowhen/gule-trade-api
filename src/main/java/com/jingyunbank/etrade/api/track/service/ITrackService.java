@@ -12,6 +12,7 @@ import com.jingyunbank.etrade.api.track.bo.AdDetail;
 import com.jingyunbank.etrade.api.track.bo.AdModule;
 import com.jingyunbank.etrade.api.track.bo.FavoritesGoods;
 import com.jingyunbank.etrade.api.track.bo.FootprintGoods;
+import com.jingyunbank.etrade.api.track.bo.RecommendGoods;
 
 /**
  * 推广延伸服务
@@ -158,5 +159,13 @@ public interface ITrackService {
 	 * @throws DataRemovingException
 	 */
 	public int queryAddetailsCount(List<String> id) throws Exception;
-	
+	/**
+	 * 查询推荐商品
+	 * @param uid
+	 * @param from
+	 * @param to
+	 * @return
+	 * @throws Exception
+	 */
+	public List<RecommendGoods> listRecommendGoods(String uid,int from,int to) throws Exception ;
 }
