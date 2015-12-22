@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.order.postsale.service.context;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.postsale.bo.Refund;
 import com.jingyunbank.etrade.api.order.postsale.bo.RefundLogistic;
@@ -12,6 +13,13 @@ public interface IRefundContextService {
 	 * @param refund
 	 */
 	public void request(Refund refund) throws DataSavingException, DataRefreshingException;
+	/**
+	 * 更新退款信息
+	 * @param refund
+	 * @throws DataSavingException
+	 * @throws DataRefreshingException
+	 */
+	public void refresh(Refund refund) throws DataSavingException, DataRefreshingException, DataRemovingException;
 	/**
 	 * 撤销本次退款申请
 	 * @param RID
@@ -46,4 +54,5 @@ public interface IRefundContextService {
 	 * @throws DataSavingException
 	 */
 	public void done(String RID) throws DataRefreshingException, DataSavingException;
+	
 }
