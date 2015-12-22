@@ -38,6 +38,16 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listBrands() throws Exception;
+	
+	
+	
+	/**
+	 *查询3个品牌 用于首页菜单
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listBrandsThree() throws Exception;
 
 	/**
 	 * 查询所有的类别
