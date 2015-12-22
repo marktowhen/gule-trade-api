@@ -18,7 +18,7 @@ public interface ICommentService {
 	//通过gid得到产品的留言	
 	public List<Comments> getCommentsByGid(String gid);
 	
-	public List<Comments> selectCommentGradeByGid(String gid,int commentGrade,Range range);
+	public List<Comments> selectCommentGradeByGid(String gid,int commentGrade,int picture,Range range);
 	
 	public Optional<Comments> getById(String id);
 	
