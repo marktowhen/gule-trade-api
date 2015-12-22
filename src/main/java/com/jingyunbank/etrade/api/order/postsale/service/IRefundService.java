@@ -12,8 +12,12 @@ import com.jingyunbank.etrade.api.order.postsale.bo.RefundStatusDesc;
 public interface IRefundService {
 
 	public void save(Refund refund) throws DataSavingException;
+
+	public void refresh(Refund refund)throws DataRefreshingException;
 	
 	public void refreshStatus(String RID, RefundStatusDesc status) throws DataRefreshingException;
+	
+	public Optional<Refund> latestOneByOGID(String ogid) ;
 	
 	public Optional<Refund> single(String rid);
 	/**
@@ -30,5 +34,4 @@ public interface IRefundService {
 
 	public List<Refund> list(String uid, String statuscode,
 			String fromdate, String keywords, Range range);
-	
 }
