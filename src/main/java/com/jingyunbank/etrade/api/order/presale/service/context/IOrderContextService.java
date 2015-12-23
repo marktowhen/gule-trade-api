@@ -114,4 +114,6 @@ public interface IOrderContextService {
 	public boolean refund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
 	
 	public boolean cancelRefund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
+	
+	public void refundDone(String oid, String ogid) throws DataRefreshingException, DataSavingException;
 }
