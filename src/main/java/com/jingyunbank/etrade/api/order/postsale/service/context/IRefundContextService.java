@@ -25,7 +25,7 @@ public interface IRefundContextService {
 	 * @param RID
 	 * @throws DataRefreshingException
 	 */
-	public void cancel(String RID) throws DataRefreshingException, DataSavingException;
+	public void cancel(String RID, String note) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 同意买家的退款申请。如果用户不需要退货，则退款流程结束.
 	 * 否则，用户需要发货并提交发货信息，等待卖家进一步审批。

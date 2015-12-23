@@ -112,4 +112,6 @@ public interface IOrderContextService {
 	 * @throws DataSavingException
 	 */
 	public boolean refund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
+	
+	public boolean cancelRefund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
 }
