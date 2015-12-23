@@ -10,4 +10,5 @@ public interface IRefundLogisticService {
 	public void save(RefundLogistic bo) throws DataSavingException;
 
 	public Optional<RefundLogistic> single(String rid);
+
 }
