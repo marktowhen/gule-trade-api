@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.comment.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.jingyunbank.etrade.api.comment.bo.CommentsImg;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
@@ -13,4 +14,6 @@ public interface ICommentImgService {
 	public List<CommentsImg> getById(String id);
 	
 	public void remove(String id) throws DataRemovingException;
+	
+	public Optional<CommentsImg> singleById(String id);
 }
