@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.point.service.context;
+package com.jingyunbank.etrade.api.vip.point.service.context;
 
 
 public interface IPointContextService {

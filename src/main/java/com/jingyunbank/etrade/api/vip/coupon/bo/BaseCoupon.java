@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.vip.bo;
+package com.jingyunbank.etrade.api.vip.coupon.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

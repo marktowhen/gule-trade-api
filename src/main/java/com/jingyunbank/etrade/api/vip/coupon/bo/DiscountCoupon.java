@@ -1,33 +1,39 @@
-package com.jingyunbank.etrade.api.vip.bo;
+package com.jingyunbank.etrade.api.vip.coupon.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 现金购物金（代金券）<br>
+ * 折扣抵用券<br>
  * <strong>规则：</strong><br>
- * 结账时的商品金额可抵扣100%；<br>
- * 不能抵扣运费；<br>
- * 一张购物金只能在一张订单中使用、使用后不找零、退货后不返回；<br>
- * 购物金不可与抵用券和优惠券叠加使用。<br>
- * 
+ * 结账时的商品金额可抵扣20%；<br>
+ * 不能抵扣运费（即运费部分另计，只对商品部分进行打折）；<br>
+ * 一张抵用券只能在一张订单中使用，且不找零；<br>
+ * 抵用券不可与优惠券购物金叠加使用。
  */
-public class CashCoupon extends BaseCoupon implements Serializable {
-
-	private static final long serialVersionUID = 3237245861035524988L;
+public class DiscountCoupon extends BaseCoupon implements Serializable{
+	
+	private static final long serialVersionUID = 8517634142198267544L;
 	
 	private String ID;
 	private String code;//充值码
-	private BigDecimal value;//
+	private BigDecimal discount;//折扣
 	private Date addtime;
 	private Date start;
 	private Date end;
-	private boolean used;
-	private Date usedtime;
+	private boolean used;//是否充值到某用户账户中
+	private Date usedtime;//充值时间
 	private BigDecimal threshhold;//使用门槛
 	
+	private BigDecimal value;//面值 抵用的最高值
 	
+	public BigDecimal getValue() {
+		return value;
+	}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
 	public String getID() {
 		return ID;
 	}
@@ -40,11 +46,11 @@ public class CashCoupon extends BaseCoupon implements Serializable {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public BigDecimal getValue() {
-		return value;
+	public BigDecimal getDiscount() {
+		return discount;
 	}
-	public void setValue(BigDecimal value) {
-		this.value = value;
+	public void setDiscount(BigDecimal discount) {
+		this.discount = discount;
 	}
 	public Date getAddtime() {
 		return addtime;

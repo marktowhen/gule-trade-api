@@ -1,10 +1,10 @@
-package com.jingyunbank.etrade.api.point.service;
+package com.jingyunbank.etrade.api.vip.point.service;
 
 import java.util.List;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.point.bo.PointLog;
+import com.jingyunbank.etrade.api.vip.point.bo.PointLog;
 
 public interface IPointLogService {
 

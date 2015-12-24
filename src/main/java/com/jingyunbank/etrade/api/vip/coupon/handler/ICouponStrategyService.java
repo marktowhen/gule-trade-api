@@ -1,10 +1,10 @@
-package com.jingyunbank.etrade.api.vip.handler;
+package com.jingyunbank.etrade.api.vip.coupon.handler;
 
 import java.math.BigDecimal;
 
 import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
-import com.jingyunbank.etrade.api.vip.bo.BaseCoupon;
+import com.jingyunbank.etrade.api.vip.coupon.bo.BaseCoupon;
 /**
  * 优惠券（购物金，抵扣券）的优惠策略。
  */
