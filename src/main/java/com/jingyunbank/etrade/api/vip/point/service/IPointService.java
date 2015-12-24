@@ -1,8 +1,8 @@
-package com.jingyunbank.etrade.api.point.service;
+package com.jingyunbank.etrade.api.vip.point.service;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.point.bo.Point;
+import com.jingyunbank.etrade.api.vip.point.bo.Point;
 
 public interface IPointService {
 	/**

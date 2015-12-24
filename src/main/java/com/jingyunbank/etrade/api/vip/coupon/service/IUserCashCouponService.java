@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.vip.service;
+package com.jingyunbank.etrade.api.vip.coupon.service;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -9,8 +9,8 @@ import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.user.bo.Users;
-import com.jingyunbank.etrade.api.vip.bo.CashCoupon;
-import com.jingyunbank.etrade.api.vip.bo.UserCashCoupon;
+import com.jingyunbank.etrade.api.vip.coupon.bo.CashCoupon;
+import com.jingyunbank.etrade.api.vip.coupon.bo.UserCashCoupon;
 
 
 public interface IUserCashCouponService {

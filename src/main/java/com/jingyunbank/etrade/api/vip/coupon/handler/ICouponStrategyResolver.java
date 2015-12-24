@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.vip.handler;
+package com.jingyunbank.etrade.api.vip.coupon.handler;
 
 public interface ICouponStrategyResolver {
 

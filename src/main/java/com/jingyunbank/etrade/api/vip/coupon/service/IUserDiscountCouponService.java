@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.vip.service;
+package com.jingyunbank.etrade.api.vip.coupon.service;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -8,7 +8,7 @@ import com.jingyunbank.core.Range;
 import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.vip.bo.UserDiscountCoupon;
+import com.jingyunbank.etrade.api.vip.coupon.bo.UserDiscountCoupon;
 
 /**
  * @author Lenovo
