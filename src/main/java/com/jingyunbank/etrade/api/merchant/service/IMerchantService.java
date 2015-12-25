@@ -107,5 +107,11 @@ public interface IMerchantService {
 	 * @throws Exception
 	 */
 	public List<Merchant> listMerchantsByCondition(Merchant merchant, Range range) throws Exception;
+	/**
+	 * 查询商家数量
+	 * @return
+	 * @throws Exception
+	 */
+	public int countMerchants(Merchant merchant) throws Exception;
 	
 }
