@@ -12,6 +12,7 @@ import com.jingyunbank.etrade.api.track.bo.AdDetail;
 import com.jingyunbank.etrade.api.track.bo.AdModule;
 import com.jingyunbank.etrade.api.track.bo.FavoritesGoods;
 import com.jingyunbank.etrade.api.track.bo.FootprintGoods;
+import com.jingyunbank.etrade.api.track.bo.OtherGoods;
 import com.jingyunbank.etrade.api.track.bo.RecommendGoods;
 
 /**
@@ -168,4 +169,13 @@ public interface ITrackService {
 	 * @throws Exception
 	 */
 	public List<RecommendGoods> listRecommendGoods(String uid,int from,int to) throws Exception ;
+	/**
+	 * 查询其他用户购买的商品
+	 * @param uid
+	 * @param from
+	 * @param to
+	 * @return
+	 * @throws Exception
+	 */
+	public List<OtherGoods> listOtherGoods(String gid,String uid,int from,int to) throws Exception;
 }
