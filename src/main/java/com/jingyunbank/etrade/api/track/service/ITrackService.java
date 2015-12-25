@@ -26,7 +26,7 @@ public interface ITrackService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<FootprintGoods> listFootprintGoods(int from,int to) throws Exception;
+	public List<FootprintGoods> listFootprintGoods(int from,int to,String uid) throws Exception;
 	/**
 	 * 保存我的足迹
 	 * @param uid

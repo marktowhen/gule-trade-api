@@ -43,27 +43,26 @@ public class BaseGoods implements Serializable {
 	private String count; // 库存
 	private String volume; // 销量
 	private Date addTime;// 商品添加时间
-	private Date pro_start;  //促销开始时间
-	private Date pro_end;	//促销结束时间
-	private String pro_flag; //是否促销标志
-	private Date upTime; //上架时间
-	private Date downTime;//下架时间
-	private BigDecimal postage; //邮费
-	private int subVolumeType; //减库存方式 (拍下减库存 0 付款减库存1)
-	private String barCode; //条形码
-	private String goodsDesc; //宝贝描述
-	private String goodsTitle; //宝贝标题
-	private int state;
-	
-	private int comment; //商品评论数
-	//----------------商品图片属性-----------------//
+	private Date onSaleBeginTime; // 促销开始时间
+	private Date onSaleEndTime; // 促销结束时间
+	private boolean onSale; // 是否促销标志
+	private Date upTime; // 上架时间
+	private Date downTime;// 下架时间
+	private BigDecimal postage; // 邮费
+	private int subVolumeType; // 减库存方式 (拍下减库存 0 付款减库存1)
+	private String barCode; // 条形码
+	private String goodsDesc; // 宝贝描述
+	private String goodsTitle; // 宝贝标题
+	private boolean state;
+
+	private int comment; // 商品评论数
+	// ----------------商品图片属性-----------------//
 	private String thumb_path_1; // 展示图片
 	private String thumb_path_2; // 展示图片
 	private String thumb_path_3; // 展示图片
 	private String thumb_path_4; // 展示图片
 	private String thumb_path_5; // 展示图片
-	private String content;  //图片展示html代码
-	
+	private String content; // 图片展示html代码
 
 	// --------------商品详细属性----------------//
 	private String standardNo;// 产品标准号
@@ -80,15 +79,13 @@ public class BaseGoods implements Serializable {
 	private String note;// 注意事项
 	private String storageMethods;// 储藏方法
 	private String isGiftBox;// 是否礼盒装
-	private Date productionDate;//生产日期
+	private Date productionDate;// 生产日期
 	private String weight;// 重量
 	private String unit;// 单位
-	private String factoryName; //厂名
-	private String factoryAddr; //厂址
-	private String factoryTel;  //联系方式
-	
-	
- 
+	private String factoryName; // 厂名
+	private String factoryAddr; // 厂址
+	private String factoryTel; // 联系方式
+
 	public BigDecimal getPostage() {
 		return postage;
 	}
@@ -257,7 +254,6 @@ public class BaseGoods implements Serializable {
 		this.price = price;
 	}
 
-
 	public BigDecimal getPromotionPrice() {
 		return promotionPrice;
 	}
@@ -289,8 +285,6 @@ public class BaseGoods implements Serializable {
 	public void setDiscountPrice(BigDecimal discountPrice) {
 		this.discountPrice = discountPrice;
 	}
-
-	
 
 	public String getThumb_path_1() {
 		return thumb_path_1;
@@ -492,30 +486,36 @@ public class BaseGoods implements Serializable {
 		this.unit = unit;
 	}
 
-	public Date getPro_start() {
-		return pro_start;
+	public Date getOnSaleBeginTime() {
+		return onSaleBeginTime;
 	}
 
-	public void setPro_start(Date pro_start) {
-		this.pro_start = pro_start;
+	public void setOnSaleBeginTime(Date onSaleBeginTime) {
+		this.onSaleBeginTime = onSaleBeginTime;
 	}
 
-	public Date getPro_end() {
-		return pro_end;
+	public Date getOnSaleEndTime() {
+		return onSaleEndTime;
 	}
 
-	public void setPro_end(Date pro_end) {
-		this.pro_end = pro_end;
+	public void setOnSaleEndTime(Date onSaleEndTime) {
+		this.onSaleEndTime = onSaleEndTime;
 	}
 
-	 
-
-	public String getPro_flag() {
-		return pro_flag;
+	public boolean isOnSale() {
+		return onSale;
 	}
 
-	public void setPro_flag(String pro_flag) {
-		this.pro_flag = pro_flag;
+	public void setOnSale(boolean onSale) {
+		this.onSale = onSale;
+	}
+
+	public boolean isState() {
+		return state;
+	}
+
+	public void setState(boolean state) {
+		this.state = state;
 	}
 
 	public Date getProductionDate() {
@@ -542,14 +542,6 @@ public class BaseGoods implements Serializable {
 		this.downTime = downTime;
 	}
 
-	public int getState() {
-		return state;
-	}
-
-	public void setState(int state) {
-		this.state = state;
-	}
-
 	public int getComment() {
 		return comment;
 	}
@@ -565,6 +557,5 @@ public class BaseGoods implements Serializable {
 	public void setLevel(String level) {
 		this.level = level;
 	}
-	
-	
+
 }
