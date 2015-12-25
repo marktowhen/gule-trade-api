@@ -3,7 +3,6 @@ package com.jingyunbank.etrade.api.information.bo;
 public class Information {
 
 	private String ID;
-	private String SiteID;
 	private String name;
 	
 	public String getID() {
@@ -11,12 +10,6 @@ public class Information {
 	}
 	public void setID(String iD) {
 		ID = iD;
-	}
-	public String getSiteID() {
-		return SiteID;
-	}
-	public void setSiteID(String siteID) {
-		SiteID = siteID;
 	}
 	public String getName() {
 		return name;
