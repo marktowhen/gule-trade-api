@@ -28,7 +28,7 @@ public class AuthIntercepter implements HandlerInterceptor{
 		if(method == null){
 			try {
 				JsonResponse.write(response, 
-						Result.fail("cast exception when casting object " + handler + "to HandlerMethod").toString());
+						Result.fail("服务异常，请稍后重试。").toString());
 	        } catch (IOException e) {}
 			return false;
 		}
@@ -38,7 +38,7 @@ public class AuthIntercepter implements HandlerInterceptor{
 			if(!ServletBox.authenticated(request)){
 				try {
 		           JsonResponse.write(response, 
-		        		   Result.fail("please login first").toString());
+		        		   Result.fail("您还未登录，请先登录后继续操作。").toString());
 		        } catch (IOException e) {}
 				return false;
 			}
