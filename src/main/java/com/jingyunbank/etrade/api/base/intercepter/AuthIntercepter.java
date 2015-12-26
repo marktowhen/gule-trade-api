@@ -38,7 +38,7 @@ public class AuthIntercepter implements HandlerInterceptor{
 			if(!ServletBox.authenticated(request)){
 				try {
 		           JsonResponse.write(response, 
-		        		   Result.fail("您还未登录，请先登录后继续操作。").toString());
+		        		   Result.fail("您还未登录，请先登录后继续操作。").setCode("400").toString());
 		        } catch (IOException e) {}
 				return false;
 			}
