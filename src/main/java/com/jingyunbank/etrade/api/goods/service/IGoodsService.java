@@ -46,7 +46,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listBrandsThree() throws Exception;
+	public List<ShowGoods> listBrandsThree(Range rang) throws Exception;
 
 	/**
 	 * 查询所有的类别
@@ -96,17 +96,8 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<GoodsMerchant> listMerchantByWhere(GoodsShow show, Range range) throws Exception;
-
 	/**
-	 * 店铺相关产品 显示4条
-	 * 
-	 * @param show
-	 * @return
-	 * @throws Exception
-	 */
-	public List<ShowGoods> listMerchantByWhereGoods4(GoodsShow show) throws Exception;
-	/**
-	 * 店铺相关产品 全部显示
+	 * 店铺相关产品 
 	 * 
 	 * @param show
 	 * @return
