@@ -34,11 +34,11 @@ public class Orders  implements Serializable{
 	private String invoiceTitle;
 	private String couponID;//优惠卡券Id
 	private String couponType;//优惠卡券类型 （DISCOUNTCOUPON, CACHCOUPON）
-	private BigDecimal price;//订单初始总价
-	private BigDecimal payout;//优惠后的总价
+	private BigDecimal price;//订单使用卡券前的总价（包含邮费）
+	private BigDecimal payout;//优惠后的总价(实际支付，去掉卡券优惠)
 	private String statusCode;//订单状态code
 	private String statusName;
-	private BigDecimal postage;
+	private BigDecimal postage;//订单计算出的邮费（主要用于数据校验）
 	private String note;
 	
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();

@@ -18,8 +18,9 @@ public class OrderGoods implements Serializable{
 	private long orderno;
 	private String GID;//商品id
 	private String gname;
-	private BigDecimal pprice;//promotion price//促销价格
-	private BigDecimal price;//订单生成时的商品原价格
+	private BigDecimal pprice;//promotion price//促销价格（不包含邮费）
+	private BigDecimal price;//订单生成时的商品原价格（不包含邮费）
+	private BigDecimal postage;//商品邮费，不做存储
 	private int count;
 	private String statusCode;//状态id，用户支持订单中某个商品的退款
 	private BigDecimal payout;//实际付款
@@ -125,5 +126,11 @@ public class OrderGoods implements Serializable{
 	}
 	public void setMID(String mID) {
 		MID = mID;
+	}
+	public BigDecimal getPostage() {
+		return postage;
+	}
+	public void setPostage(BigDecimal postage) {
+		this.postage = postage;
 	}
 }

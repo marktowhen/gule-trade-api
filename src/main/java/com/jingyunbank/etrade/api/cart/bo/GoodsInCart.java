@@ -25,7 +25,8 @@ public class GoodsInCart implements Serializable{
 	
 	//attrs to show
 	private String imgpath;
-	private int stock;
+	private int stock;//库存
+	private BigDecimal postage;//邮费
 	
 	public String getID() {
 		return ID;
@@ -117,5 +118,10 @@ public class GoodsInCart implements Serializable{
 	public void setPprice(BigDecimal pprice) {
 		this.pprice = pprice;
 	}
-	
+	public BigDecimal getPostage() {
+		return postage;
+	}
+	public void setPostage(BigDecimal postage) {
+		this.postage = postage;
+	}
 }
