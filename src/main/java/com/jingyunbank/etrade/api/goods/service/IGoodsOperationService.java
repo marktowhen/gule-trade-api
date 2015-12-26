@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import com.jingyunbank.etrade.api.goods.bo.BaseGoodsOperation;
 import com.jingyunbank.etrade.api.goods.bo.GoodsOperation;
-import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 
 /**
  * 

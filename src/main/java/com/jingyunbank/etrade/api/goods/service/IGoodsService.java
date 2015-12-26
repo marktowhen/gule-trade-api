@@ -11,7 +11,6 @@ import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
 import com.jingyunbank.etrade.api.goods.bo.HoneyGoods;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
-import com.jingyunbank.etrade.api.goods.bo.SalesRecord;
 import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
 
 /**
@@ -162,13 +161,4 @@ public interface IGoodsService {
 	 */
 	public List<GoodsList> listGoodsByCondition(GoodsSearch goodsSearch, Range range) throws Exception;
 	
-	/**
-	 * 查询商品的交易记录
-	 * @param gid
-	 * @param range
-	 * @return
-	 * @throws Exception
-	 */
-	public List<SalesRecord> listSalesRecords(String gid,Range range) throws Exception;
-	 
 }
