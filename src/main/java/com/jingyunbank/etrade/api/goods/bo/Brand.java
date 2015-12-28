@@ -16,6 +16,17 @@ public class Brand implements Serializable {
 	private String name;
 	private String desc;
 	private int admin_sort;
+	private boolean status;
+	
+	
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
 
 	public String getID() {
 		return ID;

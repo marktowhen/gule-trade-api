@@ -42,6 +42,9 @@ public interface IBrandService {
 	 * @throws Exception
 	 */
 	public boolean refreshBrand(Brand brand) throws Exception;
+	
+	
+	public boolean delBrand(String bid) throws Exception;
 
 	/**
 	 * 根据MID 查询brand
