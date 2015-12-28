@@ -3,6 +3,8 @@ package com.jingyunbank.etrade.api.goods.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.goods.bo.BaseGoodsOperation;
 import com.jingyunbank.etrade.api.goods.bo.GoodsOperation;
 
@@ -43,7 +45,7 @@ public interface IGoodsOperationService {
 	 * @return true 修改成功  false 修改失败
 	 * @throws Exception
 	 */
-	public boolean refreshGoodsVolume(String gid,int count) throws Exception;
+	public void refreshGoodsVolume(String uid, String uname, String gid,int count) throws DataSavingException, DataRefreshingException;
 	
 	/**
 	 * 商品上架

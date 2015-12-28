@@ -23,6 +23,7 @@ public class Orders  implements Serializable{
 	private String mobile ;//收货人电话
 	private String zipcode;
 	private String UID;//下单人
+	private String uname;
 	private String MID;
 	private String mname;
 	private Date addtime;//下单时间
@@ -255,6 +256,12 @@ public class Orders  implements Serializable{
 
 	public void setInvoiceTitle(String invoiceTitle) {
 		this.invoiceTitle = invoiceTitle;
+	}
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
 	}
 
 	public Date getExpireTime(){
