@@ -4,18 +4,16 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.jingyunbank.etrade.api.user.bo.Users;
-
 public class GoodsInCart implements Serializable{
 
 	private static final long serialVersionUID = -5109034256152795171L;
 	private String ID;
 	private Cart cart;
-	private Users user;
 	private String cartID;
 	private String GID;
 	private String gname;
 	private String UID;
+	private String uname;
 	private String MID;
 	private String mname;
 	private int count;
@@ -70,12 +68,6 @@ public class GoodsInCart implements Serializable{
 	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
-	public Users getUser() {
-		return user;
-	}
-	public void setUser(Users user) {
-		this.user = user;
-	}
 	public String getUID() {
 		return UID;
 	}
@@ -123,5 +115,11 @@ public class GoodsInCart implements Serializable{
 	}
 	public void setPostage(BigDecimal postage) {
 		this.postage = postage;
+	}
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
 	}
 }
