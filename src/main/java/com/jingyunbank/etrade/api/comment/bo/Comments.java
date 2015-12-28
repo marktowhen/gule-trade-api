@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.jingyunbank.etrade.api.user.bo.Users;
 
 
 public class Comments implements Serializable{
