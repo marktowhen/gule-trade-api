@@ -1,10 +1,9 @@
 package com.jingyunbank.etrade.api.goods.service;
 
-import java.util.Collection;
+
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.validation.ObjectError;
 
 import com.jingyunbank.etrade.api.goods.bo.Brand;
 
