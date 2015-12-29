@@ -20,28 +20,7 @@ public interface IOrderService {
 
 	public Optional<Orders> single(String oid);
 	
-	/**
-	 * 查询某用户的所有订单信息，默认是按照下单时间的降序排列
-	 * @param uid
-	 * @return
-	 */
-	public List<Orders> list(String uid);
-	
 	public List<Orders> list(List<String> oids);
-	/**
-	 * 查询某用户的某订单状态下的所有订单
-	 * @param uid
-	 * @param status
-	 * @return
-	 */
-	public List<Orders> listOrder(String uid, OrderStatusDesc status);
-	/**
-	 * 查询某用户的按时间降序排列的订单中的 某几条数据。
-	 * @param uid
-	 * @param range from->to
-	 * @return
-	 */
-	public List<Orders> list(String uid, Range range);
 	/**
 	 *  查询某用户的按时间降序排列的订单中的 某几条状态，日期，关键字符合自定参数的数据。
 	 *  
@@ -65,10 +44,6 @@ public interface IOrderService {
 	 */
 	public List<Orders> listm(String mid, String statuscode, String fromdate, String keywords, Range range);
 	
-	public List<Orders> list();
-	
-	public List<Orders> list(Date start, Date end);
-
 	/**
 	 * 根据对外订单号获取公用该订单号的订单信息
 	 * @param extransno
@@ -86,5 +61,11 @@ public interface IOrderService {
 	 * 2015年12月10日 qxs
 	 */
 	public Integer count(String uid, String statuscode, String fromdate,String keywords);
+	/**
+	 * 列出截止某期限内所有某状态的订单
+	 * @param deadline
+	 * @return
+	 */
+	public List<Orders> listBefore(Date deadline, OrderStatusDesc status);
 	
 }
