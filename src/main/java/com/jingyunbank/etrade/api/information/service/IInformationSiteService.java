@@ -11,7 +11,7 @@ public interface IInformationSiteService {
 	
 	public boolean save(InformationSite informationSite) throws DataSavingException;
 		
-	public Optional<InformationSite> singleSitesByName(String name);
+	public List<InformationSite> list(String informationID);
 	
 	public List<InformationSite> list(String informationID,Range range);
 }
