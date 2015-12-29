@@ -13,8 +13,8 @@ public class InternExceptionHandler {
 
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
-	public ResponseEntity<Result> handleException( Exception ex){
-		return new ResponseEntity<Result>(Result.fail(ex.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
+	public ResponseEntity<Result<String>> handleException( Exception ex){
+		return new ResponseEntity<Result<String>>(Result.fail(ex.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 }
