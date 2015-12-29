@@ -19,18 +19,18 @@ public interface IMerchantContextService {
 	 * @return
 	 * @throws DataSavingException
 	 */
-	public boolean saveMerchant(Merchant merchant) throws DataSavingException;
+	public boolean save(Merchant merchant) throws DataSavingException;
 	/**
 	 * 更新商家信息
 	 * @param merchant
 	 * @return
 	 * @throws DataSavingException
 	 */
-	public boolean updateMerchant(Merchant merchant) throws DataRefreshingException;
+	public boolean refresh(Merchant merchant) throws DataRefreshingException;
 	/**
 	 * 根据商家ID 查询商家信息
 	 * @param mid
 	 * @return
 	 */
-	public Optional<Merchant> getMerchantInfoByMid(String mid) throws IllegalAccessException, InvocationTargetException;
+	public Optional<Merchant> singleByMID(String mid) throws IllegalAccessException, InvocationTargetException;
 }
