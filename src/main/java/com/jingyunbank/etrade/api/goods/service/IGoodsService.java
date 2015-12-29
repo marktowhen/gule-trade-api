@@ -160,8 +160,6 @@ public interface IGoodsService {
 	 */
 	public List<GoodsList> listGoodsByCondition(GoodsSearch goodsSearch, Range range) throws Exception;
 	
-	
-	
 
 	
 }
