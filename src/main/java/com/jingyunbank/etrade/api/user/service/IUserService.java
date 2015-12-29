@@ -15,12 +15,6 @@ public interface IUserService {
 
 	public Optional<Users> getByUID(String id);
 	
-	public Optional<Users> getByPhone(String phone);
-	
-	public Optional<Users> getByUname(String username);
-	
-	public Optional<Users> getByEmail(String email);
-	
 	/**
 	 * 用户用户登录的查询，提供用户的键值（可以是用户名，手机号，邮箱）
 	 * 该方法主要用户的登录查询
@@ -37,12 +31,6 @@ public interface IUserService {
 	public List<Users> list(Range range);
 	
 	public List<Users> list(Date start, Date end);
-	
-	public boolean phoneExists(String phone);
-	
-	public boolean unameExists(String uname);
-	
-	public boolean emailExists(String email);
 	
 	/**
 	 * equals to(phoneExists(key) | unameExists(uname) | emailExists(email))

@@ -10,10 +10,8 @@ import com.jingyunbank.etrade.api.information.bo.InformationSite;
 public interface IInformationSiteService {
 	
 	public boolean save(InformationSite informationSite) throws DataSavingException;
-	
-	public List<InformationSite> getSitesBySiteid(String siteid);
-	
+		
 	public Optional<InformationSite> singleSitesByName(String name);
 	
-	public List<InformationSite> getSite(String informationID,Range range);
+	public List<InformationSite> list(String informationID,Range range);
 }

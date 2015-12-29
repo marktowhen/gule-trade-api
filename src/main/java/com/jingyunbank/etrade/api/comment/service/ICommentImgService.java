@@ -11,7 +11,7 @@ public interface ICommentImgService {
 
 	public boolean save(CommentsImg commentsImg) throws DataSavingException;
 	
-	public List<CommentsImg> getById(String id);
+	public List<CommentsImg> list(String commentID);
 	
 	public void remove(String id) throws DataRemovingException;
 	
