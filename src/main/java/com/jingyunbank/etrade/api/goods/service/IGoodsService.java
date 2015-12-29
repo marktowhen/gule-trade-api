@@ -47,6 +47,14 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listBrandsThree(Range rang) throws Exception;
+	
+	/**
+	 *查询3个类别 用于首页菜单
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<ShowGoods> listTypesThree(Range rang) throws Exception;
 
 	/**
 	 * 查询所有的类别
@@ -151,5 +159,9 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<GoodsList> listGoodsByCondition(GoodsSearch goodsSearch, Range range) throws Exception;
+	
+	
+	
+
 	
 }
