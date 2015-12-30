@@ -40,7 +40,7 @@ public class BaseGoods implements Serializable {
 	private BigDecimal nowPrice; // 现价
 	private String disCount; // 折扣
 	private BigDecimal discountPrice; // 折扣价
-	private String count; // 库存
+	private int count; // 库存
 	private String volume; // 销量
 	private Date addTime;// 商品添加时间
 	private Date onSaleBeginTime; // 促销开始时间
@@ -336,11 +336,13 @@ public class BaseGoods implements Serializable {
 		this.content = content;
 	}
 
-	public String getCount() {
+	
+
+	public int getCount() {
 		return count;
 	}
 
-	public void setCount(String count) {
+	public void setCount(int count) {
 		this.count = count;
 	}
 
