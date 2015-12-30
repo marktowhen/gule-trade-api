@@ -1,5 +1,7 @@
 package com.jingyunbank.etrade.api.order.postsale.service.context;
 
+import java.util.List;
+
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
@@ -33,7 +35,7 @@ public interface IRefundContextService {
 	 * @param note 如果需要退货，则note为卖家的收货地址
 	 * @throws DataRefreshingException
 	 */
-	public void accept(String RID, String operator, String note) throws DataRefreshingException, DataSavingException;
+	public boolean accept(List<String> RIDs, String operator, String note) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 卖家拒绝了买家的退款申请
 	 * @param RID
@@ -53,6 +55,6 @@ public interface IRefundContextService {
 	 * @throws DataRefreshingException
 	 * @throws DataSavingException
 	 */
-	public void done(String RID, String operator) throws DataRefreshingException, DataSavingException;
+	public boolean done(List<String> RIDs, String operator) throws DataRefreshingException, DataSavingException;
 	
 }

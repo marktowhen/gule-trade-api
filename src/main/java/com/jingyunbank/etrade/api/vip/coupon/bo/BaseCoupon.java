@@ -16,8 +16,6 @@ public class BaseCoupon implements Serializable{
 	public final static String CASHCOUPONSTRATEGY = "CASHCOUPONSTRATEGY";
 	public final static String DISCOUNTCOUPONSTRATEGY = "DISCOUNTCOUPONSTRATEGY";
 	
-	private boolean del;//是否被删除
-	private String remark;//备注 
 	private Date addtimeStart;
 	private Date addtiemEnd;
 	private BigDecimal threshholdLow;//查询时添加条件 and threshhold>=threshholdLow
@@ -27,6 +25,24 @@ public class BaseCoupon implements Serializable{
 	private boolean needUsed;//查询时是否需要加上used这个字段的条件
 	private boolean needDelete;//查询时是否需要加上Delete这个字段的条件
 	
+	private boolean del;//是否被删除
+	private String remark;//备注 
+	private String cardNum;//卡号
+	private boolean locked;//是否锁定
+	
+	
+	public String getCardNum() {
+		return cardNum;
+	}
+	public void setCardNum(String cardNum) {
+		this.cardNum = cardNum;
+	}
+	public boolean isLocked() {
+		return locked;
+	}
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
 	public boolean isValidTime() {
 		return validTime;
 	}

@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.vip.coupon.service;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +18,22 @@ import com.jingyunbank.etrade.api.vip.coupon.bo.CashCoupon;
  *
  */
 public interface ICashCouponService {
+	/**
+	 * 1000元购物金卡号前缀
+	 */
+	String CARD_NUM_PRIFIX_1000 = "E";
+	/**
+	 * 500元购物金卡号前缀
+	 */
+	String CARD_NUM_PRIFIX_500 = "F";
+	/**
+	 * 200元购物金卡号前缀
+	 */
+	String CARD_NUM_PRIFIX_200 = "G";
+	/**
+	 * 购物金后缀计数开始于
+	 */
+	long CARD_NUM_SUFFIX_START = 10000001L;
 
 	/**
 	 * 管理员新增一张代金券
@@ -94,6 +111,33 @@ public interface ICashCouponService {
 	 * @throws DataRefreshingException 
 	 */
 	public boolean activeCoupon(String code) throws DataRefreshingException;
+
+	/**
+	 * 列表展示
+	 * @param cardNum
+	 * @param value
+	 * @param locked
+	 * @param range
+	 * @return
+	 * 2015年12月29日 qxs
+	 */
+	public List<CashCoupon> list(String cardNum, BigDecimal value,
+			Boolean locked, Range range);
+	
+	/**
+	 * 查询数量
+	 * @param cashCoupon
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	public int count(String cardNum, BigDecimal value,Boolean locked);
+
+	/**
+	 * 解锁
+	 * @param ids
+	 * 2015年12月29日 qxs
+	 */
+	public boolean unlock(String[] ids);
 
 }
 

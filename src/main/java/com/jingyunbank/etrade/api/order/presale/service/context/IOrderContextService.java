@@ -10,18 +10,6 @@ import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 public interface IOrderContextService {
 	
 	/**
-	 * 保存单个订单信息<br>
-	 * 用户填写完订单详情后点击确定按钮，完成订单提交。
-	 * 
-	 * <br>
-	 * 1）该操作会保存订单的基本信息，包括订单的订单号，收货人，支付方式，订单的价格，邮费，商家等信息。<br>
-	 * 2）同时还会保存该订单中包含哪些商品，以及商品的价格，数量等信息<br>
-	 * 3）最后还会保存一条订单追踪信息，记录订单的生命周期
-	 * @param order
-	 * @throws OrderGenerateException
-	 */
-	public void save(Orders order) throws DataSavingException;
-	/**
 	 * 保存多个订单信息<br>
 	 * 
 	 * 1）该操作会保存订单的基本信息，包括订单的订单号，收货人，支付方式，订单的价格，邮费，商家等信息。<br>
@@ -115,5 +103,5 @@ public interface IOrderContextService {
 	
 	public boolean cancelRefund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
 	
-	public void refundDone(String oid, String ogid) throws DataRefreshingException, DataSavingException;
+	public void refundDone(List<String> ogids) throws DataRefreshingException, DataSavingException;
 }

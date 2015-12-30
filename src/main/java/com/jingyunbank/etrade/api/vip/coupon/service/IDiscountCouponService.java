@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.vip.coupon.service;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +13,11 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 import com.jingyunbank.etrade.api.vip.coupon.bo.DiscountCoupon;
 
 public interface IDiscountCouponService {
+	
+	/**
+	 * 50元抵用券卡号前缀
+	 */
+	String CARD_NUM_PRIFIX_50 = "D";
 	/**
 	 * 管理员新增一张抵用券
 	 * @param DiscountCoupon
@@ -76,7 +82,7 @@ public interface IDiscountCouponService {
 	
 	/**
 	 * 查询数量
-	 * @param cashCoupon
+	 * @param DiscountCoupon
 	 * @return
 	 * 2015年11月19日 qxs
 	 */
@@ -90,6 +96,31 @@ public interface IDiscountCouponService {
 	 */
 	public boolean active(String code) throws DataRefreshingException ;
 
+	/**
+	 * 列表展示
+	 * @param cardNum
+	 * @param value
+	 * @param locked
+	 * @param range
+	 * @return
+	 * 2015年12月29日 qxs
+	 */
+	public List<DiscountCoupon> list(String cardNum, BigDecimal value,
+			Boolean locked, Range range);
 	
+	/**
+	 * 查询数量
+	 * @param DiscountCoupon
+	 * @return
+	 * 2015年11月19日 qxs
+	 */
+	public int count(String cardNum, BigDecimal value,Boolean locked);
+
+	/**
+	 * 解锁
+	 * @param ids
+	 * 2015年12月29日 qxs
+	 */
+	public boolean unlock(String[] ids);
 
 }

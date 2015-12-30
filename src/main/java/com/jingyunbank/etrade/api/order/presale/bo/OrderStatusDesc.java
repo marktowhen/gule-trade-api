@@ -53,7 +53,7 @@ public final class OrderStatusDesc implements Serializable{
 	public final static OrderStatusDesc			CLOSED			= new OrderStatusDesc(CLOSED_CODE, "交易关闭", 0, "订单被取消", true);
 	public final static OrderStatusDesc			REMOVED			= new OrderStatusDesc(REMOVED_CODE, "订单移除", 0, "已取消的订单被用户删除", true);
 	public final static OrderStatusDesc			REFUNDING		= new OrderStatusDesc(REFUNDING_CODE, "退款中", 0, "买家申请退款中", true);
-	public final static OrderStatusDesc			REFUNDED		= new OrderStatusDesc(REFUNDING_CODE, "退款完成", 0, "完成退款", true);
+	public final static OrderStatusDesc			REFUNDED		= new OrderStatusDesc(REFUNDED_CODE, "退款完成", 0, "完成退款", true);
 	
 	private final static Map<String, OrderStatusDesc> caches = new HashMap<String, OrderStatusDesc>();
 	static{

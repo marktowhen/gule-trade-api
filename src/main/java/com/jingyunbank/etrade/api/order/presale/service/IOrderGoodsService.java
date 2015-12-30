@@ -33,7 +33,7 @@ public interface IOrderGoodsService {
 	 * @param paid
 	 */
 	public void refreshStatus(List<String> oids, OrderStatusDesc paid) throws DataRefreshingException;
-	public void refreshGoodStatus(String ogid, OrderStatusDesc paid) throws DataRefreshingException;
+	public void refreshGoodStatus(List<String> ogids, OrderStatusDesc paid) throws DataRefreshingException;
 	
 	
 	public int count(String oid,OrderStatusDesc status);
