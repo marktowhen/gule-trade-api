@@ -44,7 +44,7 @@ public interface IInformationDetailsService {
 	 */
 	public Optional<InformationDetails> single(String id);
 	
-	public List<InformationDetails> list();
+	public List<InformationDetails> list(Range range);
 	/**
 	 * 查出二级分别对应的所有三级页面
 	 * @param sid

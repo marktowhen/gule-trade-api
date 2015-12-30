@@ -19,6 +19,15 @@ public class InformationDetails implements Serializable{
 	private String recipe;//古方医药的处方
 	private String function;//古方医药的主治功能
 	
+	private String sitename;
+	
+
+	public String getSitename() {
+		return sitename;
+	}
+	public void setSitename(String sitename) {
+		this.sitename = sitename;
+	}
 	public String getRecipe() {
 		return recipe;
 	}
