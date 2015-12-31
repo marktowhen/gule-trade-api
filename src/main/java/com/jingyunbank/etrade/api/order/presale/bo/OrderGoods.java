@@ -27,6 +27,7 @@ public class OrderGoods implements Serializable{
 	private BigDecimal payout;//实际付款
 	private BigDecimal couponReduce;//卡券优惠减免价格
 	private Date addtime;
+	private int point;//赚取积分
 	
 	private String MID;
 	private String mname;
@@ -139,5 +140,11 @@ public class OrderGoods implements Serializable{
 	}
 	public void setStatusName(String statusName) {
 		this.statusName = statusName;
+	}
+	public int getPoint() {
+		return point;
+	}
+	public void setPoint(int point) {
+		this.point = point;
 	}
 }

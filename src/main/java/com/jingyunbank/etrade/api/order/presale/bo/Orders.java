@@ -2,11 +2,9 @@ package com.jingyunbank.etrade.api.order.presale.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
 
@@ -35,12 +33,14 @@ public class Orders  implements Serializable{
 	private String invoiceTitle;
 	private String couponID;//优惠卡券Id
 	private String couponType;//优惠卡券类型 （DISCOUNTCOUPON, CACHCOUPON）
+	private BigDecimal couponReduce;
 	private BigDecimal price;//订单使用卡券前的总价（包含邮费）
 	private BigDecimal payout;//优惠后的总价(实际支付，去掉卡券优惠)
 	private String statusCode;//订单状态code
 	private String statusName;
 	private BigDecimal postage;//订单计算出的邮费（主要用于数据校验）
 	private String note;
+	private int point;//赚取积分
 	
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
 	private List<OrderTrace> traces = new ArrayList<OrderTrace>();
@@ -264,12 +264,19 @@ public class Orders  implements Serializable{
 		this.uname = uname;
 	}
 
-	public Date getExpireTime(){
-		if(Objects.nonNull(this.addtime)){
-			Instant i = this.addtime.toInstant();
-			Instant e = i.plusSeconds(VALID_TIME_IN_SECOND);
-			return Date.from(e);
-		}
-		return new Date();
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
+	}
+
+	public BigDecimal getCouponReduce() {
+		return couponReduce;
+	}
+
+	public void setCouponReduce(BigDecimal couponReduce) {
+		this.couponReduce = couponReduce;
 	}
 }
