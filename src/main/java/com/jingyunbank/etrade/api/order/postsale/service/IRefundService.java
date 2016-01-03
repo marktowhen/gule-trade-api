@@ -18,7 +18,7 @@ public interface IRefundService {
 	
 	public void refreshStatus(List<String> RIDs, RefundStatusDesc status) throws DataRefreshingException;
 	
-	public Optional<Refund> latestOneByOGID(String ogid) ;
+	public Optional<Refund> singleByOGID(String ogid) ;
 	
 	public Optional<Refund> single(String rid);
 	/**
