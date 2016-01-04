@@ -33,6 +33,8 @@ public class GoodsDetail implements Serializable{
 	private String specifications;
 	/** 成分含量*/
 	private String ingredient;
+	/** 口味*/
+	private String taste; 
 	/** 功能及功效*/
 	private String functions;
 	/** 注意事项*/
@@ -185,6 +187,12 @@ public class GoodsDetail implements Serializable{
 	}
 	public void setUnit(String unit) {
 		this.unit = unit;
+	}
+	public String getTaste() {
+		return taste;
+	}
+	public void setTaste(String taste) {
+		this.taste = taste;
 	}
 	
 	
