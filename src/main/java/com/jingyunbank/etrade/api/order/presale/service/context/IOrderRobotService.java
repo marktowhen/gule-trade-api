@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.order.presale.service.context;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.exception.NoticeDispatchException;
 
 public interface IOrderRobotService {
 
@@ -17,5 +18,9 @@ public interface IOrderRobotService {
 	 * @throws DataSavingException
 	 */
 	public void autoReceive() throws DataRefreshingException, DataSavingException;
+	/**
+	 * 在进行自动确认收货前24小时，提醒用户需要进行确认收货
+	 */
+	public void remindReceive() throws NoticeDispatchException ;
 	
 }

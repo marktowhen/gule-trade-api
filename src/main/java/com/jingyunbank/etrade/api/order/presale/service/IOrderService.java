@@ -68,4 +68,11 @@ public interface IOrderService {
 	 */
 	public List<Orders> listBefore(Date deadline, OrderStatusDesc status);
 	
+	/**
+	 * 列出某期限内所有某状态的订单
+	 * @param deadline
+	 * @return
+	 */
+	public List<Orders> listBetween(Date from, Date to, OrderStatusDesc status);
+	
 }
