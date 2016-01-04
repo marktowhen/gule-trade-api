@@ -33,7 +33,7 @@ public interface IOrderContextService {
 	 * @param extorderno
 	 * @throws OrderPayFailException
 	 */
-	public void payfail(String extorderno) throws DataRefreshingException, DataSavingException ;
+	public void payfail(String extorderno, String note) throws DataRefreshingException, DataSavingException ;
 	/**
 	 * 支付成功确认<br>
 	 * 用户支付成功后，卖家需要将订单状态更新为accept， <br>
