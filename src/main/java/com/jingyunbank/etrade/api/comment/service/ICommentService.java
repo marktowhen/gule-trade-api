@@ -70,7 +70,7 @@ public interface ICommentService {
 	 * @param oid
 	 * @return
 	 */
-	public Optional<Comments> singleByOid(String oid);
+	public Optional<Comments> singleByOid(String oid,String gid);
 	
 	public List<Comments> list();
 }
