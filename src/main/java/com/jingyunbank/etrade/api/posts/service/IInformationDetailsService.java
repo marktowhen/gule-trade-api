@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.information.service;
+package com.jingyunbank.etrade.api.posts.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,7 +7,7 @@ import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.information.bo.InformationDetails;
+import com.jingyunbank.etrade.api.posts.bo.InformationDetails;
 
 public interface IInformationDetailsService {
 	/**

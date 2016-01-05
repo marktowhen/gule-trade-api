@@ -1,9 +1,11 @@
 package com.jingyunbank.etrade.api.vip.coupon.handler;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 import com.jingyunbank.etrade.api.vip.coupon.bo.BaseCoupon;
 /**
  * 优惠券（购物金，抵扣券）的优惠策略。
@@ -23,6 +25,9 @@ public interface ICouponStrategyService {
 	 * @return 
 	 */
 	public Result<BigDecimal> calculate(String UID, String couponID, BigDecimal originprice) throws UnsupportedOperationException;
+	
+	public boolean calculate(String UID, String couponID, List<Orders> orders) throws UnsupportedOperationException;
+	
 	/**
 	 * 消费指定类型的指定优惠卡券.
 	 * <p>

@@ -1,10 +1,10 @@
-package com.jingyunbank.etrade.api.information.service;
+package com.jingyunbank.etrade.api.posts.service;
 
 import java.util.List;
 
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.information.bo.InformationSite;
+import com.jingyunbank.etrade.api.posts.bo.InformationSite;
 
 public interface IInformationSiteService {
 	
