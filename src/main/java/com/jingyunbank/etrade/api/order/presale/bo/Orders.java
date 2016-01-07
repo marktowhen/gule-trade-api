@@ -16,6 +16,7 @@ public class Orders  implements Serializable{
 	private static final long serialVersionUID = 2563253149671693408L;
 	private String ID;
 	private long orderno;
+	private int province;
 	private String receiver;//收货人
 	private String address;//收货地址
 	private String mobile ;//收货人电话
@@ -269,5 +270,13 @@ public class Orders  implements Serializable{
 
 	public void setCouponReduce(BigDecimal couponReduce) {
 		this.couponReduce = couponReduce;
+	}
+
+	public int getProvince() {
+		return province;
+	}
+
+	public void setProvince(int province) {
+		this.province = province;
 	}
 }
