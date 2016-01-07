@@ -64,4 +64,12 @@ public interface IProvinceService {
 	 * 2015年11月21日 qxs
 	 */
 	public List<Province> listByCountry(int countryID);
+	
+	/**
+	 * 根据id判断是否偏远地区
+	 * @param provinceID
+	 * @return
+	 * 2016年1月7日 qxs
+	 */
+	public boolean isFaraway(int provinceID);
 }

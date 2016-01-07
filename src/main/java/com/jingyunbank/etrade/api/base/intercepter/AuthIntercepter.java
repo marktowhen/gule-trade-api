@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.base.intercepter;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jingyunbank.core.Result;
 import com.jingyunbank.core.web.AuthBeforeOperation;
 import com.jingyunbank.core.web.JsonResponse;
-import com.jingyunbank.core.web.ServletBox;
+import com.jingyunbank.core.web.Security;
 
 public class AuthIntercepter implements HandlerInterceptor{
 
@@ -35,10 +36,19 @@ public class AuthIntercepter implements HandlerInterceptor{
 		
 		AuthBeforeOperation requiredLogin = method.getMethodAnnotation(AuthBeforeOperation.class);
 		if(requiredLogin != null){
-			if(!ServletBox.authenticated(request)){
+			String[] requiredroles = requiredLogin.role();
+			String[] requiredrolesname = requiredLogin.name();
+			if(!Security.authenticated(request)){
 				try {
 		           JsonResponse.write(response, 
 		        		   Result.fail("您还未登录，请先登录后继续操作。").setCode("400").toString());
+		        } catch (IOException e) {}
+				return false;
+			}
+			if(!Security.authorized(request, requiredroles)){
+				try {
+		           JsonResponse.write(response, 
+		        		   Result.fail("您为被授权"+Arrays.asList(requiredrolesname)).setCode("400").toString());
 		        } catch (IOException e) {}
 				return false;
 			}
