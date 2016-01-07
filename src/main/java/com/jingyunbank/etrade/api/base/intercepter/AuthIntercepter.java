@@ -48,7 +48,7 @@ public class AuthIntercepter implements HandlerInterceptor{
 			if(!Security.authorized(request, requiredroles)){
 				try {
 		           JsonResponse.write(response, 
-		        		   Result.fail("您为被授权"+Arrays.asList(requiredrolesname)).setCode("400").toString());
+		        		   Result.fail("您未被授权"+Arrays.asList(requiredrolesname)).setCode("400").toString());
 		        } catch (IOException e) {}
 				return false;
 			}
