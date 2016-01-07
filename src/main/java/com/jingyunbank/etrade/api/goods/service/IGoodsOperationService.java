@@ -98,4 +98,12 @@ public interface IGoodsOperationService {
 	 * @throws Exception
 	 */
 	public boolean refreshCount(String gid, String count) throws Exception;
+	
+	/**
+	 * 检查是否编码重复
+	 * @param code
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean checkCode(String code) throws Exception;
 }
