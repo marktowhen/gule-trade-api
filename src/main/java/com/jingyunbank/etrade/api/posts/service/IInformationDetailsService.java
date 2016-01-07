@@ -51,4 +51,17 @@ public interface IInformationDetailsService {
 	 * @return
 	 */
 	public List<InformationDetails> list(String sid);
+	/**
+	 * 按类别进行查询
+	 * @param name
+	 * @param range
+	 * @return
+	 */
+	public List<InformationDetails> listByName(String name,Range range);
+	/**
+	 * 查出最大的orders
+	 * @return
+	 * @throws Exception
+	 */
+	public int selectmaxOrders(String id) throws Exception;
 }
