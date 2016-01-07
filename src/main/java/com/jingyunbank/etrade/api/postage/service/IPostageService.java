@@ -15,7 +15,7 @@ public interface IPostageService {
 	 * @param weight
 	 * @return
 	 */
-	public BigDecimal calculate(BigDecimal orderprice, int provenceid, BigDecimal weight);
+	public BigDecimal calculate(BigDecimal orderprice, int provenceid);
 	
 	public void calculate(List<Orders> orders);
 }
