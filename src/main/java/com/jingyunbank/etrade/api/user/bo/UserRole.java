@@ -18,7 +18,7 @@ public class UserRole implements Serializable {
 	private String UID;//用户id
 	private boolean valid;//是否有效
 	private Date updateTime;//变动时间
-	private Role role;
+	private Role role = new Role();
 	
 	public Role getRole() {
 		return role;

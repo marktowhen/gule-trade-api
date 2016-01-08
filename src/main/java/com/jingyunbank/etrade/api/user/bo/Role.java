@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 public class Role implements Serializable {
 
+	public static final String MANAGER_CODE = "MANAGER";
+	public static final String MANAGER_NAME = "管理员";
 	/**
 	 * 
 	 */

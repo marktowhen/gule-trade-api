@@ -12,4 +12,6 @@ public interface IUserRoleService {
 	public UserRole single(String id);
 	
 	public boolean delete(String[]ids) throws DataRemovingException;
+	
+	public boolean isAuthoritative(String uid, String roleCode);
 }
