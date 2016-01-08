@@ -1,9 +1,9 @@
-package com.jingyunbank.etrade.api.postage.service;
+package com.jingyunbank.etrade.api.logistic.service;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import com.jingyunbank.etrade.api.order.presale.bo.Orders;
+import com.jingyunbank.etrade.api.logistic.bo.Postage;
 
 public interface IPostageService {
 
@@ -17,5 +17,5 @@ public interface IPostageService {
 	 */
 	public BigDecimal calculate(BigDecimal orderprice, int provenceid);
 	
-	public void calculate(List<Orders> orders);
+	public List<Postage> calculate(List<Postage> postages);
 }
