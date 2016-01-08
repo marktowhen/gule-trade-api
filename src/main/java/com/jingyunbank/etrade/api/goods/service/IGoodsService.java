@@ -156,7 +156,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<HoneyGoods> listHoneyGoods() throws Exception;
+	public List<HoneyGoods> listHoneyGoods(String gid) throws Exception;
 
 	/**
 	 * 根据多条件查询商品
