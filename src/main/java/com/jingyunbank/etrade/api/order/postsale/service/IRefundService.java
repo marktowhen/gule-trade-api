@@ -28,23 +28,31 @@ public interface IRefundService {
 	 */
 	public List<Refund> list(List<String> rids);
 	/**
-	 * 查询商户的退款信息
-	 * @param mid
-	 * @param statuscode
-	 * @param fromdate
-	 * @param keywords
-	 * @param range
-	 * @return
-	 */
-	public List<Refund> listm(String mid, String statuscode,
-			String fromdate, String keywords, Range range);
-
-	public List<Refund> list(String uid, String statuscode,
-			String fromdate, String keywords, Range range);
-	/**
 	 * 列出截止某期限内所有某状态的退单
 	 * @param deadline
 	 * @return
 	 */
 	public List<Refund> listBefore(Date from, RefundStatusDesc status);
+	
+	
+	/**
+	 *  查询某用户的按时间降序排列的订单中的 某几条状态，日期，关键字符合自定参数的数据。
+	 *  <p>
+	 *  keywords 参数用来过滤多个条件，其中任意条件满足即可(OR)
+	 *  
+	 * @param uid
+	 * @param statuscode 订单状态码 （如果为空，则不过滤该条件，即查询全部）
+	 * @param fromdate 订单开始日期（格式良好的日期字符串，如‘2015-12-09’，如果为空，则默认‘1970-01-01’）
+	 * @param keywords 订单关键字 (包括，订单号，商品民，商家名，商家id)（如果为空，则不过滤该条件，即查询全部）
+	 * @param range
+	 * @return
+	 */
+	public List<Refund> list(
+				String uid, 
+				String mid, 
+				String statuscode, 
+				String keywords, 
+				String fromdate, 
+				String enddate, 
+				Range range);
 }
