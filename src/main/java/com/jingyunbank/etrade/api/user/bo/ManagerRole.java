@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  *	用户角色
  */
-public class UserRole implements Serializable {
+public class ManagerRole implements Serializable {
 
 	/**
 	 * 
