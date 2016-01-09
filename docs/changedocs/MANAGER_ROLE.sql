@@ -1,4 +1,4 @@
-CREATE TABLE `user_role` (
+CREATE TABLE `manager_role` (
   `id` char(22) NOT NULL,
   `role_id` char(22) NOT NULL,
   `uid` char(22) NOT NULL,

@@ -3,13 +3,13 @@ package com.jingyunbank.etrade.api.user.service;
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
-import com.jingyunbank.etrade.api.user.bo.UserRole;
+import com.jingyunbank.etrade.api.user.bo.ManagerRole;
 
-public interface IUserRoleService {
+public interface IManagerRoleService {
 
-	public List<UserRole> list(String uid);
+	public List<ManagerRole> list(String uid);
 	
-	public UserRole single(String id);
+	public ManagerRole single(String id);
 	
 	public boolean delete(String[]ids) throws DataRemovingException;
 	
