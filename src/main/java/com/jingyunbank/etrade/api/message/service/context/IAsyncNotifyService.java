@@ -11,7 +11,7 @@ public interface IAsyncNotifyService {
 
 	public static final String MQ_NOTIFY_TOPIC = "async-notify-service-dispatch-message";
 	
-	public static final String MQ_NOTIFY_TOPIC_TAG = "async-message";
+	public static final String MQ_NOTIFY_TOPIC_TAG = "message";
 	
 	public void dispatch(Message message) throws NoticeDispatchException;
 }
