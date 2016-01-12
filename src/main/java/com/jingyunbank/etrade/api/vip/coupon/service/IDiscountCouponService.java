@@ -25,7 +25,7 @@ public interface IDiscountCouponService {
 	 * 2015年11月14日 qxs
 	 * @throws DataSavingException 
 	 */
-	public boolean save(DiscountCoupon discountCoupon, Users manager) throws DataSavingException;
+	public DiscountCoupon save(DiscountCoupon discountCoupon, Users manager) throws DataSavingException;
 	
 	/**
 	 * 新增多张券
@@ -36,7 +36,7 @@ public interface IDiscountCouponService {
 	 * @throws DataSavingException
 	 * 2015年12月9日 qxs
 	 */
-	public boolean saveMuti(DiscountCoupon discountCoupon, Users manager, int amount) throws DataSavingException;
+	public List<DiscountCoupon> saveMuti(DiscountCoupon discountCoupon, Users manager, int amount) throws DataSavingException;
 	
 	/**
 	 * 逻辑删除
