@@ -31,6 +31,10 @@ public interface ICashCouponService {
 	 */
 	String CARD_NUM_PRIFIX_200 = "G";
 	/**
+	 * 其他面额购物金卡号前缀
+	 */
+	String CARD_NUM_PRIFIX_OTHER = "X";
+	/**
 	 * 购物金后缀计数开始于
 	 */
 	long CARD_NUM_SUFFIX_START = 10000001L;
@@ -42,7 +46,7 @@ public interface ICashCouponService {
 	 * @return
 	 * 2015年11月14日 qxs
 	 */
-	public boolean save(CashCoupon cashCoupon, Users manager) throws DataSavingException;
+	public CashCoupon save(CashCoupon cashCoupon, Users manager) throws DataSavingException;
 	
 	/**
 	 * 新增多张券
@@ -52,7 +56,7 @@ public interface ICashCouponService {
 	 * 2015年12月9日 qxs
 	 * @throws DataSavingException 
 	 */
-	public boolean saveMuti(CashCoupon cashCoupon, Users manager, int amount) throws DataSavingException;
+	public List<CashCoupon> saveMuti(CashCoupon cashCoupon, Users manager, int amount) throws DataSavingException;
 	
 	/**
 	 * 逻辑删除
