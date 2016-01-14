@@ -21,7 +21,7 @@ public class Refund implements Serializable{
 	private String OID;//所退商品订单号
 	private String MID;//商家
 	private String UID;
-	private BigDecimal omoney;//订单价格
+	private BigDecimal omoney;//订单价格（含运费），订单含多件商品时需与卖家协商
 	private BigDecimal money;//退款金额申请
 	private String reason;//退款退货原因
 	private String description;//说明

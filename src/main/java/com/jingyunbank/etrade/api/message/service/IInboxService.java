@@ -13,22 +13,7 @@ import com.jingyunbank.etrade.api.message.service.context.ISyncNotifyService;
  * 站内信服务
  */
 public interface IInboxService extends ISyncNotifyService{
-	/**
-	 * 成功状态
-	 */
-	int STATUS_SUC = 1;
-	/**
-	 * 失败
-	 */
-	int STATUS_FAIL = 2;
-	/**
-	 * 删除状态
-	 */
-	int STATUS_DEL = 3;
-	/**
-	 * 站内信
-	 */
-	String TYPE_LETTER = "letter";
+	
 
 	public boolean save(Message message) throws DataSavingException;
 	

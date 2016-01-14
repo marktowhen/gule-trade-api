@@ -30,6 +30,7 @@ public class OrderGoods implements Serializable{
 	private String MID;
 	private String mname;
 	private String imgpath;
+	private String postage;//用户邮费退换的显示
 	
 	public String getID() {
 		return ID;
@@ -132,5 +133,11 @@ public class OrderGoods implements Serializable{
 	}
 	public void setStatusName(String statusName) {
 		this.statusName = statusName;
+	}
+	public String getPostage() {
+		return postage;
+	}
+	public void setPostage(String postage) {
+		this.postage = postage;
 	}
 }

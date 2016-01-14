@@ -118,5 +118,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<Orders> listByExtransno(String extransno);
-
+	/**
+	 * 判断指定优惠卡券是否同时适用于多个订单？
+	 * @param couponid
+	 * @return
+	 */
+	public boolean shareCoupon(String couponid);
+	
 }

@@ -7,6 +7,24 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class Message implements Serializable{
 
+	/**
+	 * 成功状态
+	 */
+	public static final int STATUS_SUC = 1;
+	/**
+	 * 失败
+	 */
+	public static final int STATUS_FAIL = 2;
+	/**
+	 * 删除状态
+	 */
+	public static final int STATUS_DEL = 3;
+	/**
+	 * 站内信
+	 */
+	public static final String TYPE_LETTER = "letter";
+	
+	
 	private static final long serialVersionUID = -4803430571542836689L;
 	private String ID;
 	private String sentUID;//发送者
