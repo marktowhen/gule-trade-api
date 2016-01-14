@@ -279,4 +279,23 @@ public class Orders  implements Serializable{
 	public void setProvince(int province) {
 		this.province = province;
 	}
+
+	@Override
+	public String toString() {
+		return "Orders [ID=" + ID + ", orderno=" + orderno + ", province="
+				+ province + ", receiver=" + receiver + ", address=" + address
+				+ ", mobile=" + mobile + ", zipcode=" + zipcode + ", UID="
+				+ UID + ", uname=" + uname + ", MID=" + MID + ", mname="
+				+ mname + ", addtime=" + addtime + ", paytypeCode="
+				+ paytypeCode + ", paytypeName=" + paytypeName
+				+ ", deliveryTypeCode=" + deliveryTypeCode
+				+ ", deliveryTypeName=" + deliveryTypeName + ", invoiceType="
+				+ invoiceType + ", invoiceTitle=" + invoiceTitle
+				+ ", couponID=" + couponID + ", couponType=" + couponType
+				+ ", couponReduce=" + couponReduce + ", price=" + price
+				+ ", payout=" + payout + ", statusCode=" + statusCode
+				+ ", statusName=" + statusName + ", postage=" + postage
+				+ ", note=" + note + ", goods=" + goods + ", traces=" + traces
+				+ ", payment=" + payment + "]";
+	}
 }

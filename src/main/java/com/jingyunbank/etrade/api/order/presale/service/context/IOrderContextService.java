@@ -18,7 +18,7 @@ public interface IOrderContextService {
 	 * @param orders
 	 * @throws DataSavingException
 	 */
-	public void save(List<Orders> orders) throws DataSavingException;
+	public void save(List<Orders> orders) throws DataSavingException, DataRefreshingException ;
 	/**
 	 * 完成支付操作<br>
 	 * 当接收到相应支付接口的支付结果反馈后，执行相应的动作<br>

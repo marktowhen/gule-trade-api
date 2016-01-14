@@ -16,4 +16,6 @@ public interface IOrderEventService {
 	public final static String MQ_ORDER_QUEUE_DISPATCH = "order-event-service-broadcast-event-dispatch";
 	
 	public void broadcast(List<Orders> event, String status);
+	
+	public void broadcast(String extransno, String status);
 }
