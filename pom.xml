@@ -4,7 +4,7 @@
 
   <groupId>com.jingyunbank</groupId>
   <artifactId>jingyun-etrade-api</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-RELEASE</version>
   <packaging>jar</packaging>
 
   <name>jingyun-etrade-api</name>
@@ -19,7 +19,7 @@
 		<dependency>
 	    	<groupId>com.jingyunbank</groupId>
 			<artifactId>jingyun-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0-RELEASE</version>
 	    </dependency>
 	    <dependency>
 			<groupId>org.springframework</groupId>
