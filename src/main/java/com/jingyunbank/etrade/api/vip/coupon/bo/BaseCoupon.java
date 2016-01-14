@@ -17,7 +17,8 @@ public class BaseCoupon implements Serializable{
 	
 	public final static String ACCESS_KEY_JYJR = "bb1f957f773b12ae8f61d8b429b09ad5";
 	public final static String ACCESS_ID_JYJR = "jyjr";
-	
+	 //"https://www.jingyunbank.com/welfare/usecoupon/:id.htm"; 
+	public final static String ACTIVE_COUNPON_NOTICE_URL= "https://www.jingyunbank.com/welfare/usecoupon/:id.htm";
 	private Date addtimeStart;
 	private Date addtiemEnd;
 	
