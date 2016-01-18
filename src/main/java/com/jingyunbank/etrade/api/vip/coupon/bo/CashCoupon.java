@@ -16,7 +16,18 @@ import java.util.Date;
 public class CashCoupon extends BaseCoupon implements Serializable {
 
 	private static final long serialVersionUID = 3237245861035524988L;
-	
+	/**
+	 * 1000元购物金卡号前缀
+	 */
+	public static final String CARD_NUM_PRIFIX_1000 = "E";
+	/**
+	 * 500元购物金卡号前缀
+	 */
+	public static final String CARD_NUM_PRIFIX_500 = "F";
+	/**
+	 * 200元购物金卡号前缀
+	 */
+	public static final String CARD_NUM_PRIFIX_200 = "G";
 	private String ID;
 	private String code;//充值码
 	private BigDecimal value;//

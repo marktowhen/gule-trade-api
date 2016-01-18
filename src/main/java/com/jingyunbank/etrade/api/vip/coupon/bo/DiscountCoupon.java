@@ -15,7 +15,10 @@ import java.util.Date;
 public class DiscountCoupon extends BaseCoupon implements Serializable{
 	
 	private static final long serialVersionUID = 8517634142198267544L;
-	
+	/**
+	 * 50元抵用券卡号前缀
+	 */
+	public static final String CARD_NUM_PRIFIX_50 = "D";
 	private String ID;
 	private String code;//充值码
 	private BigDecimal discount;//折扣

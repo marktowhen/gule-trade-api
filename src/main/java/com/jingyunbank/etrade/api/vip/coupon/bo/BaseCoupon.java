@@ -1,7 +1,6 @@
 package com.jingyunbank.etrade.api.vip.coupon.bo;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 所有优惠方式的父类。
@@ -15,14 +14,20 @@ public class BaseCoupon implements Serializable{
 	public final static String CASHCOUPONSTRATEGY = "CASHCOUPONSTRATEGY";
 	public final static String DISCOUNTCOUPONSTRATEGY = "DISCOUNTCOUPONSTRATEGY";
 	
+	/**
+	 * 其他面额购物金卡号前缀
+	 */
+	public static final String CARD_NUM_PRIFIX_OTHER = "X";
+	/**
+	 * 购物金后缀计数开始于
+	 */
+	public static final long CARD_NUM_SUFFIX_START = 10000001L;
+	
+	
 	public final static String ACCESS_KEY_JYJR = "bb1f957f773b12ae8f61d8b429b09ad5";
 	public final static String ACCESS_ID_JYJR = "jyjr";
 	 //"https://www.jingyunbank.com/welfare/usecoupon/:id.htm"; 
 	public final static String ACTIVE_COUNPON_NOTICE_URL= "https://www.jingyunbank.com/welfare/usecoupon/:id.htm";
-	private Date addtimeStart;
-	private Date addtiemEnd;
-	
-	private boolean validTime;//true ->查询有效期内 false不起效
 	private boolean needUsed;//查询时是否需要加上used这个字段的条件
 	private boolean needDelete;//查询时是否需要加上Delete这个字段的条件
 	
@@ -44,12 +49,6 @@ public class BaseCoupon implements Serializable{
 	public void setLocked(boolean locked) {
 		this.locked = locked;
 	}
-	public boolean isValidTime() {
-		return validTime;
-	}
-	public void setValidTime(boolean validTime) {
-		this.validTime = validTime;
-	}
 	public boolean isNeedUsed() {
 		return needUsed;
 	}
@@ -61,18 +60,6 @@ public class BaseCoupon implements Serializable{
 	}
 	public void setNeedDelete(boolean needDelete) {
 		this.needDelete = needDelete;
-	}
-	public Date getAddtimeStart() {
-		return addtimeStart;
-	}
-	public void setAddtimeStart(Date addtimeStart) {
-		this.addtimeStart = addtimeStart;
-	}
-	public Date getAddtiemEnd() {
-		return addtiemEnd;
-	}
-	public void setAddtiemEnd(Date addtiemEnd) {
-		this.addtiemEnd = addtiemEnd;
 	}
 	public boolean isDel() {
 		return del;

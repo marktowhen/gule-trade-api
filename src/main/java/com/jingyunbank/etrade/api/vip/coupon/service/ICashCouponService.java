@@ -18,26 +18,7 @@ import com.jingyunbank.etrade.api.vip.coupon.bo.CashCoupon;
  *
  */
 public interface ICashCouponService {
-	/**
-	 * 1000元购物金卡号前缀
-	 */
-	String CARD_NUM_PRIFIX_1000 = "E";
-	/**
-	 * 500元购物金卡号前缀
-	 */
-	String CARD_NUM_PRIFIX_500 = "F";
-	/**
-	 * 200元购物金卡号前缀
-	 */
-	String CARD_NUM_PRIFIX_200 = "G";
-	/**
-	 * 其他面额购物金卡号前缀
-	 */
-	String CARD_NUM_PRIFIX_OTHER = "X";
-	/**
-	 * 购物金后缀计数开始于
-	 */
-	long CARD_NUM_SUFFIX_START = 10000001L;
+	
 
 	/**
 	 * 管理员新增一张代金券
@@ -142,6 +123,13 @@ public interface ICashCouponService {
 	 * 2015年12月29日 qxs
 	 */
 	public boolean unlock(String[] ids);
+
+	public List<CashCoupon> list(String cardNum,
+			String cardNumStart, String cardNumEnd, BigDecimal value,
+			Boolean locked, Range range);
+
+	public int count(String cardNum, String cardNumStart, String cardNumEnd,
+			BigDecimal value, Boolean locked);
 
 }
 
