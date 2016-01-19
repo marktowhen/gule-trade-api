@@ -52,8 +52,6 @@
 		请求参数：{
 			"ID": "ID",   //选填
 			"value":"价值",//选填
-			"addtimeStart":"添加开始时间",//选填
-			"addtiemEnd": "添加结束时间",//选填
 			"validTime":"true/false", //查询在使用期限内的//选填
 			"used":"true/false",// 已使用、未使用 如需该值起效 再传个参数 "needUsed"=true //选填
 			"del":"true/false"// 已删除、未删除 如需该值起效 再传个参数 "needDelete"=true//选填
@@ -88,8 +86,6 @@
 		请求参数：{
 			"ID": "ID",//选填
 			"value":"价值",//选填
-			"addtimeStart":"添加开始时间",//选填
-			"addtiemEnd": "添加结束时间",//选填
 			"validTime":"true/false", //查询在使用期限内的//选填
 			"used":"true/false",// 已使用、未使用 如需该值起效 再传个参数 "needUsed"=true//选填
 			"del":"true/false"// 已删除、未删除 如需该值起效 再传个参数 "needDelete"=true//选填

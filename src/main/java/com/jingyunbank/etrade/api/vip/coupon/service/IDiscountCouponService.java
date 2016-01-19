@@ -14,10 +14,7 @@ import com.jingyunbank.etrade.api.vip.coupon.bo.DiscountCoupon;
 
 public interface IDiscountCouponService {
 	
-	/**
-	 * 50元抵用券卡号前缀
-	 */
-	String CARD_NUM_PRIFIX_50 = "D";
+	
 	/**
 	 * 管理员新增一张抵用券
 	 * @param DiscountCoupon
@@ -122,5 +119,11 @@ public interface IDiscountCouponService {
 	 * 2015年12月29日 qxs
 	 */
 	public boolean unlock(String[] ids);
+
+	public List<DiscountCoupon> list(String cardNum,
+			String cardNumStart, String cardNumEnd, BigDecimal value, Boolean locked, Range range);
+
+	public int count(String cardNum, String cardNumStart, String cardNumEnd,
+			BigDecimal value, Boolean locked);
 
 }
