@@ -1,6 +1,8 @@
 package com.jingyunbank.etrade.api.order.presale.bo;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 订单状态描述定义业务类。<br><br>
@@ -38,6 +40,7 @@ public final class OrderStatusDesc implements Serializable{
 	public final static String CLOSED_CODE 				= "CLOSED";
 	public final static String REMOVED_CODE 			= "REMOVED";
 	public final static String REFUNDING_CODE 			= "REFUNDING";
+	public final static String REFUNDED_CODE 			= "REFUNDED";
 	
 	public final static OrderStatusDesc			NEW				= new OrderStatusDesc(NEW_CODE, "待付款", 0, "买家下单，但是还没有付款", true);
 	public final static OrderStatusDesc			PAYING			= new OrderStatusDesc(PAYING_CODE, "支付结果确认中", 1, "支付结果确认中， 已调用第三方或者银行支付接口，等待对方确认支付结果", false);
@@ -50,6 +53,23 @@ public final class OrderStatusDesc implements Serializable{
 	public final static OrderStatusDesc			CLOSED			= new OrderStatusDesc(CLOSED_CODE, "交易关闭", 0, "订单被取消", true);
 	public final static OrderStatusDesc			REMOVED			= new OrderStatusDesc(REMOVED_CODE, "订单移除", 0, "已取消的订单被用户删除", true);
 	public final static OrderStatusDesc			REFUNDING		= new OrderStatusDesc(REFUNDING_CODE, "退款中", 0, "买家申请退款中", true);
+	public final static OrderStatusDesc			REFUNDED		= new OrderStatusDesc(REFUNDED_CODE, "退款完成", 0, "完成退款", true);
+	
+	private final static Map<String, OrderStatusDesc> caches = new HashMap<String, OrderStatusDesc>();
+	static{
+		caches.put(ACCEPT_CODE, ACCEPT);
+		caches.put(CLOSED_CODE, CLOSED);
+		caches.put(COMMENTED_CODE, COMMENTED);
+		caches.put(DELIVERED_CODE, DELIVERED);
+		caches.put(NEW_CODE, NEW);
+		caches.put(PAID_CODE, PAID);
+		caches.put(PAYFAIL_CODE, PAYFAIL);
+		caches.put(PAYING_CODE, PAYING);
+		caches.put(RECEIVED_CODE, RECEIVED);
+		caches.put(REFUNDING_CODE, REFUNDING);
+		caches.put(REMOVED_CODE, REMOVED);
+		caches.put(REFUNDED_CODE, REFUNDED);
+	}
 	
 	private String name;
 	private String code;
@@ -69,6 +89,10 @@ public final class OrderStatusDesc implements Serializable{
 		this.orders = orders;
 		this.description = desc;
 		this.visible = visible;
+	}
+	
+	public static OrderStatusDesc resolve(String code){
+		return caches.getOrDefault(code, new OrderStatusDesc("NULL", "未定义", 999, "未定义的状态，程序异常", false));
 	}
 	
 	public String getName() {

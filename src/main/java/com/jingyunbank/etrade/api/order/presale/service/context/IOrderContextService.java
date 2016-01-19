@@ -10,18 +10,6 @@ import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 public interface IOrderContextService {
 	
 	/**
-	 * 保存单个订单信息<br>
-	 * 用户填写完订单详情后点击确定按钮，完成订单提交。
-	 * 
-	 * <br>
-	 * 1）该操作会保存订单的基本信息，包括订单的订单号，收货人，支付方式，订单的价格，邮费，商家等信息。<br>
-	 * 2）同时还会保存该订单中包含哪些商品，以及商品的价格，数量等信息<br>
-	 * 3）最后还会保存一条订单追踪信息，记录订单的生命周期
-	 * @param order
-	 * @throws OrderGenerateException
-	 */
-	public void save(Orders order) throws DataSavingException;
-	/**
 	 * 保存多个订单信息<br>
 	 * 
 	 * 1）该操作会保存订单的基本信息，包括订单的订单号，收货人，支付方式，订单的价格，邮费，商家等信息。<br>
@@ -30,7 +18,7 @@ public interface IOrderContextService {
 	 * @param orders
 	 * @throws DataSavingException
 	 */
-	public void save(List<Orders> orders) throws DataSavingException;
+	public void save(List<Orders> orders) throws DataSavingException, DataRefreshingException ;
 	/**
 	 * 完成支付操作<br>
 	 * 当接收到相应支付接口的支付结果反馈后，执行相应的动作<br>
@@ -45,7 +33,7 @@ public interface IOrderContextService {
 	 * @param extorderno
 	 * @throws OrderPayFailException
 	 */
-	public void payfail(String extorderno) throws DataRefreshingException, DataSavingException ;
+	public void payfail(String extorderno, String note) throws DataRefreshingException, DataSavingException ;
 	/**
 	 * 支付成功确认<br>
 	 * 用户支付成功后，卖家需要将订单状态更新为accept， <br>
@@ -72,7 +60,7 @@ public interface IOrderContextService {
 	 * 
 	 * @param orderno
 	 */
-	public boolean received(String oid) throws DataRefreshingException, DataSavingException;
+	public boolean received(List<String> oids, String note) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 取消订单<br>
 	 * 将订单状态更新为已取消。<br>
@@ -84,7 +72,7 @@ public interface IOrderContextService {
 	 * @param orderno 订单号
 	 * @param reason 取消原因
 	 */
-	public boolean cancel(String oid, String reason) throws DataRefreshingException, DataSavingException;
+	public boolean cancel(List<String> oids, String reason) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 移除已取消的订单(逻辑删除)<br>
 	 * 将已经取消的订单更新为删除状态，不在显示在用户的订单列表中
@@ -112,4 +100,8 @@ public interface IOrderContextService {
 	 * @throws DataSavingException
 	 */
 	public boolean refund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
+	
+	public boolean cancelRefund(String oid, String ogid) throws DataRefreshingException, DataSavingException;
+	
+	public void refundDone(List<String> ogids) throws DataRefreshingException, DataSavingException;
 }

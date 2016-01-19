@@ -2,11 +2,9 @@ package com.jingyunbank.etrade.api.order.presale.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
 
@@ -18,11 +16,13 @@ public class Orders  implements Serializable{
 	private static final long serialVersionUID = 2563253149671693408L;
 	private String ID;
 	private long orderno;
+	private int province;
 	private String receiver;//收货人
 	private String address;//收货地址
 	private String mobile ;//收货人电话
 	private String zipcode;
 	private String UID;//下单人
+	private String uname;
 	private String MID;
 	private String mname;
 	private Date addtime;//下单时间
@@ -34,11 +34,12 @@ public class Orders  implements Serializable{
 	private String invoiceTitle;
 	private String couponID;//优惠卡券Id
 	private String couponType;//优惠卡券类型 （DISCOUNTCOUPON, CACHCOUPON）
-	private BigDecimal price;//订单初始总价
-	private BigDecimal payout;//优惠后的总价
+	private BigDecimal couponReduce;
+	private BigDecimal price;//订单使用卡券前的总价（包含邮费）
+	private BigDecimal payout;//优惠后的总价(实际支付，去掉卡券优惠)
 	private String statusCode;//订单状态code
 	private String statusName;
-	private BigDecimal postage;
+	private BigDecimal postage;//订单计算出的邮费（主要用于数据校验）
 	private String note;
 	
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
@@ -256,13 +257,45 @@ public class Orders  implements Serializable{
 	public void setInvoiceTitle(String invoiceTitle) {
 		this.invoiceTitle = invoiceTitle;
 	}
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
 
-	public Date getExpireTime(){
-		if(Objects.nonNull(this.addtime)){
-			Instant i = this.addtime.toInstant();
-			Instant e = i.plusSeconds(VALID_TIME_IN_SECOND);
-			return Date.from(e);
-		}
-		return new Date();
+	public BigDecimal getCouponReduce() {
+		return couponReduce;
+	}
+
+	public void setCouponReduce(BigDecimal couponReduce) {
+		this.couponReduce = couponReduce;
+	}
+
+	public int getProvince() {
+		return province;
+	}
+
+	public void setProvince(int province) {
+		this.province = province;
+	}
+
+	@Override
+	public String toString() {
+		return "Orders [ID=" + ID + ", orderno=" + orderno + ", province="
+				+ province + ", receiver=" + receiver + ", address=" + address
+				+ ", mobile=" + mobile + ", zipcode=" + zipcode + ", UID="
+				+ UID + ", uname=" + uname + ", MID=" + MID + ", mname="
+				+ mname + ", addtime=" + addtime + ", paytypeCode="
+				+ paytypeCode + ", paytypeName=" + paytypeName
+				+ ", deliveryTypeCode=" + deliveryTypeCode
+				+ ", deliveryTypeName=" + deliveryTypeName + ", invoiceType="
+				+ invoiceType + ", invoiceTitle=" + invoiceTitle
+				+ ", couponID=" + couponID + ", couponType=" + couponType
+				+ ", couponReduce=" + couponReduce + ", price=" + price
+				+ ", payout=" + payout + ", statusCode=" + statusCode
+				+ ", statusName=" + statusName + ", postage=" + postage
+				+ ", note=" + note + ", goods=" + goods + ", traces=" + traces
+				+ ", payment=" + payment + "]";
 	}
 }

@@ -1,10 +1,9 @@
 package com.jingyunbank.etrade.api.goods.service;
 
-import java.util.Collection;
+
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.validation.ObjectError;
 
 import com.jingyunbank.etrade.api.goods.bo.Brand;
 
@@ -42,6 +41,9 @@ public interface IBrandService {
 	 * @throws Exception
 	 */
 	public boolean refreshBrand(Brand brand) throws Exception;
+	
+	
+	public boolean delBrand(String bid) throws Exception;
 
 	/**
 	 * 根据MID 查询brand

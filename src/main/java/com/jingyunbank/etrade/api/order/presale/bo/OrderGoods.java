@@ -18,15 +18,19 @@ public class OrderGoods implements Serializable{
 	private long orderno;
 	private String GID;//商品id
 	private String gname;
-	private BigDecimal pprice;//promotion price//促销价格
-	private BigDecimal price;//订单生成时的商品原价格
+	private BigDecimal pprice;//promotion price//促销价格（不包含邮费）
+	private BigDecimal price;//订单生成时的商品原价格（不包含邮费）
 	private int count;
-	private int points;//赠送积分
 	private String statusCode;//状态id，用户支持订单中某个商品的退款
+	private String statusName;
 	private BigDecimal payout;//实际付款
 	private BigDecimal couponReduce;//卡券优惠减免价格
 	private Date addtime;
+	
+	private String MID;
+	private String mname;
 	private String imgpath;
+	private BigDecimal postage;//用户邮费退换的显示
 	
 	public String getID() {
 		return ID;
@@ -51,12 +55,6 @@ public class OrderGoods implements Serializable{
 	}
 	public void setCount(int count) {
 		this.count = count;
-	}
-	public int getPoints() {
-		return points;
-	}
-	public void setPoints(int points) {
-		this.points = points;
 	}
 	public String getStatusCode() {
 		return statusCode;
@@ -118,4 +116,29 @@ public class OrderGoods implements Serializable{
 	public void setPprice(BigDecimal pprice) {
 		this.pprice = pprice;
 	}
+	public String getMname() {
+		return mname;
+	}
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+	public String getMID() {
+		return MID;
+	}
+	public void setMID(String mID) {
+		MID = mID;
+	}
+	public String getStatusName() {
+		return statusName;
+	}
+	public void setStatusName(String statusName) {
+		this.statusName = statusName;
+	}
+	public BigDecimal getPostage() {
+		return postage;
+	}
+	public void setPostage(BigDecimal postage) {
+		this.postage = postage;
+	}
+	
 }

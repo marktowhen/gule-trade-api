@@ -58,5 +58,12 @@ public class OrderLogistic implements Serializable{
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
 	}
+	@Override
+	public String toString() {
+		return "OrderLogistic [ID=" + ID + ", OID=" + OID + ", expressno="
+				+ expressno + ", expressName=" + expressName + ", addtime="
+				+ addtime + ", typeCode=" + typeCode + ", typeName=" + typeName
+				+ "]";
+	}
 	
 }

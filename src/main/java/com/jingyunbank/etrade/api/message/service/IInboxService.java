@@ -13,22 +13,7 @@ import com.jingyunbank.etrade.api.message.service.context.ISyncNotifyService;
  * 站内信服务
  */
 public interface IInboxService extends ISyncNotifyService{
-	/**
-	 * 成功状态
-	 */
-	int STATUS_SUC = 1;
-	/**
-	 * 失败
-	 */
-	int STATUS_FAIL = 2;
-	/**
-	 * 删除状态
-	 */
-	int STATUS_DEL = 3;
-	/**
-	 * 站内信
-	 */
-	String TYPE_LETTER = "letter";
+	
 
 	public boolean save(Message message) throws DataSavingException;
 	
@@ -76,7 +61,7 @@ public interface IInboxService extends ISyncNotifyService{
 	 * 2015年11月12日 qxs
 	 * @throws DataRefreshingException 
 	 */
-	public Optional<Message> getSingle(String ID) ;
+	public Optional<Message> single(String ID) ;
 	
 	/**
 	 * 列表查询
@@ -93,7 +78,7 @@ public interface IInboxService extends ISyncNotifyService{
 	 * @return
 	 * 2015年11月13日 qxs
 	 */
-	public int getAmount(String receiveUID);
+	public int count(String receiveUID);
 	/**
 	 * 未读消息
 	 * @param receiveUID
@@ -108,7 +93,7 @@ public interface IInboxService extends ISyncNotifyService{
 	 * @return
 	 * 2015年11月13日 qxs
 	 */
-	public int getAmountRead(String receiveUID);
+	public int countRead(String receiveUID);
 	
 	/**
 	 * 已读消息
@@ -124,7 +109,7 @@ public interface IInboxService extends ISyncNotifyService{
 	 * @return
 	 * 2015年11月13日 qxs
 	 */
-	public int getAmountUnread(String receiveUID);
+	public int countUnread(String receiveUID);
 
 	/**
 	 * 修改消息的读取状态

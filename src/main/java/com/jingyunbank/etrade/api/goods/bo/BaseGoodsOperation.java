@@ -17,16 +17,16 @@ public class BaseGoodsOperation implements Serializable {
 	private String TID;//商品类型ID
 	private BigDecimal price;//商品价格
 	private BigDecimal promotionPrice;//商品促销价格
-	private BigDecimal now_price;//商品现价
-	private int state;//是否上架0否1是
+	private BigDecimal nowprice;//商品现价
+	private boolean state;//是否上架0否1是
 	private Date upTime;//上架时间
 	private Date downTime;//下架时间
 	private int count;//库存
 	private int volume;//销量
 	private Date addTime;//添加时间
-	private Date pro_start;  //促销开始时间
-	private Date pro_end;	//促销结束时间
-	private int pro_flag; //是否促销标志
+	private Date onSaleBeginTime;  //促销开始时间
+	private Date onSaleEndTime;	//促销结束时间
+	private boolean onSale; //是否促销标志
 	private BigDecimal postage; //邮费
 	private int subVolumeType; //减库存方式 (拍下减库存 0 付款减库存1)
 	private String barCode; //条形码
@@ -56,6 +56,7 @@ public class BaseGoodsOperation implements Serializable {
 	private String foodAdditives;//食品添加剂
 	private String specifications;//具体规格
 	private String functions;//功能及功效
+	private String taste; //口味
 	private String ingredient; //成分含量
 	private String note;//注意事项
 	private String storageMethods;//储藏方法
@@ -66,19 +67,6 @@ public class BaseGoodsOperation implements Serializable {
 	private String factoryName; //厂名
 	private String factoryAddr; //厂址
 	private String factoryTel;  //联系方式
-	
-	public String getMerchantName() {
-		return merchantName;
-	}
-	public void setMerchantName(String merchantName) {
-		this.merchantName = merchantName;
-	}
-	public String getBrandName() {
-		return brandName;
-	}
-	public void setBrandName(String brandName) {
-		this.brandName = brandName;
-	}
 	public String getGID() {
 		return GID;
 	}
@@ -91,11 +79,23 @@ public class BaseGoodsOperation implements Serializable {
 	public void setMID(String mID) {
 		MID = mID;
 	}
+	public String getMerchantName() {
+		return merchantName;
+	}
+	public void setMerchantName(String merchantName) {
+		this.merchantName = merchantName;
+	}
 	public String getBID() {
 		return BID;
 	}
 	public void setBID(String bID) {
 		BID = bID;
+	}
+	public String getBrandName() {
+		return brandName;
+	}
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
 	}
 	public String getName() {
 		return name;
@@ -127,16 +127,17 @@ public class BaseGoodsOperation implements Serializable {
 	public void setPromotionPrice(BigDecimal promotionPrice) {
 		this.promotionPrice = promotionPrice;
 	}
-	public BigDecimal getNow_price() {
-		return now_price;
+	
+	public BigDecimal getNowprice() {
+		return nowprice;
 	}
-	public void setNow_price(BigDecimal now_price) {
-		this.now_price = now_price;
+	public void setNowprice(BigDecimal nowprice) {
+		this.nowprice = nowprice;
 	}
-	public int getState() {
+	public boolean isState() {
 		return state;
 	}
-	public void setState(int state) {
+	public void setState(boolean state) {
 		this.state = state;
 	}
 	public Date getUpTime() {
@@ -169,23 +170,23 @@ public class BaseGoodsOperation implements Serializable {
 	public void setAddTime(Date addTime) {
 		this.addTime = addTime;
 	}
-	public Date getPro_start() {
-		return pro_start;
+	public Date getOnSaleBeginTime() {
+		return onSaleBeginTime;
 	}
-	public void setPro_start(Date pro_start) {
-		this.pro_start = pro_start;
+	public void setOnSaleBeginTime(Date onSaleBeginTime) {
+		this.onSaleBeginTime = onSaleBeginTime;
 	}
-	public Date getPro_end() {
-		return pro_end;
+	public Date getOnSaleEndTime() {
+		return onSaleEndTime;
 	}
-	public void setPro_end(Date pro_end) {
-		this.pro_end = pro_end;
+	public void setOnSaleEndTime(Date onSaleEndTime) {
+		this.onSaleEndTime = onSaleEndTime;
 	}
-	public int getPro_flag() {
-		return pro_flag;
+	public boolean isOnSale() {
+		return onSale;
 	}
-	public void setPro_flag(int pro_flag) {
-		this.pro_flag = pro_flag;
+	public void setOnSale(boolean onSale) {
+		this.onSale = onSale;
 	}
 	public BigDecimal getPostage() {
 		return postage;
@@ -361,7 +362,6 @@ public class BaseGoodsOperation implements Serializable {
 	public void setIsGiftBox(String isGiftBox) {
 		this.isGiftBox = isGiftBox;
 	}
-	
 	public Date getProductionDate() {
 		return productionDate;
 	}
@@ -398,6 +398,13 @@ public class BaseGoodsOperation implements Serializable {
 	public void setFactoryTel(String factoryTel) {
 		this.factoryTel = factoryTel;
 	}
+	public String getTaste() {
+		return taste;
+	}
+	public void setTaste(String taste) {
+		this.taste = taste;
+	}
+	
 	
 	
 }

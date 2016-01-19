@@ -1,3 +1,5 @@
+
+delete from city;
 INSERT INTO `city` VALUES (1, '北京市', '100000', 1);
 INSERT INTO `city` VALUES (2, '天津市', '100000', 2);
 INSERT INTO `city` VALUES (3, '石家庄市', '050000', 3);

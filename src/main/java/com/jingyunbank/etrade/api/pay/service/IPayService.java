@@ -32,7 +32,7 @@ public interface IPayService {
 //	
 //	public OrderPayment singlePayment(long orderno);
 //	
-	public List<OrderPayment> listPayments(List<String> oids);
+	public List<OrderPayment> listPayable(List<String> oids);
 
 	/**
 	 * 批量更新订单支付记录的信息，如果付款方式，对外订单号的更新等。

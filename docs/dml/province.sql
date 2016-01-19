@@ -1,3 +1,5 @@
+
+delete from province;
 INSERT INTO `province` VALUES (1, '北京市', 1);
 INSERT INTO `province` VALUES (2, '天津市', 1);
 INSERT INTO `province` VALUES (3, '河北省', 1);
@@ -32,3 +34,4 @@ INSERT INTO `province` VALUES (31, '新疆维吾尔自治区', 1);
 INSERT INTO `province` VALUES (32, '香港特别行政区', 1);
 INSERT INTO `province` VALUES (33, '澳门特别行政区', 1);
 INSERT INTO `province` VALUES (34, '台湾省', 1);
+update province p set p.faraway=1 where p.province_id in ('31','30' ,'26' ,'25' ,'28' ,'5' ,'21' ,'32'  ,'33','34' );
