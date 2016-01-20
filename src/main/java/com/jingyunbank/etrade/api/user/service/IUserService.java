@@ -10,6 +10,10 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 
 
 public interface IUserService {
+	/**
+	 * 用户以短信登录方式注册时用户名默认为 该前缀加手机号
+	 */
+	public String SMS_LOGIN_USERNAME_PREFIX =  "user";
 
 	public Optional<Users> single(String id);
 	

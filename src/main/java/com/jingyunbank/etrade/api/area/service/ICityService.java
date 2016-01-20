@@ -11,7 +11,7 @@ import com.jingyunbank.etrade.api.exception.DataSavingException;
 public interface ICityService {
 	
 	/**
-	 * 新增
+	 * 新增 
 	 * @param bo
 	 * @return
 	 * @throws DataSavingException
