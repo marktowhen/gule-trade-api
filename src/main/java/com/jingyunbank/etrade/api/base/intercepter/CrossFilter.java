@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * <b>该过滤器只应用于开发测试环境，线上环境应当去掉该过滤器！</b>
  */
-//@WebFilter("/*")
+@WebFilter("/*")
 public class CrossFilter implements Filter{
 
 	@Override
