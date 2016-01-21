@@ -2,6 +2,7 @@ package com.jingyunbank.etrade.api.order.presale.service.context;
 
 import java.util.List;
 
+import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.presale.bo.OrderLogistic;
@@ -18,7 +19,7 @@ public interface IOrderContextService {
 	 * @param orders
 	 * @throws DataSavingException
 	 */
-	public void save(List<Orders> orders) throws DataSavingException, DataRefreshingException ;
+	public Result<List<Orders>> save(List<Orders> orders) throws DataSavingException, DataRefreshingException ;
 	/**
 	 * 完成支付操作<br>
 	 * 当接收到相应支付接口的支付结果反馈后，执行相应的动作<br>
