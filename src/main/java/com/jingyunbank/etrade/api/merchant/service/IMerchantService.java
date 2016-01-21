@@ -113,5 +113,10 @@ public interface IMerchantService {
 	 * @throws Exception
 	 */
 	public int countMerchants(Merchant merchant) throws Exception;
-	
+	/**
+	 * 判断指定商家是否是自营商家
+	 * @param mid
+	 * @return
+	 */
+	public boolean isAutotrophic(String mid) ;
 }

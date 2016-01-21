@@ -38,6 +38,7 @@ public class BaseGoods implements Serializable {
 	private BigDecimal price; // 原价
 	private BigDecimal promotionPrice; // 促销价格
 	private BigDecimal nowPrice; // 现价
+	private BigDecimal emprice;//员工价
 	private String disCount; // 折扣
 	private BigDecimal discountPrice; // 折扣价
 	private int count; // 库存
@@ -569,6 +570,14 @@ public class BaseGoods implements Serializable {
 
 	public void setTaste(String taste) {
 		this.taste = taste;
+	}
+
+	public BigDecimal getEmprice() {
+		return emprice;
+	}
+
+	public void setEmprice(BigDecimal emprice) {
+		this.emprice = emprice;
 	}
 	
 }

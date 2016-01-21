@@ -24,9 +24,15 @@ public interface ICouponStrategyService {
 	 * @param couponid 卡券id
 	 * @return 
 	 */
-	public Result<BigDecimal> calculate(String UID, String couponID, BigDecimal originprice) throws UnsupportedOperationException;
-	
-	public boolean calculate(String UID, String couponID, List<Orders> orders) throws UnsupportedOperationException;
+	public Result<BigDecimal> calculate(String UID, String couponID, BigDecimal originprice);
+	/**
+	 * 计算卡券优惠的订单价格。存在卡券并且计算成功后返回true，否则返回false
+	 * @param UID
+	 * @param couponID
+	 * @param orders
+	 * @return
+	 */
+	public boolean calculate(String UID, String couponID, List<Orders> orders);
 	
 	/**
 	 * 消费指定类型的指定优惠卡券.

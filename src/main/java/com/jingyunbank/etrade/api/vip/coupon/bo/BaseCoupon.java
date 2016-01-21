@@ -11,8 +11,10 @@ public class BaseCoupon implements Serializable{
 
 	public final static String CASHCOUPON = "CASHCOUPON";
 	public final static String DISCOUNTCOUPON = "DISCOUNTCOUPON";
-	public final static String CASHCOUPONSTRATEGY = "CASHCOUPONSTRATEGY";
-	public final static String DISCOUNTCOUPONSTRATEGY = "DISCOUNTCOUPONSTRATEGY";
+	public final static String EMPLOYEECOUPON = "EMPLOYEECOUPON";
+	public final static String CASHCOUPONSTRATEGY = CASHCOUPON+"STRATEGY";
+	public final static String DISCOUNTCOUPONSTRATEGY = DISCOUNTCOUPON+"STRATEGY";
+	public final static String EMPLOYEECOUPONSTRATEGY = EMPLOYEECOUPON+"STRATEGY";
 	
 	/**
 	 * 其他面额购物金卡号前缀

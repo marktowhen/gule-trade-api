@@ -31,6 +31,8 @@ public class Goods implements Serializable {
 	private BigDecimal promotionPrice;
 	/** 商品现价 */
 	private BigDecimal nowprice;
+	/**员工价**/
+	private BigDecimal emprice;
 	/** 是否上架0否1是 */
 	private boolean state;
 	/** 上架时间 */
@@ -223,8 +225,11 @@ public class Goods implements Serializable {
 	public void setGoodsTitle(String goodsTitle) {
 		this.goodsTitle = goodsTitle;
 	}
-
+	public BigDecimal getEmprice() {
+		return emprice;
+	}
+	public void setEmprice(BigDecimal emprice) {
+		this.emprice = emprice;
+	}
 	
-	
-
 }

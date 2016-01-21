@@ -48,6 +48,8 @@ public class Merchant {
 	private String invoiceCodes;
 	/**快递的类型*/
 	private String deliveryCodes;
+	/**是否是自营商家*/
+	private boolean autotrophic;
 	/**发票类型列表*/
 	private List<InvoiceType> invoiceList;
 	/**发票类型列表*/
@@ -184,5 +186,11 @@ public class Merchant {
 	}
 	public void setLevel(String level) {
 		this.level = level;
+	}
+	public boolean isAutotrophic() {
+		return autotrophic;
+	}
+	public void setAutotrophic(boolean autotrophic) {
+		this.autotrophic = autotrophic;
 	}
 }

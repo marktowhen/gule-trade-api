@@ -1,7 +1,12 @@
 package com.jingyunbank.etrade.api.goods.service;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+
+
+
 
 
 import com.jingyunbank.core.Range;
@@ -174,4 +179,6 @@ public interface IGoodsService {
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listGoodsStcok(List<String> gids) throws Exception;
+	
+	public Map<String, BigDecimal> emprice(List<String> gids);
 }
