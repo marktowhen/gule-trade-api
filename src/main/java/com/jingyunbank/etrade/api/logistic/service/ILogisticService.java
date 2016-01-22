@@ -1,9 +1,9 @@
 package com.jingyunbank.etrade.api.logistic.service;
 
+import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
-import com.jingyunbank.etrade.api.logistic.bo.KDNShow;
+import com.jingyunbank.etrade.api.logistic.bo.LogisticData;
 
 /**
  * 
@@ -11,7 +11,7 @@ import com.jingyunbank.etrade.api.logistic.bo.KDNShow;
 * @author    duanxf
 * @date      2016年1月21日
  */
-public interface IExpressDeliveryService {
+public interface ILogisticService {
 
 	/**
 	 * 获取远程快递接口返回的数据
@@ -19,5 +19,5 @@ public interface IExpressDeliveryService {
 	 * @return
 	 * @throws Exception
 	 */
-	public Optional<KDNShow> getRemoteExpress(Map<Object, Object> map) throws Exception;
+	public List<LogisticData> getRemoteExpress(Map<Object, Object> map) throws Exception;
 }
