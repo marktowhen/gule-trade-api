@@ -13,6 +13,7 @@ public class OrderLogistic implements Serializable{
 	private String OID;
 	private String expressno;
 	private String expressName;
+	private String expressCode;
 	private Date addtime;
 	private String typeCode;
 	private String typeName;
@@ -57,6 +58,13 @@ public class OrderLogistic implements Serializable{
 	}
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
+	}
+	
+	public String getExpressCode() {
+		return expressCode;
+	}
+	public void setExpressCode(String expressCode) {
+		this.expressCode = expressCode;
 	}
 	@Override
 	public String toString() {
