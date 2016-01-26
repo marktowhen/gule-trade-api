@@ -27,7 +27,7 @@ public interface IOrderContextService {
 	 * @param extorderno 对外订单号（用于提交给支付平台的订单号）
 	 * @throws OrderPaidException 
 	 */
-	public void paysuccess(String extorderno) throws DataRefreshingException, DataSavingException;
+	public boolean paysuccess(String extorderno) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 完成支付失败的相应操作<br>
 	 * 包括：更新订单状态为PAYFAIL，并生成相应log信息，然后通知买家支付失败
