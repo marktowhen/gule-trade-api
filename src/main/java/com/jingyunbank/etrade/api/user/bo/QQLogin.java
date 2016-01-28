@@ -9,7 +9,9 @@ public class QQLogin implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -2836403978880988439L;
-	
+	public static final String APP_ID = "101288386";
+	public static final String APP_KEY = "6e820c34284b24e6ccf89a82c45d518d";
+	public static final String REDIRECT_URL = "http://www.zhonghuaejiao.com/";
 	private String ID;
 	private String accessToken;
 	private String UID;

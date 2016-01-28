@@ -15,6 +15,8 @@ public interface IWeiboLoginService {
 	public boolean save(WeiboLogin weibo, Users user, UserInfo info) throws DataSavingException;
 	
 	public boolean refreshLoginTime(String accessTokenOrWeiboUID) throws DataRefreshingException;
+
+	public boolean refreshByID(String id, String accessToken, String uid);
 	
 	
 }
