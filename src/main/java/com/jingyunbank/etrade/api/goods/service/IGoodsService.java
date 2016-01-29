@@ -5,10 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-
-
-
-
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.goods.bo.GoodsList;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
@@ -27,15 +23,7 @@ import com.jingyunbank.etrade.api.goods.bo.ShowGoods;
  * @date 2015年11月5日
  */
 public interface IGoodsService {
-	/**
-	 * 根据商品名模糊查询商品信息
-	 * 
-	 * @param goodsname
-	 * @return
-	 * @throws Exception
-	 */
-	public List<ShowGoods> listGoodsByLikeName(String goodsname, Range range) throws Exception;
-
+	
 	/**
 	 * 查询所有的品牌
 	 * 
@@ -84,7 +72,8 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listGoodsByWhere(GoodsShow goodsshow, Range range) throws Exception;
+	public List<ShowGoods> listGoodsByWhere(String[] brands, String[] types, BigDecimal beginPrice, BigDecimal endPrice,
+			int order, Range range) throws Exception;
 
 	/**
 	 * 首页查询热门推荐商品
@@ -109,7 +98,7 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<GoodsMerchant> listMerchantByWhere(GoodsShow show, Range range) throws Exception;
+	public List<GoodsMerchant> listMerchantByWhere(String[] brands, String[] types, BigDecimal beginPrice, BigDecimal endPrice, Range range) throws Exception;
 
 	/**
 	 * 店铺相关产品
@@ -118,7 +107,8 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listMerchantByWhereGoodsMax(GoodsShow show, Range range) throws Exception;
+	public List<ShowGoods> listMerchantByWhereGoodsMax(String[] brands, String[] types, BigDecimal beginPrice, BigDecimal endPrice,
+			String mid, int order ,Range range) throws Exception;
 
 	/**
 	 * 阿胶后台查询24小时热门推荐商品
@@ -144,7 +134,8 @@ public interface IGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<ShowGoods> listGoodsByGoodsResult(GoodsShow bo, Range range) throws Exception;
+	public List<ShowGoods> listGoodsByGoodsResult(String[] brands, String[] types, BigDecimal beginPrice, BigDecimal endPrice,
+			String goodsname, int order , Range range) throws Exception;
 
 	/**
 	 * 根据id 查询 商品属性
@@ -174,11 +165,12 @@ public interface IGoodsService {
 
 	/**
 	 * 获取商品的库存数量by gid
+	 * 
 	 * @param gids
 	 * @return
 	 * @throws Exception
 	 */
 	public List<ShowGoods> listGoodsStcok(List<String> gids) throws Exception;
-	
+
 	public Map<String, BigDecimal> emprice(List<String> gids);
 }
