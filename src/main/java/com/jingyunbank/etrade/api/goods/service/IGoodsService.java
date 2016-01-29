@@ -160,8 +160,9 @@ public interface IGoodsService {
 	 * @param goodsshow
 	 * @return
 	 * @throws Exception
+
 	 */
-	public List<GoodsList> listGoodsByCondition(GoodsSearch goodsSearch, Range range) throws Exception;
+	public List<GoodsList> listGoodsByCondition(String name,int state,String mid,String bid, Range range) throws Exception;
 
 	/**
 	 * 获取商品的库存数量by gid
