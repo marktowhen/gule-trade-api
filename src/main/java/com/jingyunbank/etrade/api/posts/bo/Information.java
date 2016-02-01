@@ -1,7 +1,13 @@
 package com.jingyunbank.etrade.api.posts.bo;
 
-public class Information {
+import java.io.Serializable;
 
+public class Information implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2259900226922898943L;
 	private String ID;
 	private String name;
 	
