@@ -8,8 +8,6 @@ import java.util.Optional;
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.goods.bo.GoodsList;
 import com.jingyunbank.etrade.api.goods.bo.GoodsMerchant;
-import com.jingyunbank.etrade.api.goods.bo.GoodsSearch;
-import com.jingyunbank.etrade.api.goods.bo.GoodsShow;
 import com.jingyunbank.etrade.api.goods.bo.HoneyGoods;
 import com.jingyunbank.etrade.api.goods.bo.Hot24Goods;
 import com.jingyunbank.etrade.api.goods.bo.HotGoods;
