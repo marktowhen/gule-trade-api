@@ -4,7 +4,7 @@
 
   <groupId>com.jingyunbank</groupId>
   <artifactId>jingyun-etrade-api</artifactId>
-  <version>1.2.1-RELEASE</version>
+  <version>1.2.2-RELEASE</version>
   <packaging>jar</packaging>
 
   <name>jingyun-etrade-api</name>
