@@ -1,9 +1,9 @@
-package com.jingyunbank.etrade.api.posts.service;
+package com.jingyunbank.etrade.api.posts.help.service;
 
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.posts.bo.Information;
+import com.jingyunbank.etrade.api.posts.help.bo.Information;
 
 
 public interface IInformationService {

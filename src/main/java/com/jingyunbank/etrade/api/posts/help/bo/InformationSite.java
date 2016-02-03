@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.posts.bo;
+package com.jingyunbank.etrade.api.posts.help.bo;
 
 import java.io.Serializable;
 
