@@ -18,4 +18,14 @@ public interface ISalesRecordsService {
 	 * @throws Exception
 	 */
 	public List<SalesRecord> listRange(String gid, Range range) throws Exception;
+	
+	/**
+	 * 商品销量
+	 * @param gid
+	 * @param year
+	 * @param month
+	 * @return
+	 * 2016年2月14日 qxs
+	 */
+	public Integer count(String gid, String year, String month);
 }
