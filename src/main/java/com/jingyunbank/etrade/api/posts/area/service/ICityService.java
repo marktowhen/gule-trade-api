@@ -1,12 +1,12 @@
-package com.jingyunbank.etrade.api.area.service;
+package com.jingyunbank.etrade.api.posts.area.service;
 
 import java.util.List;
 
 import com.jingyunbank.core.Range;
-import com.jingyunbank.etrade.api.area.bo.City;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.posts.area.bo.City;
 
 public interface ICityService {
 	

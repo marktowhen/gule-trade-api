@@ -1,14 +1,15 @@
-package com.jingyunbank.etrade.api.area.service;
+package com.jingyunbank.etrade.api.posts.area.service;
 
 import java.util.List;
 
 import com.jingyunbank.core.Range;
-import com.jingyunbank.etrade.api.area.bo.Country;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.posts.area.bo.Province;
 
-public interface ICountryService {
+public interface IProvinceService {
+
 	/**
 	 * 新增
 	 * @param bo
@@ -16,7 +17,7 @@ public interface ICountryService {
 	 * @throws DataSavingException
 	 * 2015年11月18日 qxs
 	 */
-	public boolean save(Country bo) throws DataSavingException;
+	public boolean save(Province bo) throws DataSavingException;
 	/**
 	 * 删除
 	 * @param id
@@ -32,7 +33,7 @@ public interface ICountryService {
 	 * @throws DataRefreshingException
 	 * 2015年11月18日 qxs
 	 */
-	public boolean refresh(Country bo) throws DataRefreshingException;
+	public boolean refresh(Province bo) throws DataRefreshingException;
 	/**
 	 * 分页查询
 	 * @param bo
@@ -40,19 +41,35 @@ public interface ICountryService {
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public List<Country> list(Country bo, Range range);
+	public List<Province> list(Province bo, Range range);
 	/**
 	 * 不分页查询
 	 * @param bo
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public List<Country> list(Country bo);
+	public List<Province> list(Province bo);
 	/**
 	 * 单个详情
 	 * @param id
 	 * @return
 	 * 2015年11月18日 qxs
 	 */
-	public Country single(int id);
+	public Province single(int id);
+	
+	/**
+	 * 根据国家查询
+	 * @param countryID
+	 * @return
+	 * 2015年11月21日 qxs
+	 */
+	public List<Province> listByCountry(int countryID);
+	
+	/**
+	 * 根据id判断是否偏远地区
+	 * @param provinceID
+	 * @return
+	 * 2016年1月7日 qxs
+	 */
+	public boolean isFaraway(int provinceID);
 }
