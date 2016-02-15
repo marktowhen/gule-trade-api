@@ -5,6 +5,7 @@ import java.util.Optional;
 
 
 
+
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.order.presale.bo.OrderGoods;
@@ -37,4 +38,14 @@ public interface IOrderGoodsService {
 	
 	
 	public int count(String oid,OrderStatusDesc status);
+
+	/**
+	 * 更新指定订单下某商品的状态
+	 * @param oid
+	 * @param gid
+	 * @param commented
+	 * @throws DataRefreshingException
+	 * 2016年2月15日 qxs
+	 */
+	public void refreshGoodStatus(String oid, String gid,OrderStatusDesc commented) throws DataRefreshingException;
 }

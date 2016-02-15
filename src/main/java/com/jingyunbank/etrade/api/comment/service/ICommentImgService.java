@@ -29,4 +29,6 @@ public interface ICommentImgService {
 	public void remove(String id) throws DataRemovingException;
 	
 	public Optional<CommentsImg> singleById(String id);
+	
+	public boolean save(List<CommentsImg> imgList) throws DataSavingException;
 }

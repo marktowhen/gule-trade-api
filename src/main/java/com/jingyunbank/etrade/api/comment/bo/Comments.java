@@ -22,7 +22,7 @@ public class Comments implements Serializable{
 	private int serviceGrade;//服务级别
 	private int logisticsGrade;//物流级别
 	private Date addtime;//添加评价的时间
-	private int commentStatus;//评价的是否的状态
+	private int commentStatus;//该字段暂时未使用
 	private int sort;//按其排序
 	
 	private List<CommentsImg> imgs=new ArrayList<CommentsImg>();
