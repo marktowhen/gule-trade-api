@@ -4,7 +4,7 @@
 
   <groupId>co.legu</groupId>
   <artifactId>legu-etrade-api</artifactId>
-  <version>1.2.4-RELEASE</version>
+  <version>1.2.5-RELEASE</version>
   <packaging>jar</packaging>
 
   <name>legu-etrade-api</name>
@@ -19,7 +19,7 @@
 		<dependency>
 	    	<groupId>co.legu</groupId>
 			<artifactId>legu-core</artifactId>
-			<version>1.1.1-RELEASE</version>
+			<version>1.1.3-RELEASE</version>
 	    </dependency>
 	    <dependency>
 			<groupId>org.springframework</groupId>
