@@ -14,9 +14,11 @@ public class AsynSchedule implements Serializable {
 	public static final String PROCESSING = "PROCESSING";
 	public static final String SUCCESS = "SUCCESS";
 	public static final String ERROR = "ERROR";
+	
+	public static final String SALES_REGISTER_SERVICE_NAME = "salseRegesterService";
 
 	private String ID;
-	private String definedID;
+	private String serviceName;
 	private String status;
 	private Date addtime;
 	private Date updatetime;
@@ -27,11 +29,11 @@ public class AsynSchedule implements Serializable {
 	public void setID(String iD) {
 		ID = iD;
 	}
-	public String getDefinedID() {
-		return definedID;
+	public String getServiceName() {
+		return serviceName;
 	}
-	public void setDefinedID(String definedID) {
-		this.definedID = definedID;
+	public void setServiceName(String serviceName) {
+		this.serviceName = serviceName;
 	}
 	public Date getAddtime() {
 		return addtime;

@@ -35,7 +35,7 @@ public interface IUserService {
 	 */
 	public boolean exists(String key);
 
-	public void save(Users user, UserInfo info) throws DataSavingException;
+	public void save(Users user, UserInfo info, String inviterUID) throws DataSavingException;
 	
 	public void refresh(Users user) throws DataRefreshingException;
 	

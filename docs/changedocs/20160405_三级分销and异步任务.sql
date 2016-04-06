@@ -1,7 +1,7 @@
 CREATE TABLE `sales_userrelationship` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `sid` varchar(22) DEFAULT NULL COMMENT '分销系统id',
-  `uid` int(11) DEFAULT NULL COMMENT 'p2p系统用户id',
+  `uid` char(22) DEFAULT NULL COMMENT 'p2p系统用户id',
   `realname` varchar(50) DEFAULT NULL COMMENT '真实姓名',
   `cardid` varchar(18) DEFAULT NULL COMMENT '身份证号码(18/15)',
   `realnameremark` varchar(1000) DEFAULT NULL COMMENT '实名认证备注',
