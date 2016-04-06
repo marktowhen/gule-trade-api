@@ -1,21 +1,22 @@
-package com.jingyunbank.etrade.api.goods.bo;
+package com.jingyunbank.etrade.api.wap.goods.bo;
 
 import java.io.Serializable;
+
 /**
- * 商品类型  业务类
- * @author liug
- *
+ * 
+* Title: GoodsType  商品类型
+* @author    duanxf
+* @date      2016年3月31日
  */
 public class GoodsType implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	/**主键*/
-	private String ID;
-	/**类型名称*/
-	private String name;
 	
+	private String ID;
+	private String name;
 	private boolean status;
 	private int adminsort;
+	
 	public String getID() {
 		return ID;
 	}
