@@ -14,5 +14,6 @@ public interface IAsynParamService {
 
 	public boolean saveMutl(String scheduleID, Map<String, String> params) throws DataSavingException;
 	
+	public  Map<String, String> getMap(String scheduleID);
 
 }
