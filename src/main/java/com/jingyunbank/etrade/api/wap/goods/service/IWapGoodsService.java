@@ -28,4 +28,8 @@ public interface IWapGoodsService {
 
 	Optional<GoodsDeatil> singleGoodsDetail(String gid) throws Exception;
 
+	boolean modifyStock(String skuid, String count) throws Exception;
+
+	List<GoodsSku> listStockBySkuIds(List<String> skuids) throws Exception;
+
 }
