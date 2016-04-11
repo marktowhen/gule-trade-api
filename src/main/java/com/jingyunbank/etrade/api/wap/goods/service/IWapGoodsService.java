@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import com.jingyunbank.etrade.api.wap.goods.bo.GoodsDeatil;
 import com.jingyunbank.etrade.api.wap.goods.bo.GoodsInfo;
+import com.jingyunbank.etrade.api.wap.goods.bo.GoodsPostage;
 import com.jingyunbank.etrade.api.wap.goods.bo.GoodsSku;
 import com.jingyunbank.etrade.api.wap.goods.bo.GoodsSkuCondition;
 import com.jingyunbank.etrade.api.wap.goods.bo.ShowGoods;
@@ -31,5 +32,9 @@ public interface IWapGoodsService {
 	boolean modifyStock(String skuid, String count) throws Exception;
 
 	List<GoodsSku> listStockBySkuIds(List<String> skuids) throws Exception;
+
+	Optional<GoodsPostage> singleGoodsPostage(String gid) throws Exception;
+
+	String singlePidByGid(String gid) throws Exception;
 
 }
