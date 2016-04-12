@@ -16,12 +16,14 @@ public class PayPipeline implements Serializable{
 	public final static String FASTPAY = "FASTPAY";
 	public final static String WXPAY = "WXPAY";
 	public final static String LLPAY = "LLPAY";
+	public final static String JSAPIPAY = "WXJSAPIPAY";
 	
 	public final static String GATEPAYHANDLER = GATEPAY+"HANDLER";
 	public final static String ALIPAYHANDLER = ALIPAY+"HANDLER";
 	public final static String FASTPAYHANDLER = FASTPAY+"HANDLER";
 	public final static String WXPAYHANDLER = WXPAY+"HANDLER";
 	public final static String LLPAYHANDLER = LLPAY+"HANDLER";
+	public final static String JSAPIPAYHANDLER = JSAPIPAY+"HANDLER";
 	
 	
 	private String ID;
@@ -34,7 +36,17 @@ public class PayPipeline implements Serializable{
 	private String partner;
 	private String signtype;
 	private String signkey;
+	private String bankcode;
 	
+	public PayPipeline() {
+		super();
+	}
+	public PayPipeline(String name, String code, String bankcode) {
+		super();
+		this.name = name;
+		this.code = code;
+		this.bankcode = bankcode;
+	}
 	public String getID() {
 		return ID;
 	}
@@ -94,5 +106,11 @@ public class PayPipeline implements Serializable{
 	}
 	public void setSignkey(String signkey) {
 		this.signkey = signkey;
+	}
+	public String getBankcode() {
+		return bankcode;
+	}
+	public void setBankcode(String bankcode) {
+		this.bankcode = bankcode;
 	}	
 }

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.pay.bo.OrderPayment;
+import com.jingyunbank.etrade.api.pay.bo.PayPipeline;
 
 public interface IPayContextService {
 
@@ -15,8 +15,10 @@ public interface IPayContextService {
 	 * @param payments
 	 * @throws DataSavingException
 	 */
-	public Map<String, String> refreshAndResolvePipeline(
-					List<OrderPayment> payments, 
-					String pipelineCode, String pipelineName,
-					String bankCode) throws Exception;
+//	public Map<String, String> refreshAndResolvePipeline(
+//					List<OrderPayment> payments, 
+//					String pipelineCode, String pipelineName,
+//					String bankCode) throws Exception;
+	
+	public Map<String, String> prepay(List<String> oids, PayPipeline pipeline) throws Exception;
 }
