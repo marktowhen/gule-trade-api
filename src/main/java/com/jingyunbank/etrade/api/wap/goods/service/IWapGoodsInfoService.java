@@ -9,7 +9,7 @@ import com.jingyunbank.etrade.api.wap.goods.bo.GoodsInfo;
  * @author duanxf
  * @date 2016年4月11日
  */
-public interface IWapGoodsInfoOperationService {
+public interface IWapGoodsInfoService {
 
 	void saveGoodsInfo(GoodsInfo infoBO) throws Exception;
 
