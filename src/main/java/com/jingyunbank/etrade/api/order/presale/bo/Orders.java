@@ -47,6 +47,16 @@ public class Orders  implements Serializable{
 	private List<OrderTrace> traces = new ArrayList<OrderTrace>();
 	private OrderPayment payment = new OrderPayment();
 	
+	private int city;
+	
+	public int getCity() {
+		return city;
+	}
+
+	public void setCity(int city) {
+		this.city = city;
+	}
+
 	public String getID() {
 		return ID;
 	}

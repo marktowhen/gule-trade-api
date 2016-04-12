@@ -2,11 +2,16 @@ package com.jingyunbank.etrade.api.logistic.bo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 
 public class Postage implements Serializable{
 	
 	private static final long serialVersionUID = 1765751272587097762L;
+	
+	public static final String TYPE_NUMBER = "number";
+	public static final String TYPE_WEIGHT = "weight";
+	public static final String TYPE_VOLUME = "volume";
 	
 	private String ID;
 	private String MID;//商家id
@@ -15,20 +20,21 @@ public class Postage implements Serializable{
 	private String type;//收费类型 number:按件计费 weight:按重量 volume:体积
 	private boolean valid;
 	private BigDecimal postage;
-	private BigDecimal price;
-	private int province;
+	private PostageDetail postageDetail;
+	private List<PostageDetail> postageDetailList;
 	
-	public BigDecimal getPrice() {
-		return price;
+	
+	public PostageDetail getPostageDetail() {
+		return postageDetail;
 	}
-	public void setPrice(BigDecimal price) {
-		this.price = price;
+	public void setPostageDetail(PostageDetail postageDetail) {
+		this.postageDetail = postageDetail;
 	}
-	public int getProvince() {
-		return province;
+	public List<PostageDetail> getPostageDetailList() {
+		return postageDetailList;
 	}
-	public void setProvince(int province) {
-		this.province = province;
+	public void setPostageDetailList(List<PostageDetail> postageDetailList) {
+		this.postageDetailList = postageDetailList;
 	}
 	public BigDecimal getPostage() {
 		return postage;

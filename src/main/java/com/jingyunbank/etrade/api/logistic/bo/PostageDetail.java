@@ -9,6 +9,10 @@ public class PostageDetail implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 8152373469412325191L;
+	/**
+	 * 全局的邮费策略
+	 */
+	public static final String DEFAULT_FIT_AREA = "default";
 	
 	private String ID;
 	private String postageID;
@@ -21,7 +25,7 @@ public class PostageDetail implements Serializable {
 	private double nextWeight;
 	private double nextVolumn;
 	private BigDecimal nextCost;
-	private String fitArea;
+	private String fitArea;//{cityID},{cityID},。。。{cityID} 若为default则为全局模板
 	private boolean valid;
 	public String getID() {
 		return ID;
