@@ -13,6 +13,7 @@ public class GroupGoods {
 	private long duration;//开团后团的时间长度，minutes
 	private Date deadline;//团购截止日期
 	private boolean upperlimit;//是否设置人数上限 
+	private int minpeople;//最少成团人数
 	//团购阶梯价
 	private List<GroupGoodsPriceSetting> priceSettings = new ArrayList<GroupGoodsPriceSetting>();
 	private BigDecimal deposit;//订金，（多退少补）
@@ -75,6 +76,12 @@ public class GroupGoods {
 	}
 	public void setGroups(List<Group> groups) {
 		this.groups = groups;
+	}
+	public int getMinpeople() {
+		return minpeople;
+	}
+	public void setMinpeople(int minpeople) {
+		this.minpeople = minpeople;
 	}
 	
 }

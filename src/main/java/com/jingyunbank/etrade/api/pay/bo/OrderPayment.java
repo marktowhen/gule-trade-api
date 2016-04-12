@@ -26,6 +26,7 @@ public class OrderPayment implements Serializable{
 	private boolean done;
 	private String pipelineCode;
 	private String pipelineName;
+	private String bankCode;
 	private Date addtime;
 	private Date paidtime;
 	
@@ -112,5 +113,11 @@ public class OrderPayment implements Serializable{
 	}
 	public void setExtransno(long extransno) {
 		this.extransno = extransno;
+	}
+	public String getBankCode() {
+		return bankCode;
+	}
+	public void setBankCode(String bankCode) {
+		this.bankCode = bankCode;
 	}
 }

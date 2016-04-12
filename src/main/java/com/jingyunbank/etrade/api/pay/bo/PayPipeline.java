@@ -34,7 +34,17 @@ public class PayPipeline implements Serializable{
 	private String partner;
 	private String signtype;
 	private String signkey;
+	private String bankcode;
 	
+	public PayPipeline() {
+		super();
+	}
+	public PayPipeline(String name, String code, String bankcode) {
+		super();
+		this.name = name;
+		this.code = code;
+		this.bankcode = bankcode;
+	}
 	public String getID() {
 		return ID;
 	}
@@ -94,5 +104,11 @@ public class PayPipeline implements Serializable{
 	}
 	public void setSignkey(String signkey) {
 		this.signkey = signkey;
+	}
+	public String getBankcode() {
+		return bankcode;
+	}
+	public void setBankcode(String bankcode) {
+		this.bankcode = bankcode;
 	}	
 }
