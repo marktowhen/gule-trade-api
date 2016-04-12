@@ -16,12 +16,14 @@ public class PayPipeline implements Serializable{
 	public final static String FASTPAY = "FASTPAY";
 	public final static String WXPAY = "WXPAY";
 	public final static String LLPAY = "LLPAY";
+	public final static String JSAPIPAY = "WXJSAPIPAY";
 	
 	public final static String GATEPAYHANDLER = GATEPAY+"HANDLER";
 	public final static String ALIPAYHANDLER = ALIPAY+"HANDLER";
 	public final static String FASTPAYHANDLER = FASTPAY+"HANDLER";
 	public final static String WXPAYHANDLER = WXPAY+"HANDLER";
 	public final static String LLPAYHANDLER = LLPAY+"HANDLER";
+	public final static String JSAPIPAYHANDLER = JSAPIPAY+"HANDLER";
 	
 	
 	private String ID;
