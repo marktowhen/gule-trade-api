@@ -9,6 +9,7 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 public class Group {
 
 	private GroupGoods goods;
+	private String ID;
 	private Users leader;
 	private Date start;
 	private List<GroupUser> buyers = new ArrayList<GroupUser>();
@@ -36,6 +37,12 @@ public class Group {
 	}
 	public void setBuyers(List<GroupUser> buyers) {
 		this.buyers = buyers;
+	}
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
 	}
 	
 }
