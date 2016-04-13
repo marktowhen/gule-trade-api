@@ -9,14 +9,14 @@ public interface IPostageCalculateService {
 	
 	/**
 	 * 计算单种商品的邮费
-	 * @param postageCalculate postageID、cityID必填 num/weight/volume3选1
+	 * @param postageCalculate postageID、cityID、transpostType必填 num/weight/volume3选1
 	 * @return
 	 * 2016年4月12日 qxs
 	 */
 	public BigDecimal calculate(PostageCalculate postageCalculate);
 	/**
 	 * 同一收货地址 多种商品多店铺邮费计算
-	 * @param postageCalculateList postageID必填 num/weight/volume3选1
+	 * @param postageCalculateList postageID、transpostType必填 num/weight/volume3选1
 	 * @param city
 	 * @return
 	 * 2016年4月12日 qxs

@@ -1,13 +1,11 @@
 package com.jingyunbank.etrade.api.logistic.service;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataRemovingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.logistic.bo.Postage;
-import com.jingyunbank.etrade.api.logistic.bo.PostageCalculate;
 
 
 public interface IPostageService {
@@ -39,6 +37,6 @@ public interface IPostageService {
 	 * @return Postage Postage.PostageDetail
 	 * 2016年4月12日 qxs
 	 */
-	public Postage singleWithDetail(String ID , int cityID) ;
+	public Postage singleWithDetail(String ID , int cityID, String transportType) ;
 	
 }

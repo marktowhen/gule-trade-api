@@ -21,6 +21,8 @@ public interface IPostageDetailService {
 	
 	public boolean removeByPostageID(String postageID) throws DataRemovingException;
 	
-	public PostageDetail singleFit(String postageID, int cityID);
+	public PostageDetail singleFit(String postageID, int cityID,String transportType);
+	
+	public List<String> listTransportType(String postageID);
 	
 }

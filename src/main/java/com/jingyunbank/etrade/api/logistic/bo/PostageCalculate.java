@@ -16,9 +16,16 @@ public class PostageCalculate implements Serializable{
 	private int number;
 	private double weight;
 	private double volume;
+	private String transportType;
 	
 	private Postage calculatRule;
 	
+	public String getTransportType() {
+		return transportType;
+	}
+	public void setTransportType(String transportType) {
+		this.transportType = transportType;
+	}
 	public Postage getCalculatRule() {
 		return calculatRule;
 	}

@@ -48,7 +48,16 @@ public class Orders  implements Serializable{
 	private OrderPayment payment = new OrderPayment();
 	
 	private int city;
+	private String transportType;
 	
+	public String getTransportType() {
+		return transportType;
+	}
+
+	public void setTransportType(String transportType) {
+		this.transportType = transportType;
+	}
+
 	public int getCity() {
 		return city;
 	}

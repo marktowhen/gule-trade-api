@@ -10,9 +10,18 @@ public class PostageDetail implements Serializable {
 	 */
 	private static final long serialVersionUID = 8152373469412325191L;
 	/**
-	 * 全局的邮费策略
+	 * 全国默认邮费策略
 	 */
 	public static final String DEFAULT_FIT_AREA = "default";
+	public static final String TRANSPORT_TYPE_EMS = "EMS";
+	/**
+	 * 平邮
+	 */
+	public static final String TRANSPORT_TYPE_POST = "POST";
+	/**
+	 * 快递
+	 */
+	public static final String TRANSPORT_TYPE_EXPRESS = "EXPRESS";
 	
 	private String ID;
 	private String postageID;
@@ -27,6 +36,14 @@ public class PostageDetail implements Serializable {
 	private BigDecimal nextCost;
 	private String fitArea;//{cityID},{cityID},。。。{cityID} 若为default则为全局模板
 	private boolean valid;
+	private String transportType;//运送方式
+	
+	public String getTransportType() {
+		return transportType;
+	}
+	public void setTransportType(String transportType) {
+		this.transportType = transportType;
+	}
 	public String getID() {
 		return ID;
 	}
