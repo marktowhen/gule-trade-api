@@ -1,4 +1,4 @@
-package com.jingyunbank.etrade.api.group.bo;
+package com.jingyunbank.etrade.api.marketing.group.bo;
 
 import java.util.ArrayList;
 import java.util.Date;

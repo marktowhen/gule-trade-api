@@ -1,9 +1,9 @@
-package com.jingyunbank.etrade.api.group.service;
+package com.jingyunbank.etrade.api.marketing.group.service;
 
 import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataSavingException;
-import com.jingyunbank.etrade.api.group.bo.GroupGoods;
+import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoods;
 
 public interface IGroupGoodsService {
 
