@@ -119,4 +119,10 @@ public interface IMerchantService {
 	 * @return
 	 */
 	public boolean isAutotrophic(String mid) ;
+	/**
+	 * 根据后台用户Id查询书所属的店铺
+	 * @param sellerId
+	 * @return
+	 */
+	public Optional<Merchant> getMerchantBySellerId(String sellerId) throws Exception;
 }
