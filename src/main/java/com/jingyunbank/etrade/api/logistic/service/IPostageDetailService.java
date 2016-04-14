@@ -24,5 +24,9 @@ public interface IPostageDetailService {
 	public PostageDetail singleFit(String postageID, int cityID,String transportType);
 	
 	public List<String> listTransportType(String postageID);
+
+	public boolean save(List<PostageDetail> details) throws DataSavingException;
+	
+	public boolean deleteBatch(String postageID) throws DataRemovingException;
 	
 }
