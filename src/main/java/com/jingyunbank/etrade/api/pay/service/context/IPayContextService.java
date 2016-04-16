@@ -21,4 +21,7 @@ public interface IPayContextService {
 //					String bankCode) throws Exception;
 	
 	public Map<String, String> prepay(List<String> oids, PayPipeline pipeline) throws Exception;
+	
+	public Map<String, String> prefund(String oids) throws Exception;
+	
 }
