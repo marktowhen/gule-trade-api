@@ -22,6 +22,10 @@ public interface IPayContextService {
 	
 	public Map<String, String> prepay(List<String> oids, PayPipeline pipeline) throws Exception;
 	
+	public boolean paysucc(String extrano) throws Exception;
+	
+	public void payfail(String extrano, String reason) throws Exception;
+	
 	public Map<String, String> prefund(String oids) throws Exception;
 	
 }
