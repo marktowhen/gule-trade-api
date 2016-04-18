@@ -1,6 +1,6 @@
-package com.jingyunbank.etrade.api.group.service.context;
+package com.jingyunbank.etrade.api.marketing.group.service.context;
 
-import com.jingyunbank.etrade.api.group.bo.Group;
+import com.jingyunbank.etrade.api.marketing.group.bo.Group;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
 public interface IGroupPurchaseContextService {
