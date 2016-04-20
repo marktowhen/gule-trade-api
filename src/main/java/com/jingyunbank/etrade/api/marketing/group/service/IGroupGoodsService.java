@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.marketing.group.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoods;
 
@@ -12,6 +13,6 @@ public interface IGroupGoodsService {
 	
 	public Optional<GroupGoods> single(String ggid) ;
 	
-	public List<GroupGoods> list() ;
+	public List<GroupGoods> list(Range range) ;
 	
 }
