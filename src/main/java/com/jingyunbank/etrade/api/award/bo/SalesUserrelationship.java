@@ -11,6 +11,7 @@ public class SalesUserrelationship implements Serializable{
 
 	private String ID;
 	private String SID;
+	private String UID;
 	private String realname;
 	private String cardid;
 	private String realnameremark ;
@@ -18,6 +19,13 @@ public class SalesUserrelationship implements Serializable{
 	private String phoneremark ;
 	private String password ;
 	private String passwordremark ;
+	
+	public String getUID() {
+		return UID;
+	}
+	public void setUID(String uID) {
+		UID = uID;
+	}
 	public String getID() {
 		return ID;
 	}
