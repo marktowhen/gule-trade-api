@@ -8,12 +8,33 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class Group {
 
-	private GroupGoods goods;
 	private String ID;
-	private Users leader;
+	private String leaderUID;
 	private Date start;
+	private String groupGoodsID;
+	private String status;//该团的状态
+	private GroupGoods goods;
+	private Users leader;
 	private List<GroupUser> buyers = new ArrayList<GroupUser>();
 	
+	public String getLeaderUID() {
+		return leaderUID;
+	}
+	public void setLeaderUID(String leaderUID) {
+		this.leaderUID = leaderUID;
+	}
+	public String getGroupGoodsID() {
+		return groupGoodsID;
+	}
+	public void setGroupGoodsID(String groupGoodsID) {
+		this.groupGoodsID = groupGoodsID;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public GroupGoods getGoods() {
 		return goods;
 	}

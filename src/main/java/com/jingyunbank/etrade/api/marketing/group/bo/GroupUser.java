@@ -7,12 +7,34 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class GroupUser {
 
-	private Users user;
-	private Group group;
+	private String ID;
+	private String groupID;
+	private String UID;
 	private Date jointime;
 	private BigDecimal paid;
 	private String status;
 	
+	private Users user;
+	private Group group;
+	
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	public String getGroupID() {
+		return groupID;
+	}
+	public void setGroupID(String groupID) {
+		this.groupID = groupID;
+	}
+	public String getUID() {
+		return UID;
+	}
+	public void setUID(String uID) {
+		UID = uID;
+	}
 	public String getStatus() {
 		return status;
 	}
