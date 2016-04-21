@@ -5,11 +5,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.jingyunbank.etrade.api.goods.bo.Goods;
-
 public class GroupGoods {
 
-	private Goods goods;
+	private String ID;
+	private String SKUID;
 	private long duration;//开团后团的时间长度，minutes
 	private Date deadline;//团购截止日期
 	private boolean upperlimit;//是否设置人数上限 
@@ -20,15 +19,10 @@ public class GroupGoods {
 	//团长佣金
 	private BigDecimal commission;
 	private boolean show;//是否上架
+	private Date addtime;
 	
 	private List<Group> groups = new ArrayList<Group>();
 	
-	public Goods getGoods() {
-		return goods;
-	}
-	public void setGoods(Goods goods) {
-		this.goods = goods;
-	}
 	public long getDuration() {
 		return duration;
 	}
@@ -82,6 +76,24 @@ public class GroupGoods {
 	}
 	public void setMinpeople(int minpeople) {
 		this.minpeople = minpeople;
+	}
+	public Date getAddtime() {
+		return addtime;
+	}
+	public void setAddtime(Date addtime) {
+		this.addtime = addtime;
+	}
+	public String getSKUID() {
+		return SKUID;
+	}
+	public void setSKUID(String sKUID) {
+		SKUID = sKUID;
+	}
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
 	}
 	
 }
