@@ -43,7 +43,17 @@ public class GoodsOperationShow implements Serializable {
 	// sku 信息
 	private List<GoodsSku> skuList = new ArrayList<GoodsSku>();
 	
+	private List<GoodsInfo> infoList = new ArrayList<GoodsInfo>();
 	
+	
+	public List<GoodsInfo> getInfoList() {
+		return infoList;
+	}
+
+	public void setInfoList(List<GoodsInfo> infoList) {
+		this.infoList = infoList;
+	}
+
 	public List<GoodsImg> getImgList() {
 		return imgList;
 	}
