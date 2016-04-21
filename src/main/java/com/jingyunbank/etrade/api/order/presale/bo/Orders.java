@@ -43,6 +43,7 @@ public class Orders  implements Serializable{
 	private boolean employee;
 	private String type;//订单类型，普通，团购。。。
 	private int city;
+	private String extradata;//附加数据，可以是团购id，竞拍id等附加信息
 	
 	public static final String BASE_ORDER_TYPE = "BASE";
 	public static final String GROUP_ORDER_TYPE = "GROUP";
@@ -299,6 +300,14 @@ public class Orders  implements Serializable{
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public String getExtradata() {
+		return extradata;
+	}
+
+	public void setExtradata(String extradata) {
+		this.extradata = extradata;
 	}
 
 	@Override
