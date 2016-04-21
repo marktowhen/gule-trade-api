@@ -16,7 +16,6 @@ public class Orders  implements Serializable{
 	private static final long serialVersionUID = 2563253149671693408L;
 	private String ID;
 	private long orderno;
-	private int province;
 	private String receiver;//收货人
 	private String address;//收货地址
 	private String mobile ;//收货人电话
@@ -42,22 +41,16 @@ public class Orders  implements Serializable{
 	private BigDecimal postage;//订单计算出的邮费（主要用于数据校验）
 	private String note;
 	private boolean employee;
+	private String type;//订单类型，普通，团购。。。
+	private int city;
+	
+	public static final String BASE_ORDER_TYPE = "BASE";
+	public static final String GROUP_ORDER_TYPE = "GROUP";
 	
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
 	private List<OrderTrace> traces = new ArrayList<OrderTrace>();
 	private OrderPayment payment = new OrderPayment();
 	
-	private int city;
-	private String transportType;
-	
-	public String getTransportType() {
-		return transportType;
-	}
-
-	public void setTransportType(String transportType) {
-		this.transportType = transportType;
-	}
-
 	public int getCity() {
 		return city;
 	}
@@ -292,14 +285,6 @@ public class Orders  implements Serializable{
 		this.couponReduce = couponReduce;
 	}
 
-	public int getProvince() {
-		return province;
-	}
-
-	public void setProvince(int province) {
-		this.province = province;
-	}
-
 	public boolean isEmployee() {
 		return employee;
 	}
@@ -307,11 +292,19 @@ public class Orders  implements Serializable{
 	public void setEmployee(boolean employee) {
 		this.employee = employee;
 	}
+	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 
 	@Override
 	public String toString() {
-		return "Orders [ID=" + ID + ", orderno=" + orderno + ", province="
-				+ province + ", receiver=" + receiver + ", address=" + address
+		return "Orders [ID=" + ID + ", orderno=" + orderno 
+				+ ", receiver=" + receiver + ", address=" + address
 				+ ", mobile=" + mobile + ", zipcode=" + zipcode + ", UID="
 				+ UID + ", uname=" + uname + ", MID=" + MID + ", mname="
 				+ mname + ", addtime=" + addtime + ", paytypeCode="
