@@ -7,6 +7,12 @@ import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class GroupUser {
 
+	public static final String FLOW_TYPE = "GROUP_USER_FLOW";
+	/**
+	 * 新建团购
+	 */
+	public static final String NEW_STATUS = "NEW";
+	
 	private String ID;
 	private String groupID;
 	private String UID;

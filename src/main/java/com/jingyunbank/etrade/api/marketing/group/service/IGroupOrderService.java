@@ -13,6 +13,8 @@ public interface IGroupOrderService {
 	public Optional<GroupOrder> single(String ID);
 	
 	public List<GroupOrder> list(String groupUserID);
+
+	public Optional<GroupOrder> singleByOID( String OID);
 	
 
 }

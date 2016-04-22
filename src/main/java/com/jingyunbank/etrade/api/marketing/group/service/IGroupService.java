@@ -14,5 +14,7 @@ public interface IGroupService {
 	
 	public boolean refreshStatus(String ID, String status) throws DataRefreshingException;
 	
+	public boolean isLeader(String groupID, String uid);
 	
+	public boolean full(String groupID);
 }

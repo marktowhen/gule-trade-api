@@ -9,6 +9,14 @@ public class GroupOrder implements Serializable {
 	 */
 	private static final long serialVersionUID = -3590695560755407669L;
 
+	/**
+	 * 定金
+	 */
+	public static final String TYPE_DEPOSIT = "DEPOSIT";
+	/**
+	 * 尾款
+	 */
+	public static final String TYPE_BALANCE_PAYMENT = "BALANCE_PAYMENT";
 	private String ID;
 	private String groupID;
 	private String groupUserID; //group_user表 id

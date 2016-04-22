@@ -7,6 +7,9 @@ import java.util.List;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class Group {
+	
+	public static final String FLOW_TYPE = "GROUP_FLOW";
+	public static final String NEW_STATUS = "NEW";
 
 	private String ID;
 	private String leaderUID;

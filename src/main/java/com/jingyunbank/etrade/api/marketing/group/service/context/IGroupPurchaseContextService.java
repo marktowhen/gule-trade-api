@@ -1,7 +1,5 @@
 package com.jingyunbank.etrade.api.marketing.group.service.context;
 
-import java.util.List;
-
 import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
@@ -20,7 +18,7 @@ public interface IGroupPurchaseContextService {
 	 * @throws DataSavingException 
 	 * @throws DataRefreshingException 
 	 */
-	public void start(Users leader, Group group, List<Orders> orders) throws DataSavingException, DataRefreshingException;
+	public void start(Users leader, Group group, Orders orders) throws DataSavingException, DataRefreshingException;
 	/**
 	 * 加入该团
 	 * @param user
@@ -28,7 +26,7 @@ public interface IGroupPurchaseContextService {
 	 * @throws DataSavingException 
 	 * @throws DataRefreshingException 
 	 */
-	public void join(Users user, Group group, List<Orders> orders) throws DataSavingException, DataRefreshingException;
+	public void join(Users user, Group group, Orders orders) throws DataSavingException, DataRefreshingException;
 	/**
 	 * 1，满团，提醒用户支付尾款
 	 * 2，未满团，为用户退换订金，并提醒用户
@@ -51,6 +49,15 @@ public interface IGroupPurchaseContextService {
 	 * 2016年4月21日 qxs
 	 */
 	public Result<String> joinMatch(Group group);
+	
+	/**
+	 * 支付成功/失败
+	 * @param order
+	 * 2016年4月22日 qxs
+	 * @throws DataRefreshingException 
+	 */
+	public void payFinish(Orders order) throws DataRefreshingException;
+	
 	
 	
 	
