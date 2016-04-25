@@ -9,7 +9,7 @@ public class GroupGoods {
 
 	private String ID;
 	private String SKUID;
-	private long duration;//开团后团的时间长度，minutes
+	private long duration;//开团后团的时间长度，second
 	private Date deadline;//团购截止日期
 	private boolean upperlimit;//是否设置人数上限 
 	private int minpeople;//最少成团人数 分享团成团人数

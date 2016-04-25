@@ -11,7 +11,28 @@ public class GroupUser {
 	/**
 	 * 新建团购
 	 */
-	public static final String NEW_STATUS = "NEW";
+	public static final String STATUS_NEW = "NEW";
+	/**
+	 * 定金支付成功
+	 */
+	public static final String STATUS_DEPOSIT_PAID = "DEPOSIT_PAID";
+	/**
+	 * 定金支付失败
+	 */
+	public static final String STATUS_DEPOSIT_PAYFAIL = "DEPOSIT_PAYFAIL";
+	/**
+	 * 尾款支付成功
+	 */
+	public static final String STATUS_BALANCE_PAYMENT_PAID = "BALANCE_PAYMENT_PAID";
+	/**
+	 * 尾款支付失败
+	 */
+	public static final String STATUS_BALANCE_PAYMENT_PAYFAIL = "BALANCE_PAYMENT_PAYFAIL";
+	
+	/**
+	 * 团购关闭 未创建成功
+	 */
+	public static final String STATUS_CLOSED = "CLOSED";
 	
 	private String ID;
 	private String groupID;

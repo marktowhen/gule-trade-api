@@ -15,6 +15,14 @@ public interface IGroupOrderService {
 	public List<GroupOrder> list(String groupUserID);
 
 	public Optional<GroupOrder> singleByOID( String OID);
+
+	/**
+	 * 查询定金或尾款订单
+	 * @param groupUserID group_user id
+	 * @param orderType DEPOSIT 或 BALANCE_PAYMENT
+	 * 2016年4月25日 qxs
+	 */
+	public Optional<GroupOrder> single(String groupUserID, String orderType);
 	
 
 }
