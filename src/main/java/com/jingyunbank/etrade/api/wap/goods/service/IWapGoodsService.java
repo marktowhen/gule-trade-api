@@ -29,7 +29,7 @@ public interface IWapGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	List<ShowGoods> listGoods(String mid, String tid, String order, String name) throws Exception;
+	List<ShowGoods> listGoods(String mid, String tid, String order, String name,String from,String size) throws Exception;
 
 	/**
 	 * 获取商品查询的 sku 条件
