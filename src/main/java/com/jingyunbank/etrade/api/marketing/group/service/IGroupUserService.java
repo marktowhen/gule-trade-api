@@ -33,19 +33,18 @@ public interface IGroupUserService {
 	public Optional<GroupUser> single(String groupID, String uid);
 
 	/**
-	 * 未支付定金的用户
+	 * 未支付的用户
 	 * @param groupID
 	 * @return
 	 * 2016年4月25日 qxs
 	 */
-	public List<GroupUser> listUnPayDeposit(String groupID);
+	public List<GroupUser> listUnPay(String groupID);
 
 	/**
-	 * 未支付尾款的用户
-	 * @param id
-	 * @return
+	 * 退款 并提醒用户
+	 * @param groupUserList
 	 * 2016年4月25日 qxs
 	 */
-	public List<GroupUser> listUnPayBalance(String groupID);
+	public void refound(List<GroupUser> groupUserList);
 
 }

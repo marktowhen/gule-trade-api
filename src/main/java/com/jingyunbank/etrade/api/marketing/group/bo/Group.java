@@ -17,19 +17,16 @@ public class Group {
 	 * 召集中
 	 */
 	public static final String STATUS_CONVENING = "CONVENING";
-	/**
-	 * 团长定金支付超时，建团失败
-	 */
-	public static final String STATUS_FAIL = "DEPOSIT_PAYFAIL";
-	/**
-	 * 定金支付完成
-	 */
-	public static final String STATUS_DEPOSIT_PAID = "DEPOSIT_PAID";
-	/**
-	 * 尾款支付完成
-	 */
-	public static final String STATUS_BALANCE_PAYMENT_PAID = "BALANCE_PAYMENT_PAID";
 	
+	/**
+	 * 支付完成
+	 */
+	public static final String STATUS_PAID = "PAID";
+	
+	/**
+	 * 已退款
+	 */
+	public static final String STATUS_REFUNED = "REFUNED";
 	/**
 	 * 参团失败 如定金支付超时等
 	 */
