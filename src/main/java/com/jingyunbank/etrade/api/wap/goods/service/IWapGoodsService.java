@@ -109,11 +109,19 @@ public interface IWapGoodsService {
 
 	/**
 	 * 获取我收藏的商品
+	 * 
 	 * @param uid
 	 * @param type
 	 * @return
 	 * @throws Exception
 	 */
 	List<ShowGoods> listFavGoods(String uid, int type) throws Exception;
+	/**
+	 * 根据商品ID 获取下属的sku
+	 * @param gid
+	 * @return
+	 * @throws Exception
+	 */
+	List<GoodsSku> getSkusByGid(String gid) throws Exception;
 
 }
