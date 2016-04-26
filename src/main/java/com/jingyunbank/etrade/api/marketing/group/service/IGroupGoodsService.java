@@ -11,8 +11,10 @@ public interface IGroupGoodsService {
 
 	public void save(GroupGoods goods) throws DataSavingException;
 	
-	public Optional<GroupGoods> single(String ggid) ;
+	public Optional<GroupGoods> single(String id) ;
 	
 	public List<GroupGoods> list(Range range) ;
+	
+	public Optional<GroupGoods> singleByGroupID(String groupID) ;
 	
 }

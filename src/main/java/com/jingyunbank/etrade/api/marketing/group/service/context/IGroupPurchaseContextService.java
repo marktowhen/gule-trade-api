@@ -1,10 +1,13 @@
 package com.jingyunbank.etrade.api.marketing.group.service.context;
 
+import java.util.List;
+
 import com.jingyunbank.core.Result;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.marketing.group.bo.Group;
 import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoods;
+import com.jingyunbank.etrade.api.marketing.group.bo.GroupUser;
 import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
@@ -27,12 +30,6 @@ public interface IGroupPurchaseContextService {
 	 * @throws DataRefreshingException 
 	 */
 	public void join(Users user, Group group, Orders orders) throws DataSavingException, DataRefreshingException;
-	/**
-	 * 1，满团，提醒用户支付尾款
-	 * 2，未满团，为用户退换订金，并提醒用户
-	 * @param group
-	 */
-	public void expire(Group group);
 	
 	/**
 	 * 是否满足开团条件
@@ -58,6 +55,48 @@ public interface IGroupPurchaseContextService {
 	 */
 	public void payFinish(Orders order) throws DataRefreshingException;
 	
+	/**
+	 * 退款 并提醒用户
+	 * @param groupUserList
+	 * 2016年4月25日 qxs
+	 * @throws DataRefreshingException 
+	 * @throws DataSavingException 
+	 */
+	public void refound(List<GroupUser> groupUserList) throws DataRefreshingException, DataSavingException;
+	
+	/**
+	 * 满团
+	 * @param group
+	 * 2016年4月26日 qxs
+	 * @throws DataRefreshingException 
+	 */
+	public void fullMission(Group group) throws DataRefreshingException;
+	
+	
+	/**
+	 * 解散
+	 * @param group
+	 * 2016年4月26日 qxs
+	 * @throws DataRefreshingException 
+	 * @throws DataSavingException 
+	 */
+	public void dismiss(Group group) throws DataRefreshingException, DataSavingException;
+	
+	/**
+	 * 支付超时
+	 * @param group
+	 * 2016年4月26日 qxs
+	 * @throws DataSavingException 
+	 * @throws DataRefreshingException 
+	 */
+	public void payTimeout(GroupUser groupUser) throws DataRefreshingException, DataSavingException;
+	/**
+	 * 开团
+	 * @param group
+	 * 2016年4月26日 qxs
+	 * @throws DataRefreshingException 
+	 */
+	public void startSuccess(Group group) throws DataRefreshingException;
 	
 	
 	

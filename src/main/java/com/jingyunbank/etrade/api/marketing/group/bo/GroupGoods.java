@@ -23,6 +23,13 @@ public class GroupGoods {
 	
 	private List<Group> groups = new ArrayList<Group>();
 	
+	private String GID;
+	public String getGID() {
+		return GID;
+	}
+	public void setGID(String gID) {
+		GID = gID;
+	}
 	public long getDuration() {
 		return duration;
 	}

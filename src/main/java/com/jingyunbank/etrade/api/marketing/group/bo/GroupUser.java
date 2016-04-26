@@ -28,7 +28,7 @@ public class GroupUser {
 	/**
 	 * 团购关闭 未创建成功
 	 */
-	public static final String STATUS_TIME_OUT = "TIME_OUT";
+	public static final String STATUS_CLOSED = "CLOSED";
 	
 	private String ID;
 	private String groupID;

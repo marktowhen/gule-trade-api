@@ -48,11 +48,38 @@ public interface IGroupService {
 	 * 2016年4月25日 qxs
 	 */
 	public List<Group> list(String status);
+	/**
+	 * 查询出 过去几分钟内到期的团购
+	 * @param minute 分钟数
+	 * @return
+	 * 2016年4月26日 qxs
+	 */
+	public List<Group> listOnDeadline(int minute);
 
 	/**
-	 * 形成尾款订单
-	 * @param group
-	 * 2016年4月25日 qxs
+	 * 查出刚刚召集成功的团
+	 * @return
+	 * 2016年4月26日 qxs
 	 */
-	public void addBalancePayment(Group group);
+	public List<Group> listOnSuccess();
+
+	/**
+	 * 查出开团失败的  即团长支付失败
+	 * @return
+	 * 2016年4月26日 qxs
+	 */
+	public List<Group> listStartFail();
+	/**
+	 * 召集中
+	 * @return
+	 * 2016年4月26日 qxs
+	 */
+	public List<Group> listConvening();
+
+	/**
+	 * 开团成功的
+	 * @return
+	 * 2016年4月26日 qxs
+	 */
+	public List<Group> listStartSuccess();
 }

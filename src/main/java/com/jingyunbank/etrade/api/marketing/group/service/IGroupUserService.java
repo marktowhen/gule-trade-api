@@ -34,17 +34,19 @@ public interface IGroupUserService {
 
 	/**
 	 * 未支付的用户
-	 * @param groupID
 	 * @return
 	 * 2016年4月25日 qxs
 	 */
-	public List<GroupUser> listUnPay(String groupID);
+	public List<GroupUser> listUnPay();
 
+	
 	/**
-	 * 退款 并提醒用户
-	 * @param groupUserList
-	 * 2016年4月25日 qxs
+	 * 通知
+	 * @param user
+	 * @param message
+	 * 2016年4月26日 qxs
 	 */
-	public void refound(List<GroupUser> groupUserList);
+	public void notice(GroupUser user, String message);
+
 
 }
