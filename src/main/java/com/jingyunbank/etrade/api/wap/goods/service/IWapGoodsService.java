@@ -29,7 +29,8 @@ public interface IWapGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	List<ShowGoods> listGoods(String mid, String tid, String order, String name) throws Exception;
+	List<ShowGoods> listGoods(String mid, String tid, String order, String name, String from, String size)
+			throws Exception;
 
 	/**
 	 * 获取商品查询的 sku 条件
@@ -105,5 +106,14 @@ public interface IWapGoodsService {
 	 * @throws Exception
 	 */
 	String singlePidByGid(String gid) throws Exception;
+
+	/**
+	 * 获取我收藏的商品
+	 * @param uid
+	 * @param type
+	 * @return
+	 * @throws Exception
+	 */
+	List<ShowGoods> listFavGoods(String uid, int type) throws Exception;
 
 }

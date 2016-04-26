@@ -23,6 +23,19 @@ public class GoodsOperation implements Serializable {
 	private List<GoodsAttrValue> attrValueList = new ArrayList<GoodsAttrValue>();
 	// sku 信息
 	private List<GoodsSku> skuList = new ArrayList<GoodsSku>();
+	
+	
+	private List<GoodsInfo> infoList = new ArrayList<GoodsInfo>();
+
+	
+	
+	public List<GoodsInfo> getInfoList() {
+		return infoList;
+	}
+
+	public void setInfoList(List<GoodsInfo> infoList) {
+		this.infoList = infoList;
+	}
 
 	public Goods getGoods() {
 		return goods;

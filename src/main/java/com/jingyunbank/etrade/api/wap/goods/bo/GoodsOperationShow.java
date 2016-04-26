@@ -35,6 +35,7 @@ public class GoodsOperationShow implements Serializable {
 	private String path;
 	private String content;
 	private boolean status;
+	private boolean isSale;
 	// -------------------
 	// 图片信息
 	private List<GoodsImg> imgList = new ArrayList<GoodsImg>();
@@ -43,7 +44,26 @@ public class GoodsOperationShow implements Serializable {
 	// sku 信息
 	private List<GoodsSku> skuList = new ArrayList<GoodsSku>();
 	
+	private List<GoodsInfo> infoList = new ArrayList<GoodsInfo>();
 	
+	
+	
+	public boolean isSale() {
+		return isSale;
+	}
+
+	public void setSale(boolean isSale) {
+		this.isSale = isSale;
+	}
+
+	public List<GoodsInfo> getInfoList() {
+		return infoList;
+	}
+
+	public void setInfoList(List<GoodsInfo> infoList) {
+		this.infoList = infoList;
+	}
+
 	public List<GoodsImg> getImgList() {
 		return imgList;
 	}

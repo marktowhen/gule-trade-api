@@ -26,6 +26,27 @@ public class BaseGoodsDeatil implements Serializable {
 	private String content;
 	private int volume;
 	private int comment;
+	private String about;
+	private boolean isSale;
+	
+	
+	
+	
+	public boolean isSale() {
+		return isSale;
+	}
+
+	public void setSale(boolean isSale) {
+		this.isSale = isSale;
+	}
+
+	public String getAbout() {
+		return about;
+	}
+
+	public void setAbout(String about) {
+		this.about = about;
+	}
 
 	public String getGID() {
 		return GID;
