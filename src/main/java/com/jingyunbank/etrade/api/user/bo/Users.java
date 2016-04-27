@@ -22,7 +22,7 @@ public class Users implements Serializable {
 	private String nickname;
 	private UserInfo uinfo;
 	private boolean locked;
-	
+	private String openId;
 	public String getID() {
 		return ID;
 	}
@@ -77,4 +77,11 @@ public class Users implements Serializable {
 	public void setLocked(boolean locked) {
 		this.locked = locked;
 	}
+	public String getOpenId() {
+		return openId;
+	}
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
+	
 }
