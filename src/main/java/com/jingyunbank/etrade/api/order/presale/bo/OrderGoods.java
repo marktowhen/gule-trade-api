@@ -17,6 +17,7 @@ public class OrderGoods implements Serializable{
 	private String OID;//订单id
 	private long orderno;
 	private String GID;//商品id
+	private String SKUID;
 	private String gname;
 	private BigDecimal pprice;//promotion price//促销价格（不包含邮费）
 	private BigDecimal price;//订单生成时的商品原价格（不包含邮费）
@@ -139,6 +140,12 @@ public class OrderGoods implements Serializable{
 	}
 	public void setPostage(BigDecimal postage) {
 		this.postage = postage;
+	}
+	public String getSKUID() {
+		return SKUID;
+	}
+	public void setSKUID(String sKUID) {
+		SKUID = sKUID;
 	}
 	
 }

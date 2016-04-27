@@ -21,6 +21,14 @@ public interface IPostageCalculateService {
 	 * @return
 	 * 2016年4月12日 qxs
 	 */
-	public BigDecimal calculateMuti(List<PostageCalculate> postageCalculateList, int city);
+	public BigDecimal calculateMuti(List<PostageCalculate> postageCalculateList);
+	
+	/**
+	 * 同一店铺下多种商品邮费计算
+	 * @param postageCalculateList
+	 * @return
+	 * 2016年4月27日 qxs
+	 */
+	public BigDecimal calculateOneMerchat(List<PostageCalculate> postageCalculateList);
 
 }

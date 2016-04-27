@@ -20,6 +20,7 @@ public class GoodsInCart implements Serializable{
 	private BigDecimal price;
 	private Date addtime;
 	private BigDecimal pprice;
+	private String SKUID;
 	
 	//attrs to show
 	private String imgpath;
@@ -121,5 +122,11 @@ public class GoodsInCart implements Serializable{
 	}
 	public void setUname(String uname) {
 		this.uname = uname;
+	}
+	public String getSKUID() {
+		return SKUID;
+	}
+	public void setSKUID(String sKUID) {
+		SKUID = sKUID;
 	}
 }
