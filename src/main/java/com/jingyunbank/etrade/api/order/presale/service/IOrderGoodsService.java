@@ -48,4 +48,6 @@ public interface IOrderGoodsService {
 	 * 2016年2月15日 qxs
 	 */
 	public void refreshGoodStatus(String oid, String gid,OrderStatusDesc commented) throws DataRefreshingException;
+	
+	public Optional<OrderGoods> singleOrderGoods(String OID, String GID);
 }

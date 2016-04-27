@@ -28,9 +28,16 @@ public class BaseShowGoods implements Serializable {
 	private Date addTime; //添加时间
 	private int volume; //总销量    
 	private int comment; //总评论
+	private boolean isSale; //是否促销
 	
 	
 	
+	public boolean isSale() {
+		return isSale;
+	}
+	public void setSale(boolean isSale) {
+		this.isSale = isSale;
+	}
 	public String getGID() {
 		return GID;
 	}
