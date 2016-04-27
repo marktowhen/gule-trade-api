@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoods;
+import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoodsShow;
 
 public interface IGroupGoodsService {
 
@@ -13,7 +14,7 @@ public interface IGroupGoodsService {
 	
 	public Optional<GroupGoods> single(String id) ;
 	
-	public List<GroupGoods> list(Range range) ;
+	public List<GroupGoodsShow> list(Range range) ;
 	
 	public Optional<GroupGoods> singleByGroupID(String groupID) ;
 	
