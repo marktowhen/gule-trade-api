@@ -41,7 +41,7 @@ public class PayPipeline implements Serializable{
 	public PayPipeline() {
 		super();
 	}
-	public PayPipeline(String name, String code, String bankcode) {
+	public PayPipeline(String code, String name, String bankcode) {
 		super();
 		this.name = name;
 		this.code = code;
