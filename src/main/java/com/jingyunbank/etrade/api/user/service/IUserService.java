@@ -40,4 +40,11 @@ public interface IUserService {
 	public void refresh(Users user) throws DataRefreshingException;
 	
 	/*public boolean updatePhone(Users user) throws DataRefreshingException;*/
+	
+	/**
+	 * 根据用户id  查询用户信息
+	 * @param userId
+	 * @return
+	 */
+	public Users selUserByUserId(String userId);
 }

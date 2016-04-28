@@ -14,7 +14,7 @@ public interface MyService {
 	 * @param dataMap   数据包
 	 * @return
 	 */
-	public String sendMessageToUser(String templateId,String userId,Map<String, String> dataMap);
+	public boolean sendMessageToUser(String templateId,String userId,Map<String, String> dataMap);
 
 
 	
