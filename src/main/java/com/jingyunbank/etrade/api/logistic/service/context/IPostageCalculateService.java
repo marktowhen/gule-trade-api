@@ -30,5 +30,13 @@ public interface IPostageCalculateService {
 	 * 2016年4月27日 qxs
 	 */
 	public BigDecimal calculateOneMerchat(List<PostageCalculate> postageCalculateList);
+	
+	/**
+	 * 根据postageID查出对应的邮费模板 放入calculatRule中
+	 * @param postageCalculateList
+	 * @return
+	 * 2016年4月28日 qxs
+	 */
+	public List<PostageCalculate> fitPostageRule(List<PostageCalculate> postageCalculateList);
 
 }
