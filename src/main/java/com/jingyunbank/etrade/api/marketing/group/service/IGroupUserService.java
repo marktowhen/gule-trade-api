@@ -48,5 +48,14 @@ public interface IGroupUserService {
 	 */
 	public void notice(GroupUser user, String message);
 
+	/**
+	 * 用户数量
+	 * @param groupID
+	 * @param status
+	 * @return
+	 * 2016年4月28日 qxs
+	 */
+	public Integer count(String groupID, String status);
+
 
 }

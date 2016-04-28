@@ -49,12 +49,12 @@ public interface IGroupService {
 	 */
 	public List<Group> list(String status);
 	/**
-	 * 查询出 过去几分钟内到期的团购
+	 * 查询出 到期的团购
 	 * @param minute 分钟数
 	 * @return
 	 * 2016年4月26日 qxs
 	 */
-	public List<Group> listOnDeadline(int minute);
+	public List<Group> listOnDeadline();
 
 	/**
 	 * 查出刚刚召集成功的团
@@ -70,11 +70,11 @@ public interface IGroupService {
 	 */
 	public List<Group> listStartFail();
 	/**
-	 * 召集中
+	 * 召集超时
 	 * @return
 	 * 2016年4月26日 qxs
 	 */
-	public List<Group> listConvening();
+	public List<Group> listConveneTimeOut();
 
 	/**
 	 * 开团成功的
