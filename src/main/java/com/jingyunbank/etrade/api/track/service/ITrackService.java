@@ -17,6 +17,7 @@ import com.jingyunbank.etrade.api.track.bo.RecommendGoods;
 
 /**
  * 推广延伸服务
+ * 
  * @author liug
  *
  */
@@ -27,46 +28,58 @@ public interface ITrackService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<FootprintGoods> listFootprintGoods(int from,int to,String uid) throws Exception;
+	public List<FootprintGoods> listFootprintGoods(int from, int to, String uid) throws Exception;
+
 	/**
 	 * 保存我的足迹
+	 * 
 	 * @param uid
 	 * @param gid
 	 * @return
 	 * @throws DataSavingException
 	 */
-	public boolean saveFootprint(String uid,String gid) throws DataSavingException;
+	public boolean saveFootprint(String uid, String gid) throws DataSavingException;
+
 	/**
 	 * 保存我的收藏
+	 * 
 	 * @param uid
 	 * @param gid
 	 * @return
 	 * @throws DataSavingException
 	 */
-	public boolean saveFavorites(String uid,String fid,String type) throws DataSavingException;
+	public String saveFavorites(String uid, String fid, String type) throws DataSavingException;
+
 	/**
 	 * 查询我的收藏店铺商品信息
+	 * 
 	 * @return
 	 * @throws Exception
 	 */
-	public List<FavoritesGoods> listMerchantFavorites(String uid,String type,int from,int to) throws Exception;
+	public List<FavoritesGoods> listMerchantFavorites(String uid, String type, int from, int to) throws Exception;
+
 	/**
 	 * 查询我的收藏是否已经存在
+	 * 
 	 * @param uid
 	 * @param gid
 	 * @return
 	 * @throws Exception
 	 */
-	public boolean isFavoritesExists(String uid,String fid,String type)throws Exception;
+	public boolean isFavoritesExists(String uid, String fid, String type) throws Exception;
+
 	/**
 	 * 根据ID 删除我的收藏
+	 * 
 	 * @param id
 	 * @return
 	 * @throws DataRemovingException
 	 */
 	public boolean removeFavoritesById(List<String> id) throws DataRemovingException;
+
 	/**
 	 * 获取我的收藏大小
+	 * 
 	 * @param uid
 	 * @param type
 	 * @param from
@@ -74,85 +87,108 @@ public interface ITrackService {
 	 * @return
 	 * @throws Exception
 	 */
-	public int countMerchantFavorites(String uid,String type) throws Exception;
+	public int countMerchantFavorites(String uid, String type) throws Exception;
+
 	/**
 	 * 查询广告列表
+	 * 
 	 * @param code
 	 * @return
 	 * @throws IllegalAccessException
 	 * @throws InvocationTargetException
 	 */
 	public List<AdDetail> listAdDetails(String code) throws IllegalAccessException, InvocationTargetException;
+
 	/**
 	 * 根据ID 查询广告模块
+	 * 
 	 * @param id
 	 * @return
 	 */
 	public Optional<AdModule> getAdmoduleInfo(String id);
+
 	/**
 	 * 根据ID 查询广告
+	 * 
 	 * @param id
 	 * @return
 	 */
 	public Optional<AdDetail> getAddetailInfo(String id);
+
 	/**
 	 * 保存广告模块
+	 * 
 	 * @param adModule
 	 * @return
 	 * @throws DataSavingException
 	 */
 	public boolean saveAdmodule(AdModule adModule) throws DataSavingException;
+
 	/**
 	 * 保存广告
+	 * 
 	 * @param adDetail
 	 * @return
 	 * @throws DataSavingException
 	 */
 	public boolean saveAddetail(AdDetail adDetail) throws DataSavingException;
+
 	/**
 	 * 更新广告模块
+	 * 
 	 * @param adModule
 	 * @return
 	 * @throws DataRefreshingException
 	 */
 	public boolean updateAdmodule(AdModule adModule) throws DataRefreshingException;
+
 	/**
 	 * 更新广告
+	 * 
 	 * @param adDetail
 	 * @return
 	 * @throws DataRefreshingException
 	 */
 	public boolean updateAddetail(AdDetail adDetail) throws DataRefreshingException;
+
 	/**
 	 * 查询广告模块列表
+	 * 
 	 * @param adModule
 	 * @param range
 	 * @return
 	 * @throws Exception
 	 */
 	public List<AdModule> listModulesByCondition(AdModule adModule, Range range) throws Exception;
+
 	/**
 	 * 查询广告列表
+	 * 
 	 * @param adDetail
 	 * @param range
 	 * @return
 	 * @throws Exception
 	 */
 	public List<AdDetail> listAddetailsByCondition(AdDetail adDetail, Range range) throws Exception;
+
 	/**
 	 * 删除广告
+	 * 
 	 * @param id
 	 * @return
 	 * @throws DataRemovingException
 	 */
 	public boolean removeAddetail(List<String> id) throws DataRemovingException;
+
 	/**
 	 * 删除广告模块
+	 * 
 	 * @param id
 	 * @return
 	 * @throws DataRemovingException
 	 */
 	public boolean removeAdmodule(List<String> id) throws DataRemovingException;
+
 	/**
 	 * 
 	 * @param id
@@ -160,22 +196,36 @@ public interface ITrackService {
 	 * @throws DataRemovingException
 	 */
 	public int queryAddetailsCount(List<String> id) throws Exception;
+
 	/**
 	 * 查询推荐商品
+	 * 
 	 * @param uid
 	 * @param from
 	 * @param to
 	 * @return
 	 * @throws Exception
 	 */
-	public List<RecommendGoods> listRecommendGoods(String uid,int from,int to) throws Exception ;
+	public List<RecommendGoods> listRecommendGoods(String uid, int from, int to) throws Exception;
+
 	/**
 	 * 查询其他用户购买的商品
+	 * 
 	 * @param uid
 	 * @param from
 	 * @param to
 	 * @return
 	 * @throws Exception
 	 */
-	public List<OtherGoods> listOtherGoods(String gid,String uid,int from,int to) throws Exception;
+	public List<OtherGoods> listOtherGoods(String gid, String uid, int from, int to) throws Exception;
+
+	/**
+	 * 判断是否收藏过此商品
+	 * @param uid
+	 * @param gid
+	 * @param string
+	 * @return
+	 * @throws Exception
+	 */
+	public String isFav(String uid, String gid, String string) throws Exception;
 }
