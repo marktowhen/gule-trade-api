@@ -47,13 +47,6 @@ public interface IGroupPurchaseContextService {
 	 */
 	public Result<String> joinMatch(Group group);
 	
-	/**
-	 * 支付成功/失败
-	 * @param order
-	 * 2016年4月22日 qxs
-	 * @throws DataRefreshingException 
-	 */
-	public void payFinish(Orders order) throws DataRefreshingException;
 	
 	/**
 	 * 退款 并提醒用户
@@ -97,6 +90,21 @@ public interface IGroupPurchaseContextService {
 	 * @throws DataRefreshingException 
 	 */
 	public void startSuccess(Group group) throws DataRefreshingException;
+	
+	/**
+	 * 支付失败
+	 * @param order
+	 * @throws DataRefreshingException
+	 * 2016年5月3日 qxs
+	 */
+	public void payFail(Orders order) throws DataRefreshingException;
+	/**
+	 * 支付成功
+	 * @param order
+	 * @throws DataRefreshingException
+	 * 2016年5月3日 qxs
+	 */
+	public void paySuccess(Orders order) throws DataRefreshingException;
 	
 	
 	
