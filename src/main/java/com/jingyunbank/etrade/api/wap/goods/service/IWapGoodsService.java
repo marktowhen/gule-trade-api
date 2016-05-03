@@ -49,7 +49,7 @@ public interface IWapGoodsService {
 	 * @return
 	 * @throws Exception
 	 */
-	Optional<GoodsSku> singleGoodsSku(String gid, String condition) throws Exception;
+	GoodsSku singleGoodsSku(String gid, String condition) throws Exception;
 
 	/**
 	 * 根据商品id获取商品的概要信息

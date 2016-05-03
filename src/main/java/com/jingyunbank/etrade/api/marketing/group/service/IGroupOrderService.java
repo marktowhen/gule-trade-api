@@ -8,6 +8,13 @@ import com.jingyunbank.etrade.api.marketing.group.bo.GroupOrder;
 
 public interface IGroupOrderService {
 	
+	/**
+	 * 此时orderno和oid未知
+	 * @param groupOrder
+	 * @return
+	 * @throws DataSavingException
+	 * 2016年4月29日 qxs
+	 */
 	public boolean save(GroupOrder groupOrder) throws DataSavingException;
 	
 	public Optional<GroupOrder> single(String ID);
@@ -24,5 +31,4 @@ public interface IGroupOrderService {
 	 */
 	public Optional<GroupOrder> single(String groupUserID, String orderType);
 	
-
 }

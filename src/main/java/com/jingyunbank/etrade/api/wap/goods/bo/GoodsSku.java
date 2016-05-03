@@ -26,7 +26,20 @@ public class GoodsSku implements Serializable {
 	private BigDecimal price;
 	private BigDecimal salePrice;
 	private boolean status;
+	private boolean sale;
+	
+	
 
+
+
+
+	public boolean isSale() {
+		return sale;
+	}
+
+	public void setSale(boolean sale) {
+		this.sale = sale;
+	}
 
 	public String getID() {
 		return ID;
