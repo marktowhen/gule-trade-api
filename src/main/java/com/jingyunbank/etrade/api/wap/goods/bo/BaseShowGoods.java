@@ -31,7 +31,17 @@ public class BaseShowGoods implements Serializable {
 	private boolean isSale; //是否促销
 	
 	
+	 private String favId; //收藏id
+	 
+	 
 	
+	
+	public String getFavId() {
+		return favId;
+	}
+	public void setFavId(String favId) {
+		this.favId = favId;
+	}
 	public boolean isSale() {
 		return isSale;
 	}
