@@ -15,10 +15,12 @@ public interface IGroupGoodsService {
 	
 	public Optional<GroupGoods> single(String id) ;
 	
-	public List<GroupGoodsShow> list(String MID, Range range) ;
+	public List<GroupGoodsShow> list(String MID, String goodsName, Range range) ;
 	
 	public Optional<GroupGoods> singleByGroupID(String groupID) ;
 
 	public void refresh(GroupGoods goodsbo) throws DataRefreshingException;
+
+	public int count(String mid, String goodsName);
 	
 }
