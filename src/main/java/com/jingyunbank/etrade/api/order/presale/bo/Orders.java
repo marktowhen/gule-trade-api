@@ -51,6 +51,7 @@ public class Orders  implements Serializable{
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
 	private List<OrderTrace> traces = new ArrayList<OrderTrace>();
 	private OrderPayment payment = new OrderPayment();
+	private OrderLogistic logistic = new OrderLogistic();
 	
 	public int getCity() {
 		return city;
@@ -308,6 +309,14 @@ public class Orders  implements Serializable{
 
 	public void setExtradata(String extradata) {
 		this.extradata = extradata;
+	}
+
+	public OrderLogistic getLogistic() {
+		return logistic;
+	}
+
+	public void setLogistic(OrderLogistic logistic) {
+		this.logistic = logistic;
 	}
 
 	@Override
