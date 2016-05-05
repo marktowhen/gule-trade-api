@@ -19,7 +19,7 @@ public class AuctionGoods implements Serializable{
 	
 	public static final String STATUS_NEW = "NEW";
 	public static final String STATUS_AUCTIONING = "AUCTIONING";
-	public static final String STATUS_FINISH = "FINISH";
+	public static final String STATUS_OVER = "OVER";
 	
 	
 	private String ID;
