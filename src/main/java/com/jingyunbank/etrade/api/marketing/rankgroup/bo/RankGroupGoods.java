@@ -19,6 +19,7 @@ public class RankGroupGoods {
 	private BigDecimal deposit;//订金，（多退少补）
 	private boolean show;//是否上架
 	private Date addtime;
+	private String GID;
 	
 	private List<RankGroup> groups = new ArrayList<RankGroup>();
 	
@@ -106,6 +107,6 @@ public class RankGroupGoods {
 		GID = gID;
 	}
 
-	private String GID;
+	
 
 }
