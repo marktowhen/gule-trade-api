@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import com.jingyunbank.core.Range;
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoods;
+import com.jingyunbank.etrade.api.marketing.group.bo.GroupGoodsShow;
 import com.jingyunbank.etrade.api.marketing.rankgroup.bo.RankGroupGoods;
 import com.jingyunbank.etrade.api.marketing.rankgroup.bo.RankGroupGoodsShow;
 
@@ -21,10 +24,11 @@ public interface IRankGroupGoodsService {
 	/**
 	 * 查询阶梯团购上架商品列表
 	 * @param MID
+	 * @param goodsName
 	 * @param range
 	 * @return
 	 */
-	public List<RankGroupGoodsShow> list(String MID, Range range) ;
+	public List<RankGroupGoodsShow> list(String MID, String goodsName, Range range) ;
 	
 	/**
 	 * 查看上架商品详情
@@ -40,4 +44,12 @@ public interface IRankGroupGoodsService {
 	 */
 	public Optional<RankGroupGoods> singleByGid(String gid);
 	
+	/**
+	 * 修改商品信息
+	 * @param goodsbo
+	 * @throws DataRefreshingException
+	 */
+	public void refresh(RankGroupGoods goodsbo) throws DataRefreshingException;
+	
+	public int count(String mid, String goodsName);
 }
