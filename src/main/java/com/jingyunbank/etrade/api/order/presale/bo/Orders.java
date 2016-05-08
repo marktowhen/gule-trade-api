@@ -47,6 +47,7 @@ public class Orders  implements Serializable{
 	
 	public static final String BASE_ORDER_TYPE = "BASE";
 	public static final String GROUP_ORDER_TYPE = "GROUP";
+	public static final String FLASH_SALE_TYPE = "FLASHSALE";
 	
 	private List<OrderGoods> goods = new ArrayList<OrderGoods>();
 	private List<OrderTrace> traces = new ArrayList<OrderTrace>();

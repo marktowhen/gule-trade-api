@@ -15,7 +15,11 @@ public interface IFlashSaleService {
 	
 	public List<FlashSaleShow> getFlashSaleMany(String mid,Range range);
 	
+	public List<FlashSaleShow> getFlashSaleByCondition(Range range);
+	
 	public Optional<FlashSale> single(String id);
 	
 	public boolean refresh(FlashSale flashSale) throws DataRefreshingException;
+	
+	public boolean refreshStock(FlashSale flashSale) throws DataRefreshingException;
 }
