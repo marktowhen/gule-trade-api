@@ -1,6 +1,7 @@
 package com.jingyunbank.etrade.api.marketing.flashsale.bo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.jingyunbank.etrade.api.user.bo.Users;
 
@@ -10,10 +11,8 @@ public class FlashSaleUser implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -4213207910987325099L;
-
-	private static final String PAY_SUCCESS = "PAY_SUCCESS";
 	
-	private static final String PAY_FAIL="PAY_FAIL";
+	public static final String TIMEOUT = "TIMEOUT";//支付超时的状态
 	
 	private String id;
 	
@@ -29,7 +28,21 @@ public class FlashSaleUser implements Serializable{
 	
 	private FlashSale flashSale;
 	
+	private Date orderTime;
 	
+	/**
+	 * @return the orderTime
+	 */
+	public Date getOrderTime() {
+		return orderTime;
+	}
+
+	/**
+	 * @param orderTime the orderTime to set
+	 */
+	public void setOrderTime(Date orderTime) {
+		this.orderTime = orderTime;
+	}
 
 	/**
 	 * @return the user

@@ -13,7 +13,7 @@ public class FlashSaleOrder implements Serializable{
 	
 	private String flashId;
 	
-	private String uid;//关联的那个FlashSaleUser的id
+	private String flashUserId;//关联的那个FlashSaleUser的id
 	
 	private String oid;
 	
@@ -79,19 +79,6 @@ public class FlashSaleOrder implements Serializable{
 		this.flashId = flashId;
 	}
 
-	/**
-	 * @return the uid
-	 */
-	public String getUid() {
-		return uid;
-	}
-
-	/**
-	 * @param uid the uid to set
-	 */
-	public void setUid(String uid) {
-		this.uid = uid;
-	}
 
 	/**
 	 * @return the oid
@@ -105,6 +92,20 @@ public class FlashSaleOrder implements Serializable{
 	 */
 	public void setOid(String oid) {
 		this.oid = oid;
+	}
+
+	/**
+	 * @return the flashUserId
+	 */
+	public String getFlashUserId() {
+		return flashUserId;
+	}
+
+	/**
+	 * @param flashUserId the flashUserId to set
+	 */
+	public void setFlashUserId(String flashUserId) {
+		this.flashUserId = flashUserId;
 	}
 
 	

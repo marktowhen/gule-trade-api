@@ -1,5 +1,6 @@
 package com.jingyunbank.etrade.api.marketing.flashsale.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
@@ -16,4 +17,6 @@ public interface IFlashSaleUserService {
 	
 	public boolean refreshStatus(String ID, String currentStatus,
 			String flowStatusFlag) throws DataRefreshingException;
+	
+	public List<FlashSaleUser> listByStatus();
 }

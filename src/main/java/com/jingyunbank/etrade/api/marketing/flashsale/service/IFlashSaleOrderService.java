@@ -18,4 +18,10 @@ public interface IFlashSaleOrderService {
 	 * @return
 	 */
 	public Optional<FlashSaleOrder> single(String oid);
+	/**
+	 * 通过id查某对象信息
+	 * @param id
+	 * @return
+	 */
+	public Optional<FlashSaleOrder> singleByUid(String flashUserId);
 }
