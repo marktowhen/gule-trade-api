@@ -6,6 +6,10 @@ public class RankGroupOrder {
 	 * 订金
 	 */
 	public static final String TYPE_DEPOSIT = "DEPOSIT";
+	/**
+	 * 尾款
+	 */
+	public static final String TYPE_FINAL_PAYMENT = "TYPE_FINAL_PAYMENT";
 	private String ID;
 	public String getID() {
 		return ID;

@@ -18,6 +18,14 @@ public class RankGroupUser {
 	 */
 	public static final String STATUS_PAID = "PAID";
 	/**
+	 * 订金支付成功
+	 */
+	public static final String STATUS_PAID_DEPOSIT = "DEPOSIT";
+	/**
+	 * 尾款支付成功
+	 */
+	public static final String STATUS_PAID_FINAL_PAYMENT = "FINALPAYMENT";
+	/**
 	 * 支付失败
 	 */
 	public static final String STATUS_PAYFAIL = "PAYFAIL";

@@ -7,7 +7,31 @@ import java.util.List;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
 public class RankGroup {
+	public static final String FLOW_TYPE = "GROUP_FLOW";
+	/**
+	 * 新建团购 团长未支付定金
+	 */
+	public static final String STATUS_NEW = "NEW";
+	/**
+	 * 召集中
+	 */
+	public static final String STATUS_CONVENING = "CONVENING";
 	
+	/**
+	 * 支付完成
+	 */
+	public static final String STATUS_PAID = "PAID";
+	
+	/**
+	 * 已退款
+	 */
+	public static final String STATUS_REFUNED = "REFUNED";
+	
+	/**
+	 * 参团失败 如定金支付超时等
+	 */
+	
+	public static final String STATUS_CLOSED = "CLOSED";
 	private String ID;
 	private String leaderUID;//团长id
 	private Date start;

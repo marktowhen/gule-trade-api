@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
 import com.jingyunbank.etrade.api.exception.DataSavingException;
+import com.jingyunbank.etrade.api.marketing.group.bo.GroupUser;
 import com.jingyunbank.etrade.api.marketing.rankgroup.bo.RankGroupUser;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
@@ -37,5 +38,32 @@ public interface IRankGroupUserService {
 	
 	public boolean refreshStatus(String ID, String status) throws DataRefreshingException;
 	
-
+    /**
+     * 更新参团人状态
+     * @param ID
+     * @param currentStatus
+     * @param flowStatusFlag
+     * @return
+     * @throws DataRefreshingException
+     */
+	public boolean refreshStatus(String ID, String currentStatus, String flowStatusFlag) throws DataRefreshingException;
+	/**
+	 * 发送用户通知
+	 * @param user
+	 * @param message
+	 */
+	public void notice(RankGroupUser user, String message);
+	/**
+	 * 查询未支付的参团人
+	 * @return
+	 */
+	public List<RankGroupUser> listUnPay();
+	
+	/**
+	 * 根据团购id和参团人支付状态 查询未支付订金或未支付尾款人
+	 * @param gid
+	 * @param status
+	 * @return
+	 */
+	public List<RankGroupUser> listUnPay(String gid,String status);
 }

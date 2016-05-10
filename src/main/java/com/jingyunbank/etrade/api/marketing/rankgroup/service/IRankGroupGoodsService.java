@@ -52,4 +52,6 @@ public interface IRankGroupGoodsService {
 	public void refresh(RankGroupGoods goodsbo) throws DataRefreshingException;
 	
 	public int count(String mid, String goodsName);
+	
+	public Optional<RankGroupGoods> singleByGroupID(String groupID) ;
 }
