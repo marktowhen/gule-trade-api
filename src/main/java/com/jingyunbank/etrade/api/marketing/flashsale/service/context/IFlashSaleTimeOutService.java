@@ -5,7 +5,7 @@ import com.jingyunbank.etrade.api.exception.DataSavingException;
 
 public interface IFlashSaleTimeOutService{
 	/**
-	 * 支付超时
+	 * 支付超时的处理
 	 */
-	public void payTimeout()throws DataRefreshingException, DataSavingException;
+	public void payTimeout();
 }

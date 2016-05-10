@@ -38,4 +38,12 @@ public interface IFlashSalePurchaseContextService {
 	 * @throws DataRefreshingException
 	 */
 	public void payFail(Orders order)throws DataRefreshingException;
+	
+	/**
+	 * 支付超时
+	 * @param flashSaleUser
+	 * @throws DataSavingException
+	 * @throws DataRefreshingException
+	 */
+	public void payTimeOut(FlashSaleUser flashSaleUser)throws DataSavingException, DataRefreshingException;
 }
