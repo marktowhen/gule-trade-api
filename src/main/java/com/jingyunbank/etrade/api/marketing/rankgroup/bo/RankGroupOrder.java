@@ -2,7 +2,10 @@ package com.jingyunbank.etrade.api.marketing.rankgroup.bo;
 
 public class RankGroupOrder {
 
-	
+	/**
+	 * 订金
+	 */
+	public static final String TYPE_DEPOSIT = "DEPOSIT";
 	private String ID;
 	public String getID() {
 		return ID;
