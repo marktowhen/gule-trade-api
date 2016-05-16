@@ -72,8 +72,11 @@ public interface IOrderContextService {
 	 * 
 	 * @param orderno 订单号
 	 * @param reason 取消原因
+	 * 
 	 */
-	public boolean cancel(List<String> oids, String reason) throws DataRefreshingException, DataSavingException;
+	public boolean cancel(List<String> oids,String reason) throws DataRefreshingException, DataSavingException;
+	
+	public boolean cancels(List<String> oids) throws DataRefreshingException, DataSavingException;
 	/**
 	 * 移除已取消的订单(逻辑删除)<br>
 	 * 将已经取消的订单更新为删除状态，不在显示在用户的订单列表中
