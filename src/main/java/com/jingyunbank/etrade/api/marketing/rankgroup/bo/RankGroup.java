@@ -40,6 +40,9 @@ public class RankGroup {
 	private RankGroupGoods rankGoods;
 	private Users leader;
 	private List<RankGroupUser> buyers = new ArrayList<RankGroupUser>();
+	
+	
+	
 	public String getID() {
 		return ID;
 	}

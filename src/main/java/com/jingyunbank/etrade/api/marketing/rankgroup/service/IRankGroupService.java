@@ -55,6 +55,20 @@ public interface IRankGroupService {
 	 * @return
 	 */
 	public Optional<RankGroup> single(String groupid) ;
+	
+	/**
+	 * 根据团购商品ID  rankgroupgoods 表 ID 查询团购信息
+	 * @param groupid
+	 * @return
+	 */
+	public Optional<RankGroup> singleByGroupGoodID(String groupGoodID) ;
+	
+	/**
+	 * 参团页详情
+	 * @param groupid
+	 * @return
+	 */
+	public Optional<RankGroup> joinDetail(String groupGoodID) ;
 
 	/**
 	 * 验证参团条件
@@ -129,6 +143,8 @@ public interface IRankGroupService {
 	  * @throws DataSavingException
 	  */
 	public void refound(List<RankGroupUser> groupUserList) throws DataRefreshingException, DataSavingException;
+	
+	
 	
 	
 }
