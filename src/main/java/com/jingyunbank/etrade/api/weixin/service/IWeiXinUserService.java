@@ -9,7 +9,7 @@ import com.jingyunbank.etrade.api.weixin.bo.SNSUserInfoBo;
 
 public interface IWeiXinUserService {
 	
-	public void addUser(SNSUserInfoBo userInfo) throws DataSavingException, DataRefreshingException;
+	public boolean addUser(SNSUserInfoBo userInfo) throws DataSavingException, DataRefreshingException;
 	
 	public Optional<SNSUserInfoBo> getUsers(String openId);
 }

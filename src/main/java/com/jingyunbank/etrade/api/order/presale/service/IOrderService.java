@@ -37,6 +37,7 @@ public interface IOrderService {
 				String uid, 
 				String mid, 
 				String statuscode, 
+				int anystatus,
 				Range range);
 	/**
 	 * 查询按时间降序排列的订单中的 某几条状态，日期，关键字符合自定参数的数据。
