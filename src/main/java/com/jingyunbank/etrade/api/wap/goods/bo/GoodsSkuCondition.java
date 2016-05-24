@@ -21,8 +21,22 @@ public class GoodsSkuCondition implements Serializable {
 	private BigDecimal salePrice; // 折扣价
     private boolean isSale;
 	private List<GoodsAttr> attrList = new ArrayList<GoodsAttr>();
-
+	private int grade;//1:推荐2:新品3:热销
 	
+	/**
+	 * @return the grade
+	 */
+	public int getGrade() {
+		return grade;
+	}
+
+	/**
+	 * @param grade the grade to set
+	 */
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
 	public boolean isSale() {
 		return isSale;
 	}

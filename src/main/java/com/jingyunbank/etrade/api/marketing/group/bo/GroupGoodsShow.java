@@ -9,15 +9,8 @@ public class GroupGoodsShow extends GroupGoods{
 
 	private Goods goods;
 	private GoodsSku sku;
-	private BigDecimal showPrice;
 	
 	
-	public BigDecimal getShowPrice() {
-		return showPrice;
-	}
-	public void setShowPrice(BigDecimal showPrice) {
-		this.showPrice = showPrice;
-	}
 	public Goods getGoods() {
 		return goods;
 	}
