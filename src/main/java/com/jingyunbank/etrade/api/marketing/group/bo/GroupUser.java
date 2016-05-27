@@ -36,10 +36,36 @@ public class GroupUser {
 	private Date jointime;
 	private BigDecimal paid;
 	private String status;
-	
+	private String headImgUrl;
+	private String nickname;
 	private Users user;
 	private Group group;
 	
+	
+	/**
+	 * @return the headImgUrl
+	 */
+	public String getHeadImgUrl() {
+		return headImgUrl;
+	}
+	/**
+	 * @param headImgUrl the headImgUrl to set
+	 */
+	public void setHeadImgUrl(String headImgUrl) {
+		this.headImgUrl = headImgUrl;
+	}
+	/**
+	 * @return the nickname
+	 */
+	public String getNickname() {
+		return nickname;
+	}
+	/**
+	 * @param nickname the nickname to set
+	 */
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
 	public String getID() {
 		return ID;
 	}
