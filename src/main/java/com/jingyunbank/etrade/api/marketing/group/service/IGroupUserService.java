@@ -56,6 +56,13 @@ public interface IGroupUserService {
 	 * 2016年4月28日 qxs
 	 */
 	public Integer count(String groupID, String status);
-
+	/**
+	 * 只有他的状态是paid状态时，他才会拥有一个团！
+	 * 通过uid查出对应的groupid
+	 * @param uid
+	 * @param status
+	 * @return
+	 */
+	public List<GroupUser> getGroup(String uid);
 
 }

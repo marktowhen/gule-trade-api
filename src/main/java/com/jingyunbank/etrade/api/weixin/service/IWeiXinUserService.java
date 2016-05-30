@@ -12,4 +12,6 @@ public interface IWeiXinUserService {
 	public boolean addUser(SNSUserInfoBo userInfo) throws DataSavingException, DataRefreshingException;
 	
 	public Optional<SNSUserInfoBo> getUsers(String openId);
+	
+	public Optional<SNSUserInfoBo> singles(String id);
 }

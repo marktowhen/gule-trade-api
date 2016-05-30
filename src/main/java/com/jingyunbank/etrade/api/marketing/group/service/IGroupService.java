@@ -82,4 +82,11 @@ public interface IGroupService {
 	 * 2016年4月26日 qxs
 	 */
 	public List<Group> listStartSuccess();
+	/**
+	 * 查出对应团的信息和团商品的信息
+	 * @param id
+	 * @param status
+	 * @return
+	 */
+	public Optional<Group> getGroupGoods(String id,String status);
 }
