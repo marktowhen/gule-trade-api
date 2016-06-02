@@ -1,6 +1,8 @@
 package com.jingyunbank.etrade.api.marketing.group.bo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class GroupOrder implements Serializable {
 
@@ -19,6 +21,35 @@ public class GroupOrder implements Serializable {
 	private String OID;
 	private long orderno;
 	private String type;//指明是押金、尾款等
+	
+	private Date addtime;
+	private BigDecimal postage;
+	
+	
+	/**
+	 * @return the postage
+	 */
+	public BigDecimal getPostage() {
+		return postage;
+	}
+	/**
+	 * @param postage the postage to set
+	 */
+	public void setPostage(BigDecimal postage) {
+		this.postage = postage;
+	}
+	/**
+	 * @return the addtime
+	 */
+	public Date getAddtime() {
+		return addtime;
+	}
+	/**
+	 * @param addtime the addtime to set
+	 */
+	public void setAddtime(Date addtime) {
+		this.addtime = addtime;
+	}
 	public String getID() {
 		return ID;
 	}

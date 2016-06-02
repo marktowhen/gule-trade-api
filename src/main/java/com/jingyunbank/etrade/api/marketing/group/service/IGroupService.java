@@ -88,5 +88,5 @@ public interface IGroupService {
 	 * @param status
 	 * @return
 	 */
-	public Optional<Group> getGroupGoods(String id,String status);
+	public Optional<Group> getGroupGoods(String id);
 }

@@ -40,9 +40,48 @@ public class Group {
 	private String groupGoodsID;
 	private String status;//该团的状态
 	private GroupGoods goods;
+	private String path;
+	private String propertyValue;
+	private String gname;
 	private Users leader;
 	private List<GroupUser> buyers = new ArrayList<GroupUser>();
 	
+	/**
+	 * @return the gname
+	 */
+	public String getGname() {
+		return gname;
+	}
+	/**
+	 * @param gname the gname to set
+	 */
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+	/**
+	 * @return the propertyValue
+	 */
+	public String getPropertyValue() {
+		return propertyValue;
+	}
+	/**
+	 * @param propertyValue the propertyValue to set
+	 */
+	public void setPropertyValue(String propertyValue) {
+		this.propertyValue = propertyValue;
+	}
+	/**
+	 * @return the path
+	 */
+	public String getPath() {
+		return path;
+	}
+	/**
+	 * @param path the path to set
+	 */
+	public void setPath(String path) {
+		this.path = path;
+	}
 	public String getLeaderUID() {
 		return leaderUID;
 	}

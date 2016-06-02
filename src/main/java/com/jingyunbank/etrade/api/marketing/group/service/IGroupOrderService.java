@@ -19,9 +19,11 @@ public interface IGroupOrderService {
 	
 	public Optional<GroupOrder> single(String ID);
 	
-	public List<GroupOrder> list(String groupUserID);
+	/*public List<GroupOrder> list(String groupUserID);*/
 
 	public Optional<GroupOrder> singleByOID( String OID);
+	
+	public Optional<GroupOrder> singleByGroupUserId(String GroupUserId);
 
 	/**
 	 * 查询定金或尾款订单
