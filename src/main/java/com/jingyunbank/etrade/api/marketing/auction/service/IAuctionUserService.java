@@ -26,4 +26,12 @@ public interface IAuctionUserService {
 	 * @return
 	 */
 	public Optional<AuctionUser> selByUserId(String auctionid,String userid);
+	
+	/**
+	 * 我的竞拍
+	 * @param userid
+	 * @param status
+	 * @return
+	 */
+	public List<AuctionUser> selMyAuction(String userid,String status);
 }
