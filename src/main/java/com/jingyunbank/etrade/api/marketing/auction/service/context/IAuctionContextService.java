@@ -2,11 +2,23 @@ package com.jingyunbank.etrade.api.marketing.auction.service.context;
 
 import java.math.BigDecimal;
 
+import com.jingyunbank.etrade.api.exception.DataRefreshingException;
+import com.jingyunbank.etrade.api.exception.DataSavingException;
 import com.jingyunbank.etrade.api.marketing.auction.bo.AuctionGoods;
+import com.jingyunbank.etrade.api.marketing.auction.bo.AuctionPriceLog;
 import com.jingyunbank.etrade.api.marketing.auction.bo.AuctionUser;
+import com.jingyunbank.etrade.api.order.presale.bo.Orders;
 import com.jingyunbank.etrade.api.user.bo.Users;
 
 public interface IAuctionContextService {
+	
+	/**
+	 * 报名
+	 * @param auctionUser
+	 * @param orders
+	 * @return
+	 */
+	public boolean signUp(AuctionUser auctionUser,Orders orders) throws DataSavingException, DataRefreshingException;
 
 	/**
 	 * 交保证金获取 竞标资格
@@ -25,6 +37,13 @@ public interface IAuctionContextService {
 	 * 2016年5月5日 qxs
 	 */
 	public boolean submitTender(AuctionUser auctionUser, BigDecimal price );
+	
+	/**
+	 * 出价
+	 * @param priceLog
+	 * @return
+	 */
+	public boolean bidding(AuctionPriceLog priceLog);
 	
 	/**
 	 * 未中标归还保证金

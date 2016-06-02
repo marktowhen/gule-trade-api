@@ -9,6 +9,9 @@ public class AuctionOrder implements Serializable {
 	 */
 	private static final long serialVersionUID = 6728925264211583962L;
 	
+	public static final String TYPE_DEPOSIT="DEPOSIT"; //定金
+	public static final String TYPE_FINAL="FINAL"; //尾款
+	
 	private String ID;
 	private String auctionGoodsID;
 	private String auctionUserID;

@@ -18,4 +18,12 @@ public interface IAuctionUserService {
 	public int count(String auctionID);
 	
 	public Optional<AuctionUser> single(String auctionUserID);
+	
+	/**
+	 * 根据用户id 竞拍id 确定唯一参拍人
+	 * @param auctinoid
+	 * @param userid
+	 * @return
+	 */
+	public Optional<AuctionUser> selByUserId(String auctionid,String userid);
 }
