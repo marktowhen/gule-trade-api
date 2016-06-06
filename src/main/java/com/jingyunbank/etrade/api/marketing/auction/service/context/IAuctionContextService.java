@@ -19,7 +19,8 @@ public interface IAuctionContextService {
 	 * @return
 	 */
 	public boolean signUp(AuctionUser auctionUser,Orders orders) throws DataSavingException, DataRefreshingException;
-
+    
+	
 	/**
 	 * 交保证金获取 竞标资格
 	 * @param user
@@ -28,6 +29,14 @@ public interface IAuctionContextService {
 	 * 2016年5月4日 qxs
 	 */
 	public boolean addDeposit(Users user, AuctionGoods auctionGoods) ;
+	
+	
+	/**
+	 * 立即支付
+	 * @param orders
+	 * @return
+	 */
+	public boolean payFinal(AuctionUser auctionUser,Orders orders) throws DataSavingException, DataRefreshingException;
 	
 	/**
 	 * 投标
