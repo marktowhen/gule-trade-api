@@ -34,4 +34,12 @@ public interface IAuctionUserService {
 	 * @return
 	 */
 	public List<AuctionUser> selMyAuction(String userid,String status);
+	
+	/**
+	 * 是否报名
+	 * @param auctionid
+	 * @param uid
+	 * @return
+	 */
+	public int ifSign(String auctionid,String uid);
 }
