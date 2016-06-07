@@ -28,10 +28,27 @@ public class BaseGoodsDeatil implements Serializable {
 	private int comment;
 	private String about;
 	private boolean isSale;
+	private String path;
 	
 	
 	
 	
+	
+	
+	/**
+	 * @return the path
+	 */
+	public String getPath() {
+		return path;
+	}
+
+	/**
+	 * @param path the path to set
+	 */
+	public void setPath(String path) {
+		this.path = path;
+	}
+
 	public boolean isSale() {
 		return isSale;
 	}
