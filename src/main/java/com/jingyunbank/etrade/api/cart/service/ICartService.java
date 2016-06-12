@@ -3,6 +3,7 @@ package com.jingyunbank.etrade.api.cart.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.jingyunbank.core.Range;
 import com.jingyunbank.etrade.api.cart.bo.Cart;
 import com.jingyunbank.etrade.api.cart.bo.GoodsInCart;
 import com.jingyunbank.etrade.api.exception.DataRefreshingException;
