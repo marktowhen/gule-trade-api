@@ -55,6 +55,13 @@ public interface IAuctionContextService {
 	public boolean bidding(AuctionPriceLog priceLog);
 	
 	/**
+	 * 延时
+	 * @param priceLog
+	 * @return
+	 */
+	public void delayed(String auctionid) throws DataRefreshingException;
+	
+	/**
 	 * 未中标归还保证金
 	 * @param auctionUser
 	 * @return
