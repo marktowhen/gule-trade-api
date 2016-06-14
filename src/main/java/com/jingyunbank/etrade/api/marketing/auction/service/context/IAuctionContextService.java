@@ -55,6 +55,19 @@ public interface IAuctionContextService {
 	public boolean bidding(AuctionPriceLog priceLog);
 	
 	/**
+	 * 延时
+	 * @param priceLog
+	 * @return
+	 */
+	public void delayed(String auctionid) throws DataRefreshingException;
+	
+	/**
+	 * 到期 
+	 * @return
+	 */
+	public void expire();
+	
+	/**
 	 * 未中标归还保证金
 	 * @param auctionUser
 	 * @return
@@ -77,5 +90,8 @@ public interface IAuctionContextService {
 	 * 2016年5月5日 qxs
 	 */
 	public boolean payBalanceTimeout(AuctionGoods goods);
+	
+	
+	
 	
 }

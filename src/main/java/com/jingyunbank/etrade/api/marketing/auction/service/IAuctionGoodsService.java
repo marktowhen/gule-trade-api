@@ -47,5 +47,11 @@ public interface IAuctionGoodsService {
 
 	public int count();
 	
+	/**
+	 * 到期
+	 * @return
+	 */
+	public List<AuctionGoods> listOnDead();
+	
 	
 }
