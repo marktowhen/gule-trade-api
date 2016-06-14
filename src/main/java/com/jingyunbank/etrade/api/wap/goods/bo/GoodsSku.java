@@ -28,11 +28,23 @@ public class GoodsSku implements Serializable {
 	private boolean status;
 	private boolean sale;
 	private int grade;//1:推荐2:新品3:热销
+	private String skuPath;
 	
 	
+	
+	/**
+	 * @return the skuPath
+	 */
+	public String getSkuPath() {
+		return skuPath;
+	}
 
-
-	
+	/**
+	 * @param skuPath the skuPath to set
+	 */
+	public void setSkuPath(String skuPath) {
+		this.skuPath = skuPath;
+	}
 
 	/**
 	 * @return the grade
