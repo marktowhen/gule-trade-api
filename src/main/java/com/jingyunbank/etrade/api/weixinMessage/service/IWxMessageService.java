@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * 我的微信服务接口，主要用于结合自己的业务和微信接口
  */
-public interface WxMessageService {
+public interface IWxMessageService {
 	
 	/**
 	 * 推送操作结果信息到用户
